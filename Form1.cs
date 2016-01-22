@@ -16,5 +16,15 @@ namespace PJCalender
         {
             InitializeComponent();
         }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            PJCalender.Program.Exit();
+        }
+
+        private void buttonRestart_Click(object sender, EventArgs e)
+        {
+            PJCalender.Program.Restart();
+        }
     }
 }
