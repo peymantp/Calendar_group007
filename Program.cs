@@ -18,5 +18,9 @@ namespace PJCalender
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
+        static void test()
+        {
+            //testing GitHub
+        }
     }
 }
