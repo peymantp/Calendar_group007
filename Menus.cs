@@ -10,21 +10,17 @@ using System.Windows.Forms;
 
 namespace PJCalender
 {
-    public partial class Form1 : Form
+    public partial class Menus : Form
     {
-        public Form1()
+        public Menus()
         {
             InitializeComponent();
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
-            PJCalender.Program.Exit();
+            global::PJCalender.Program.Exit();
         }
 
-        private void buttonRestart_Click(object sender, EventArgs e)
-        {
-            PJCalender.Program.Restart();
-        }
     }
 }

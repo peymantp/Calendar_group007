@@ -16,11 +16,10 @@ namespace PJCalender
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Menus());
         }
         public static void Exit()
         {
-            //testing GitHub
             Application.Exit();
         }
         public static void Restart()
