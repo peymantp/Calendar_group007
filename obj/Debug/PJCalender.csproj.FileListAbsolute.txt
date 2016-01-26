@@ -3,7 +3,6 @@ C:\Users\peymantp\Desktop\Calender_group007\bin\Debug\PJCalender.exe.config
 C:\Users\peymantp\Desktop\Calender_group007\bin\Debug\PJCalender.exe
 C:\Users\peymantp\Desktop\Calender_group007\bin\Debug\PJCalender.pdb
 C:\Users\peymantp\Desktop\Calender_group007\obj\Debug\PJCalender.csprojResolveAssemblyReference.cache
-C:\Users\peymantp\Desktop\Calender_group007\obj\Debug\PJCalender.Form1.resources
 C:\Users\peymantp\Desktop\Calender_group007\obj\Debug\PJCalender.Properties.Resources.resources
 C:\Users\peymantp\Desktop\Calender_group007\obj\Debug\PJCalender.csproj.GenerateResource.Cache
 C:\Users\peymantp\Desktop\Calender_group007\obj\Debug\PJCalender.exe
@@ -20,3 +19,7 @@ C:\Users\Student\Documents\007\bin\Debug\en-CA\PJCalender.resources.dll
 C:\Users\Student\Documents\007\obj\Debug\en-CA\PJCalender.resources.dll
 C:\Users\Student\Documents\007\obj\Debug\PJCalender.Menus.resources
 C:\Users\Student\Documents\007\obj\Debug\PJCalender.Menus.en-CA.resources
+C:\Users\peymantp\Desktop\Calender_group007\bin\Debug\en-CA\PJCalender.resources.dll
+C:\Users\peymantp\Desktop\Calender_group007\obj\Debug\PJCalender.Menus.resources
+C:\Users\peymantp\Desktop\Calender_group007\obj\Debug\PJCalender.Menus.en-CA.resources
+C:\Users\peymantp\Desktop\Calender_group007\obj\Debug\en-CA\PJCalender.resources.dll

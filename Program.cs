@@ -22,9 +22,5 @@ namespace PJCalender
         {
             Application.Exit();
         }
-        public static void Restart()
-        {
-            Application.Restart();
-        }
     }
 }
