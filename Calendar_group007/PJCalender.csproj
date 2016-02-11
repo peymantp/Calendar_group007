@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dayPickerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dayPickerDialog.Designer.cs">
+      <DependentUpon>dayPickerDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menus.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="dayPickerDialog.resx">
+      <DependentUpon>dayPickerDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menus.en-CA.resx">
       <DependentUpon>Menus.cs</DependentUpon>
     </EmbeddedResource>
