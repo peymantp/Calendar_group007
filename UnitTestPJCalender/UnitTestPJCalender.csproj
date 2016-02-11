@@ -50,9 +50,15 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="dayPickerDialogTest.cs" />
+    <Compile Include="dayPickerDialogTests.cs" />
     <Compile Include="menuTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Calendar_group007\PJCalender.csproj">
+      <Project>{7375CAB0-0540-47BF-92FF-9AE4450718F4}</Project>
+      <Name>PJCalender</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

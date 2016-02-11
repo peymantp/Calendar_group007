@@ -15,6 +15,12 @@ namespace PJCalender
         public dayPickerDialog()
         {
             InitializeComponent();
+            this.ClientSize = new System.Drawing.Size(this.Size.Width, 566);
+        }
+
+        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            this.textBox1.Text = "Date Selected: " + e.Start.Year + "," + e.Start.Month + "," + e.Start.Day;
         }
     }
 }

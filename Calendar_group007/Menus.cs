@@ -35,5 +35,10 @@ namespace PJCalender
             global::PJCalender.Program.Exit();
         }
 
+        private void buttonPickDay_Click(object sender, EventArgs e)
+        {
+            dayPickerDialog d = new dayPickerDialog();
+            d.Show();
+        }
     }
 }

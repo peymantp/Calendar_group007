@@ -56,6 +56,7 @@
             this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.buttonPickDay = new System.Windows.Forms.Button();
             this.tableLayoutPanelMonth.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -233,10 +234,18 @@
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // buttonPickDay
+            // 
+            resources.ApplyResources(this.buttonPickDay, "buttonPickDay");
+            this.buttonPickDay.Name = "buttonPickDay";
+            this.buttonPickDay.UseVisualStyleBackColor = true;
+            this.buttonPickDay.Click += new System.EventHandler(this.buttonPickDay_Click);
+            // 
             // Menus
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonPickDay);
             this.Controls.Add(this.comboBoxViewPicker);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.buttonExit);
@@ -284,6 +293,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.HScrollBar hScrollBar1;
+        private System.Windows.Forms.Button buttonPickDay;
     }
 }
 
