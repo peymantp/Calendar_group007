@@ -237,7 +237,6 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ControlBox = false;
             this.Controls.Add(this.comboBoxViewPicker);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.buttonExit);

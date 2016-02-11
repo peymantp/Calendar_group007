@@ -538,7 +538,7 @@
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>758, 1</value>
+    <value>759, 1</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 13</value>
@@ -790,7 +790,7 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanelWeek.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="label1" Row="0" RowSpan="1" Column="6" ColumnSpan="1" /&gt;&lt;Control Name="label2" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label3" Row="0" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="label5" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label6" Row="0" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="label7" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="label8" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,100,Absolute,100,Absolute,100,Absolute,100,Absolute,100,Absolute,100,Absolute,203" /&gt;&lt;Rows Styles="Absolute,15,Percent,16.66667,Percent,16.66667,Percent,16.66667,Percent,16.66667,Percent,16.66667,Percent,16.66667" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="label1" Row="0" RowSpan="1" Column="6" ColumnSpan="1" /&gt;&lt;Control Name="label2" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label3" Row="0" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="label5" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label6" Row="0" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="label7" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="label8" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,100,Absolute,100,Absolute,100,Absolute,100,Absolute,100,Absolute,100,Absolute,204" /&gt;&lt;Rows Styles="Absolute,15,Percent,16.66667,Percent,16.66667,Percent,16.66667,Percent,16.66667,Percent,16.66667,Percent,16.66667" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="hScrollBar1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
@@ -934,7 +934,7 @@
     <value>891, 643</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Form1</value>
+    <value>PJCalender</value>
   </data>
   <data name="&gt;&gt;toolStripTextBox1.Name" xml:space="preserve">
     <value>toolStripTextBox1</value>
