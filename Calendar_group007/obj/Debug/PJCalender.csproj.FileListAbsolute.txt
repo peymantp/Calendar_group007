@@ -47,3 +47,4 @@ C:\Users\peymantp\Documents\Calendar_group007\Calendar_group007\obj\Debug\PJCale
 C:\Users\peymantp\Documents\Calendar_group007\Calendar_group007\obj\Debug\en-CA\PJCalender.resources.dll
 C:\Users\peymantp\Documents\Calendar_group007\Calendar_group007\obj\Debug\PJCalender.exe
 C:\Users\peymantp\Documents\Calendar_group007\Calendar_group007\obj\Debug\PJCalender.pdb
+C:\Users\peymantp\Documents\Calendar_group007\Calendar_group007\obj\Debug\PJCalender.csprojResolveAssemblyReference.cache
