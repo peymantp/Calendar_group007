@@ -46,6 +46,7 @@
             this.tabPageDay = new System.Windows.Forms.TabPage();
             this.textBoxTest = new System.Windows.Forms.TextBox();
             this.tabPageAgenda = new System.Windows.Forms.TabPage();
+            this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutAgenda = new System.Windows.Forms.TableLayoutPanel();
             this.buttonPickDay = new System.Windows.Forms.Button();
             this.tableLayoutPanelMonth.SuspendLayout();
@@ -54,6 +55,7 @@
             this.tabPageWeek.SuspendLayout();
             this.tabPageDay.SuspendLayout();
             this.tabPageAgenda.SuspendLayout();
+            this.flowLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonExit
@@ -171,14 +173,25 @@
             // 
             // tabPageAgenda
             // 
-            this.tabPageAgenda.Controls.Add(this.tableLayoutAgenda);
+            this.tabPageAgenda.Controls.Add(this.flowLayoutPanel);
             resources.ApplyResources(this.tabPageAgenda, "tabPageAgenda");
             this.tabPageAgenda.Name = "tabPageAgenda";
             this.tabPageAgenda.UseVisualStyleBackColor = true;
             // 
+            // flowLayoutPanel
+            // 
+            resources.ApplyResources(this.flowLayoutPanel, "flowLayoutPanel");
+            this.flowLayoutPanel.BackColor = System.Drawing.Color.Gray;
+            this.flowLayoutPanel.Controls.Add(this.tableLayoutAgenda);
+            this.flowLayoutPanel.Name = "flowLayoutPanel";
+            this.flowLayoutPanel.VerticalScroll.Enabled = true;
+            this.flowLayoutPanel.HorizontalScroll.Enabled = false;
+            this.flowLayoutPanel.WrapContents = false;
+            // 
             // tableLayoutAgenda
             // 
             resources.ApplyResources(this.tableLayoutAgenda, "tableLayoutAgenda");
+            this.tableLayoutAgenda.BackColor = System.Drawing.Color.Gainsboro;
             this.tableLayoutAgenda.Name = "tableLayoutAgenda";
             // 
             // buttonPickDay
@@ -192,6 +205,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.Controls.Add(this.buttonPickDay);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.buttonExit);
@@ -208,7 +222,8 @@
             this.tabPageDay.ResumeLayout(false);
             this.tabPageDay.PerformLayout();
             this.tabPageAgenda.ResumeLayout(false);
-            this.tabPageAgenda.PerformLayout();
+            this.flowLayoutPanel.ResumeLayout(false);
+            this.flowLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -234,6 +249,7 @@
         private System.Windows.Forms.TabPage tabPageAgenda;
         private System.Windows.Forms.TextBox textBoxTest;
         private System.Windows.Forms.TableLayoutPanel tableLayoutAgenda;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
     }
 }
 

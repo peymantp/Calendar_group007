@@ -106,15 +106,18 @@ namespace PJCalender
                                 textBoxTest.Text += nl + startDay + nl;
                                 Label label = new Label();
                                 label.Text = startDay;
+                                label.Width = 700;
+                                /* method 1
                                 tableLayoutAgenda.Controls.Add(label,0, row);
                                 row++;
                                 tableLayoutAgenda.RowCount = row + 1;
                                 tableLayoutAgenda.Height += 22; //to-do
+                                */
+                                flowLayoutPanel.Controls.Add(label);
                             }
                             textBoxTest.Text += eventItem.Summary + " at " + startTime + " ends " + endTime + nl
                                              + "   " + discription + nl;
                             dayHold = startDay;
-                            column++;
                         }
                     }
                 }
