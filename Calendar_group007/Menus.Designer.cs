@@ -31,7 +31,6 @@
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.dropDownView = new System.Windows.Forms.ToolStripComboBox();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.comboBoxViewPicker = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanelMonth = new System.Windows.Forms.TableLayoutPanel();
             this.labelSunday = new System.Windows.Forms.Label();
             this.labelMonday = new System.Windows.Forms.Label();
@@ -40,26 +39,18 @@
             this.labelThursday = new System.Windows.Forms.Label();
             this.labelFriday = new System.Windows.Forms.Label();
             this.labelSaturday = new System.Windows.Forms.Label();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPageMonth = new System.Windows.Forms.TabPage();
             this.tabControl = new System.Windows.Forms.TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanelWeek = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.tabPageWeek = new System.Windows.Forms.TabPage();
             this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPageDay = new System.Windows.Forms.TabPage();
+            this.tabPageAgenda = new System.Windows.Forms.TabPage();
             this.buttonPickDay = new System.Windows.Forms.Button();
+            this.textBoxTest = new System.Windows.Forms.TextBox();
             this.tableLayoutPanelMonth.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabPageMonth.SuspendLayout();
             this.tabControl.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tableLayoutPanelWeek.SuspendLayout();
+            this.tabPageWeek.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonExit
@@ -84,17 +75,6 @@
             resources.ApplyResources(this.dateTimePicker, "dateTimePicker");
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Value = new System.DateTime(2016, 1, 1, 0, 0, 0, 0);
-            // 
-            // comboBoxViewPicker
-            // 
-            resources.ApplyResources(this.comboBoxViewPicker, "comboBoxViewPicker");
-            this.comboBoxViewPicker.FormattingEnabled = true;
-            this.comboBoxViewPicker.Items.AddRange(new object[] {
-            resources.GetString("comboBoxViewPicker.Items"),
-            resources.GetString("comboBoxViewPicker.Items1"),
-            resources.GetString("comboBoxViewPicker.Items2"),
-            resources.GetString("comboBoxViewPicker.Items3")});
-            this.comboBoxViewPicker.Name = "comboBoxViewPicker";
             // 
             // tableLayoutPanelMonth
             // 
@@ -143,94 +123,46 @@
             resources.ApplyResources(this.labelSaturday, "labelSaturday");
             this.labelSaturday.Name = "labelSaturday";
             // 
-            // tabPage1
+            // tabPageMonth
             // 
-            this.tabPage1.Controls.Add(this.tableLayoutPanelMonth);
-            resources.ApplyResources(this.tabPage1, "tabPage1");
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPageMonth.Controls.Add(this.tableLayoutPanelMonth);
+            resources.ApplyResources(this.tabPageMonth, "tabPageMonth");
+            this.tabPageMonth.Name = "tabPageMonth";
+            this.tabPageMonth.UseVisualStyleBackColor = true;
             // 
             // tabControl
             // 
             resources.ApplyResources(this.tabControl, "tabControl");
-            this.tabControl.Controls.Add(this.tabPage1);
-            this.tabControl.Controls.Add(this.tabPage2);
-            this.tabControl.Controls.Add(this.tabPage3);
-            this.tabControl.Controls.Add(this.tabPage4);
+            this.tabControl.Controls.Add(this.tabPageMonth);
+            this.tabControl.Controls.Add(this.tabPageWeek);
+            this.tabControl.Controls.Add(this.tabPageDay);
+            this.tabControl.Controls.Add(this.tabPageAgenda);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             // 
-            // tabPage2
+            // tabPageWeek
             // 
-            this.tabPage2.Controls.Add(this.tableLayoutPanelWeek);
-            this.tabPage2.Controls.Add(this.hScrollBar1);
-            resources.ApplyResources(this.tabPage2, "tabPage2");
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanelWeek
-            // 
-            resources.ApplyResources(this.tableLayoutPanelWeek, "tableLayoutPanelWeek");
-            this.tableLayoutPanelWeek.Controls.Add(this.label1, 6, 0);
-            this.tableLayoutPanelWeek.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanelWeek.Controls.Add(this.label3, 5, 0);
-            this.tableLayoutPanelWeek.Controls.Add(this.label5, 1, 0);
-            this.tableLayoutPanelWeek.Controls.Add(this.label6, 4, 0);
-            this.tableLayoutPanelWeek.Controls.Add(this.label7, 2, 0);
-            this.tableLayoutPanelWeek.Controls.Add(this.label8, 3, 0);
-            this.tableLayoutPanelWeek.Name = "tableLayoutPanelWeek";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
-            // label5
-            // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
-            // 
-            // label6
-            // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
-            // 
-            // label7
-            // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.Name = "label7";
-            // 
-            // label8
-            // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.Name = "label8";
+            this.tabPageWeek.Controls.Add(this.hScrollBar1);
+            resources.ApplyResources(this.tabPageWeek, "tabPageWeek");
+            this.tabPageWeek.Name = "tabPageWeek";
+            this.tabPageWeek.UseVisualStyleBackColor = true;
             // 
             // hScrollBar1
             // 
             resources.ApplyResources(this.hScrollBar1, "hScrollBar1");
             this.hScrollBar1.Name = "hScrollBar1";
             // 
-            // tabPage3
+            // tabPageDay
             // 
-            resources.ApplyResources(this.tabPage3, "tabPage3");
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.tabPageDay, "tabPageDay");
+            this.tabPageDay.Name = "tabPageDay";
+            this.tabPageDay.UseVisualStyleBackColor = true;
             // 
-            // tabPage4
+            // tabPageAgenda
             // 
-            resources.ApplyResources(this.tabPage4, "tabPage4");
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.tabPageAgenda, "tabPageAgenda");
+            this.tabPageAgenda.Name = "tabPageAgenda";
+            this.tabPageAgenda.UseVisualStyleBackColor = true;
             // 
             // buttonPickDay
             // 
@@ -239,12 +171,19 @@
             this.buttonPickDay.UseVisualStyleBackColor = true;
             this.buttonPickDay.Click += new System.EventHandler(this.buttonPickDay_Click);
             // 
+            // textBoxTest
+            // 
+            this.textBoxTest.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            resources.ApplyResources(this.textBoxTest, "textBoxTest");
+            this.textBoxTest.Name = "textBoxTest";
+            this.textBoxTest.ReadOnly = true;
+            // 
             // Menus
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.textBoxTest);
             this.Controls.Add(this.buttonPickDay);
-            this.Controls.Add(this.comboBoxViewPicker);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.tabControl);
@@ -253,12 +192,12 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.tableLayoutPanelMonth.ResumeLayout(false);
             this.tableLayoutPanelMonth.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
+            this.tabPageMonth.ResumeLayout(false);
+            this.tabPageMonth.PerformLayout();
             this.tabControl.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tableLayoutPanelWeek.ResumeLayout(false);
-            this.tableLayoutPanelWeek.PerformLayout();
+            this.tabPageWeek.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
         
@@ -266,13 +205,11 @@
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.ToolStripComboBox dropDownView;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
-        private System.Windows.Forms.ComboBox comboBoxViewPicker;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelMonth;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPageMonth;
         private System.Windows.Forms.TabControl tabControl;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabPageWeek;
+        private System.Windows.Forms.TabPage tabPageDay;
         private System.Windows.Forms.Label labelWednesday;
         private System.Windows.Forms.Label labelTuesday;
         private System.Windows.Forms.Label labelMonday;
@@ -280,16 +217,10 @@
         private System.Windows.Forms.Label labelSaturday;
         private System.Windows.Forms.Label labelFriday;
         private System.Windows.Forms.Label labelThursday;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelWeek;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.HScrollBar hScrollBar1;
         private System.Windows.Forms.Button buttonPickDay;
+        private System.Windows.Forms.TabPage tabPageAgenda;
+        private System.Windows.Forms.TextBox textBoxTest;
     }
 }
 
