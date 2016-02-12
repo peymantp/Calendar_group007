@@ -49,6 +49,7 @@
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutAgenda = new System.Windows.Forms.TableLayoutPanel();
             this.buttonPickDay = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanelMonth.SuspendLayout();
             this.tabPageMonth.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -184,9 +185,6 @@
             this.flowLayoutPanel.BackColor = System.Drawing.Color.Gray;
             this.flowLayoutPanel.Controls.Add(this.tableLayoutAgenda);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.VerticalScroll.Enabled = true;
-            this.flowLayoutPanel.HorizontalScroll.Enabled = false;
-            this.flowLayoutPanel.WrapContents = false;
             // 
             // tableLayoutAgenda
             // 
@@ -201,11 +199,18 @@
             this.buttonPickDay.UseVisualStyleBackColor = true;
             this.buttonPickDay.Click += new System.EventHandler(this.buttonPickDay_Click);
             // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Menus
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonPickDay);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.buttonExit);
@@ -250,6 +255,7 @@
         private System.Windows.Forms.TextBox textBoxTest;
         private System.Windows.Forms.TableLayoutPanel tableLayoutAgenda;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
+        private System.Windows.Forms.Button button1;
     }
 }
 
