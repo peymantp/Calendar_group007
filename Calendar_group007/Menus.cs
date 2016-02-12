@@ -26,6 +26,8 @@ namespace PJCalender
         public Menus()
         {
             InitializeComponent();
+
+            //adding days to month view HARD CODED
             int day = 27;
             for(int row = 1; row < 7; row++)
             {
@@ -41,13 +43,11 @@ namespace PJCalender
             }
 
             UserCredential credential;
-
             using (var stream =
                 new System.IO.FileStream("client_secret.json", System.IO.FileMode.Open, FileAccess.Read))
             {
-                string credPath = System.Environment.GetFolderPath(
-                    System.Environment.SpecialFolder.Personal);
-                credPath = System.IO.Path.Combine(credPath, ".credentials/calendar-dotnet-quickstart.json");
+                //string credPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+                string credPath = (".credentials/calendar-dotnet-quickstart.json");
 
                 credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
                     GoogleClientSecrets.Load(stream).Secrets,
@@ -55,7 +55,7 @@ namespace PJCalender
                     "user",
                     System.Threading.CancellationToken.None,
                     new FileDataStore(credPath, true)).Result;
-                Console.WriteLine("Credential file saved to: " + credPath);
+                //textBoxTest.Text += "Credential file saved to: " + credPath;
             }
 
             // Create Google Calendar API service.
@@ -70,28 +70,57 @@ namespace PJCalender
             request.TimeMin = DateTime.Now;
             request.ShowDeleted = false;
             request.SingleEvents = true;
-            request.MaxResults = 10;
+            request.MaxResults = 30;
             request.OrderBy = EventsResource.ListRequest.OrderByEnum.StartTime;
             try
             {
                 // List events.
                 Events events = request.Execute();
-                Console.WriteLine("Upcoming events:");
                 if (events.Items != null && events.Items.Count > 0)
                 {
+                    //Monday, February 15, 2016
+                    //COMP 3760 algorithm lecture  at 08:30:00 AM ends 09:20:00 AM
+                    //   SW1 - 2009
+                    //Farnaz Dargahi
+                    string dayHold = null;
+                    String nl = Environment.NewLine;
+                    int column = 0;
+                    int row = 0;
                     foreach (var eventItem in events.Items)
                     {
-                        string when = eventItem.Start.DateTime.ToString();
-                        if (String.IsNullOrEmpty(when))
+                        if (eventItem.Start.DateTime != null)
                         {
-                            when = eventItem.Start.Date;
+                            DateTime start = (DateTime)eventItem.Start.DateTime;
+                            string startDay = start.ToLongDateString();
+                            string startTime = start.ToLongTimeString();
+
+                            DateTime end = (DateTime)eventItem.End.DateTime;
+                            string endDay = end.ToLongDateString();
+                            string endTime = end.ToLongTimeString();
+
+                            string discription = eventItem.Description;
+
+                            //only print each day once
+                            if (!String.Equals(dayHold, startDay))
+                            {
+                                textBoxTest.Text += nl + startDay + nl;
+                                Label label = new Label();
+                                label.Text = startDay;
+                                tableLayoutAgenda.Controls.Add(label,0, row);
+                                row++;
+                                tableLayoutAgenda.RowCount = row + 1;
+                                tableLayoutAgenda.Height += 22; //to-do
+                            }
+                            textBoxTest.Text += eventItem.Summary + " at " + startTime + " ends " + endTime + nl
+                                             + "   " + discription + nl;
+                            dayHold = startDay;
+                            column++;
                         }
-                        Console.WriteLine("{0} ({1})", eventItem.Summary, when);
                     }
                 }
                 else
                 {
-                    Console.WriteLine("No upcoming events found.");
+                    textBoxTest.Text += Environment.NewLine + "No upcoming events found.";
                 }
             }
             catch (System.Net.Http.HttpRequestException requestEx)

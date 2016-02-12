@@ -1,0 +1,6 @@
+C:\Users\peymantp\Desktop\Calendar_group007\Calendar_group007\bin\x64\Debug\PJCalender.exe.config
+C:\Users\peymantp\Desktop\Calendar_group007\Calendar_group007\obj\x64\Debug\PJCalender.dayPickerDialog.resources
+C:\Users\peymantp\Desktop\Calendar_group007\Calendar_group007\obj\x64\Debug\PJCalender.Menus.resources
+C:\Users\peymantp\Desktop\Calendar_group007\Calendar_group007\obj\x64\Debug\PJCalender.Properties.Resources.resources
+C:\Users\peymantp\Desktop\Calendar_group007\Calendar_group007\obj\x64\Debug\PJCalender.Menus.en-CA.resources
+C:\Users\peymantp\Desktop\Calendar_group007\Calendar_group007\obj\x64\Debug\PJCalender.csproj.GenerateResource.Cache

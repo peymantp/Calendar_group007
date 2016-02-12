@@ -126,13 +126,10 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="buttonExit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 895</value>
-  </data>
-  <data name="buttonExit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>0, 576</value>
   </data>
   <data name="buttonExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 35</value>
+    <value>75, 23</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="buttonExit.TabIndex" type="System.Int32, mscorlib">
@@ -151,22 +148,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonExit.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="toolStripTextBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
   </data>
   <data name="dropDownView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 33</value>
+    <value>121, 23</value>
   </data>
   <data name="dateTimePicker.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 2</value>
-  </data>
-  <data name="dateTimePicker.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>0, 1</value>
   </data>
   <data name="dateTimePicker.Size" type="System.Drawing.Size, System.Drawing">
-    <value>222, 26</value>
+    <value>149, 20</value>
   </data>
   <data name="dateTimePicker.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -181,7 +175,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dateTimePicker.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="tableLayoutPanelMonth.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -205,13 +199,10 @@
     <value>True</value>
   </data>
   <data name="labelSunday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 1</value>
-  </data>
-  <data name="labelSunday.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>54, 1</value>
   </data>
   <data name="labelSunday.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 20</value>
+    <value>46, 13</value>
   </data>
   <data name="labelSunday.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -238,13 +229,10 @@
     <value>NoControl</value>
   </data>
   <data name="labelMonday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>236, 1</value>
-  </data>
-  <data name="labelMonday.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>158, 1</value>
   </data>
   <data name="labelMonday.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 20</value>
+    <value>45, 13</value>
   </data>
   <data name="labelMonday.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -274,13 +262,10 @@
     <value>NoControl</value>
   </data>
   <data name="labelTuesday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>389, 1</value>
-  </data>
-  <data name="labelTuesday.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>258, 1</value>
   </data>
   <data name="labelTuesday.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 20</value>
+    <value>48, 13</value>
   </data>
   <data name="labelTuesday.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -310,13 +295,10 @@
     <value>NoControl</value>
   </data>
   <data name="labelWednesday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>519, 1</value>
-  </data>
-  <data name="labelWednesday.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>345, 1</value>
   </data>
   <data name="labelWednesday.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 20</value>
+    <value>64, 13</value>
   </data>
   <data name="labelWednesday.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -346,13 +328,10 @@
     <value>NoControl</value>
   </data>
   <data name="labelThursday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>692, 1</value>
-  </data>
-  <data name="labelThursday.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>461, 1</value>
   </data>
   <data name="labelThursday.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 20</value>
+    <value>51, 13</value>
   </data>
   <data name="labelThursday.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -382,13 +361,10 @@
     <value>NoControl</value>
   </data>
   <data name="labelFriday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>868, 1</value>
-  </data>
-  <data name="labelFriday.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>580, 1</value>
   </data>
   <data name="labelFriday.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 20</value>
+    <value>35, 13</value>
   </data>
   <data name="labelFriday.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -418,13 +394,10 @@
     <value>NoControl</value>
   </data>
   <data name="labelSaturday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1005, 1</value>
-  </data>
-  <data name="labelSaturday.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>669, 1</value>
   </data>
   <data name="labelSaturday.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 20</value>
+    <value>49, 13</value>
   </data>
   <data name="labelSaturday.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -451,13 +424,13 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="tableLayoutPanelMonth.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1083, 854</value>
+    <value>722, 555</value>
   </data>
   <data name="tableLayoutPanelMonth.RowCount" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
   <data name="tableLayoutPanelMonth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1083, 871</value>
+    <value>722, 555</value>
   </data>
   <data name="tableLayoutPanelMonth.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -475,13 +448,16 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanelMonth.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="labelSunday" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelMonday" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelTuesday" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="labelWednesday" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="labelThursday" Row="0" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="labelFriday" Row="0" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="labelSaturday" Row="0" RowSpan="1" Column="6" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,14.28869,Percent,14.28869,Percent,14.28869,Percent,14.28869,Percent,14.28869,Percent,14.28869,Percent,14.26786" /&gt;&lt;Rows Styles="Absolute,23,Percent,16.66667,Percent,16.66667,Percent,16.66667,Percent,16.66667,Percent,16.66667,Percent,16.66667" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="labelSunday" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelMonday" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelTuesday" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="labelWednesday" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="labelThursday" Row="0" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="labelFriday" Row="0" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="labelSaturday" Row="0" RowSpan="1" Column="6" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,14.28869,Percent,14.28869,Percent,14.28869,Percent,14.28869,Percent,14.28869,Percent,14.28869,Percent,14.26786" /&gt;&lt;Rows Styles="Absolute,15,Percent,16.66667,Percent,16.66667,Percent,16.66667,Percent,16.66667,Percent,16.66667,Percent,16.66667" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="tabPageMonth.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 29</value>
+    <value>4, 22</value>
+  </data>
+  <data name="tabPageMonth.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="tabPageMonth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1087, 896</value>
+    <value>722, 572</value>
   </data>
   <data name="tabPageMonth.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -511,10 +487,10 @@
     <value>Bottom</value>
   </data>
   <data name="hScrollBar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 874</value>
+    <value>3, 552</value>
   </data>
   <data name="hScrollBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1079, 17</value>
+    <value>716, 17</value>
   </data>
   <data name="hScrollBar1.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -532,16 +508,13 @@
     <value>0</value>
   </data>
   <data name="tabPageWeek.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 29</value>
-  </data>
-  <data name="tabPageWeek.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>4, 22</value>
   </data>
   <data name="tabPageWeek.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPageWeek.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1087, 896</value>
+    <value>722, 572</value>
   </data>
   <data name="tabPageWeek.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -561,17 +534,44 @@
   <data name="&gt;&gt;tabPageWeek.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="tabPageDay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 29</value>
+  <data name="textBoxTest.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="tabPageDay.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+  <data name="textBoxTest.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="textBoxTest.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="textBoxTest.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="textBoxTest.Size" type="System.Drawing.Size, System.Drawing">
+    <value>616, 531</value>
+  </data>
+  <data name="textBoxTest.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;textBoxTest.Name" xml:space="preserve">
+    <value>textBoxTest</value>
+  </data>
+  <data name="&gt;&gt;textBoxTest.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxTest.Parent" xml:space="preserve">
+    <value>tabPageDay</value>
+  </data>
+  <data name="&gt;&gt;textBoxTest.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPageDay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
   </data>
   <data name="tabPageDay.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPageDay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1087, 896</value>
+    <value>722, 572</value>
   </data>
   <data name="tabPageDay.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -591,20 +591,53 @@
   <data name="&gt;&gt;tabPageDay.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="tableLayoutAgenda.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tableLayoutAgenda.CellBorderStyle" type="System.Windows.Forms.TableLayoutPanelCellBorderStyle, System.Windows.Forms">
+    <value>Single</value>
+  </data>
+  <data name="tableLayoutAgenda.ColumnCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tableLayoutAgenda.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tableLayoutAgenda.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tableLayoutAgenda.Size" type="System.Drawing.Size, System.Drawing">
+    <value>722, 2</value>
+  </data>
+  <data name="tableLayoutAgenda.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutAgenda.Name" xml:space="preserve">
+    <value>tableLayoutAgenda</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutAgenda.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutAgenda.Parent" xml:space="preserve">
+    <value>tabPageAgenda</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutAgenda.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tableLayoutAgenda.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls /&gt;&lt;Columns Styles="Percent,20,Percent,60,Percent,20" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
   <data name="tabPageAgenda.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="tabPageAgenda.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 29</value>
-  </data>
-  <data name="tabPageAgenda.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>4, 22</value>
   </data>
   <data name="tabPageAgenda.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPageAgenda.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1087, 896</value>
+    <value>722, 572</value>
   </data>
   <data name="tabPageAgenda.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -625,13 +658,10 @@
     <value>3</value>
   </data>
   <data name="tabControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>222, 2</value>
-  </data>
-  <data name="tabControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>148, 1</value>
   </data>
   <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1095, 929</value>
+    <value>730, 598</value>
   </data>
   <data name="tabControl.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -646,16 +676,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tabControl.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="buttonPickDay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 69</value>
-  </data>
-  <data name="buttonPickDay.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>13, 45</value>
   </data>
   <data name="buttonPickDay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 35</value>
+    <value>75, 23</value>
   </data>
   <data name="buttonPickDay.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -673,49 +700,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonPickDay.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="textBoxTest.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 295</value>
-  </data>
-  <data name="textBoxTest.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textBoxTest.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 26</value>
-  </data>
-  <data name="textBoxTest.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;textBoxTest.Name" xml:space="preserve">
-    <value>textBoxTest</value>
-  </data>
-  <data name="&gt;&gt;textBoxTest.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxTest.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;textBoxTest.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>9, 20</value>
+    <value>6, 13</value>
   </data>
   <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1312, 929</value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>875, 598</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1326, 959</value>
+    <value>889, 637</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>PJCalender</value>

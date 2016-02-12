@@ -44,13 +44,16 @@
             this.tabPageWeek = new System.Windows.Forms.TabPage();
             this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
             this.tabPageDay = new System.Windows.Forms.TabPage();
-            this.tabPageAgenda = new System.Windows.Forms.TabPage();
-            this.buttonPickDay = new System.Windows.Forms.Button();
             this.textBoxTest = new System.Windows.Forms.TextBox();
+            this.tabPageAgenda = new System.Windows.Forms.TabPage();
+            this.tableLayoutAgenda = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonPickDay = new System.Windows.Forms.Button();
             this.tableLayoutPanelMonth.SuspendLayout();
             this.tabPageMonth.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabPageWeek.SuspendLayout();
+            this.tabPageDay.SuspendLayout();
+            this.tabPageAgenda.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonExit
@@ -154,22 +157,10 @@
             // 
             // tabPageDay
             // 
+            this.tabPageDay.Controls.Add(this.textBoxTest);
             resources.ApplyResources(this.tabPageDay, "tabPageDay");
             this.tabPageDay.Name = "tabPageDay";
             this.tabPageDay.UseVisualStyleBackColor = true;
-            // 
-            // tabPageAgenda
-            // 
-            resources.ApplyResources(this.tabPageAgenda, "tabPageAgenda");
-            this.tabPageAgenda.Name = "tabPageAgenda";
-            this.tabPageAgenda.UseVisualStyleBackColor = true;
-            // 
-            // buttonPickDay
-            // 
-            resources.ApplyResources(this.buttonPickDay, "buttonPickDay");
-            this.buttonPickDay.Name = "buttonPickDay";
-            this.buttonPickDay.UseVisualStyleBackColor = true;
-            this.buttonPickDay.Click += new System.EventHandler(this.buttonPickDay_Click);
             // 
             // textBoxTest
             // 
@@ -178,11 +169,29 @@
             this.textBoxTest.Name = "textBoxTest";
             this.textBoxTest.ReadOnly = true;
             // 
+            // tabPageAgenda
+            // 
+            this.tabPageAgenda.Controls.Add(this.tableLayoutAgenda);
+            resources.ApplyResources(this.tabPageAgenda, "tabPageAgenda");
+            this.tabPageAgenda.Name = "tabPageAgenda";
+            this.tabPageAgenda.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutAgenda
+            // 
+            resources.ApplyResources(this.tableLayoutAgenda, "tableLayoutAgenda");
+            this.tableLayoutAgenda.Name = "tableLayoutAgenda";
+            // 
+            // buttonPickDay
+            // 
+            resources.ApplyResources(this.buttonPickDay, "buttonPickDay");
+            this.buttonPickDay.Name = "buttonPickDay";
+            this.buttonPickDay.UseVisualStyleBackColor = true;
+            this.buttonPickDay.Click += new System.EventHandler(this.buttonPickDay_Click);
+            // 
             // Menus
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBoxTest);
             this.Controls.Add(this.buttonPickDay);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.buttonExit);
@@ -196,8 +205,11 @@
             this.tabPageMonth.PerformLayout();
             this.tabControl.ResumeLayout(false);
             this.tabPageWeek.ResumeLayout(false);
+            this.tabPageDay.ResumeLayout(false);
+            this.tabPageDay.PerformLayout();
+            this.tabPageAgenda.ResumeLayout(false);
+            this.tabPageAgenda.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
         
@@ -221,6 +233,7 @@
         private System.Windows.Forms.Button buttonPickDay;
         private System.Windows.Forms.TabPage tabPageAgenda;
         private System.Windows.Forms.TextBox textBoxTest;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutAgenda;
     }
 }
 
