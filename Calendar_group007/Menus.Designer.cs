@@ -50,13 +50,13 @@
             this.tableLayoutAgenda = new System.Windows.Forms.TableLayoutPanel();
             this.buttonPickDay = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanelMonth.SuspendLayout();
             this.tabPageMonth.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabPageWeek.SuspendLayout();
             this.tabPageDay.SuspendLayout();
             this.tabPageAgenda.SuspendLayout();
-            this.flowLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonExit
@@ -148,6 +148,7 @@
             // 
             // tabPageWeek
             // 
+            this.tabPageWeek.Controls.Add(this.tableLayoutPanel1);
             this.tabPageWeek.Controls.Add(this.hScrollBar1);
             resources.ApplyResources(this.tabPageWeek, "tabPageWeek");
             this.tabPageWeek.Name = "tabPageWeek";
@@ -183,13 +184,11 @@
             // 
             resources.ApplyResources(this.flowLayoutPanel, "flowLayoutPanel");
             this.flowLayoutPanel.BackColor = System.Drawing.Color.Gray;
-            this.flowLayoutPanel.Controls.Add(this.tableLayoutAgenda);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
             // 
             // tableLayoutAgenda
             // 
             resources.ApplyResources(this.tableLayoutAgenda, "tableLayoutAgenda");
-            this.tableLayoutAgenda.BackColor = System.Drawing.Color.Gainsboro;
             this.tableLayoutAgenda.Name = "tableLayoutAgenda";
             // 
             // buttonPickDay
@@ -204,6 +203,11 @@
             resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel1
+            // 
+            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
             // Menus
             // 
@@ -227,8 +231,6 @@
             this.tabPageDay.ResumeLayout(false);
             this.tabPageDay.PerformLayout();
             this.tabPageAgenda.ResumeLayout(false);
-            this.flowLayoutPanel.ResumeLayout(false);
-            this.flowLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -256,6 +258,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutAgenda;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
 

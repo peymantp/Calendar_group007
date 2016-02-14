@@ -52,10 +52,10 @@ namespace PJCalender
                 credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
                     GoogleClientSecrets.Load(stream).Secrets,
                     Scopes,
-                    "user",
+                    "peyman",
                     System.Threading.CancellationToken.None,
                     new FileDataStore(credPath, true)).Result;
-                //textBoxTest.Text += "Credential file saved to: " + credPath;
+                textBoxTest.Text += "Credential file saved to: " + credPath;
             }
 
             // Create Google Calendar API service.
@@ -70,7 +70,6 @@ namespace PJCalender
             request.TimeMin = DateTime.Now;
             request.ShowDeleted = false;
             request.SingleEvents = true;
-            request.PrettyPrint = true;
             request.MaxResults = 30;
             request.OrderBy = EventsResource.ListRequest.OrderByEnum.StartTime;
             try
@@ -79,10 +78,6 @@ namespace PJCalender
                 Events events = request.Execute();
                 if (events.Items != null && events.Items.Count > 0)
                 {
-                    //Monday, February 15, 2016
-                    //COMP 3760 algorithm lecture  at 08:30:00 AM ends 09:20:00 AM
-                    //   SW1 - 2009
-                    //Farnaz Dargahi
                     Label label = null;
                     string dayHold = null;
                     String nl = Environment.NewLine;
@@ -106,57 +101,64 @@ namespace PJCalender
 
                             if (!String.Equals(dayHold, startDay) & TLA != null)
                             {
-                                flowLayoutPanel.Controls.Add(TLA);
-                                TLA = null;
-                            }
+                                TLA.MinimumSize = new Size(722, 0);
+                                //TLA.AutoSize = true;
+                                TableLayoutRowStyleCollection styles = TLA.RowStyles;
 
-                                //only print each day once
-                                if (!String.Equals(dayHold, startDay) & TLA == null)
+                                foreach (RowStyle style in styles)
+                                {
+                                    style.SizeType = SizeType.Absolute;
+                                    style.Height = 50;
+                                }
+                                flowLayoutPanel.Controls.Add(TLA);
+
+                                //set table and row count to ZERO
+                                TLA = null;
+								row = 0;
+                            }
+                            if (TLA != null)
                             {
-                                textBoxTest.Text += nl + startDay + nl;
+                                TLA.RowCount = ++row;
+                                label = new Label();
+
+                                column = 0;
+                                //Start hour
+                                label = new Label();
+                                label.Text = startTime + nl + endTime;
+                                TLA.Controls.Add(label, column++, row);
+
+                                //discription
+                                label = new Label();
+                                label.Text = (Summary + nl + discription);
+                                TLA.Controls.Add(label, column++, row);
+                            }
+                            //first table row in a table
+                            if (!String.Equals(dayHold, startDay) & TLA == null)
+                            {
                                 label = new Label();
                                 label.Text = startDay;
                                 label.Width = 700;
                                 flowLayoutPanel.Controls.Add(label);
 
                                 TLA = new TableLayoutPanel();
-
+                                TLA.ColumnCount = 2;
+                                TLA.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
+                                //TLA.Sty = 
+								
+								column = 0;
+                                //Start hour
                                 label = new Label();
                                 label.Text = startTime;
                                 TLA.Controls.Add(label, column++, row);
-                                label.Text = Summary + nl + discription;
+
+                                //discription
+                                label = new Label();
+                                label.Text += Summary + nl + discription;
                                 TLA.Controls.Add(label, column++, row);
-                                /* method 1
-                                TLA.Controls.Add(label,0, row);
-                                row++;
-                                TLA.RowCount = row + 1;
-                                TLA.Height += 22; //to-do
-                                */
+                                
                             }
 
-                            if (!String.Equals(dayHold, startDay) & TLA != null)
-                            {
-                                textBoxTest.Text += nl + startDay + nl;
-                                label = new Label();
-                                label.Text = startDay;
-                                label.Width = 700;
-                                flowLayoutPanel.Controls.Add(label);
-
-                                label = new Label();
-                                label.Text = startTime;
-                                TLA.Controls.Add(label, column++, row);
-                                label.Text = Summary + nl + discription;
-                                TLA.Controls.Add(label, column++, row);
-                                /* method 1
-                                TLA.Controls.Add(label,0, row);
-                                row++;
-                                TLA.RowCount = row + 1;
-                                TLA.Height += 22; //to-do
-                                */
-                            }
-
-                            textBoxTest.Text += eventItem.Summary + " at " + startTime + " ends " + endTime + nl
-                                             + "   " + discription + nl;
+                            textBoxTest.Text += eventItem.Summary + " at " + startTime + " ends " + endTime + nl + "  X " + discription + nl;
                             dayHold = startDay;
                         }
                         else if(eventItem.Start.DateTime == null && eventItem.Start.Date != null)
