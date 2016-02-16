@@ -156,6 +156,7 @@
     <Compile Include="dayPickerDialog.Designer.cs">
       <DependentUpon>dayPickerDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="google.cs" />
     <Compile Include="Menus.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +165,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="user.cs" />
     <EmbeddedResource Include="dayPickerDialog.resx">
       <DependentUpon>dayPickerDialog.cs</DependentUpon>
     </EmbeddedResource>
