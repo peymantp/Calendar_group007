@@ -156,6 +156,9 @@
     <Compile Include="dayPickerDialog.Designer.cs">
       <DependentUpon>dayPickerDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="display.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="google.cs" />
     <Compile Include="Menus.cs">
       <SubType>Form</SubType>
@@ -184,6 +187,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="client_secret.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
