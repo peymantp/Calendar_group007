@@ -51,6 +51,7 @@
             this.buttonPickDay = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.labelDay = new System.Windows.Forms.Label();
             this.tableLayoutPanelMonth.SuspendLayout();
             this.tabPageMonth.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -81,6 +82,7 @@
             resources.ApplyResources(this.dateTimePicker, "dateTimePicker");
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Value = new System.DateTime(2016, 1, 1, 0, 0, 0, 0);
+            this.dateTimePicker.CloseUp += new System.EventHandler(this.dateTimePicker_DatePicked);
             // 
             // tableLayoutPanelMonth
             // 
@@ -161,7 +163,7 @@
             // 
             // tabPageDay
             // 
-            this.tabPageDay.Controls.Add(this.textBoxTest);
+            this.tabPageDay.Controls.Add(this.labelDay);
             resources.ApplyResources(this.tabPageDay, "tabPageDay");
             this.tabPageDay.Name = "tabPageDay";
             this.tabPageDay.UseVisualStyleBackColor = true;
@@ -209,11 +211,17 @@
             resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
+            // labelDay
+            // 
+            resources.ApplyResources(this.labelDay, "labelDay");
+            this.labelDay.Name = "labelDay";
+            // 
             // Menus
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
+            this.Controls.Add(this.textBoxTest);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonPickDay);
             this.Controls.Add(this.dateTimePicker);
@@ -232,6 +240,7 @@
             this.tabPageDay.PerformLayout();
             this.tabPageAgenda.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
         
@@ -259,6 +268,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label labelDay;
     }
 }
 

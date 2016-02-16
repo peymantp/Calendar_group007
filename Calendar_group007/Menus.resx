@@ -148,7 +148,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonExit.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="toolStripTextBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
@@ -175,7 +175,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dateTimePicker.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="tableLayoutPanelMonth.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -477,9 +477,6 @@
   <data name="&gt;&gt;tabPageMonth.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="tabControl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="tabControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
@@ -567,37 +564,34 @@
   <data name="&gt;&gt;tabPageWeek.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="textBoxTest.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="textBoxTest.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="textBoxTest.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="textBoxTest.Multiline" type="System.Boolean, mscorlib">
+  <data name="labelDay.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="textBoxTest.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Vertical</value>
+  <data name="labelDay.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
-  <data name="textBoxTest.Size" type="System.Drawing.Size, System.Drawing">
-    <value>716, 566</value>
+  <data name="labelDay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
   </data>
-  <data name="textBoxTest.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="labelDay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 24</value>
   </data>
-  <data name="&gt;&gt;textBoxTest.Name" xml:space="preserve">
-    <value>textBoxTest</value>
+  <data name="labelDay.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;textBoxTest.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="labelDay.Text" xml:space="preserve">
+    <value>Its not working</value>
   </data>
-  <data name="&gt;&gt;textBoxTest.Parent" xml:space="preserve">
+  <data name="&gt;&gt;labelDay.Name" xml:space="preserve">
+    <value>labelDay</value>
+  </data>
+  <data name="&gt;&gt;labelDay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelDay.Parent" xml:space="preserve">
     <value>tabPageDay</value>
   </data>
-  <data name="&gt;&gt;textBoxTest.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;labelDay.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="tabPageDay.Location" type="System.Drawing.Point, System.Drawing">
@@ -709,7 +703,37 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tabControl.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
+  </data>
+  <data name="textBoxTest.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 153</value>
+  </data>
+  <data name="textBoxTest.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="textBoxTest.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="textBoxTest.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="textBoxTest.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 331</value>
+  </data>
+  <data name="textBoxTest.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;textBoxTest.Name" xml:space="preserve">
+    <value>textBoxTest</value>
+  </data>
+  <data name="&gt;&gt;textBoxTest.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxTest.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBoxTest.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="tableLayoutAgenda.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -730,10 +754,10 @@
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls /&gt;&lt;Columns Styles="" /&gt;&lt;Rows Styles="" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="buttonPickDay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 45</value>
+    <value>13, 56</value>
   </data>
   <data name="buttonPickDay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>75, 21</value>
   </data>
   <data name="buttonPickDay.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -751,10 +775,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonPickDay.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 74</value>
+    <value>12, 83</value>
   </data>
   <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -775,7 +799,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
