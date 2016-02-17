@@ -42,12 +42,12 @@
             this.tabPageMonth = new System.Windows.Forms.TabPage();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageWeek = new System.Windows.Forms.TabPage();
+            this.textBoxTest = new System.Windows.Forms.TextBox();
             this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
             this.tabPageDay = new System.Windows.Forms.TabPage();
             this.labelDay = new System.Windows.Forms.Label();
             this.tabPageAgenda = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.textBoxTest = new System.Windows.Forms.TextBox();
             this.tableLayoutAgenda = new System.Windows.Forms.TableLayoutPanel();
             this.buttonPickDay = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -155,6 +155,13 @@
             this.tabPageWeek.Name = "tabPageWeek";
             this.tabPageWeek.UseVisualStyleBackColor = true;
             // 
+            // textBoxTest
+            // 
+            this.textBoxTest.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            resources.ApplyResources(this.textBoxTest, "textBoxTest");
+            this.textBoxTest.Name = "textBoxTest";
+            this.textBoxTest.ReadOnly = true;
+            // 
             // hScrollBar1
             // 
             resources.ApplyResources(this.hScrollBar1, "hScrollBar1");
@@ -185,13 +192,6 @@
             this.flowLayoutPanel.BackColor = System.Drawing.Color.Gray;
             this.flowLayoutPanel.Name = "flowLayoutPanel";
             // 
-            // textBoxTest
-            // 
-            this.textBoxTest.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            resources.ApplyResources(this.textBoxTest, "textBoxTest");
-            this.textBoxTest.Name = "textBoxTest";
-            this.textBoxTest.ReadOnly = true;
-            // 
             // tableLayoutAgenda
             // 
             resources.ApplyResources(this.tableLayoutAgenda, "tableLayoutAgenda");
@@ -209,6 +209,7 @@
             resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Menus
             // 
@@ -259,7 +260,7 @@
         private System.Windows.Forms.TextBox textBoxTest;
         private System.Windows.Forms.TableLayoutPanel tableLayoutAgenda;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
-        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label labelDay;
     }
 }

@@ -17,6 +17,10 @@ namespace PJCalender
         public Menus()
         {
             InitializeComponent();
+            if (String.IsNullOrEmpty(UserControl.currentUserLoggedIn()))
+                button1.Text = "Login";
+            else
+                button1.Text = "Logout";
             dateTimePicker.Value = DateTime.Now;
             labelDay.Text = DateTime.Now.ToLongDateString();
         }
@@ -93,6 +97,22 @@ namespace PJCalender
             }
             return 0;
         }
-        
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            String type = ((Button)sender).Text;
+            UserControl uc = new UserControl(type, this);
+            if (type.Equals("Login") 
+                && !String.IsNullOrEmpty(UserControl.currentUserLoggedIn()))
+            {
+                button1.Text = "Logout";
+            }
+            else
+            {
+                button1.Text = "Login";
+            }
+
+
+        }
     }
 }

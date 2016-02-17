@@ -26,7 +26,7 @@ namespace PJCalender
             using (var stream = new System.IO.FileStream("client_secret.json", System.IO.FileMode.Open, System.IO.FileAccess.Read))
             {
                 //string credPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-                string credPath = (".credentials/calendar-dotnet-quickstart.json");
+                string credPath = (".credentials/currentUser");
 
                 credential = GoogleWebAuthorizationBroker.AuthorizeAsync(GoogleClientSecrets.Load(stream).Secrets,
                                                                          Scopes,
