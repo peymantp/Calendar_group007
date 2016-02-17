@@ -72,9 +72,13 @@ namespace PJCalender
             }
             catch (System.IndexOutOfRangeException ex)
             {
-                return null;
-                throw ex;
+                MessageBox.Show(ex.ToString(), ex.GetType().ToString());
             }
+            catch(System.IO.DirectoryNotFoundException ex)
+            {
+                MessageBox.Show(ex.ToString(), ex.GetType().ToString());
+            }
+            return "";
         }
     }
 }
