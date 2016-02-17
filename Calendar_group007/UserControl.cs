@@ -67,6 +67,10 @@ namespace PJCalender
             String file;
             try
             {
+                if (!Directory.Exists(@".credentials/currentUser"))
+                {
+                    Directory.CreateDirectory(@".credentials/currentUser");
+                }
                 file = Directory.GetFiles(@".credentials/currentUser", "*")[0];
                 return file.Split('-')[1];
             }

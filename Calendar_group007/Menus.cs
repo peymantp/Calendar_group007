@@ -102,8 +102,7 @@ namespace PJCalender
         {
             String type = ((Button)sender).Text;
             UserControl uc = new UserControl(type, this);
-            if (type.Equals("Login") 
-                && !String.IsNullOrEmpty(UserControl.currentUserLoggedIn()))
+            if (!String.IsNullOrEmpty(UserControl.currentUserLoggedIn()))
             {
                 button1.Text = "Logout";
             }
