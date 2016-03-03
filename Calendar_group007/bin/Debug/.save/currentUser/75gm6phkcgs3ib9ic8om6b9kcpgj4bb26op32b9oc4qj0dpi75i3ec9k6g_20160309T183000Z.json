@@ -1,0 +1,73 @@
+{
+  "anyoneCanAddSelf": null,
+  "attachments": null,
+  "attendees": null,
+  "attendeesOmitted": null,
+  "colorId": null,
+  "created": "2016-01-03T10:57:59.000Z",
+  "creator": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "description": "SE6-205 ",
+  "end": {
+    "date": null,
+    "dateTime": "2016-03-09T11:20:00-08:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "endTimeUnspecified": null,
+  "etag": "\"2903639470807000\"",
+  "extendedProperties": null,
+  "gadget": null,
+  "guestsCanInviteOthers": null,
+  "guestsCanModify": null,
+  "guestsCanSeeOtherGuests": null,
+  "hangoutLink": null,
+  "htmlLink": "https://www.google.com/calendar/event?eid=NzVnbTZwaGtjZ3MzaWI5aWM4b202YjlrY3BnajRiYjI2b3AzMmI5b2M0cWowZHBpNzVpM2VjOWs2Z18yMDE2MDMwOVQxODMwMDBaIHBleW1hbnRwYXJzYUBt",
+  "iCalUID": "75gm6phkcgs3ib9ic8om6b9kcpgj4bb26op32b9oc4qj0dpi75i3ec9k6g@google.com",
+  "id": "75gm6phkcgs3ib9ic8om6b9kcpgj4bb26op32b9oc4qj0dpi75i3ec9k6g_20160309T183000Z",
+  "kind": "calendar#event",
+  "location": null,
+  "locked": null,
+  "organizer": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "originalStartTime": {
+    "date": null,
+    "dateTime": "2016-03-09T10:30:00-08:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "privateCopy": null,
+  "recurrence": null,
+  "recurringEventId": "75gm6phkcgs3ib9ic8om6b9kcpgj4bb26op32b9oc4qj0dpi75i3ec9k6g",
+  "reminders": {
+    "overrides": [
+      {
+        "method": "popup",
+        "minutes": 30,
+        "ETag": null
+      }
+    ],
+    "useDefault": false
+  },
+  "sequence": 0,
+  "source": null,
+  "start": {
+    "date": null,
+    "dateTime": "2016-03-09T10:30:00-08:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "status": "confirmed",
+  "summary": "COMP 3512 OO C++ Lecture ",
+  "transparency": null,
+  "updated": "2016-01-03T11:33:11.291Z",
+  "visibility": null
+}

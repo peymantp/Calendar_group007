@@ -1,0 +1,73 @@
+{
+  "anyoneCanAddSelf": null,
+  "attachments": null,
+  "attendees": null,
+  "attendeesOmitted": null,
+  "colorId": null,
+  "created": "2016-01-03T10:52:25.000Z",
+  "creator": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "description": "SW1-1021",
+  "end": {
+    "date": null,
+    "dateTime": "2016-03-08T15:20:00-08:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "endTimeUnspecified": null,
+  "etag": "\"2903639135758000\"",
+  "extendedProperties": null,
+  "gadget": null,
+  "guestsCanInviteOthers": null,
+  "guestsCanModify": null,
+  "guestsCanSeeOtherGuests": null,
+  "hangoutLink": null,
+  "htmlLink": "https://www.google.com/calendar/event?eid=NmNxMzRvcGtja3NqZ2I5ZzZvcjNpYjlrNjlpMzZiYjJjZ3MzNGI5bmNnb204ZDM1NmNyNjZwMW1jOF8yMDE2MDMwOFQyMjMwMDBaIHBleW1hbnRwYXJzYUBt",
+  "iCalUID": "6cq34opkcksjgb9g6or3ib9k69i36bb2cgs34b9ncgom8d356cr66p1mc8@google.com",
+  "id": "6cq34opkcksjgb9g6or3ib9k69i36bb2cgs34b9ncgom8d356cr66p1mc8_20160308T223000Z",
+  "kind": "calendar#event",
+  "location": null,
+  "locked": null,
+  "organizer": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "originalStartTime": {
+    "date": null,
+    "dateTime": "2016-03-08T14:30:00-08:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "privateCopy": null,
+  "recurrence": null,
+  "recurringEventId": "6cq34opkcksjgb9g6or3ib9k69i36bb2cgs34b9ncgom8d356cr66p1mc8",
+  "reminders": {
+    "overrides": [
+      {
+        "method": "popup",
+        "minutes": 30,
+        "ETag": null
+      }
+    ],
+    "useDefault": false
+  },
+  "sequence": 0,
+  "source": null,
+  "start": {
+    "date": null,
+    "dateTime": "2016-03-08T14:30:00-08:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "status": "confirmed",
+  "summary": "COMP 3721 Intro Data Comm Lecture ",
+  "transparency": null,
+  "updated": "2016-01-03T11:33:10.097Z",
+  "visibility": null
+}

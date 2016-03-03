@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Google.Apis.Calendar.v3.Data;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,9 +11,12 @@ namespace PJCalender
 {
     public partial class Menus
     {
-        public void displayAgenda(Google.Apis.Calendar.v3.Data.Events events)
+        public void displayAgenda()
         {
-            if (events.Items != null && events.Items.Count > 0)
+            ArrayList events = google.readEventLocal();
+            if (events == null)
+                return;
+            if (events.Count > 0)
             {
                 Label label = null;
                 string dayHold = null;
@@ -19,7 +24,7 @@ namespace PJCalender
                 int column = 0;
                 int row = 0;
                 TableLayoutPanel TLA = null;
-                foreach (var eventItem in events.Items)
+                foreach (Event eventItem in events)
                 {
                     if (eventItem.Start.DateTime != null)
                     {

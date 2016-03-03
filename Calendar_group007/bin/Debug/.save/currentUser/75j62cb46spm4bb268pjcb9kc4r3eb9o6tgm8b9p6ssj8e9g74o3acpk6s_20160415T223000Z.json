@@ -1,0 +1,73 @@
+{
+  "anyoneCanAddSelf": null,
+  "attachments": null,
+  "attendees": null,
+  "attendeesOmitted": null,
+  "colorId": null,
+  "created": "2016-01-03T11:24:43.000Z",
+  "creator": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "description": "SE12-320",
+  "end": {
+    "date": null,
+    "dateTime": "2016-04-15T17:20:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "endTimeUnspecified": null,
+  "etag": "\"2903640567579000\"",
+  "extendedProperties": null,
+  "gadget": null,
+  "guestsCanInviteOthers": null,
+  "guestsCanModify": null,
+  "guestsCanSeeOtherGuests": null,
+  "hangoutLink": null,
+  "htmlLink": "https://www.google.com/calendar/event?eid=NzVqNjJjYjQ2c3BtNGJiMjY4cGpjYjlrYzRyM2ViOW82dGdtOGI5cDZzc2o4ZTlnNzRvM2FjcGs2c18yMDE2MDQxNVQyMjMwMDBaIHBleW1hbnRwYXJzYUBt",
+  "iCalUID": "75j62cb46spm4bb268pjcb9kc4r3eb9o6tgm8b9p6ssj8e9g74o3acpk6s@google.com",
+  "id": "75j62cb46spm4bb268pjcb9kc4r3eb9o6tgm8b9p6ssj8e9g74o3acpk6s_20160415T223000Z",
+  "kind": "calendar#event",
+  "location": null,
+  "locked": null,
+  "organizer": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "originalStartTime": {
+    "date": null,
+    "dateTime": "2016-04-15T15:30:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "privateCopy": null,
+  "recurrence": null,
+  "recurringEventId": "75j62cb46spm4bb268pjcb9kc4r3eb9o6tgm8b9p6ssj8e9g74o3acpk6s",
+  "reminders": {
+    "overrides": [
+      {
+        "method": "popup",
+        "minutes": 30,
+        "ETag": null
+      }
+    ],
+    "useDefault": false
+  },
+  "sequence": 0,
+  "source": null,
+  "start": {
+    "date": null,
+    "dateTime": "2016-04-15T15:30:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "status": "confirmed",
+  "summary": "COMP 3512 OO C++ Lab ",
+  "transparency": null,
+  "updated": "2016-01-03T11:24:43.822Z",
+  "visibility": null
+}

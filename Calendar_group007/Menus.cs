@@ -23,7 +23,7 @@ namespace PJCalender
             }
             else {
                 button1.Text = "Logout";
-                //displayAgenda(events);
+                displayAgenda();
             }
             dateTimePicker.Value = DateTime.Now;
             labelDay.Text = DateTime.Now.ToLongDateString();

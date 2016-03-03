@@ -1,0 +1,73 @@
+{
+  "anyoneCanAddSelf": null,
+  "attachments": null,
+  "attendees": null,
+  "attendeesOmitted": null,
+  "colorId": null,
+  "created": "2016-01-03T11:06:56.000Z",
+  "creator": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "description": "SW1-1205\nFarnaz Dargahi ",
+  "end": {
+    "date": null,
+    "dateTime": "2016-03-03T09:20:00-08:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "endTimeUnspecified": null,
+  "etag": "\"2903640132609000\"",
+  "extendedProperties": null,
+  "gadget": null,
+  "guestsCanInviteOthers": null,
+  "guestsCanModify": null,
+  "guestsCanSeeOtherGuests": null,
+  "hangoutLink": null,
+  "htmlLink": "https://www.google.com/calendar/event?eid=NnBpbTZlYjI3MG8zZ2I5a2NjcmpjYjlrNmhoM2liOW9jNHNqZ2JiNWM5aG00Y2oyNjhxM2ljcG02MF8yMDE2MDMwM1QxNjMwMDBaIHBleW1hbnRwYXJzYUBt",
+  "iCalUID": "6pim6eb270o3gb9kccrjcb9k6hh3ib9oc4sjgbb5c9hm4cj268q3icpm60@google.com",
+  "id": "6pim6eb270o3gb9kccrjcb9k6hh3ib9oc4sjgbb5c9hm4cj268q3icpm60_20160303T163000Z",
+  "kind": "calendar#event",
+  "location": null,
+  "locked": null,
+  "organizer": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "originalStartTime": {
+    "date": null,
+    "dateTime": "2016-03-03T08:30:00-08:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "privateCopy": null,
+  "recurrence": null,
+  "recurringEventId": "6pim6eb270o3gb9kccrjcb9k6hh3ib9oc4sjgbb5c9hm4cj268q3icpm60",
+  "reminders": {
+    "overrides": [
+      {
+        "method": "popup",
+        "minutes": 120,
+        "ETag": null
+      }
+    ],
+    "useDefault": false
+  },
+  "sequence": 0,
+  "source": null,
+  "start": {
+    "date": null,
+    "dateTime": "2016-03-03T08:30:00-08:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "status": "confirmed",
+  "summary": "COMP 3760 algorithm lecture ",
+  "transparency": null,
+  "updated": "2016-01-03T11:35:15.604Z",
+  "visibility": null
+}

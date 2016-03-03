@@ -1,0 +1,73 @@
+{
+  "anyoneCanAddSelf": null,
+  "attachments": null,
+  "attendees": null,
+  "attendeesOmitted": null,
+  "colorId": null,
+  "created": "2016-01-03T11:16:06.000Z",
+  "creator": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "description": "SW1-1025",
+  "end": {
+    "date": null,
+    "dateTime": "2016-04-07T14:20:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "endTimeUnspecified": null,
+  "etag": "\"2903639532824000\"",
+  "extendedProperties": null,
+  "gadget": null,
+  "guestsCanInviteOthers": null,
+  "guestsCanModify": null,
+  "guestsCanSeeOtherGuests": null,
+  "hangoutLink": null,
+  "htmlLink": "https://www.google.com/calendar/event?eid=NmtvM2dvOWc3MHIzNGI5aTc1aTNnYjlrY2RpajBiYjFjY3MzOGJiNjZkaGphcDFtY3BobThjMWdjY18yMDE2MDQwN1QyMDMwMDBaIHBleW1hbnRwYXJzYUBt",
+  "iCalUID": "6ko3go9g70r34b9i75i3gb9kcdij0bb1ccs38bb66dhjap1mcphm8c1gcc@google.com",
+  "id": "6ko3go9g70r34b9i75i3gb9kcdij0bb1ccs38bb66dhjap1mcphm8c1gcc_20160407T203000Z",
+  "kind": "calendar#event",
+  "location": null,
+  "locked": null,
+  "organizer": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "originalStartTime": {
+    "date": null,
+    "dateTime": "2016-04-07T13:30:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "privateCopy": null,
+  "recurrence": null,
+  "recurringEventId": "6ko3go9g70r34b9i75i3gb9kcdij0bb1ccs38bb66dhjap1mcphm8c1gcc",
+  "reminders": {
+    "overrides": [
+      {
+        "method": "popup",
+        "minutes": 30,
+        "ETag": null
+      }
+    ],
+    "useDefault": false
+  },
+  "sequence": 0,
+  "source": null,
+  "start": {
+    "date": null,
+    "dateTime": "2016-04-07T13:30:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "status": "confirmed",
+  "summary": "COMP 3512 OO C++ Lecture ",
+  "transparency": null,
+  "updated": "2016-01-03T11:16:06.447Z",
+  "visibility": null
+}

@@ -1,0 +1,67 @@
+{
+  "anyoneCanAddSelf": null,
+  "attachments": null,
+  "attendees": null,
+  "attendeesOmitted": null,
+  "colorId": null,
+  "created": "2016-01-03T11:33:12.000Z",
+  "creator": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "description": "SW3-3615",
+  "end": {
+    "date": null,
+    "dateTime": "2016-04-06T11:20:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "endTimeUnspecified": null,
+  "etag": "\"2903641584926000\"",
+  "extendedProperties": null,
+  "gadget": null,
+  "guestsCanInviteOthers": null,
+  "guestsCanModify": null,
+  "guestsCanSeeOtherGuests": null,
+  "hangoutLink": null,
+  "htmlLink": "https://www.google.com/calendar/event?eid=NjlqM2lwajZja3M2NmI5cGNrcDYyYjlrY2tzM2FiOXBjNHEzaWJiMmNjcDMwYzloY2dzamdjYjVjNF8yMDE2MDQwNlQxNzMwMDBaIHBleW1hbnRwYXJzYUBt",
+  "iCalUID": "69j3ipj6cks66b9pckp62b9kcks3ab9pc4q3ibb2ccp30c9hcgsjgcb5c4@google.com",
+  "id": "69j3ipj6cks66b9pckp62b9kcks3ab9pc4q3ibb2ccp30c9hcgsjgcb5c4_20160406T173000Z",
+  "kind": "calendar#event",
+  "location": null,
+  "locked": null,
+  "organizer": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "originalStartTime": {
+    "date": null,
+    "dateTime": "2016-04-06T10:30:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "privateCopy": null,
+  "recurrence": null,
+  "recurringEventId": "69j3ipj6cks66b9pckp62b9kcks3ab9pc4q3ibb2ccp30c9hcgsjgcb5c4",
+  "reminders": {
+    "overrides": null,
+    "useDefault": true
+  },
+  "sequence": 0,
+  "source": null,
+  "start": {
+    "date": null,
+    "dateTime": "2016-04-06T10:30:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "status": "confirmed",
+  "summary": "COMP 3512 OO C++ Lecture ",
+  "transparency": null,
+  "updated": "2016-01-03T11:33:12.463Z",
+  "visibility": null
+}

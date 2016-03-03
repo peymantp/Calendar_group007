@@ -1,0 +1,73 @@
+{
+  "anyoneCanAddSelf": null,
+  "attachments": null,
+  "attendees": null,
+  "attendeesOmitted": null,
+  "colorId": null,
+  "created": "2016-02-15T17:45:35.000Z",
+  "creator": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "description": null,
+  "end": {
+    "date": "2016-03-06",
+    "dateTime": null,
+    "timeZone": null,
+    "ETag": null
+  },
+  "endTimeUnspecified": null,
+  "etag": "\"2911116670514000\"",
+  "extendedProperties": null,
+  "gadget": null,
+  "guestsCanInviteOthers": null,
+  "guestsCanModify": null,
+  "guestsCanSeeOtherGuests": null,
+  "hangoutLink": null,
+  "htmlLink": "https://www.google.com/calendar/event?eid=NnNvbTRjaGs2NHMzaWJiMmNoZ2o0YjlrNjFoajBiOW82Z28zZWI5b2NjcjMyY3BwNjRybThkajM2YyBwZXltYW50cGFyc2FAbQ",
+  "iCalUID": "6som4chk64s3ibb2chgj4b9k61hj0b9o6go3eb9occr32cpp64rm8dj36c@google.com",
+  "id": "6som4chk64s3ibb2chgj4b9k61hj0b9o6go3eb9occr32cpp64rm8dj36c",
+  "kind": "calendar#event",
+  "location": null,
+  "locked": null,
+  "organizer": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "originalStartTime": null,
+  "privateCopy": null,
+  "recurrence": null,
+  "recurringEventId": null,
+  "reminders": {
+    "overrides": [
+      {
+        "method": "email",
+        "minutes": 430,
+        "ETag": null
+      },
+      {
+        "method": "popup",
+        "minutes": 30,
+        "ETag": null
+      }
+    ],
+    "useDefault": false
+  },
+  "sequence": 0,
+  "source": null,
+  "start": {
+    "date": "2016-03-05",
+    "dateTime": null,
+    "timeZone": null,
+    "ETag": null
+  },
+  "status": "confirmed",
+  "summary": "Ronin bday party",
+  "transparency": "transparent",
+  "updated": "2016-02-15T17:45:35.379Z",
+  "visibility": null
+}

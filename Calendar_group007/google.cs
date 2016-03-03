@@ -9,6 +9,8 @@ using Google.Apis.Calendar.v3.Data;
 using Google.Apis.Services;
 using Google.Apis.Util.Store;
 using Newtonsoft.Json;
+using System.IO;
+using System.Collections;
 
 namespace PJCalender
 {
@@ -19,7 +21,7 @@ namespace PJCalender
         // at ~/.credentials/calendar-dotnet-quickstart.json
         static string[] Scopes = { CalendarService.Scope.CalendarReadonly };
         static string ApplicationName = "Google Calendar API .NET Quickstart";
-        
+
         public google(Menus form, string user)
         {
             UserCredential credential;
@@ -50,39 +52,69 @@ namespace PJCalender
                 request.TimeMax = DateTime.Now.AddYears(1); //todo change number to 20
                 request.OrderBy = EventsResource.ListRequest.OrderByEnum.StartTime;
 
-                string path = ".save/" + user + ".json";
                 try
                 {
                     Events events = request.Execute();
-
-                    //
-                    if (!System.IO.Directory.Exists(".save"))
-                    {
-                        System.IO.Directory.CreateDirectory(".save");
-                        System.IO.StreamWriter file = new System.IO.StreamWriter(path);
-                        foreach (var eventItem in events.Items)
-                        {
-                            string json = JsonConvert.SerializeObject(eventItem);
-                            file.WriteLine(json);
-                        }
-                        file.Close();
-                    }
-                    else {
-                        System.IO.StreamWriter file = new System.IO.StreamWriter(path);
-                        foreach (var eventItem in events.Items)
-                        {
-                            string json = JsonConvert.SerializeObject(eventItem);
-                            file.WriteLine(json);
-                        }
-                        file.Close();
-                    }
-                    //
-
-                    form.displayAgenda(events);
-                }   
+                    saveEventLocal(events);
+                    form.displayAgenda();
+                }
                 catch (System.Net.Http.HttpRequestException requestEx)
                 {
                     System.Windows.Forms.MessageBox.Show(requestEx.ToString(), requestEx.GetType().ToString());
+                }
+            }
+        }
+
+        static public ArrayList readEventLocal()
+        {
+            ArrayList events = new ArrayList();
+            if (!System.IO.Directory.Exists(".save/currentUser"))
+                return null;
+            string[] files = Directory.GetFiles(@".save/currentUser", "*");
+            foreach (String fileName in files)
+            {
+               using(StreamReader file = File.OpenText(fileName))
+                {
+                    JsonSerializer serializer = new JsonSerializer();
+                    Event calEvent = (Event)serializer.Deserialize(file,typeof(Event));
+                    events.Add(calEvent);
+                }
+            }
+            return events;
+        }
+
+        void saveEventLocal(Events events)
+        {
+            if (!System.IO.Directory.Exists(".save/currentUser"))
+                System.IO.Directory.CreateDirectory(".save/currentUser");
+
+            foreach (var eventItem in events.Items)
+            {
+                try
+                {
+                    System.IO.StreamWriter file = new System.IO.StreamWriter(".save/currentUser/" + eventItem.Id + ".json");
+                    string json = JsonConvert.SerializeObject(eventItem, Formatting.Indented);
+                    file.WriteLine(json);
+                    try
+                    {
+                        file.Close();
+                    }
+                    catch (EncoderFallbackException fallback)
+                    {
+                        System.Windows.Forms.MessageBox.Show(fallback.ToString(), fallback.GetType().ToString());
+                    }
+                }
+                catch (System.IO.DirectoryNotFoundException e)
+                {
+                    System.Windows.Forms.MessageBox.Show(e.ToString(), e.GetType().ToString());
+                }
+                catch (System.IO.IOException e)
+                {
+                    System.Windows.Forms.MessageBox.Show(e.ToString(), e.GetType().ToString());
+                }
+                catch (System.Security.SecurityException e)
+                {
+                    System.Windows.Forms.MessageBox.Show(e.ToString(), e.GetType().ToString());
                 }
             }
         }

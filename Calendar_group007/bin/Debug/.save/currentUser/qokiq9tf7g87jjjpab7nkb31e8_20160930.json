@@ -1,0 +1,102 @@
+{
+  "anyoneCanAddSelf": null,
+  "attachments": null,
+  "attendees": [
+    {
+      "additionalGuests": null,
+      "comment": null,
+      "displayName": "Peyman Parsa",
+      "email": "peymantparsa@gmail.com",
+      "id": null,
+      "optional": null,
+      "organizer": true,
+      "resource": null,
+      "responseStatus": "accepted",
+      "self": true,
+      "ETag": null
+    }
+  ],
+  "attendeesOmitted": null,
+  "colorId": null,
+  "created": "2013-06-13T03:43:02.000Z",
+  "creator": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "description": null,
+  "end": {
+    "date": "2016-10-01",
+    "dateTime": null,
+    "timeZone": null,
+    "ETag": null
+  },
+  "endTimeUnspecified": null,
+  "etag": "\"2742189965117000\"",
+  "extendedProperties": null,
+  "gadget": null,
+  "guestsCanInviteOthers": null,
+  "guestsCanModify": null,
+  "guestsCanSeeOtherGuests": null,
+  "hangoutLink": null,
+  "htmlLink": "https://www.google.com/calendar/event?eid=cW9raXE5dGY3Zzg3ampqcGFiN25rYjMxZThfMjAxNjA5MzAgcGV5bWFudHBhcnNhQG0",
+  "iCalUID": "qokiq9tf7g87jjjpab7nkb31e8@google.com",
+  "id": "qokiq9tf7g87jjjpab7nkb31e8_20160930",
+  "kind": "calendar#event",
+  "location": null,
+  "locked": null,
+  "organizer": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "originalStartTime": {
+    "date": "2016-09-30",
+    "dateTime": null,
+    "timeZone": null,
+    "ETag": null
+  },
+  "privateCopy": null,
+  "recurrence": null,
+  "recurringEventId": "qokiq9tf7g87jjjpab7nkb31e8",
+  "reminders": {
+    "overrides": [
+      {
+        "method": "popup",
+        "minutes": 2880,
+        "ETag": null
+      },
+      {
+        "method": "email",
+        "minutes": 2880,
+        "ETag": null
+      },
+      {
+        "method": "popup",
+        "minutes": 10080,
+        "ETag": null
+      },
+      {
+        "method": "email",
+        "minutes": 10080,
+        "ETag": null
+      }
+    ],
+    "useDefault": false
+  },
+  "sequence": 1,
+  "source": null,
+  "start": {
+    "date": "2016-09-30",
+    "dateTime": null,
+    "timeZone": null,
+    "ETag": null
+  },
+  "status": "tentative",
+  "summary": "Tom",
+  "transparency": null,
+  "updated": "2013-06-13T03:43:02.608Z",
+  "visibility": null
+}

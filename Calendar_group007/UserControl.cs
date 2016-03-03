@@ -16,6 +16,8 @@ namespace PJCalender
             //currentUserLoggedIn();
             if (type.Equals("Login"))
             {
+                if (!System.IO.Directory.Exists(".credentials/.archived.users"))
+                    System.IO.Directory.CreateDirectory(".credentials/.archived.users");
                 string[] files = Directory.GetFiles(@".credentials/.archived.users", "*");
 
                 UsernameDialog login = new UsernameDialog(mainForm);

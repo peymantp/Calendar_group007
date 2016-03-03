@@ -1,0 +1,73 @@
+{
+  "anyoneCanAddSelf": null,
+  "attachments": null,
+  "attendees": null,
+  "attendeesOmitted": null,
+  "colorId": null,
+  "created": "2016-01-19T18:59:10.000Z",
+  "creator": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "description": null,
+  "end": {
+    "date": null,
+    "dateTime": "2016-04-06T14:00:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "endTimeUnspecified": null,
+  "etag": "\"2907679112636000\"",
+  "extendedProperties": null,
+  "gadget": null,
+  "guestsCanInviteOthers": null,
+  "guestsCanModify": null,
+  "guestsCanSeeOtherGuests": null,
+  "hangoutLink": null,
+  "htmlLink": "https://www.google.com/calendar/event?eid=Y2dzbTRjOW82dGdqZWJiNWNoaTY2YjlrNnNvMzBiOW82cGkzZ2I5aWNrcm00cDlwY2NwbThkaGhjNF8yMDE2MDQwNlQyMDAwMDBaIHBleW1hbnRwYXJzYUBt",
+  "iCalUID": "cgsm4c9o6tgjebb5chi66b9k6so30b9o6pi3gb9ickrm4p9pccpm8dhhc4@google.com",
+  "id": "cgsm4c9o6tgjebb5chi66b9k6so30b9o6pi3gb9ickrm4p9pccpm8dhhc4_20160406T200000Z",
+  "kind": "calendar#event",
+  "location": null,
+  "locked": null,
+  "organizer": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "originalStartTime": {
+    "date": null,
+    "dateTime": "2016-04-06T13:00:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "privateCopy": null,
+  "recurrence": null,
+  "recurringEventId": "cgsm4c9o6tgjebb5chi66b9k6so30b9o6pi3gb9ickrm4p9pccpm8dhhc4",
+  "reminders": {
+    "overrides": [
+      {
+        "method": "popup",
+        "minutes": 30,
+        "ETag": null
+      }
+    ],
+    "useDefault": false
+  },
+  "sequence": 0,
+  "source": null,
+  "start": {
+    "date": null,
+    "dateTime": "2016-04-06T13:00:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "status": "confirmed",
+  "summary": "Meeting ",
+  "transparency": null,
+  "updated": "2016-02-02T21:39:21.897Z",
+  "visibility": null
+}
