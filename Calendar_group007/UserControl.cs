@@ -42,7 +42,6 @@ namespace PJCalender
                     {
                         new google(mainForm, userLoggedIn);
                     }
-                    
                 }
 
                 type = "Logout";
@@ -67,22 +66,26 @@ namespace PJCalender
             String file;
             try
             {
-                if (!Directory.Exists(@".credentials/currentUser"))
+                if (!Directory.Exists(".credentials/currentUser"))
                 {
-                    Directory.CreateDirectory(@".credentials/currentUser");
+                    Directory.CreateDirectory(".credentials/currentUser");
+                    return null;
                 }
-                file = Directory.GetFiles(@".credentials/currentUser", "*")[0];
-                return file.Split('-')[1];
+                else {
+                    file = Directory.GetFiles(".credentials/currentUser", "*")[0];
+
+                    return file.Split('-')[1];
+                }
             }
             catch (System.IndexOutOfRangeException ex)
             {
-                MessageBox.Show(ex.ToString(), ex.GetType().ToString());
+               // MessageBox.Show(ex.ToString(), ex.GetType().ToString());
             }
             catch(System.IO.DirectoryNotFoundException ex)
             {
                 MessageBox.Show(ex.ToString(), ex.GetType().ToString());
             }
-            return "";
+            return null;
         }
     }
 }

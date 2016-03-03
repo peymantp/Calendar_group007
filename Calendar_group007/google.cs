@@ -8,6 +8,7 @@ using Google.Apis.Calendar.v3;
 using Google.Apis.Calendar.v3.Data;
 using Google.Apis.Services;
 using Google.Apis.Util.Store;
+using Newtonsoft.Json;
 
 namespace PJCalender
 {
@@ -46,12 +47,37 @@ namespace PJCalender
                 request.TimeMin = DateTime.Now;
                 request.ShowDeleted = false;
                 request.SingleEvents = true;
-                request.MaxResults = 30;
+                request.TimeMax = DateTime.Now.AddYears(1); //todo change number to 20
                 request.OrderBy = EventsResource.ListRequest.OrderByEnum.StartTime;
+
+                string path = ".save/" + user + ".json";
                 try
                 {
-                    // List events.s
                     Events events = request.Execute();
+
+                    //
+                    if (!System.IO.Directory.Exists(".save"))
+                    {
+                        System.IO.Directory.CreateDirectory(".save");
+                        System.IO.StreamWriter file = new System.IO.StreamWriter(path);
+                        foreach (var eventItem in events.Items)
+                        {
+                            string json = JsonConvert.SerializeObject(eventItem);
+                            file.WriteLine(json);
+                        }
+                        file.Close();
+                    }
+                    else {
+                        System.IO.StreamWriter file = new System.IO.StreamWriter(path);
+                        foreach (var eventItem in events.Items)
+                        {
+                            string json = JsonConvert.SerializeObject(eventItem);
+                            file.WriteLine(json);
+                        }
+                        file.Close();
+                    }
+                    //
+
                     form.displayAgenda(events);
                 }   
                 catch (System.Net.Http.HttpRequestException requestEx)
@@ -59,8 +85,6 @@ namespace PJCalender
                     System.Windows.Forms.MessageBox.Show(requestEx.ToString(), requestEx.GetType().ToString());
                 }
             }
-
-
         }
     }
 }

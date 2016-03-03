@@ -18,11 +18,16 @@ namespace PJCalender
         {
             InitializeComponent();
             if (String.IsNullOrEmpty(UserControl.currentUserLoggedIn()))
+            {
                 button1.Text = "Login";
-            else
+            }
+            else {
                 button1.Text = "Logout";
+                //displayAgenda(events);
+            }
             dateTimePicker.Value = DateTime.Now;
             labelDay.Text = DateTime.Now.ToLongDateString();
+                
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
@@ -70,7 +75,7 @@ namespace PJCalender
             {
                 case 1: //January
                     return 31;
-                case 2: // Februrary
+                case 2: // February
                     if (DateTime.IsLeapYear(date.Year))
                         return 29;
                     return 28;
@@ -84,7 +89,7 @@ namespace PJCalender
                     return 30;
                 case 7:     //July
                     return 31;
-                case 8:     //Augest
+                case 8:     //August
                     return 31;
                 case 9:     //September
                     return 30;
