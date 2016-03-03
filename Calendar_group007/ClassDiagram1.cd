@@ -1,2 +1,58 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PJCalender.dayPickerDialog">
+    <Position X="2" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABACAAAAAAAACAAAACAAAAAAAAEAAACAAAAAA=</HashCode>
+      <FileName>dayPickerDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PJCalender.Menus" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAgAAYiAABCQCJgCEAIACIAIIACBghECEBAAAAAE=</HashCode>
+      <FileName>display.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PJCalender.google">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAEACAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>google.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PJCalender.Program" Collapsed="true">
+    <Position X="5.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PJCalender.User">
+    <Position X="3.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PJCalender.UsernameDialog" Collapsed="true">
+    <Position X="5.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAECAAAYAAAQEGAAAAAAAAA=</HashCode>
+      <FileName>UsernameDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PJCalender.Properties.Resources">
+    <Position X="2" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PJCalender.Properties.Settings" Collapsed="true">
+    <Position X="5.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

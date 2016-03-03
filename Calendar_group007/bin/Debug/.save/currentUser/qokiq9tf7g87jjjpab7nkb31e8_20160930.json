@@ -74,12 +74,12 @@
         "ETag": null
       },
       {
-        "method": "popup",
+        "method": "email",
         "minutes": 10080,
         "ETag": null
       },
       {
-        "method": "email",
+        "method": "popup",
         "minutes": 10080,
         "ETag": null
       }

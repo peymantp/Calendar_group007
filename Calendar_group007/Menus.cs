@@ -17,7 +17,7 @@ namespace PJCalender
         public Menus()
         {
             InitializeComponent();
-            if (String.IsNullOrEmpty(UserControl.currentUserLoggedIn()))
+            if (String.IsNullOrEmpty(User.currentUserLoggedIn()))
             {
                 button1.Text = "Login";
             }
@@ -106,8 +106,8 @@ namespace PJCalender
         private void button1_Click(object sender, EventArgs e)
         {
             String type = ((Button)sender).Text;
-            UserControl uc = new UserControl(type, this);
-            if (!String.IsNullOrEmpty(UserControl.currentUserLoggedIn()))
+            User uc = new User(type, this);
+            if (!String.IsNullOrEmpty(User.currentUserLoggedIn()))
             {
                 button1.Text = "Logout";
             }
