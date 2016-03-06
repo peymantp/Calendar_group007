@@ -101,9 +101,6 @@ namespace PJCalender
                             TLA.Controls.Add(label, column++, row);
 
                         }
-
-                        textBoxTest.Text += eventItem.Summary + " at " + startTime + " ends " +
-                            endTime + nl + "  " + discription + nl;
                         //store day of last event
                         dayHold = startDay;
                     }
@@ -117,21 +114,14 @@ namespace PJCalender
                         //only print each day once
                         if (!String.Equals(dayHold, startDay))
                         {
-                            textBoxTest.Text += nl + startDay + nl;
                             label = new Label();
                             label.Text = startDay;
                             label.Width = 700;
                             flowLayoutPanel.Controls.Add(label);
                         }
-                        textBoxTest.Text += eventItem.Summary + "endDay: " + endDay + nl
-                                         + "   " + discription + nl;
                         dayHold = startDay;
                     }
                 }
-            }
-            else
-            {
-                textBoxTest.Text += Environment.NewLine + "No upcoming events found.";
             }
         }
     }

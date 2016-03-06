@@ -55,7 +55,8 @@ namespace PJCalender
                 try
                 {
                     Events events = request.Execute();
-                    saveEventLocal(events);
+                    System.Threading.Thread tread = new System.Threading.Thread(new System.Threading.ThreadStart(saveEventLocal));
+                    //tread.Start(saveEventLocal(events));
                     form.displayAgenda();
                 }
                 catch (System.Net.Http.HttpRequestException requestEx)
@@ -83,11 +84,12 @@ namespace PJCalender
             return events;
         }
 
-        void saveEventLocal(Events events)
+        public static void saveEventLocal(object e)
         {
             if (!System.IO.Directory.Exists(".save/currentUser"))
                 System.IO.Directory.CreateDirectory(".save/currentUser");
 
+            Events events = (Events)e;
             foreach (var eventItem in events.Items)
             {
                 try
