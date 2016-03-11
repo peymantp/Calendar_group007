@@ -1,0 +1,73 @@
+{
+  "anyoneCanAddSelf": null,
+  "attachments": null,
+  "attendees": null,
+  "attendeesOmitted": null,
+  "colorId": null,
+  "created": "2016-01-03T11:18:50.000Z",
+  "creator": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "description": "SE12-327 3051*",
+  "end": {
+    "date": null,
+    "dateTime": "2016-04-22T10:20:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "endTimeUnspecified": null,
+  "etag": "\"2903845835651000\"",
+  "extendedProperties": null,
+  "gadget": null,
+  "guestsCanInviteOthers": null,
+  "guestsCanModify": null,
+  "guestsCanSeeOtherGuests": null,
+  "hangoutLink": null,
+  "htmlLink": "https://www.google.com/calendar/event?eid=NjlnbTZvcjE2cGgzOGI5Z2NwaGo2YjlrNmNxamViOXA2MHFqMGI5bTZwaW1jcGIxY2dwbTRkcjY2Y18yMDE2MDQyMlQxNTMwMDBaIHBleW1hbnRwYXJzYUBt",
+  "iCalUID": "69gm6or16ph38b9gcphj6b9k6cqjeb9p60qj0b9m6pimcpb1cgpm4dr66c@google.com",
+  "id": "69gm6or16ph38b9gcphj6b9k6cqjeb9p60qj0b9m6pimcpb1cgpm4dr66c_20160422T153000Z",
+  "kind": "calendar#event",
+  "location": null,
+  "locked": null,
+  "organizer": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "originalStartTime": {
+    "date": null,
+    "dateTime": "2016-04-22T08:30:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "privateCopy": null,
+  "recurrence": null,
+  "recurringEventId": "69gm6or16ph38b9gcphj6b9k6cqjeb9p60qj0b9m6pimcpb1cgpm4dr66c",
+  "reminders": {
+    "overrides": [
+      {
+        "method": "popup",
+        "minutes": 120,
+        "ETag": null
+      }
+    ],
+    "useDefault": false
+  },
+  "sequence": 0,
+  "source": null,
+  "start": {
+    "date": null,
+    "dateTime": "2016-04-22T08:30:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "status": "confirmed",
+  "summary": "COMP 3717 Android Dev Lab ",
+  "transparency": null,
+  "updated": "2016-01-05T20:31:44.983Z",
+  "visibility": null
+}

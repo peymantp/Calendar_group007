@@ -1,0 +1,73 @@
+{
+  "anyoneCanAddSelf": null,
+  "attachments": null,
+  "attendees": null,
+  "attendeesOmitted": null,
+  "colorId": null,
+  "created": "2016-01-03T11:04:40.000Z",
+  "creator": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "description": "SE12-327 3051*",
+  "end": {
+    "date": null,
+    "dateTime": "2016-04-21T11:20:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "endTimeUnspecified": null,
+  "etag": "\"2904006895368000\"",
+  "extendedProperties": null,
+  "gadget": null,
+  "guestsCanInviteOthers": null,
+  "guestsCanModify": null,
+  "guestsCanSeeOtherGuests": null,
+  "hangoutLink": null,
+  "htmlLink": "https://www.google.com/calendar/event?eid=Nm9wajRkMWpjY3FtY2I5Zzc0cGpnYjlrYzhxbThiOW9jOWhqMGI5ajZncmo4b3I1YzhyM2dwajU2a18yMDE2MDQyMVQxNjMwMDBaIHBleW1hbnRwYXJzYUBt",
+  "iCalUID": "6opj4d1jccqmcb9g74pjgb9kc8qm8b9oc9hj0b9j6grj8or5c8r3gpj56k@google.com",
+  "id": "6opj4d1jccqmcb9g74pjgb9kc8qm8b9oc9hj0b9j6grj8or5c8r3gpj56k_20160421T163000Z",
+  "kind": "calendar#event",
+  "location": null,
+  "locked": null,
+  "organizer": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "originalStartTime": {
+    "date": null,
+    "dateTime": "2016-04-21T09:30:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "privateCopy": null,
+  "recurrence": null,
+  "recurringEventId": "6opj4d1jccqmcb9g74pjgb9kc8qm8b9oc9hj0b9j6grj8or5c8r3gpj56k",
+  "reminders": {
+    "overrides": [
+      {
+        "method": "popup",
+        "minutes": 30,
+        "ETag": null
+      }
+    ],
+    "useDefault": false
+  },
+  "sequence": 0,
+  "source": null,
+  "start": {
+    "date": null,
+    "dateTime": "2016-04-21T09:30:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "status": "confirmed",
+  "summary": "COMP 3951 Technical Programing Lab ",
+  "transparency": null,
+  "updated": "2016-01-07T17:30:15.092Z",
+  "visibility": null
+}

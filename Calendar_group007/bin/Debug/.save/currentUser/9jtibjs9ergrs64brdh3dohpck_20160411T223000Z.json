@@ -1,0 +1,73 @@
+{
+  "anyoneCanAddSelf": null,
+  "attachments": null,
+  "attendees": null,
+  "attendeesOmitted": null,
+  "colorId": null,
+  "created": "2016-01-03T10:17:09.000Z",
+  "creator": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "description": "SW3-1750",
+  "end": {
+    "date": null,
+    "dateTime": "2016-04-11T17:20:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "endTimeUnspecified": null,
+  "etag": "\"2903636418018000\"",
+  "extendedProperties": null,
+  "gadget": null,
+  "guestsCanInviteOthers": null,
+  "guestsCanModify": null,
+  "guestsCanSeeOtherGuests": null,
+  "hangoutLink": null,
+  "htmlLink": "https://www.google.com/calendar/event?eid=OWp0aWJqczllcmdyczY0YnJkaDNkb2hwY2tfMjAxNjA0MTFUMjIzMDAwWiBwZXltYW50cGFyc2FAbQ",
+  "iCalUID": "9jtibjs9ergrs64brdh3dohpck@google.com",
+  "id": "9jtibjs9ergrs64brdh3dohpck_20160411T223000Z",
+  "kind": "calendar#event",
+  "location": null,
+  "locked": null,
+  "organizer": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "originalStartTime": {
+    "date": null,
+    "dateTime": "2016-04-11T15:30:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "privateCopy": null,
+  "recurrence": null,
+  "recurringEventId": "9jtibjs9ergrs64brdh3dohpck",
+  "reminders": {
+    "overrides": [
+      {
+        "method": "popup",
+        "minutes": 30,
+        "ETag": null
+      }
+    ],
+    "useDefault": false
+  },
+  "sequence": 2,
+  "source": null,
+  "start": {
+    "date": null,
+    "dateTime": "2016-04-11T15:30:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "status": "confirmed",
+  "summary": "COMP 3721 Intro Data Comm Lecture ",
+  "transparency": null,
+  "updated": "2016-01-03T11:00:36.193Z",
+  "visibility": null
+}

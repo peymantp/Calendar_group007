@@ -1,0 +1,67 @@
+{
+  "anyoneCanAddSelf": null,
+  "attachments": null,
+  "attendees": null,
+  "attendeesOmitted": null,
+  "colorId": null,
+  "created": "2016-01-03T11:32:03.000Z",
+  "creator": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "description": "SE6-207 ",
+  "end": {
+    "date": null,
+    "dateTime": "2016-04-05T11:20:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "endTimeUnspecified": null,
+  "etag": "\"2903641447002000\"",
+  "extendedProperties": null,
+  "gadget": null,
+  "guestsCanInviteOthers": null,
+  "guestsCanModify": null,
+  "guestsCanSeeOtherGuests": null,
+  "hangoutLink": null,
+  "htmlLink": "https://www.google.com/calendar/event?eid=YzRyM2NkOWs2aGozOGI5cGNvczY2YjlrY2NvM2NiOXA2a3BtNGJiMjZjcDNlY2hrYzRzamFvcjJjb18yMDE2MDQwNVQxNzMwMDBaIHBleW1hbnRwYXJzYUBt",
+  "iCalUID": "c4r3cd9k6hj38b9pcos66b9kcco3cb9p6kpm4bb26cp3echkc4sjaor2co@google.com",
+  "id": "c4r3cd9k6hj38b9pcos66b9kcco3cb9p6kpm4bb26cp3echkc4sjaor2co_20160405T173000Z",
+  "kind": "calendar#event",
+  "location": null,
+  "locked": null,
+  "organizer": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "originalStartTime": {
+    "date": null,
+    "dateTime": "2016-04-05T10:30:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "privateCopy": null,
+  "recurrence": null,
+  "recurringEventId": "c4r3cd9k6hj38b9pcos66b9kcco3cb9p6kpm4bb26cp3echkc4sjaor2co",
+  "reminders": {
+    "overrides": null,
+    "useDefault": true
+  },
+  "sequence": 0,
+  "source": null,
+  "start": {
+    "date": null,
+    "dateTime": "2016-04-05T10:30:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "status": "confirmed",
+  "summary": "COMP 3717 Android Dev Lecture ",
+  "transparency": null,
+  "updated": "2016-01-03T11:32:03.501Z",
+  "visibility": null
+}

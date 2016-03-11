@@ -1,0 +1,102 @@
+{
+  "anyoneCanAddSelf": null,
+  "attachments": null,
+  "attendees": [
+    {
+      "additionalGuests": null,
+      "comment": null,
+      "displayName": "Peyman Parsa",
+      "email": "peymantparsa@gmail.com",
+      "id": null,
+      "optional": null,
+      "organizer": true,
+      "resource": null,
+      "responseStatus": "accepted",
+      "self": true,
+      "ETag": null
+    }
+  ],
+  "attendeesOmitted": null,
+  "colorId": null,
+  "created": "2013-06-13T03:43:10.000Z",
+  "creator": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "description": null,
+  "end": {
+    "date": "2016-05-05",
+    "dateTime": null,
+    "timeZone": null,
+    "ETag": null
+  },
+  "endTimeUnspecified": null,
+  "etag": "\"2801798905291000\"",
+  "extendedProperties": null,
+  "gadget": null,
+  "guestsCanInviteOthers": null,
+  "guestsCanModify": null,
+  "guestsCanSeeOtherGuests": null,
+  "hangoutLink": null,
+  "htmlLink": "https://www.google.com/calendar/event?eid=Y2c0anRnc2hsdmUxajFnZnVhanZpZWZjZGtfMjAxNjA1MDQgcGV5bWFudHBhcnNhQG0",
+  "iCalUID": "cg4jtgshlve1j1gfuajviefcdk@google.com",
+  "id": "cg4jtgshlve1j1gfuajviefcdk_20160504",
+  "kind": "calendar#event",
+  "location": null,
+  "locked": null,
+  "organizer": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "originalStartTime": {
+    "date": "2016-05-04",
+    "dateTime": null,
+    "timeZone": null,
+    "ETag": null
+  },
+  "privateCopy": null,
+  "recurrence": null,
+  "recurringEventId": "cg4jtgshlve1j1gfuajviefcdk",
+  "reminders": {
+    "overrides": [
+      {
+        "method": "email",
+        "minutes": 2880,
+        "ETag": null
+      },
+      {
+        "method": "popup",
+        "minutes": 2880,
+        "ETag": null
+      },
+      {
+        "method": "email",
+        "minutes": 10080,
+        "ETag": null
+      },
+      {
+        "method": "popup",
+        "minutes": 10080,
+        "ETag": null
+      }
+    ],
+    "useDefault": false
+  },
+  "sequence": 2,
+  "source": null,
+  "start": {
+    "date": "2016-05-04",
+    "dateTime": null,
+    "timeZone": null,
+    "ETag": null
+  },
+  "status": "tentative",
+  "summary": "Adrian bday",
+  "transparency": null,
+  "updated": "2015-05-04T01:45:15.046Z",
+  "visibility": null
+}

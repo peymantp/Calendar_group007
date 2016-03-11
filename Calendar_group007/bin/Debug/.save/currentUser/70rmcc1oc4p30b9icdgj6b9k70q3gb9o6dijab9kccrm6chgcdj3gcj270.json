@@ -1,0 +1,73 @@
+{
+  "anyoneCanAddSelf": null,
+  "attachments": null,
+  "attendees": null,
+  "attendeesOmitted": null,
+  "colorId": "6",
+  "created": "2016-02-25T03:33:07.000Z",
+  "creator": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "description": null,
+  "end": {
+    "date": "2016-03-21",
+    "dateTime": null,
+    "timeZone": null,
+    "ETag": null
+  },
+  "endTimeUnspecified": null,
+  "etag": "\"2912742375160000\"",
+  "extendedProperties": null,
+  "gadget": null,
+  "guestsCanInviteOthers": null,
+  "guestsCanModify": null,
+  "guestsCanSeeOtherGuests": null,
+  "hangoutLink": null,
+  "htmlLink": "https://www.google.com/calendar/event?eid=NzBybWNjMW9jNHAzMGI5aWNkZ2o2YjlrNzBxM2diOW82ZGlqYWI5a2Njcm02Y2hnY2RqM2djajI3MCBwZXltYW50cGFyc2FAbQ",
+  "iCalUID": "70rmcc1oc4p30b9icdgj6b9k70q3gb9o6dijab9kccrm6chgcdj3gcj270@google.com",
+  "id": "70rmcc1oc4p30b9icdgj6b9k70q3gb9o6dijab9kccrm6chgcdj3gcj270",
+  "kind": "calendar#event",
+  "location": null,
+  "locked": null,
+  "organizer": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "originalStartTime": null,
+  "privateCopy": null,
+  "recurrence": null,
+  "recurringEventId": null,
+  "reminders": {
+    "overrides": [
+      {
+        "method": "email",
+        "minutes": 430,
+        "ETag": null
+      },
+      {
+        "method": "popup",
+        "minutes": 30,
+        "ETag": null
+      }
+    ],
+    "useDefault": false
+  },
+  "sequence": 0,
+  "source": null,
+  "start": {
+    "date": "2016-03-20",
+    "dateTime": null,
+    "timeZone": null,
+    "ETag": null
+  },
+  "status": "confirmed",
+  "summary": "Cancel Spotify",
+  "transparency": "transparent",
+  "updated": "2016-02-25T03:33:07.617Z",
+  "visibility": null
+}

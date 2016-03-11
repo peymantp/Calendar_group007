@@ -55,8 +55,7 @@ namespace PJCalender
                 try
                 {
                     Events events = request.Execute();
-                    System.Threading.Thread tread = new System.Threading.Thread(new System.Threading.ThreadStart(saveEventLocal));
-                    //tread.Start(saveEventLocal(events));
+                    saveEventLocal(events);
                     form.displayAgenda();
                 }
                 catch (System.Net.Http.HttpRequestException requestEx)
@@ -84,12 +83,11 @@ namespace PJCalender
             return events;
         }
 
-        public static void saveEventLocal(object e)
+        public static void saveEventLocal(Events events)
         {
             if (!System.IO.Directory.Exists(".save/currentUser"))
                 System.IO.Directory.CreateDirectory(".save/currentUser");
 
-            Events events = (Events)e;
             foreach (var eventItem in events.Items)
             {
                 try
@@ -106,17 +104,17 @@ namespace PJCalender
                         System.Windows.Forms.MessageBox.Show(fallback.ToString(), fallback.GetType().ToString());
                     }
                 }
-                catch (System.IO.DirectoryNotFoundException e)
+                catch (System.IO.DirectoryNotFoundException ex)
                 {
-                    System.Windows.Forms.MessageBox.Show(e.ToString(), e.GetType().ToString());
+                    System.Windows.Forms.MessageBox.Show(ex.ToString(), ex.GetType().ToString());
                 }
-                catch (System.IO.IOException e)
+                catch (System.IO.IOException ex)
                 {
-                    System.Windows.Forms.MessageBox.Show(e.ToString(), e.GetType().ToString());
+                    System.Windows.Forms.MessageBox.Show(ex.ToString(), ex.GetType().ToString());
                 }
-                catch (System.Security.SecurityException e)
+                catch (System.Security.SecurityException ex)
                 {
-                    System.Windows.Forms.MessageBox.Show(e.ToString(), e.GetType().ToString());
+                    System.Windows.Forms.MessageBox.Show(ex.ToString(), ex.GetType().ToString());
                 }
             }
         }

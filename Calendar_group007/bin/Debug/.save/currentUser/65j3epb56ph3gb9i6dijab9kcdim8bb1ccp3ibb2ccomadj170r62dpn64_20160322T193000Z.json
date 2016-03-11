@@ -1,0 +1,73 @@
+{
+  "anyoneCanAddSelf": null,
+  "attachments": null,
+  "attendees": null,
+  "attendeesOmitted": null,
+  "colorId": null,
+  "created": "2016-01-03T10:39:43.000Z",
+  "creator": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "description": "SE12-327 3051*",
+  "end": {
+    "date": null,
+    "dateTime": "2016-03-22T14:20:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "endTimeUnspecified": null,
+  "etag": "\"2903843412134000\"",
+  "extendedProperties": null,
+  "gadget": null,
+  "guestsCanInviteOthers": null,
+  "guestsCanModify": null,
+  "guestsCanSeeOtherGuests": null,
+  "hangoutLink": null,
+  "htmlLink": "https://www.google.com/calendar/event?eid=NjVqM2VwYjU2cGgzZ2I5aTZkaWphYjlrY2RpbThiYjFjY3AzaWJiMmNjb21hZGoxNzByNjJkcG42NF8yMDE2MDMyMlQxOTMwMDBaIHBleW1hbnRwYXJzYUBt",
+  "iCalUID": "65j3epb56ph3gb9i6dijab9kcdim8bb1ccp3ibb2ccomadj170r62dpn64@google.com",
+  "id": "65j3epb56ph3gb9i6dijab9kcdim8bb1ccp3ibb2ccomadj170r62dpn64_20160322T193000Z",
+  "kind": "calendar#event",
+  "location": null,
+  "locked": null,
+  "organizer": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "originalStartTime": {
+    "date": null,
+    "dateTime": "2016-03-22T12:30:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "privateCopy": null,
+  "recurrence": null,
+  "recurringEventId": "65j3epb56ph3gb9i6dijab9kcdim8bb1ccp3ibb2ccomadj170r62dpn64",
+  "reminders": {
+    "overrides": [
+      {
+        "method": "popup",
+        "minutes": 30,
+        "ETag": null
+      }
+    ],
+    "useDefault": false
+  },
+  "sequence": 0,
+  "source": null,
+  "start": {
+    "date": null,
+    "dateTime": "2016-03-22T12:30:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "status": "confirmed",
+  "summary": "COMP 3951 Technical Programing Lecture ",
+  "transparency": null,
+  "updated": "2016-01-05T20:30:28.809Z",
+  "visibility": null
+}

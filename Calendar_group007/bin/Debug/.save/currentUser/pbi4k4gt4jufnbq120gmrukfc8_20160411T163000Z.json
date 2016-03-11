@@ -1,0 +1,73 @@
+{
+  "anyoneCanAddSelf": null,
+  "attachments": null,
+  "attendees": null,
+  "attendeesOmitted": null,
+  "colorId": null,
+  "created": "2016-01-03T10:03:25.000Z",
+  "creator": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "description": "SE12-327 3051*",
+  "end": {
+    "date": null,
+    "dateTime": "2016-04-11T10:20:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "endTimeUnspecified": null,
+  "etag": "\"2903843511095000\"",
+  "extendedProperties": null,
+  "gadget": null,
+  "guestsCanInviteOthers": null,
+  "guestsCanModify": null,
+  "guestsCanSeeOtherGuests": null,
+  "hangoutLink": null,
+  "htmlLink": "https://www.google.com/calendar/event?eid=cGJpNGs0Z3Q0anVmbmJxMTIwZ21ydWtmYzhfMjAxNjA0MTFUMTYzMDAwWiBwZXltYW50cGFyc2FAbQ",
+  "iCalUID": "pbi4k4gt4jufnbq120gmrukfc8@google.com",
+  "id": "pbi4k4gt4jufnbq120gmrukfc8_20160411T163000Z",
+  "kind": "calendar#event",
+  "location": null,
+  "locked": null,
+  "organizer": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "originalStartTime": {
+    "date": null,
+    "dateTime": "2016-04-11T09:30:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "privateCopy": null,
+  "recurrence": null,
+  "recurringEventId": "pbi4k4gt4jufnbq120gmrukfc8",
+  "reminders": {
+    "overrides": [
+      {
+        "method": "popup",
+        "minutes": 30,
+        "ETag": null
+      }
+    ],
+    "useDefault": false
+  },
+  "sequence": 1,
+  "source": null,
+  "start": {
+    "date": null,
+    "dateTime": "2016-04-11T09:30:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "status": "confirmed",
+  "summary": "COMP 3900 practicum Lab",
+  "transparency": null,
+  "updated": "2016-01-05T20:30:29.707Z",
+  "visibility": null
+}

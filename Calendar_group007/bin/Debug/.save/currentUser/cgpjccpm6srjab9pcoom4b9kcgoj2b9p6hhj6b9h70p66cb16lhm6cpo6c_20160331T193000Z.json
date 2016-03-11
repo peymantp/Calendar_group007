@@ -1,0 +1,73 @@
+{
+  "anyoneCanAddSelf": null,
+  "attachments": null,
+  "attendees": null,
+  "attendeesOmitted": null,
+  "colorId": null,
+  "created": "2016-01-03T11:14:29.000Z",
+  "creator": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "description": "SW1-2030 ",
+  "end": {
+    "date": null,
+    "dateTime": "2016-03-31T13:20:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "endTimeUnspecified": null,
+  "etag": "\"2903639340038000\"",
+  "extendedProperties": null,
+  "gadget": null,
+  "guestsCanInviteOthers": null,
+  "guestsCanModify": null,
+  "guestsCanSeeOtherGuests": null,
+  "hangoutLink": null,
+  "htmlLink": "https://www.google.com/calendar/event?eid=Y2dwamNjcG02c3JqYWI5cGNvb200YjlrY2dvajJiOXA2aGhqNmI5aDcwcDY2Y2IxNmxobTZjcG82Y18yMDE2MDMzMVQxOTMwMDBaIHBleW1hbnRwYXJzYUBt",
+  "iCalUID": "cgpjccpm6srjab9pcoom4b9kcgoj2b9p6hhj6b9h70p66cb16lhm6cpo6c@google.com",
+  "id": "cgpjccpm6srjab9pcoom4b9kcgoj2b9p6hhj6b9h70p66cb16lhm6cpo6c_20160331T193000Z",
+  "kind": "calendar#event",
+  "location": null,
+  "locked": null,
+  "organizer": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "originalStartTime": {
+    "date": null,
+    "dateTime": "2016-03-31T12:30:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "privateCopy": null,
+  "recurrence": null,
+  "recurringEventId": "cgpjccpm6srjab9pcoom4b9kcgoj2b9p6hhj6b9h70p66cb16lhm6cpo6c",
+  "reminders": {
+    "overrides": [
+      {
+        "method": "popup",
+        "minutes": 30,
+        "ETag": null
+      }
+    ],
+    "useDefault": false
+  },
+  "sequence": 0,
+  "source": null,
+  "start": {
+    "date": null,
+    "dateTime": "2016-03-31T12:30:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "status": "confirmed",
+  "summary": "COMP 3717 Android Dev Lecture ",
+  "transparency": null,
+  "updated": "2016-01-03T11:14:30.049Z",
+  "visibility": null
+}
