@@ -16,5 +16,13 @@ namespace PJCalender
         {
             InitializeComponent();
         }
+
+        private void buttonColor_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                pictureBoxColor.BackColor = colorDialog1.Color;
+            }
+        }
     }
 }
