@@ -24,8 +24,8 @@ namespace PJCalender
 
         public google(Menus form, string user)
         {
-            UserCredential credential;
-
+            UserCredential credential = null;
+            
             using (var stream = new System.IO.FileStream("client_secret.json", System.IO.FileMode.Open, System.IO.FileAccess.Read))
             {
                 //string credPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
@@ -35,9 +35,12 @@ namespace PJCalender
                                                                          Scopes,
                                                                          user,
                                                                          System.Threading.CancellationToken.None,
-                                                                         new FileDataStore(credPath, true)).Result;
-
+                                                                         new FileDataStore(credPath, true)).Result
+                ;
                 // Create Google Calendar API service.
+                if (credential == null)
+                    return;
+
                 var service = new CalendarService(new BaseClientService.Initializer()
                 {
                     HttpClientInitializer = credential,
@@ -73,10 +76,10 @@ namespace PJCalender
             string[] files = Directory.GetFiles(@".save/currentUser", "*");
             foreach (String fileName in files)
             {
-               using(StreamReader file = File.OpenText(fileName))
+                using (StreamReader file = File.OpenText(fileName))
                 {
                     JsonSerializer serializer = new JsonSerializer();
-                    Event calEvent = (Event)serializer.Deserialize(file,typeof(Event));
+                    Event calEvent = (Event)serializer.Deserialize(file, typeof(Event));
                     events.Add(calEvent);
                 }
             }

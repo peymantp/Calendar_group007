@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.IO;
 using System.Windows.Forms;
 
@@ -42,7 +43,10 @@ namespace PJCalender
                 {
                     if (!String.IsNullOrEmpty(userLoggedIn))
                     {
-                        new google(mainForm, userLoggedIn);
+                        
+                        Thread t = new Thread(() => new google(mainForm, userLoggedIn));
+                        t.Name = "Google";
+                        
                     }
                 }
 
@@ -81,7 +85,7 @@ namespace PJCalender
             }
             catch (System.IndexOutOfRangeException ex)
             {
-               MessageBox.Show(ex.ToString(), ex.GetType().ToString());
+               //MessageBox.Show(ex.ToString(), ex.GetType().ToString());
             }
             catch(System.IO.DirectoryNotFoundException ex)
             {
