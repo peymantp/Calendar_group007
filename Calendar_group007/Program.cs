@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Text;
 using System.Threading;
+using System.Runtime.InteropServices;
 
 namespace PJCalender
 {
@@ -21,12 +22,26 @@ namespace PJCalender
                 mutex.ReleaseMutex();
             }
             else {
-                MessageBox.Show("only one instance at a time");
+                NativeMethods.PostMessage(
+                (IntPtr)NativeMethods.HWND_BROADCAST,
+                NativeMethods.WM_SHOWME,
+                IntPtr.Zero,
+                IntPtr.Zero);
             }
         }
         public static void Exit()
         {
             Application.Exit();
         }
+    }
+
+    internal class NativeMethods
+    {
+        public const int HWND_BROADCAST = 0xffff;
+        public static readonly int WM_SHOWME = RegisterWindowMessage("WM_SHOWME");
+        [DllImport("user32")]
+        public static extern bool PostMessage(IntPtr hwnd, int msg, IntPtr wparam, IntPtr lparam);
+        [DllImport("user32")]
+        public static extern int RegisterWindowMessage(string message);
     }
 }
