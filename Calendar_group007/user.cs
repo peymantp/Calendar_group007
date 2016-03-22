@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Threading;
 using System.IO;
 using System.Windows.Forms;
@@ -14,7 +10,6 @@ namespace PJCalender
         String userLoggedIn;
         public User(String type, Menus mainForm)
         {
-            //currentUserLoggedIn();
             if (type.Equals("Login"))
             {
                 if (!System.IO.Directory.Exists(".credentials/.archived.users"))
@@ -46,7 +41,7 @@ namespace PJCalender
                         
                         Thread t = new Thread(() => new google(mainForm, userLoggedIn));
                         t.Name = "Google";
-                        
+                        t.Start();
                     }
                 }
 

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
-using System.Text;
 using System.Threading;
 using System.Runtime.InteropServices;
 
@@ -22,11 +19,10 @@ namespace PJCalender
                 mutex.ReleaseMutex();
             }
             else {
-                NativeMethods.PostMessage(
-                (IntPtr)NativeMethods.HWND_BROADCAST,
-                NativeMethods.WM_SHOWME,
-                IntPtr.Zero,
-                IntPtr.Zero);
+                NativeMethods.PostMessage((IntPtr)NativeMethods.HWND_BROADCAST,
+                                            NativeMethods.WM_SHOWME,
+                                            IntPtr.Zero,
+                                            IntPtr.Zero);
             }
         }
         public static void Exit()

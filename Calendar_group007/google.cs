@@ -17,10 +17,8 @@ namespace PJCalender
 
     class google
     {
-        // If modifying these scopes, delete your previously saved credentials
-        // at ~/.credentials/calendar-dotnet-quickstart.json
         static string[] Scopes = { CalendarService.Scope.CalendarReadonly };
-        static string ApplicationName = "Google Calendar API .NET Quickstart";
+        static string ApplicationName = "PJCalender";
 
         public google(Menus form, string user)
         {

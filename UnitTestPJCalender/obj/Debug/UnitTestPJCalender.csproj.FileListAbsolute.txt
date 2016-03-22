@@ -6,11 +6,11 @@ C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\Micro
 C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\PJCalender.exe
 C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\Google.Apis.Calendar.v3.dll
 C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\Google.Apis.Auth.dll
+C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\Newtonsoft.Json.dll
 C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\Google.Apis.PlatformServices.dll
 C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\Google.Apis.Auth.PlatformServices.dll
 C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\Google.Apis.Core.dll
 C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\Google.Apis.dll
-C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\Newtonsoft.Json.dll
 C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\Microsoft.Threading.Tasks.dll
 C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\log4net.dll
 C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\BouncyCastle.Crypto.dll
@@ -22,6 +22,7 @@ C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\Googl
 C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\Google.Apis.Calendar.v3.xml
 C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\Google.Apis.Auth.pdb
 C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\Google.Apis.Auth.xml
+C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\Newtonsoft.Json.xml
 C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\Google.Apis.PlatformServices.pdb
 C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\Google.Apis.PlatformServices.xml
 C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\Google.Apis.Auth.PlatformServices.pdb
@@ -30,7 +31,6 @@ C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\Googl
 C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\Google.Apis.Core.xml
 C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\Google.Apis.pdb
 C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\Google.Apis.xml
-C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\Newtonsoft.Json.xml
 C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\Microsoft.Threading.Tasks.xml
 C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\log4net.xml
 C:\Users\peymantp\Documents\Calendar_group007\UnitTestPJCalender\bin\Debug\BouncyCastle.Crypto.pdb

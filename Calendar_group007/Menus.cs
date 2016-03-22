@@ -1,12 +1,4 @@
 ﻿using System;
-using System.IO;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PJCalender
@@ -40,12 +32,7 @@ namespace PJCalender
             labelDay.Text = t.ToLongDateString();
             monthDayNumber(t);
         }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="date"></param>
-        /// <returns>Number of days within each month</returns>
+        
         private int monthDayNumber(DateTime date)
         {
             //adding days to month view HARD CODED
@@ -129,6 +116,7 @@ namespace PJCalender
             }
             base.WndProc(ref m);
         }
+
         private void ShowMe()
         {
             if (WindowState == FormWindowState.Minimized)
