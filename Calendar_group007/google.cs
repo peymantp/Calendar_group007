@@ -11,15 +11,24 @@ using Google.Apis.Util.Store;
 using Newtonsoft.Json;
 using System.IO;
 using System.Collections;
-
+/// <summary>
+/// arthor: Peyman Justin
+/// </summary>
 namespace PJCalender
 {
-
+    /// <summary>
+    /// Handles all of the google api functionallity 
+    /// </summary>
     class google
     {
         static string[] Scopes = { CalendarService.Scope.CalendarReadonly };
         static string ApplicationName = "PJCalender";
-
+        /// <summary>
+        /// This object is not meant to be stored.
+        /// Will retrieve events from your account and store them locally 
+        /// </summary>
+        /// <param name="form">The form calling crating this object</param>
+        /// <param name="user">username of user</param>
         public google(Menus form, string user)
         {
             UserCredential credential = null;
@@ -57,7 +66,6 @@ namespace PJCalender
                 {
                     Events events = request.Execute();
                     saveEventLocal(events);
-                    form.displayAgenda();
                 }
                 catch (System.Net.Http.HttpRequestException requestEx)
                 {
@@ -65,6 +73,7 @@ namespace PJCalender
                 }
             }
         }
+        
 
         static public ArrayList readEventLocal()
         {

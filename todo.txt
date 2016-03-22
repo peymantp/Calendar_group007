@@ -1,0 +1,8 @@
+clear all events on screen when user logs out
+
+change events retrieved to 20 years
+
+make server
+	-multi user
+	
+have a 3 waay with 3 girls

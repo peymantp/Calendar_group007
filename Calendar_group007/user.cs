@@ -2,9 +2,14 @@
 using System.Threading;
 using System.IO;
 using System.Windows.Forms;
-
+/// <summary>
+/// arthor: Peyman Justin
+/// </summary>
 namespace PJCalender
 {
+    /// <summary>
+    /// Handles all user files and actions
+    /// </summary>
     class User
     {
         String userLoggedIn;
@@ -45,7 +50,8 @@ namespace PJCalender
                     }
                 }
 
-                type = "Logout";
+                mainForm.displayAgenda();
+                mainForm.buttonLog.Text = "Logout";
             }
             else {
                 try
@@ -58,7 +64,7 @@ namespace PJCalender
                 {
                     MessageBox.Show(indexEx.ToString(), indexEx.GetType().ToString());
                 }
-                type = "Login";
+                mainForm.buttonLog.Text = "Login";
             }
         }
 

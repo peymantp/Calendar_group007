@@ -49,7 +49,7 @@
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutAgenda = new System.Windows.Forms.TableLayoutPanel();
             this.buttonPickDay = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonLog = new System.Windows.Forms.Button();
             this.buttonEvent = new System.Windows.Forms.Button();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanelMonth.SuspendLayout();
@@ -191,12 +191,12 @@
             this.buttonPickDay.UseVisualStyleBackColor = true;
             this.buttonPickDay.Click += new System.EventHandler(this.buttonPickDay_Click);
             // 
-            // button1
+            // buttonLog
             // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            resources.ApplyResources(this.buttonLog, "buttonLog");
+            this.buttonLog.Name = "buttonLog";
+            this.buttonLog.UseVisualStyleBackColor = true;
+            this.buttonLog.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonEvent
             // 
@@ -211,7 +211,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.Controls.Add(this.buttonEvent);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonLog);
             this.Controls.Add(this.buttonPickDay);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.buttonExit);
@@ -251,7 +251,7 @@
         private System.Windows.Forms.TabPage tabPageAgenda;
         private System.Windows.Forms.TableLayoutPanel tableLayoutAgenda;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
-        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button buttonLog;
         private System.Windows.Forms.Label labelDay;
         private System.Windows.Forms.Button buttonEvent;
         private System.Windows.Forms.TabPage tabPageWeek;

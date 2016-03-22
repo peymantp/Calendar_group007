@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
-
+/// <summary>
+/// arthor: Peyman Justin
+/// </summary>
 namespace PJCalender
 {
     public partial class Menus : Form
@@ -94,11 +96,13 @@ namespace PJCalender
         {
             if (!String.IsNullOrEmpty(User.currentUserLoggedIn()))
             {
-                button1.Text = "Logout";
+                buttonLog.Text = "Logout";
+
+                displayAgenda();
             }
             else
             {
-                button1.Text = "Login";
+                buttonLog.Text = "Login";
             }
         }
 
