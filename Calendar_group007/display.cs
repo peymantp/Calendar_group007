@@ -127,13 +127,7 @@ namespace PJCalender
 
         public void clear()
         {
-            //http://stackoverflow.com/questions/12667304/remove-all-controls-in-a-flowlayoutpanel-in-c-sharp
-            List<Control> listControls = flowLayoutPanel.Controls.Cast<Control>().ToList();
-            foreach (Control control in listControls)
-            {
-                flowLayoutPanel.Controls.Remove(control);
-                control.Dispose();
-            }
+            flowLayoutPanel.Controls.Clear();
         }
         
 

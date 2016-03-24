@@ -52,6 +52,7 @@
             this.buttonLog = new System.Windows.Forms.Button();
             this.buttonEvent = new System.Windows.Forms.Button();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanelMonth.SuspendLayout();
             this.tabPageMonth.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -205,11 +206,19 @@
             this.buttonEvent.UseVisualStyleBackColor = true;
             this.buttonEvent.Click += new System.EventHandler(this.buttonEvent_Click);
             // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Menus
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonEvent);
             this.Controls.Add(this.buttonLog);
             this.Controls.Add(this.buttonPickDay);
@@ -256,6 +265,7 @@
         private System.Windows.Forms.Button buttonEvent;
         private System.Windows.Forms.TabPage tabPageWeek;
         private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

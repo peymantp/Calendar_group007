@@ -132,5 +132,10 @@ namespace PJCalender
             // set it back to whatever it was
             TopMost = top;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            clear();
+        }
     }
 }
