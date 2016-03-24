@@ -9,6 +9,8 @@ namespace PJCalender
 {
     public partial class Menus
     {
+        private delegate void DisplayDelegate();
+
         public void displayAgenda()
         {
             ArrayList events = google.readEventLocal();
@@ -133,6 +135,7 @@ namespace PJCalender
                 control.Dispose();
             }
         }
+        
 
         /// <summary> 
         /// Changes the text on the button login/logout if a new user is created
@@ -141,14 +144,40 @@ namespace PJCalender
         /// <param name="e">Event</param>
         public void loginButtonChangeText()
         {
+            String message;
+
             if (buttonLog.Text.Equals("Login"))
             {
-                buttonLog.Text = "Logout";
+                message = "Logout";
+                if (buttonLog.InvokeRequired)
+                {
+                    //Executes the DisplayDelegate on the thread that owns the control's 
+                    //underlying window handle.                                      
+                    Invoke(new DisplayDelegate(loginButtonChangeText));
+                } // end if
+                else // add message to text box
+                {
+                    buttonLog.Text = message;
+                }
             }
             else
             {
-                buttonLog.Text = "Login";
+                message = "Login";
+                if (buttonLog.InvokeRequired)
+                {
+                    //Executes the DisplayDelegate on the thread that owns the control's 
+                    //underlying window handle.                                      
+                    Invoke(new DisplayDelegate(loginButtonChangeText));
+                } // end if
+                else // add message to text box
+                {
+                    buttonLog.Text = message;
+                }
             }
+
+            
+
+
         }
     }
 }

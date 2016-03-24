@@ -10,7 +10,6 @@ namespace PJCalender
     /// </summary>
     public partial class Menus : Form
     {
-
         public Menus()
         {
             InitializeComponent();
@@ -101,7 +100,7 @@ namespace PJCalender
             }
             else if (new UsernameDialog(this).ShowDialog() == DialogResult.OK)
             {
-                loginButtonChangeText();
+             //   loginButtonChangeText();
             }
         }
 

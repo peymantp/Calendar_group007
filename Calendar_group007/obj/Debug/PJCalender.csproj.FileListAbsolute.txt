@@ -201,3 +201,5 @@ C:\Users\peymantp\Documents\Calendar_group007\Calendar_group007\obj\Debug\PJCale
 C:\Users\peymantp\Documents\Calendar_group007\Calendar_group007\obj\Debug\en-CA\PJCalender.resources.dll
 C:\Users\peymantp\Documents\Calendar_group007\Calendar_group007\obj\Debug\PJCalender.exe
 C:\Users\peymantp\Documents\Calendar_group007\Calendar_group007\obj\Debug\PJCalender.pdb
+C:\Users\Justin\Documents\BCIT\Term 3\Tech Pro\Calendar\Calendar_group007\obj\Debug\PJCalender.eventDialog.resources
+C:\Users\Justin\Documents\BCIT\Term 3\Tech Pro\Calendar\Calendar_group007\obj\Debug\PJCalender.UsernameDialog.resources

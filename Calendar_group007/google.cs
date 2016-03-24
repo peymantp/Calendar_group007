@@ -64,8 +64,8 @@ namespace PJCalender
 
                 try
                 {
-                    Events events = request.Execute();
                     form.loginButtonChangeText();
+                    Events events = request.Execute();
                     saveEventLocal(events);
                 }
                 catch (System.Net.Http.HttpRequestException requestEx)
