@@ -196,7 +196,7 @@
             resources.ApplyResources(this.buttonLog, "buttonLog");
             this.buttonLog.Name = "buttonLog";
             this.buttonLog.UseVisualStyleBackColor = true;
-            this.buttonLog.Click += new System.EventHandler(this.button1_Click);
+            this.buttonLog.Click += new System.EventHandler(this.buttonLog_Click);
             // 
             // buttonEvent
             // 

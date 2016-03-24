@@ -1,7 +1,9 @@
 ﻿using Google.Apis.Calendar.v3.Data;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Linq;
 
 namespace PJCalender
 {
@@ -118,6 +120,34 @@ namespace PJCalender
                         dayHold = startDay;
                     }
                 }
+            }
+        }
+
+        public void clear()
+        {
+            //http://stackoverflow.com/questions/12667304/remove-all-controls-in-a-flowlayoutpanel-in-c-sharp
+            List<Control> listControls = flowLayoutPanel.Controls.Cast<Control>().ToList();
+            foreach (Control control in listControls)
+            {
+                flowLayoutPanel.Controls.Remove(control);
+                control.Dispose();
+            }
+        }
+
+        /// <summary> 
+        /// Changes the text on the button login/logout if a new user is created
+        /// </summary>
+        /// <param name="sender">object calling event</param>
+        /// <param name="e">Event</param>
+        public void loginButtonChangeText()
+        {
+            if (buttonLog.Text.Equals("Login"))
+            {
+                buttonLog.Text = "Logout";
+            }
+            else
+            {
+                buttonLog.Text = "Login";
             }
         }
     }

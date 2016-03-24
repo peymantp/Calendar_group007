@@ -14,10 +14,7 @@ namespace PJCalender
 {
     public partial class UsernameDialog : Form
     {
-
-        public String username { get; set; }
-
-        Menus f;
+        private Menus f { get; set; }
 
         public UsernameDialog(Menus form)
         {
@@ -25,15 +22,15 @@ namespace PJCalender
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonLog_Click(object sender, EventArgs e)
         {
             //new google(f, textBox1.Text);
-            username = textBox1.Text;
+            new User(textBox1.Text, f);
             this.Close();
         }
     }

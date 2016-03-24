@@ -12,59 +12,52 @@ namespace PJCalender
     /// </summary>
     class User
     {
-        String userLoggedIn;
-        public User(String type, Menus mainForm)
+
+        public User(String userLoggedIn, Menus mainForm)
         {
-            if (type.Equals("Login"))
+            if (!System.IO.Directory.Exists(".credentials/.archived.users"))
+                System.IO.Directory.CreateDirectory(".credentials/.archived.users");
+            string[] files = Directory.GetFiles(@".credentials/.archived.users", "*");
+
+            bool fileNotFound = true;
+
+            foreach (String file in files)
             {
-                if (!System.IO.Directory.Exists(".credentials/.archived.users"))
-                    System.IO.Directory.CreateDirectory(".credentials/.archived.users");
-                string[] files = Directory.GetFiles(@".credentials/.archived.users", "*");
-
-                UsernameDialog login = new UsernameDialog(mainForm);
-                login.ShowDialog();
-
-                userLoggedIn = login.username;
-
-                bool fileNotFound = true;
-
-                foreach (String file in files)
+                if (file.Split('-')[1].Equals(userLoggedIn))
                 {
-                    if (file.Split('-')[1].Equals(userLoggedIn))
-                    {
-                        File.Move(file, @".credentials/currentUser/" + file.Split('\\')[1]);
-                        userLoggedIn = file.Split('-')[1];
-                        fileNotFound = false;
-                        break;
-                    }
+                    File.Move(file, @".credentials/currentUser/" + file.Split('\\')[1]);
+                    userLoggedIn = file.Split('-')[1];
+                    fileNotFound = false;
+                    break;
                 }
-
-                if (fileNotFound)
-                {
-                    if (!String.IsNullOrEmpty(userLoggedIn))
-                    {
-                        
-                        Thread t = new Thread(() => new google(mainForm, userLoggedIn));
-                        t.Name = "Google";
-                        t.Start();
-                    }
-                }
-
-                mainForm.displayAgenda();
-                mainForm.buttonLog.Text = "Logout";
             }
-            else {
-                try
+
+            if (fileNotFound)
+            {
+                if (!String.IsNullOrEmpty(userLoggedIn))
                 {
-                    string file = Directory.GetFiles(@".credentials/currentUser", "*")[0];
-                    File.Delete(@".credentials/.archived.users/" + file.Split('\\')[1]);
-                    File.Move(file, @".credentials/.archived.users/" + file.Split('\\')[1]);
+
+                    Thread t = new Thread(() => new google(mainForm, userLoggedIn));
+                    t.Name = "Google";
+                    t.Start();
                 }
-                catch (System.IndexOutOfRangeException indexEx)
-                {
-                    MessageBox.Show(indexEx.ToString(), indexEx.GetType().ToString());
-                }
-                mainForm.buttonLog.Text = "Login";
+            }
+
+            mainForm.displayAgenda();
+
+        }
+
+        static public void Logout()
+        {
+            try
+            {
+                string file = Directory.GetFiles(@".credentials/currentUser", "*")[0];
+                File.Delete(@".credentials/.archived.users/" + file.Split('\\')[1]);
+                File.Move(file, @".credentials/.archived.users/" + file.Split('\\')[1]);
+            }
+            catch (System.IndexOutOfRangeException indexEx)
+            {
+                MessageBox.Show(indexEx.ToString(), indexEx.GetType().ToString());
             }
         }
 
@@ -86,9 +79,9 @@ namespace PJCalender
             }
             catch (System.IndexOutOfRangeException ex)
             {
-               //MessageBox.Show(ex.ToString(), ex.GetType().ToString());
+                //MessageBox.Show(ex.ToString(), ex.GetType().ToString());
             }
-            catch(System.IO.DirectoryNotFoundException ex)
+            catch (System.IO.DirectoryNotFoundException ex)
             {
                 MessageBox.Show(ex.ToString(), ex.GetType().ToString());
             }

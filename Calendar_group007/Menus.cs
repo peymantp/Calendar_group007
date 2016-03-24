@@ -5,6 +5,9 @@ using System.Windows.Forms;
 /// </summary>
 namespace PJCalender
 {
+    /// <summary>
+    /// Main form for the callender
+    /// </summary>
     public partial class Menus : Form
     {
 
@@ -16,43 +19,43 @@ namespace PJCalender
             labelDay.Text = DateTime.Now.ToLongDateString();
                 
         }
-
+        /// <summary>
+        /// Exits the program
+        /// </summary>
+        /// <param name="sender">object calling event</param>
+        /// <param name="e">Event</param>
         private void buttonExit_Click(object sender, EventArgs e)
         {
             global::PJCalender.Program.Exit();
         }
-
+        /// <summary>
+        /// Brings up a calendar for you to pick a day of
+        /// </summary>
+        /// <param name="sender">object calling event</param>
+        /// <param name="e">Event</param>
         private void buttonPickDay_Click(object sender, EventArgs e)
         {
             dayPickerDialog d = new dayPickerDialog();
             d.Show();
         }
-
+        /// <summary>
+        /// displays the value selected in dateTimePicker
+        /// </summary>
+        /// <param name="sender">object calling event</param>
+        /// <param name="e">Event</param>
         private void dateTimePicker_DatePicked(object sender, EventArgs e)
         {
             DateTime t = dateTimePicker.Value;
             labelDay.Text = t.ToLongDateString();
             monthDayNumber(t);
         }
-        
+        /// <summary>
+        /// Returns the number of days in a month sent to the function
+        /// </summary>
+        /// <param name="date">A date containing a month</param>
+        /// <returns>number of days in a month</returns>
         private int monthDayNumber(DateTime date)
         {
-            //adding days to month view HARD CODED
-            /*
-            int day = 27;
-            for(int row = 1; row < 7; row++)
-            {
-                for(int column = 0; column < 7; column++, day++)
-                {
-                    if (day == 32)
-                        day = 1;
-                    Label label = new Label();
-                    label.Name = "label" + day + "ofMonth";
-                    label.Text = ""+day;
-                    tableLayoutPanelMonth.Controls.Add(label, column, row);
-                }
-            }
-            */
             switch (date.Month)
             {
                 case 1: //January
@@ -84,25 +87,21 @@ namespace PJCalender
             }
             return 0;
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Changes the text on the button login/logout if a new user is created
+        /// </summary>
+        /// <param name="sender">object calling event</param>
+        /// <param name="e">Event</param>
+        private void buttonLog_Click(object sender, EventArgs e)
         {
-            String type = ((Button)sender).Text;
-            User uc = new User(type, this);
-            loginButtonChangeText();
-        }
-
-        private void loginButtonChangeText()
-        {
-            if (!String.IsNullOrEmpty(User.currentUserLoggedIn()))
+            if (buttonLog.Text.Equals("Logout"))
             {
-                buttonLog.Text = "Logout";
-
-                displayAgenda();
+                User.Logout();
+                loginButtonChangeText();
             }
-            else
+            else if (new UsernameDialog(this).ShowDialog() == DialogResult.OK)
             {
-                buttonLog.Text = "Login";
+                loginButtonChangeText();
             }
         }
 

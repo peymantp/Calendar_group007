@@ -204,6 +204,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UsernameDialog.resx">
+      <DependentUpon>UsernameDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="client_secret.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

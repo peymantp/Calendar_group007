@@ -65,6 +65,7 @@ namespace PJCalender
                 try
                 {
                     Events events = request.Execute();
+                    form.loginButtonChangeText();
                     saveEventLocal(events);
                 }
                 catch (System.Net.Http.HttpRequestException requestEx)
@@ -74,7 +75,10 @@ namespace PJCalender
             }
         }
         
-
+        /// <summary>
+        /// todo remake fucntion
+        /// </summary>
+        /// <returns></returns>
         static public ArrayList readEventLocal()
         {
             ArrayList events = new ArrayList();
@@ -92,7 +96,10 @@ namespace PJCalender
             }
             return events;
         }
-
+        /// <summary>
+        /// todo remake funciton
+        /// </summary>
+        /// <param name="events"></param>
         public static void saveEventLocal(Events events)
         {
             if (!System.IO.Directory.Exists(".save/currentUser"))

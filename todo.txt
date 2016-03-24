@@ -1,8 +1,12 @@
 clear all events on screen when user logs out
 
+eventDialog
+
+event creation
+
 change events retrieved to 20 years
 
 make server
 	-multi user
 	
-have a 3 waay with 3 girls
+dont change login button to logout if user cancels google access

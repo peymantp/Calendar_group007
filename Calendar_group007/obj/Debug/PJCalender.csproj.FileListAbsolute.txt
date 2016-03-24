@@ -195,6 +195,7 @@ C:\Users\peymantp\Documents\Calendar_group007\Calendar_group007\obj\Debug\PJCale
 C:\Users\peymantp\Documents\Calendar_group007\Calendar_group007\obj\Debug\PJCalender.eventDialog.resources
 C:\Users\peymantp\Documents\Calendar_group007\Calendar_group007\obj\Debug\PJCalender.Menus.resources
 C:\Users\peymantp\Documents\Calendar_group007\Calendar_group007\obj\Debug\PJCalender.Properties.Resources.resources
+C:\Users\peymantp\Documents\Calendar_group007\Calendar_group007\obj\Debug\PJCalender.UsernameDialog.resources
 C:\Users\peymantp\Documents\Calendar_group007\Calendar_group007\obj\Debug\PJCalender.Menus.en-CA.resources
 C:\Users\peymantp\Documents\Calendar_group007\Calendar_group007\obj\Debug\PJCalender.csproj.GenerateResource.Cache
 C:\Users\peymantp\Documents\Calendar_group007\Calendar_group007\obj\Debug\en-CA\PJCalender.resources.dll

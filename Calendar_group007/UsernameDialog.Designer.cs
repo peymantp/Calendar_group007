@@ -29,45 +29,53 @@
         private void InitializeComponent()
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonLogin = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(47, 54);
+            this.textBox1.Location = new System.Drawing.Point(70, 83);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(197, 20);
+            this.textBox1.Size = new System.Drawing.Size(294, 26);
             this.textBox1.TabIndex = 0;
             // 
-            // buttonLog
+            // buttonLogin
             // 
-            this.button1.Location = new System.Drawing.Point(47, 111);
-            this.button1.Name = "buttonLog";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonLogin.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.buttonLogin.Location = new System.Drawing.Point(70, 171);
+            this.buttonLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonLogin.Name = "buttonLogin";
+            this.buttonLogin.Size = new System.Drawing.Size(112, 35);
+            this.buttonLogin.TabIndex = 1;
+            this.buttonLogin.Text = "Login";
+            this.buttonLogin.UseVisualStyleBackColor = true;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLog_Click);
             // 
-            // button2
+            // buttonCancel
             // 
-            this.button2.Location = new System.Drawing.Point(169, 111);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonCancel.Location = new System.Drawing.Point(252, 171);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(112, 35);
+            this.buttonCancel.TabIndex = 2;
+            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // UsernameDialog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AcceptButton = this.buttonLogin;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.CancelButton = this.buttonCancel;
+            this.ClientSize = new System.Drawing.Size(426, 268);
+            this.Controls.Add(this.buttonCancel);
+            this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.textBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UsernameDialog";
             this.Text = "UsernameDialog";
             this.ResumeLayout(false);
@@ -78,7 +86,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonLogin;
+        private System.Windows.Forms.Button buttonCancel;
     }
 }
