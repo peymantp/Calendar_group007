@@ -151,6 +151,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DateCalculations.cs" />
     <Compile Include="dayPickerDialog.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -11,21 +11,33 @@ namespace PJCalender
     {
         private delegate void DisplayDelegate();
 
-        public void displayAgenda()
+        public void displayAll()
         {
-            ArrayList events = google.readEventLocal();
-            if (events == null)
-                return;
+            clear();
+            displayMonthNumbers();
+            displayLabelDay();
+            displayAgenda();
+        }
+
+        private void displayAgenda()
+        {
+            if (events == null || events.Count == 0)
+                google.readEventLocal(this);
             if (events.Count > 0)
             {
-                Label label = null;
+                Label label = new Label();
+                label.Text = events.Count + "";
                 string dayHold = null;
                 String nl = Environment.NewLine;
                 int column = 0;
                 int row = 0;
-                TableLayoutPanel TLA = null;
+                TableLayoutPanel TLA = new TableLayoutPanel();
+                flowLayoutPanel.Controls.Add(label);
                 foreach (Event eventItem in events)
                 {
+                    column = 0;
+                    TLA.RowCount = ++row;
+
                     if (eventItem.Start.DateTime != null)
                     {
                         DateTime start = (DateTime)eventItem.Start.DateTime;
@@ -39,103 +51,57 @@ namespace PJCalender
                         string discription = eventItem.Description;
                         string Summary = eventItem.Summary;
 
-                        //adding table to the agenda page and setting it to null for the next days events
-                        //styling for the table happens here
-                        if (!String.Equals(dayHold, startDay) & TLA != null)
-                        {
-                            TLA.MinimumSize = new System.Drawing.Size(722, 0);
-                            TLA.AutoSize = true;
-                            TableLayoutRowStyleCollection styles = TLA.RowStyles;
+                        //Start hour and end hour
+                        label = new Label();
+                        label.Text = startTime + nl + endTime;
+                        TLA.Controls.Add(label, column++, row);
 
-                            foreach (RowStyle style in styles)
-                            {
-                                style.SizeType = SizeType.Absolute;
-                                style.Height = 50;
-                            }
-                            flowLayoutPanel.Controls.Add(TLA);
-
-                            //set table and row count to ZERO
-                            TLA = null;
-                            row = 0;
-                        }
-
-                        //adding new events to the table
-                        if (TLA != null)
-                        {
-                            //add row to table
-                            TLA.RowCount = ++row;
-
-                            column = 0;
-                            //Start hour and end hour
-                            label = new Label();
-                            label.Text = startTime + nl + endTime;
-                            TLA.Controls.Add(label, column++, row);
-
-                            //Summary and discription
-                            label = new Label();
-                            label.Text = (Summary + nl + discription);
-                            TLA.Controls.Add(label, column++, row);
-                        }
-
-                        //first table row in a table
-                        if (!String.Equals(dayHold, startDay) & TLA == null)
-                        {
-                            label = new Label();
-                            label.Text = startDay;
-                            label.Width = 700;
-                            flowLayoutPanel.Controls.Add(label);
-
-                            TLA = new TableLayoutPanel();
-                            TLA.ColumnCount = 2;
-                            TLA.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
-
-                            column = 0;
-                            //Start hour and end hour
-                            label = new Label();
-                            label.Text = startTime + nl + endTime;
-                            TLA.Controls.Add(label, column++, row);
-
-                            //Summary and discription
-                            label = new Label();
-                            label.Text = (Summary + nl + discription);
-                            TLA.Controls.Add(label, column++, row);
-
-                        }
-                        //store day of last event
-                        dayHold = startDay;
+                        //Summary and discription
+                        label = new Label();
+                        label.Text = (Summary + nl + discription);
+                        TLA.Controls.Add(label, column++, row);
                     }
-                    else if (eventItem.Start.DateTime == null && eventItem.Start.Date != null)
+                    }
+                TLA.MinimumSize = new System.Drawing.Size(722, 0);
+                TLA.AutoSize = true;
+                flowLayoutPanel.Controls.Add(TLA);
+            }
+        }
+
+        public void displayMonthNumbers()
+        {
+            DateTime tem = new DateTime(Selected.Year, Selected.Month, 1);
+            int firstWeekDay = (int)tem.DayOfWeek;
+            int max = DateCalculations.monthDayNumber(Selected.AddMonths(-1));
+            int thisMonthLength = DateCalculations.monthDayNumber(Selected);
+            int day = max - firstWeekDay + 1;
+            for (int row = 1; row < 7; ++row)
+            {
+                for (int column = 0; column < 7; ++column, ++day)
+                {
+                    if (day > max)
                     {
-                        string startDay = eventItem.Start.Date;
-                        string endDay = eventItem.End.Date;
-
-                        string discription = eventItem.Description;
-
-                        //only print each day once
-                        if (!String.Equals(dayHold, startDay))
-                        {
-                            label = new Label();
-                            label.Text = startDay;
-                            label.Width = 700;
-                            flowLayoutPanel.Controls.Add(label);
-                        }
-                        dayHold = startDay;
+                        day = 1;
+                        max = thisMonthLength;
                     }
+                    Label label = new Label();
+                    label.Text = "" + day;
+                    Control c = tableLayoutPanelMonth.GetControlFromPosition(column, row);
+                    c.Controls.Clear();
+                    c.Controls.Add(label);
                 }
             }
         }
 
         public void clear()
         {
-            //http://stackoverflow.com/questions/12667304/remove-all-controls-in-a-flowlayoutpanel-in-c-sharp
-            List<Control> listControls = flowLayoutPanel.Controls.Cast<Control>().ToList();
-            foreach (Control control in listControls)
-            {
-                flowLayoutPanel.Controls.Remove(control);
-                control.Dispose();
-            }
+            flowLayoutPanel.Controls.Clear();
         }
-        
+
+        private void displayLabelDay()
+        {
+            labelDay.Text = Selected.ToLongDateString();
+        }
 
         /// <summary> 
         /// Changes the text on the button login/logout if a new user is created

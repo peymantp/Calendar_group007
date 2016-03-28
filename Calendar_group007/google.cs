@@ -79,11 +79,11 @@ namespace PJCalender
         /// todo remake fucntion
         /// </summary>
         /// <returns></returns>
-        static public ArrayList readEventLocal()
+        static public  void readEventLocal(Menus form)
         {
-            ArrayList events = new ArrayList();
+            form.events = new ArrayList();
             if (!System.IO.Directory.Exists(".save/currentUser"))
-                return null;
+                return;
             string[] files = Directory.GetFiles(@".save/currentUser", "*");
             foreach (String fileName in files)
             {
@@ -91,10 +91,9 @@ namespace PJCalender
                 {
                     JsonSerializer serializer = new JsonSerializer();
                     Event calEvent = (Event)serializer.Deserialize(file, typeof(Event));
-                    events.Add(calEvent);
+                    form.events.Add(calEvent);
                 }
             }
-            return events;
         }
         /// <summary>
         /// todo remake funciton
