@@ -125,6 +125,10 @@ namespace PJCalender
             }
         }
 
+        public void displayMonth()
+        {
+
+        }
         public void clear()
         {
             flowLayoutPanel.Controls.Clear();
