@@ -53,6 +53,48 @@
             this.buttonEvent = new System.Windows.Forms.Button();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
+            this.panel01 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.panel31 = new System.Windows.Forms.Panel();
+            this.panel41 = new System.Windows.Forms.Panel();
+            this.panel51 = new System.Windows.Forms.Panel();
+            this.panel61 = new System.Windows.Forms.Panel();
+            this.panel02 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.panel42 = new System.Windows.Forms.Panel();
+            this.panel52 = new System.Windows.Forms.Panel();
+            this.panel62 = new System.Windows.Forms.Panel();
+            this.panel03 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.panel33 = new System.Windows.Forms.Panel();
+            this.panel43 = new System.Windows.Forms.Panel();
+            this.panel53 = new System.Windows.Forms.Panel();
+            this.panel63 = new System.Windows.Forms.Panel();
+            this.panel04 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.panel34 = new System.Windows.Forms.Panel();
+            this.panel44 = new System.Windows.Forms.Panel();
+            this.panel54 = new System.Windows.Forms.Panel();
+            this.panel64 = new System.Windows.Forms.Panel();
+            this.panel05 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.panel35 = new System.Windows.Forms.Panel();
+            this.panel45 = new System.Windows.Forms.Panel();
+            this.panel55 = new System.Windows.Forms.Panel();
+            this.panel65 = new System.Windows.Forms.Panel();
+            this.panel06 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.panel36 = new System.Windows.Forms.Panel();
+            this.panel46 = new System.Windows.Forms.Panel();
+            this.panel56 = new System.Windows.Forms.Panel();
+            this.panel66 = new System.Windows.Forms.Panel();
             this.tableLayoutPanelMonth.SuspendLayout();
             this.tabPageMonth.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -88,6 +130,47 @@
             // tableLayoutPanelMonth
             // 
             resources.ApplyResources(this.tableLayoutPanelMonth, "tableLayoutPanelMonth");
+            this.tableLayoutPanelMonth.Controls.Add(this.panel66, 6, 6);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel56, 5, 6);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel46, 4, 6);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel36, 3, 6);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel26, 2, 6);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel16, 1, 6);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel06, 0, 6);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel65, 6, 5);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel55, 5, 5);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel45, 4, 5);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel35, 3, 5);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel25, 2, 5);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel15, 1, 5);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel05, 0, 5);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel64, 6, 4);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel54, 5, 4);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel44, 4, 4);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel34, 3, 4);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel24, 2, 4);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel14, 1, 4);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel04, 0, 4);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel63, 6, 3);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel53, 5, 3);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel43, 4, 3);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel33, 3, 3);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel23, 2, 3);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel13, 1, 3);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel03, 0, 3);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel62, 6, 2);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel52, 5, 2);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel42, 4, 2);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel32, 3, 2);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel22, 2, 2);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel12, 1, 2);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel02, 0, 2);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel61, 6, 1);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel51, 5, 1);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel41, 4, 1);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel31, 3, 1);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel21, 2, 1);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel11, 1, 1);
             this.tableLayoutPanelMonth.Controls.Add(this.labelSunday, 0, 0);
             this.tableLayoutPanelMonth.Controls.Add(this.labelMonday, 1, 0);
             this.tableLayoutPanelMonth.Controls.Add(this.labelTuesday, 2, 0);
@@ -95,6 +178,8 @@
             this.tableLayoutPanelMonth.Controls.Add(this.labelThursday, 4, 0);
             this.tableLayoutPanelMonth.Controls.Add(this.labelFriday, 5, 0);
             this.tableLayoutPanelMonth.Controls.Add(this.labelSaturday, 6, 0);
+            this.tableLayoutPanelMonth.Controls.Add(this.panel01, 0, 1);
+            this.tableLayoutPanelMonth.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.tableLayoutPanelMonth.Name = "tableLayoutPanelMonth";
             // 
             // labelSunday
@@ -213,6 +298,216 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // panel01
+            // 
+            resources.ApplyResources(this.panel01, "panel01");
+            this.panel01.Name = "panel01";
+            // 
+            // panel11
+            // 
+            resources.ApplyResources(this.panel11, "panel11");
+            this.panel11.Name = "panel11";
+            // 
+            // panel21
+            // 
+            resources.ApplyResources(this.panel21, "panel21");
+            this.panel21.Name = "panel21";
+            // 
+            // panel31
+            // 
+            resources.ApplyResources(this.panel31, "panel31");
+            this.panel31.Name = "panel31";
+            // 
+            // panel41
+            // 
+            resources.ApplyResources(this.panel41, "panel41");
+            this.panel41.Name = "panel41";
+            // 
+            // panel51
+            // 
+            resources.ApplyResources(this.panel51, "panel51");
+            this.panel51.Name = "panel51";
+            // 
+            // panel61
+            // 
+            resources.ApplyResources(this.panel61, "panel61");
+            this.panel61.Name = "panel61";
+            // 
+            // panel02
+            // 
+            resources.ApplyResources(this.panel02, "panel02");
+            this.panel02.Name = "panel02";
+            // 
+            // panel12
+            // 
+            resources.ApplyResources(this.panel12, "panel12");
+            this.panel12.Name = "panel12";
+            // 
+            // panel22
+            // 
+            resources.ApplyResources(this.panel22, "panel22");
+            this.panel22.Name = "panel22";
+            // 
+            // panel32
+            // 
+            resources.ApplyResources(this.panel32, "panel32");
+            this.panel32.Name = "panel32";
+            // 
+            // panel42
+            // 
+            resources.ApplyResources(this.panel42, "panel42");
+            this.panel42.Name = "panel42";
+            // 
+            // panel52
+            // 
+            resources.ApplyResources(this.panel52, "panel52");
+            this.panel52.Name = "panel52";
+            // 
+            // panel62
+            // 
+            resources.ApplyResources(this.panel62, "panel62");
+            this.panel62.Name = "panel62";
+            // 
+            // panel03
+            // 
+            resources.ApplyResources(this.panel03, "panel03");
+            this.panel03.Name = "panel03";
+            // 
+            // panel13
+            // 
+            resources.ApplyResources(this.panel13, "panel13");
+            this.panel13.Name = "panel13";
+            // 
+            // panel23
+            // 
+            resources.ApplyResources(this.panel23, "panel23");
+            this.panel23.Name = "panel23";
+            // 
+            // panel33
+            // 
+            resources.ApplyResources(this.panel33, "panel33");
+            this.panel33.Name = "panel33";
+            // 
+            // panel43
+            // 
+            resources.ApplyResources(this.panel43, "panel43");
+            this.panel43.Name = "panel43";
+            // 
+            // panel53
+            // 
+            resources.ApplyResources(this.panel53, "panel53");
+            this.panel53.Name = "panel53";
+            // 
+            // panel63
+            // 
+            resources.ApplyResources(this.panel63, "panel63");
+            this.panel63.Name = "panel63";
+            // 
+            // panel04
+            // 
+            resources.ApplyResources(this.panel04, "panel04");
+            this.panel04.Name = "panel04";
+            // 
+            // panel14
+            // 
+            resources.ApplyResources(this.panel14, "panel14");
+            this.panel14.Name = "panel14";
+            // 
+            // panel24
+            // 
+            resources.ApplyResources(this.panel24, "panel24");
+            this.panel24.Name = "panel24";
+            // 
+            // panel34
+            // 
+            resources.ApplyResources(this.panel34, "panel34");
+            this.panel34.Name = "panel34";
+            // 
+            // panel44
+            // 
+            resources.ApplyResources(this.panel44, "panel44");
+            this.panel44.Name = "panel44";
+            // 
+            // panel54
+            // 
+            resources.ApplyResources(this.panel54, "panel54");
+            this.panel54.Name = "panel54";
+            // 
+            // panel64
+            // 
+            resources.ApplyResources(this.panel64, "panel64");
+            this.panel64.Name = "panel64";
+            // 
+            // panel05
+            // 
+            resources.ApplyResources(this.panel05, "panel05");
+            this.panel05.Name = "panel05";
+            // 
+            // panel15
+            // 
+            resources.ApplyResources(this.panel15, "panel15");
+            this.panel15.Name = "panel15";
+            // 
+            // panel25
+            // 
+            resources.ApplyResources(this.panel25, "panel25");
+            this.panel25.Name = "panel25";
+            // 
+            // panel35
+            // 
+            resources.ApplyResources(this.panel35, "panel35");
+            this.panel35.Name = "panel35";
+            // 
+            // panel45
+            // 
+            resources.ApplyResources(this.panel45, "panel45");
+            this.panel45.Name = "panel45";
+            // 
+            // panel55
+            // 
+            resources.ApplyResources(this.panel55, "panel55");
+            this.panel55.Name = "panel55";
+            // 
+            // panel65
+            // 
+            resources.ApplyResources(this.panel65, "panel65");
+            this.panel65.Name = "panel65";
+            // 
+            // panel06
+            // 
+            resources.ApplyResources(this.panel06, "panel06");
+            this.panel06.Name = "panel06";
+            // 
+            // panel16
+            // 
+            resources.ApplyResources(this.panel16, "panel16");
+            this.panel16.Name = "panel16";
+            // 
+            // panel26
+            // 
+            resources.ApplyResources(this.panel26, "panel26");
+            this.panel26.Name = "panel26";
+            // 
+            // panel36
+            // 
+            resources.ApplyResources(this.panel36, "panel36");
+            this.panel36.Name = "panel36";
+            // 
+            // panel46
+            // 
+            resources.ApplyResources(this.panel46, "panel46");
+            this.panel46.Name = "panel46";
+            // 
+            // panel56
+            // 
+            resources.ApplyResources(this.panel56, "panel56");
+            this.panel56.Name = "panel56";
+            // 
+            // panel66
+            // 
+            resources.ApplyResources(this.panel66, "panel66");
+            this.panel66.Name = "panel66";
+            // 
             // Menus
             // 
             resources.ApplyResources(this, "$this");
@@ -227,11 +522,9 @@
             this.Controls.Add(this.tabControl);
             this.MaximizeBox = false;
             this.Name = "Menus";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.tableLayoutPanelMonth.ResumeLayout(false);
             this.tableLayoutPanelMonth.PerformLayout();
             this.tabPageMonth.ResumeLayout(false);
-            this.tabPageMonth.PerformLayout();
             this.tabControl.ResumeLayout(false);
             this.tabPageDay.ResumeLayout(false);
             this.tabPageDay.PerformLayout();
@@ -266,6 +559,48 @@
         private System.Windows.Forms.TabPage tabPageWeek;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel01;
+        private System.Windows.Forms.Panel panel66;
+        private System.Windows.Forms.Panel panel56;
+        private System.Windows.Forms.Panel panel46;
+        private System.Windows.Forms.Panel panel36;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panel06;
+        private System.Windows.Forms.Panel panel65;
+        private System.Windows.Forms.Panel panel55;
+        private System.Windows.Forms.Panel panel45;
+        private System.Windows.Forms.Panel panel35;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panel05;
+        private System.Windows.Forms.Panel panel64;
+        private System.Windows.Forms.Panel panel54;
+        private System.Windows.Forms.Panel panel44;
+        private System.Windows.Forms.Panel panel34;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel panel04;
+        private System.Windows.Forms.Panel panel63;
+        private System.Windows.Forms.Panel panel53;
+        private System.Windows.Forms.Panel panel43;
+        private System.Windows.Forms.Panel panel33;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel03;
+        private System.Windows.Forms.Panel panel62;
+        private System.Windows.Forms.Panel panel52;
+        private System.Windows.Forms.Panel panel42;
+        private System.Windows.Forms.Panel panel32;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel02;
+        private System.Windows.Forms.Panel panel61;
+        private System.Windows.Forms.Panel panel51;
+        private System.Windows.Forms.Panel panel41;
+        private System.Windows.Forms.Panel panel31;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Panel panel11;
     }
 }
 
