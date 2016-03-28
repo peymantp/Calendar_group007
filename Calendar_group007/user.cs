@@ -43,7 +43,7 @@ namespace PJCalender
                 }
             }
 
-            mainForm.displayAgenda();
+            mainForm.displayAll();
 
         }
 

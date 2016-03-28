@@ -95,8 +95,11 @@ namespace PJCalender
             int year = date.Year % 100;
             if (month > 10)
                 ++year;
-            return (int)(Math.Abs( 1 + Math.Floor(2.6*month-0.2) - 2*century + 
+            int day = (int)(Math.Abs(1 + Math.Floor(2.6 * month - 0.2) - 2*century +
                 year + Math.Floor(year / 4.0) + Math.Floor(century / 4.0)) % 7);
+
+
+            return day;
         }
     }
 }
