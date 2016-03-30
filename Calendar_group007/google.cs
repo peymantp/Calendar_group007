@@ -21,7 +21,7 @@ namespace PJCalender
     /// </summary>
     class google
     {
-        static string[] Scopes = { CalendarService.Scope.CalendarReadonly };
+        static string[] Scopes = { CalendarService.Scope.Calendar };
         static string ApplicationName = "PJCalender";
         /// <summary>
         /// This object is not meant to be stored.
@@ -31,10 +31,9 @@ namespace PJCalender
         /// <param name="user">username of user</param>
         public google(Menus form, string user)
         {
-            UserCredential credential = null;
-
             using (var stream = new System.IO.FileStream("client_secret.json", System.IO.FileMode.Open, System.IO.FileAccess.Read))
             {
+                UserCredential credential = null;
                 //string credPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
                 string credPath = (".credentials/currentUser");
 
@@ -42,8 +41,7 @@ namespace PJCalender
                                                                          Scopes,
                                                                          user,
                                                                          System.Threading.CancellationToken.None,
-                                                                         new FileDataStore(credPath, true)).Result
-                ;
+                                                                         new FileDataStore(credPath, true)).Result;
                 // Create Google Calendar API service.
                 if (credential == null)
                     return;
@@ -75,42 +73,65 @@ namespace PJCalender
             }
         }
 
-        static public void createEvent(String sum, 
-            String where, 
-            String desc, 
-            DateTime st, 
+        static public void createEvent(String sum,
+            String where,
+            String desc,
+            DateTime st,
             DateTime en)
         {
-            Event newEvent = new Event()
+            using (var stream = new System.IO.FileStream("client_secret.json", System.IO.FileMode.Open, System.IO.FileAccess.Read))
             {
-                Summary = sum,
-                Location = where,
-                Description =desc,
-                Start = new EventDateTime()
+                UserCredential credential = null;
+                //string credPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+                string credPath = (".credentials/currentUser");
+                string user = (Directory.GetFiles(".credentials/currentUser", "*")[0]).Split('-')[1];
+                credential = GoogleWebAuthorizationBroker.AuthorizeAsync(GoogleClientSecrets.Load(stream).Secrets,
+                                                                         Scopes,
+                                                                         user,
+                                                                         System.Threading.CancellationToken.None,
+                                                                         new FileDataStore(credPath, true)).Result;
+                // Create Google Calendar API service.
+                if (credential == null)
+                    return;
+
+                var service = new CalendarService(new BaseClientService.Initializer()
                 {
-                    DateTime = st,
-                    TimeZone = TimeZone.CurrentTimeZone.ToString(),
-                },
-                End = new EventDateTime()
+                    HttpClientInitializer = credential,
+                    ApplicationName = ApplicationName,
+                });
+
+
+                Event newEvent = new Event()
                 {
-                    DateTime = en,
-                    TimeZone = TimeZone.CurrentTimeZone.ToString(),
-                },
-                Recurrence = new String[] { "RRULE:FREQ=DAILY;COUNT=2" },
-                Reminders = new Event.RemindersData()
-                {
-                    UseDefault = false,
-                    Overrides = new EventReminder[] 
+                    Summary = sum,
+                    Location = where,
+                    Description = desc,
+                    Start = new EventDateTime()
                     {
+                        DateTime = st,
+                        TimeZone = TimeZone.CurrentTimeZone.ToString(),
+                    },
+                    End = new EventDateTime()
+                    {
+                        DateTime = en,
+                        TimeZone = TimeZone.CurrentTimeZone.ToString(),
+                    },
+                    Recurrence = new String[] { "RRULE:FREQ=DAILY;COUNT=2" },
+                    Reminders = new Event.RemindersData()
+                    {
+                        UseDefault = false,
+                        Overrides = new EventReminder[]
+                        {
                         new EventReminder() { Method = "email", Minutes = 24 * 60 },
                         new EventReminder() { Method = "sms", Minutes = 10 },
+                        }
                     }
-                }
-            };
+                };
 
-            String calendarId = "primary";
-            //EventsResource.InsertRequest request = service.Events.Insert(newEvent, calendarId);
-            //Event createdEvent = request.Execute();
+                String calendarId = "primary";
+                EventsResource.InsertRequest request = service.Events.Insert(newEvent, calendarId);
+                Event createdEvent = request.Execute();
+            }
         }
         /// <summary>
         /// todo remake fucntion

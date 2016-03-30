@@ -36,30 +36,34 @@ namespace PJCalender
                 {
                     column = 0;
                     TLA.RowCount = ++row;
-                    if (eventItem.Start.DateTime != null)
+                    try
                     {
-                        DateTime start = (DateTime)eventItem.Start.DateTime;
-                        string startDay = start.ToLongDateString();
-                        string startTime = start.ToLongTimeString();
+                        if (eventItem.Start.DateTime != null)
+                        {
+                            DateTime start = (DateTime)eventItem.Start.DateTime;
+                            string startDay = start.ToLongDateString();
+                            string startTime = start.ToLongTimeString();
 
-                        DateTime end = (DateTime)eventItem.End.DateTime;
-                        string endDay = end.ToLongDateString();
-                        string endTime = end.ToLongTimeString();
+                            DateTime end = (DateTime)eventItem.End.DateTime;
+                            string endDay = end.ToLongDateString();
+                            string endTime = end.ToLongTimeString();
 
-                        string discription = eventItem.Description;
-                        string Summary = eventItem.Summary;
+                            string discription = eventItem.Description;
+                            string Summary = eventItem.Summary;
 
-                        //Start hour and end hour
-                        label = new Label();
-                        label.Text = startTime + nl + endTime;
-                        TLA.Controls.Add(label, column++, row);
+                            //Start hour and end hour
+                            label = new Label();
+                            label.Text = startTime + nl + endTime;
+                            TLA.Controls.Add(label, column++, row);
 
-                        //Summary and discription
-                        label = new Label();
-                        label.Text = (Summary + nl + discription);
-                        TLA.Controls.Add(label, column++, row);
+                            //Summary and discription
+                            label = new Label();
+                            label.Text = (Summary + nl + discription);
+                            TLA.Controls.Add(label, column++, row);
+                        }
                     }
-                    }
+                    catch (Exception e) { }
+                   }
                 TLA.MinimumSize = new System.Drawing.Size(722, 0);
                 TLA.AutoSize = true;
                 flowLayoutPanel.Controls.Add(TLA);

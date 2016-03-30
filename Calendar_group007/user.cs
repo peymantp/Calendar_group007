@@ -43,7 +43,7 @@ namespace PJCalender
                 }
             }
 
-            mainForm.displayAll();
+            mainForm.displayAll(); // make delegate
 
         }
 
