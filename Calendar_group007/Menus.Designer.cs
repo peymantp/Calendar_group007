@@ -26,12 +26,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menus));
             this.buttonExit = new System.Windows.Forms.Button();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.dropDownView = new System.Windows.Forms.ToolStripComboBox();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.tableLayoutPanelMonth = new System.Windows.Forms.DBLayoutPanel();
+            this.tableLayoutPanelMonth = new System.Windows.Forms.DBLayoutPanel(this.components);
             this.panel66 = new System.Windows.Forms.Panel();
             this.panel56 = new System.Windows.Forms.Panel();
             this.panel46 = new System.Windows.Forms.Panel();
@@ -84,7 +85,7 @@
             this.tabPageMonth = new System.Windows.Forms.TabPage();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageWeek = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.DBLayoutPanel(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -138,11 +139,12 @@
             this.labelDay = new System.Windows.Forms.Label();
             this.tabPageAgenda = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.tableLayoutAgenda = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutAgenda = new System.Windows.Forms.DBLayoutPanel(this.components);
             this.buttonPickDay = new System.Windows.Forms.Button();
             this.buttonLog = new System.Windows.Forms.Button();
             this.buttonEvent = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.tableLayoutPanelMonth.SuspendLayout();
             this.tabPageMonth.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -858,12 +860,20 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button2
+            // 
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Menus
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.SystemColors.Window;
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonEvent);
             this.Controls.Add(this.buttonLog);
@@ -906,7 +916,7 @@
         private System.Windows.Forms.Label labelThursday;
         private System.Windows.Forms.Button buttonPickDay;
         private System.Windows.Forms.TabPage tabPageAgenda;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutAgenda;
+        private System.Windows.Forms.DBLayoutPanel tableLayoutAgenda;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
         public System.Windows.Forms.Button buttonLog;
         private System.Windows.Forms.Label labelDay;
@@ -955,7 +965,7 @@
         private System.Windows.Forms.Panel panel31;
         private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.DBLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
@@ -1005,6 +1015,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel78;
+        private System.Windows.Forms.Button button2;
     }
 }
 
