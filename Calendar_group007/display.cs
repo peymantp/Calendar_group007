@@ -27,7 +27,6 @@ namespace PJCalender
             {
                 Label label = new Label();
                 label.Text = events.Count + "";
-                string dayHold = null;
                 String nl = Environment.NewLine;
                 int column = 0;
                 int row = 0;
@@ -37,7 +36,6 @@ namespace PJCalender
                 {
                     column = 0;
                     TLA.RowCount = ++row;
-
                     if (eventItem.Start.DateTime != null)
                     {
                         DateTime start = (DateTime)eventItem.Start.DateTime;

@@ -21,5 +21,52 @@ namespace PJCalender
         {
             InitializeComponent();
         }
+
+        private void checkBoxRepeat_CheckedChanged(object sender, EventArgs e)
+        {
+            if (panelRepeat.Visible == false)
+                panelRepeat.Visible = true;
+            else
+                panelRepeat.Visible = false;
+        }
+
+        private void Repeats_Changed(object sender, EventArgs e)
+        {
+            if (comboBoxRepeats.SelectedItem.Equals("Daily"))
+            {
+                labelChange.Text = "days";
+                panelWeekDay.Visible = false;
+            }
+            else if (comboBoxRepeats.SelectedItem.Equals("Weekly")) {
+                labelChange.Text = "weeks";
+                panelWeekDay.Visible = true;
+            }
+            else if (comboBoxRepeats.SelectedItem.Equals("Monthly")) {
+                labelChange.Text = "months";
+                panelWeekDay.Visible = false;
+            }
+            else if (comboBoxRepeats.SelectedItem.Equals("Yearly")) {
+                labelChange.Text = "yearly";
+                panelWeekDay.Visible = false;
+            }
+        }
+
+        private void Check_AllDay(object sender, EventArgs e)
+        {
+            if (checkBoxAllDay.Checked)
+            {
+                dateTimePickerFrom.CustomFormat = "MMM dd, yyyy";
+                dateTimePicker2.CustomFormat = "MMM dd, yyyy";
+            } else
+            {
+                dateTimePickerFrom.CustomFormat = "dd, MM, yyyy: HH:mm";
+                dateTimePicker2.CustomFormat = "dd, MM, yyyy: HH:mm";
+            }
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

@@ -32,7 +32,7 @@ namespace PJCalender
         public google(Menus form, string user)
         {
             UserCredential credential = null;
-            
+
             using (var stream = new System.IO.FileStream("client_secret.json", System.IO.FileMode.Open, System.IO.FileAccess.Read))
             {
                 //string credPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
@@ -74,12 +74,49 @@ namespace PJCalender
                 }
             }
         }
-        
+
+        static public void createEvent(String sum, 
+            String where, 
+            String desc, 
+            DateTime st, 
+            DateTime en)
+        {
+            Event newEvent = new Event()
+            {
+                Summary = sum,
+                Location = where,
+                Description =desc,
+                Start = new EventDateTime()
+                {
+                    DateTime = st,
+                    TimeZone = TimeZone.CurrentTimeZone.ToString(),
+                },
+                End = new EventDateTime()
+                {
+                    DateTime = en,
+                    TimeZone = TimeZone.CurrentTimeZone.ToString(),
+                },
+                Recurrence = new String[] { "RRULE:FREQ=DAILY;COUNT=2" },
+                Reminders = new Event.RemindersData()
+                {
+                    UseDefault = false,
+                    Overrides = new EventReminder[] 
+                    {
+                        new EventReminder() { Method = "email", Minutes = 24 * 60 },
+                        new EventReminder() { Method = "sms", Minutes = 10 },
+                    }
+                }
+            };
+
+            String calendarId = "primary";
+            //EventsResource.InsertRequest request = service.Events.Insert(newEvent, calendarId);
+            //Event createdEvent = request.Execute();
+        }
         /// <summary>
         /// todo remake fucntion
         /// </summary>
         /// <returns></returns>
-        static public  void readEventLocal(Menus form)
+        static public void readEventLocal(Menus form)
         {
             form.events = new ArrayList();
             if (!System.IO.Directory.Exists(".save/currentUser"))
@@ -110,7 +147,6 @@ namespace PJCalender
                 {
                     System.IO.StreamWriter file = new System.IO.StreamWriter(".save/currentUser/" + eventItem.Id + ".json");
                     string json = JsonConvert.SerializeObject(eventItem, Formatting.Indented);
-                    file.WriteLine(json);
                     try
                     {
                         file.Close();
