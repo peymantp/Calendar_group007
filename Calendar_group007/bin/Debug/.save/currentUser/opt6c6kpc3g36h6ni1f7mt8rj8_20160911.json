@@ -1,0 +1,67 @@
+{
+  "anyoneCanAddSelf": null,
+  "attachments": null,
+  "attendees": null,
+  "attendeesOmitted": null,
+  "colorId": null,
+  "created": "2012-12-26T23:41:49.000Z",
+  "creator": {
+    "displayName": "Emmanuel Huchet",
+    "email": "emmanuel.huchet@gmail.com",
+    "id": null,
+    "self": null
+  },
+  "description": null,
+  "end": {
+    "date": "2016-09-12",
+    "dateTime": null,
+    "timeZone": null,
+    "ETag": null
+  },
+  "endTimeUnspecified": null,
+  "etag": "\"2713130619356000\"",
+  "extendedProperties": null,
+  "gadget": null,
+  "guestsCanInviteOthers": null,
+  "guestsCanModify": null,
+  "guestsCanSeeOtherGuests": null,
+  "hangoutLink": null,
+  "htmlLink": "https://www.google.com/calendar/event?eid=b3B0NmM2a3BjM2czNmg2bmkxZjdtdDhyajhfMjAxNjA5MTEganVkYWh1QG0",
+  "iCalUID": "opt6c6kpc3g36h6ni1f7mt8rj8@google.com",
+  "id": "opt6c6kpc3g36h6ni1f7mt8rj8_20160911",
+  "kind": "calendar#event",
+  "location": null,
+  "locked": null,
+  "organizer": {
+    "displayName": "Justin Huchet",
+    "email": "judahu@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "originalStartTime": {
+    "date": "2016-09-11",
+    "dateTime": null,
+    "timeZone": null,
+    "ETag": null
+  },
+  "privateCopy": null,
+  "recurrence": null,
+  "recurringEventId": "opt6c6kpc3g36h6ni1f7mt8rj8",
+  "reminders": {
+    "overrides": null,
+    "useDefault": false
+  },
+  "sequence": 0,
+  "source": null,
+  "start": {
+    "date": "2016-09-11",
+    "dateTime": null,
+    "timeZone": null,
+    "ETag": null
+  },
+  "status": "confirmed",
+  "summary": "Justin's birthday",
+  "transparency": "transparent",
+  "updated": "2012-12-26T23:41:49.678Z",
+  "visibility": null
+}

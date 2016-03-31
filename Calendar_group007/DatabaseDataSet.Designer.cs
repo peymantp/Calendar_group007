@@ -20,17 +20,17 @@ namespace PJCalender {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("CalendarDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DatabaseDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class CalendarDataSet : global::System.Data.DataSet {
+    public partial class DatabaseDataSet : global::System.Data.DataSet {
         
-        private RawDataDataTable tableRawData;
+        private EventDataDataTable tableEventData;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public CalendarDataSet() {
+        public DatabaseDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace PJCalender {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected CalendarDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DatabaseDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace PJCalender {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["RawData"] != null)) {
-                    base.Tables.Add(new RawDataDataTable(ds.Tables["RawData"]));
+                if ((ds.Tables["EventData"] != null)) {
+                    base.Tables.Add(new EventDataDataTable(ds.Tables["EventData"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace PJCalender {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public RawDataDataTable RawData {
+        public EventDataDataTable EventData {
             get {
-                return this.tableRawData;
+                return this.tableEventData;
             }
         }
         
@@ -127,7 +127,7 @@ namespace PJCalender {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            CalendarDataSet cln = ((CalendarDataSet)(base.Clone()));
+            DatabaseDataSet cln = ((DatabaseDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace PJCalender {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["RawData"] != null)) {
-                    base.Tables.Add(new RawDataDataTable(ds.Tables["RawData"]));
+                if ((ds.Tables["EventData"] != null)) {
+                    base.Tables.Add(new EventDataDataTable(ds.Tables["EventData"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace PJCalender {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableRawData = ((RawDataDataTable)(base.Tables["RawData"]));
+            this.tableEventData = ((EventDataDataTable)(base.Tables["EventData"]));
             if ((initTable == true)) {
-                if ((this.tableRawData != null)) {
-                    this.tableRawData.InitVars();
+                if ((this.tableEventData != null)) {
+                    this.tableEventData.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace PJCalender {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "CalendarDataSet";
+            this.DataSetName = "DatabaseDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/CalendarDataSet.xsd";
+            this.Namespace = "http://tempuri.org/DatabaseDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableRawData = new RawDataDataTable();
-            base.Tables.Add(this.tableRawData);
+            this.tableEventData = new EventDataDataTable();
+            base.Tables.Add(this.tableEventData);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeRawData() {
+        private bool ShouldSerializeEventData() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace PJCalender {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            CalendarDataSet ds = new CalendarDataSet();
+            DatabaseDataSet ds = new DatabaseDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,27 +270,27 @@ namespace PJCalender {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void RawDataRowChangeEventHandler(object sender, RawDataRowChangeEvent e);
+        public delegate void EventDataRowChangeEventHandler(object sender, EventDataRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class RawDataDataTable : global::System.Data.TypedTableBase<RawDataRow> {
+        public partial class EventDataDataTable : global::System.Data.TypedTableBase<EventDataRow> {
             
             private global::System.Data.DataColumn columnId;
             
-            private global::System.Data.DataColumn columnStartDate;
+            private global::System.Data.DataColumn columnDate;
             
-            private global::System.Data.DataColumn columnStartTime;
+            private global::System.Data.DataColumn columnTime;
             
             private global::System.Data.DataColumn columnData;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public RawDataDataTable() {
-                this.TableName = "RawData";
+            public EventDataDataTable() {
+                this.TableName = "EventData";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +298,7 @@ namespace PJCalender {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal RawDataDataTable(global::System.Data.DataTable table) {
+            internal EventDataDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,7 +315,7 @@ namespace PJCalender {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected RawDataDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected EventDataDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -330,17 +330,17 @@ namespace PJCalender {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn StartDateColumn {
+            public global::System.Data.DataColumn DateColumn {
                 get {
-                    return this.columnStartDate;
+                    return this.columnDate;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn StartTimeColumn {
+            public global::System.Data.DataColumn TimeColumn {
                 get {
-                    return this.columnStartTime;
+                    return this.columnTime;
                 }
             }
             
@@ -363,55 +363,55 @@ namespace PJCalender {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public RawDataRow this[int index] {
+            public EventDataRow this[int index] {
                 get {
-                    return ((RawDataRow)(this.Rows[index]));
+                    return ((EventDataRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event RawDataRowChangeEventHandler RawDataRowChanging;
+            public event EventDataRowChangeEventHandler EventDataRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event RawDataRowChangeEventHandler RawDataRowChanged;
+            public event EventDataRowChangeEventHandler EventDataRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event RawDataRowChangeEventHandler RawDataRowDeleting;
+            public event EventDataRowChangeEventHandler EventDataRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event RawDataRowChangeEventHandler RawDataRowDeleted;
+            public event EventDataRowChangeEventHandler EventDataRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddRawDataRow(RawDataRow row) {
+            public void AddEventDataRow(EventDataRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public RawDataRow AddRawDataRow(string Id, System.DateTime StartDate, string StartTime, string Data) {
-                RawDataRow rowRawDataRow = ((RawDataRow)(this.NewRow()));
+            public EventDataRow AddEventDataRow(string Id, System.DateTime Date, string Time, string Data) {
+                EventDataRow rowEventDataRow = ((EventDataRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id,
-                        StartDate,
-                        StartTime,
+                        Date,
+                        Time,
                         Data};
-                rowRawDataRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowRawDataRow);
-                return rowRawDataRow;
+                rowEventDataRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowEventDataRow);
+                return rowEventDataRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public RawDataRow FindById(string Id) {
-                return ((RawDataRow)(this.Rows.Find(new object[] {
+            public EventDataRow FindById(string Id) {
+                return ((EventDataRow)(this.Rows.Find(new object[] {
                             Id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                RawDataDataTable cln = ((RawDataDataTable)(base.Clone()));
+                EventDataDataTable cln = ((EventDataDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -419,15 +419,15 @@ namespace PJCalender {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new RawDataDataTable();
+                return new EventDataDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnId = base.Columns["Id"];
-                this.columnStartDate = base.Columns["StartDate"];
-                this.columnStartTime = base.Columns["StartTime"];
+                this.columnDate = base.Columns["Date"];
+                this.columnTime = base.Columns["Time"];
                 this.columnData = base.Columns["Data"];
             }
             
@@ -436,10 +436,10 @@ namespace PJCalender {
             private void InitClass() {
                 this.columnId = new global::System.Data.DataColumn("Id", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnId);
-                this.columnStartDate = new global::System.Data.DataColumn("StartDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnStartDate);
-                this.columnStartTime = new global::System.Data.DataColumn("StartTime", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnStartTime);
+                this.columnDate = new global::System.Data.DataColumn("Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDate);
+                this.columnTime = new global::System.Data.DataColumn("Time", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTime);
                 this.columnData = new global::System.Data.DataColumn("Data", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnData);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
@@ -447,37 +447,37 @@ namespace PJCalender {
                 this.columnId.AllowDBNull = false;
                 this.columnId.Unique = true;
                 this.columnId.MaxLength = 50;
-                this.columnStartDate.AllowDBNull = false;
-                this.columnStartTime.AllowDBNull = false;
-                this.columnStartTime.MaxLength = 10;
+                this.columnDate.AllowDBNull = false;
+                this.columnTime.AllowDBNull = false;
+                this.columnTime.MaxLength = 10;
                 this.columnData.AllowDBNull = false;
                 this.columnData.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public RawDataRow NewRawDataRow() {
-                return ((RawDataRow)(this.NewRow()));
+            public EventDataRow NewEventDataRow() {
+                return ((EventDataRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new RawDataRow(builder);
+                return new EventDataRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(RawDataRow);
+                return typeof(EventDataRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.RawDataRowChanged != null)) {
-                    this.RawDataRowChanged(this, new RawDataRowChangeEvent(((RawDataRow)(e.Row)), e.Action));
+                if ((this.EventDataRowChanged != null)) {
+                    this.EventDataRowChanged(this, new EventDataRowChangeEvent(((EventDataRow)(e.Row)), e.Action));
                 }
             }
             
@@ -485,8 +485,8 @@ namespace PJCalender {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.RawDataRowChanging != null)) {
-                    this.RawDataRowChanging(this, new RawDataRowChangeEvent(((RawDataRow)(e.Row)), e.Action));
+                if ((this.EventDataRowChanging != null)) {
+                    this.EventDataRowChanging(this, new EventDataRowChangeEvent(((EventDataRow)(e.Row)), e.Action));
                 }
             }
             
@@ -494,8 +494,8 @@ namespace PJCalender {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.RawDataRowDeleted != null)) {
-                    this.RawDataRowDeleted(this, new RawDataRowChangeEvent(((RawDataRow)(e.Row)), e.Action));
+                if ((this.EventDataRowDeleted != null)) {
+                    this.EventDataRowDeleted(this, new EventDataRowChangeEvent(((EventDataRow)(e.Row)), e.Action));
                 }
             }
             
@@ -503,14 +503,14 @@ namespace PJCalender {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.RawDataRowDeleting != null)) {
-                    this.RawDataRowDeleting(this, new RawDataRowChangeEvent(((RawDataRow)(e.Row)), e.Action));
+                if ((this.EventDataRowDeleting != null)) {
+                    this.EventDataRowDeleting(this, new EventDataRowChangeEvent(((EventDataRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveRawDataRow(RawDataRow row) {
+            public void RemoveEventDataRow(EventDataRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -519,7 +519,7 @@ namespace PJCalender {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                CalendarDataSet ds = new CalendarDataSet();
+                DatabaseDataSet ds = new DatabaseDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -537,7 +537,7 @@ namespace PJCalender {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "RawDataDataTable";
+                attribute2.FixedValue = "EventDataDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -581,47 +581,47 @@ namespace PJCalender {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class RawDataRow : global::System.Data.DataRow {
+        public partial class EventDataRow : global::System.Data.DataRow {
             
-            private RawDataDataTable tableRawData;
+            private EventDataDataTable tableEventData;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal RawDataRow(global::System.Data.DataRowBuilder rb) : 
+            internal EventDataRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableRawData = ((RawDataDataTable)(this.Table));
+                this.tableEventData = ((EventDataDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Id {
                 get {
-                    return ((string)(this[this.tableRawData.IdColumn]));
+                    return ((string)(this[this.tableEventData.IdColumn]));
                 }
                 set {
-                    this[this.tableRawData.IdColumn] = value;
+                    this[this.tableEventData.IdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime StartDate {
+            public System.DateTime Date {
                 get {
-                    return ((global::System.DateTime)(this[this.tableRawData.StartDateColumn]));
+                    return ((global::System.DateTime)(this[this.tableEventData.DateColumn]));
                 }
                 set {
-                    this[this.tableRawData.StartDateColumn] = value;
+                    this[this.tableEventData.DateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string StartTime {
+            public string Time {
                 get {
-                    return ((string)(this[this.tableRawData.StartTimeColumn]));
+                    return ((string)(this[this.tableEventData.TimeColumn]));
                 }
                 set {
-                    this[this.tableRawData.StartTimeColumn] = value;
+                    this[this.tableEventData.TimeColumn] = value;
                 }
             }
             
@@ -629,10 +629,10 @@ namespace PJCalender {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Data {
                 get {
-                    return ((string)(this[this.tableRawData.DataColumn]));
+                    return ((string)(this[this.tableEventData.DataColumn]));
                 }
                 set {
-                    this[this.tableRawData.DataColumn] = value;
+                    this[this.tableEventData.DataColumn] = value;
                 }
             }
         }
@@ -641,22 +641,22 @@ namespace PJCalender {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class RawDataRowChangeEvent : global::System.EventArgs {
+        public class EventDataRowChangeEvent : global::System.EventArgs {
             
-            private RawDataRow eventRow;
+            private EventDataRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public RawDataRowChangeEvent(RawDataRow row, global::System.Data.DataRowAction action) {
+            public EventDataRowChangeEvent(EventDataRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public RawDataRow Row {
+            public EventDataRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -672,7 +672,7 @@ namespace PJCalender {
         }
     }
 }
-namespace PJCalender.CalendarDataSetTableAdapters {
+namespace PJCalender.DatabaseDataSetTableAdapters {
     
     
     /// <summary>
@@ -684,7 +684,7 @@ namespace PJCalender.CalendarDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class RawDataTableAdapter : global::System.ComponentModel.Component {
+    public partial class EventDataTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -698,7 +698,7 @@ namespace PJCalender.CalendarDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public RawDataTableAdapter() {
+        public EventDataTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -795,49 +795,49 @@ namespace PJCalender.CalendarDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "RawData";
+            tableMapping.DataSetTable = "EventData";
             tableMapping.ColumnMappings.Add("Id", "Id");
-            tableMapping.ColumnMappings.Add("StartDate", "StartDate");
-            tableMapping.ColumnMappings.Add("StartTime", "StartTime");
+            tableMapping.ColumnMappings.Add("Date", "Date");
+            tableMapping.ColumnMappings.Add("Time", "Time");
             tableMapping.ColumnMappings.Add("Data", "Data");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[RawData] WHERE (([Id] = @Original_Id) AND ([StartDate] = @Orig" +
-                "inal_StartDate) AND ([StartTime] = @Original_StartTime))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[EventData] WHERE (([Id] = @Original_Id) AND ([Date] = @Origina" +
+                "l_Date) AND ([Time] = @Original_Time))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StartDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StartTime", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Time", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Time", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[RawData] ([Id], [StartDate], [StartTime], [Data]) VALUES (@Id," +
-                " @StartDate, @StartTime, @Data);\r\nSELECT Id, StartDate, StartTime, Data FROM Raw" +
-                "Data WHERE (Id = @Id)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[EventData] ([Id], [Date], [Time], [Data]) VALUES (@Id, @Date, " +
+                "@Time, @Data);\r\nSELECT Id, Date, Time, Data FROM EventData WHERE (Id = @Id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartTime", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Time", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[RawData] SET [Id] = @Id, [StartDate] = @StartDate, [StartTime] = @StartTime, [Data] = @Data WHERE (([Id] = @Original_Id) AND ([StartDate] = @Original_StartDate) AND ([StartTime] = @Original_StartTime));
-SELECT Id, StartDate, StartTime, Data FROM RawData WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[EventData] SET [Id] = @Id, [Date] = @Date, [Time] = @Time, [Data] =" +
+                " @Data WHERE (([Id] = @Original_Id) AND ([Date] = @Original_Date) AND ([Time] = " +
+                "@Original_Time));\r\nSELECT Id, Date, Time, Data FROM EventData WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartTime", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Time", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Time", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StartDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StartTime", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Time", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Time", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::PJCalender.Properties.Settings.Default.CalendarDatabaseConnectionString;
+            this._connection.ConnectionString = global::PJCalender.Properties.Settings.Default.DatabaseConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -846,7 +846,7 @@ SELECT Id, StartDate, StartTime, Data FROM RawData WHERE (Id = @Id)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, StartDate, StartTime, Data FROM dbo.RawData";
+            this._commandCollection[0].CommandText = "SELECT Id, Date, Time, Data FROM dbo.EventData";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -854,7 +854,7 @@ SELECT Id, StartDate, StartTime, Data FROM RawData WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(CalendarDataSet.RawDataDataTable dataTable) {
+        public virtual int Fill(DatabaseDataSet.EventDataDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -867,9 +867,9 @@ SELECT Id, StartDate, StartTime, Data FROM RawData WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual CalendarDataSet.RawDataDataTable GetData() {
+        public virtual DatabaseDataSet.EventDataDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            CalendarDataSet.RawDataDataTable dataTable = new CalendarDataSet.RawDataDataTable();
+            DatabaseDataSet.EventDataDataTable dataTable = new DatabaseDataSet.EventDataDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -877,15 +877,15 @@ SELECT Id, StartDate, StartTime, Data FROM RawData WHERE (Id = @Id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(CalendarDataSet.RawDataDataTable dataTable) {
+        public virtual int Update(DatabaseDataSet.EventDataDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(CalendarDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "RawData");
+        public virtual int Update(DatabaseDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "EventData");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -907,19 +907,19 @@ SELECT Id, StartDate, StartTime, Data FROM RawData WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_Id, System.DateTime Original_StartDate, string Original_StartTime) {
+        public virtual int Delete(string Original_Id, System.DateTime Original_Date, string Original_Time) {
             if ((Original_Id == null)) {
                 throw new global::System.ArgumentNullException("Original_Id");
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_Id));
             }
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_StartDate));
-            if ((Original_StartTime == null)) {
-                throw new global::System.ArgumentNullException("Original_StartTime");
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_Date));
+            if ((Original_Time == null)) {
+                throw new global::System.ArgumentNullException("Original_Time");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_StartTime));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Time));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -941,19 +941,19 @@ SELECT Id, StartDate, StartTime, Data FROM RawData WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Id, System.DateTime StartDate, string StartTime, string Data) {
+        public virtual int Insert(string Id, System.DateTime Date, string Time, string Data) {
             if ((Id == null)) {
                 throw new global::System.ArgumentNullException("Id");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Id));
             }
-            this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(StartDate));
-            if ((StartTime == null)) {
-                throw new global::System.ArgumentNullException("StartTime");
+            this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(Date));
+            if ((Time == null)) {
+                throw new global::System.ArgumentNullException("Time");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(StartTime));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Time));
             }
             if ((Data == null)) {
                 throw new global::System.ArgumentNullException("Data");
@@ -981,19 +981,19 @@ SELECT Id, StartDate, StartTime, Data FROM RawData WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Id, System.DateTime StartDate, string StartTime, string Data, string Original_Id, System.DateTime Original_StartDate, string Original_StartTime) {
+        public virtual int Update(string Id, System.DateTime Date, string Time, string Data, string Original_Id, System.DateTime Original_Date, string Original_Time) {
             if ((Id == null)) {
                 throw new global::System.ArgumentNullException("Id");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Id));
             }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(StartDate));
-            if ((StartTime == null)) {
-                throw new global::System.ArgumentNullException("StartTime");
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(Date));
+            if ((Time == null)) {
+                throw new global::System.ArgumentNullException("Time");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(StartTime));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Time));
             }
             if ((Data == null)) {
                 throw new global::System.ArgumentNullException("Data");
@@ -1007,12 +1007,12 @@ SELECT Id, StartDate, StartTime, Data FROM RawData WHERE (Id = @Id)";
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Id));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Original_StartDate));
-            if ((Original_StartTime == null)) {
-                throw new global::System.ArgumentNullException("Original_StartTime");
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Original_Date));
+            if ((Original_Time == null)) {
+                throw new global::System.ArgumentNullException("Original_Time");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_StartTime));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Time));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1034,8 +1034,8 @@ SELECT Id, StartDate, StartTime, Data FROM RawData WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime StartDate, string StartTime, string Data, string Original_Id, System.DateTime Original_StartDate, string Original_StartTime) {
-            return this.Update(Original_Id, StartDate, StartTime, Data, Original_Id, Original_StartDate, Original_StartTime);
+        public virtual int Update(System.DateTime Date, string Time, string Data, string Original_Id, System.DateTime Original_Date, string Original_Time) {
+            return this.Update(Original_Id, Date, Time, Data, Original_Id, Original_Date, Original_Time);
         }
     }
     
@@ -1051,7 +1051,7 @@ SELECT Id, StartDate, StartTime, Data FROM RawData WHERE (Id = @Id)";
         
         private UpdateOrderOption _updateOrder;
         
-        private RawDataTableAdapter _rawDataTableAdapter;
+        private EventDataTableAdapter _eventDataTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1073,12 +1073,12 @@ SELECT Id, StartDate, StartTime, Data FROM RawData WHERE (Id = @Id)";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public RawDataTableAdapter RawDataTableAdapter {
+        public EventDataTableAdapter EventDataTableAdapter {
             get {
-                return this._rawDataTableAdapter;
+                return this._eventDataTableAdapter;
             }
             set {
-                this._rawDataTableAdapter = value;
+                this._eventDataTableAdapter = value;
             }
         }
         
@@ -1101,9 +1101,9 @@ SELECT Id, StartDate, StartTime, Data FROM RawData WHERE (Id = @Id)";
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._rawDataTableAdapter != null) 
-                            && (this._rawDataTableAdapter.Connection != null))) {
-                    return this._rawDataTableAdapter.Connection;
+                if (((this._eventDataTableAdapter != null) 
+                            && (this._eventDataTableAdapter.Connection != null))) {
+                    return this._eventDataTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1118,7 +1118,7 @@ SELECT Id, StartDate, StartTime, Data FROM RawData WHERE (Id = @Id)";
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._rawDataTableAdapter != null)) {
+                if ((this._eventDataTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1130,14 +1130,14 @@ SELECT Id, StartDate, StartTime, Data FROM RawData WHERE (Id = @Id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(CalendarDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DatabaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._rawDataTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.RawData.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._eventDataTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.EventData.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._rawDataTableAdapter.Update(updatedRows));
+                    result = (result + this._eventDataTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1149,13 +1149,13 @@ SELECT Id, StartDate, StartTime, Data FROM RawData WHERE (Id = @Id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(CalendarDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DatabaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._rawDataTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.RawData.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._eventDataTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.EventData.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._rawDataTableAdapter.Update(addedRows));
+                    result = (result + this._eventDataTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1167,13 +1167,13 @@ SELECT Id, StartDate, StartTime, Data FROM RawData WHERE (Id = @Id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(CalendarDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DatabaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._rawDataTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.RawData.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._eventDataTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.EventData.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._rawDataTableAdapter.Update(deletedRows));
+                    result = (result + this._eventDataTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1209,15 +1209,15 @@ SELECT Id, StartDate, StartTime, Data FROM RawData WHERE (Id = @Id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(CalendarDataSet dataSet) {
+        public virtual int UpdateAll(DatabaseDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._rawDataTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._rawDataTableAdapter.Connection) == false))) {
+            if (((this._eventDataTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._eventDataTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1253,13 +1253,13 @@ SELECT Id, StartDate, StartTime, Data FROM RawData WHERE (Id = @Id)";
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._rawDataTableAdapter != null)) {
-                    revertConnections.Add(this._rawDataTableAdapter, this._rawDataTableAdapter.Connection);
-                    this._rawDataTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._rawDataTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._rawDataTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._rawDataTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._rawDataTableAdapter.Adapter);
+                if ((this._eventDataTableAdapter != null)) {
+                    revertConnections.Add(this._eventDataTableAdapter, this._eventDataTableAdapter.Connection);
+                    this._eventDataTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._eventDataTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._eventDataTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._eventDataTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._eventDataTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1320,9 +1320,9 @@ SELECT Id, StartDate, StartTime, Data FROM RawData WHERE (Id = @Id)";
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._rawDataTableAdapter != null)) {
-                    this._rawDataTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._rawDataTableAdapter]));
-                    this._rawDataTableAdapter.Transaction = null;
+                if ((this._eventDataTableAdapter != null)) {
+                    this._eventDataTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._eventDataTableAdapter]));
+                    this._eventDataTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

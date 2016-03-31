@@ -166,7 +166,7 @@ namespace PJCalender
             {
                 try
                 {
-                    System.IO.StreamWriter file = new System.IO.StreamWriter(".save/currentUser/" + eventItem.Id + ".json");
+                    /*System.IO.StreamWriter file = new System.IO.StreamWriter(".save/currentUser/" + eventItem.Id + ".json");
                     string json = JsonConvert.SerializeObject(eventItem, Formatting.Indented);
                     try
                     {
@@ -175,7 +175,14 @@ namespace PJCalender
                     catch (EncoderFallbackException fallback)
                     {
                         System.Windows.Forms.MessageBox.Show(fallback.ToString(), fallback.GetType().ToString());
-                    }
+                    }*/
+                    DatabaseDataSet database = new DatabaseDataSet();
+                    DatabaseDataSetTableAdapters.EventDataTableAdapter adapter
+                        = new DatabaseDataSetTableAdapters.EventDataTableAdapter();
+
+
+                    adapter.Insert(eventItem.Id, (DateTime)eventItem.Start.DateTime
+                        , ((DateTime)eventItem.Start.DateTime).ToLongTimeString(), eventItem.ToString());
                 }
                 catch (System.IO.DirectoryNotFoundException ex)
                 {

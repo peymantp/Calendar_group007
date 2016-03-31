@@ -307,3 +307,5 @@ C:\Users\Student\Downloads\2m\Calendar_group007\obj\Debug\PJCalender.UsernameDia
 C:\Users\Student\Downloads\2m\Calendar_group007\obj\Debug\PJCalender.Menus.en-CA.resources
 C:\Users\Student\Downloads\2m\Calendar_group007\obj\Debug\PJCalender.csproj.GenerateResource.Cache
 C:\Users\Student\Downloads\2m\Calendar_group007\obj\Debug\en-CA\PJCalender.resources.dll
+C:\Users\Justin\Documents\BCIT\Term 3\Tech Pro\Calendar\Calendar_group007\bin\Debug\Database.mdf
+C:\Users\Justin\Documents\BCIT\Term 3\Tech Pro\Calendar\Calendar_group007\bin\Debug\Database_log.ldf
