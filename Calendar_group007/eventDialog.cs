@@ -66,7 +66,8 @@ namespace PJCalender
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            
+            google.createEvent(textBoxEvent.Text, textBoxWhere.Text, textBoxDescription.Text,
+                dateTimePickerFrom.Value, dateTimePicker2.Value);
         }
     }
 }

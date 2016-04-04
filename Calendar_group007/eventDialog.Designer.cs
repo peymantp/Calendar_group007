@@ -39,27 +39,27 @@
             this.labelWhere = new System.Windows.Forms.Label();
             this.labelDescription = new System.Windows.Forms.Label();
             this.textBoxWhere = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.panelRepeat = new System.Windows.Forms.Panel();
-            this.labelRepeat = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.labelRepeatEvery = new System.Windows.Forms.Label();
+            this.panelWeekDay = new System.Windows.Forms.Panel();
             this.labelRepeatOn = new System.Windows.Forms.Label();
-            this.labelEnds = new System.Windows.Forms.Label();
-            this.radioButtonNever = new System.Windows.Forms.RadioButton();
-            this.radioButtonAfter = new System.Windows.Forms.RadioButton();
-            this.radioButtonOn = new System.Windows.Forms.RadioButton();
-            this.comboBoxRepeats = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.labelChange = new System.Windows.Forms.Label();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.checkBox0 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.panelWeekDay = new System.Windows.Forms.Panel();
+            this.labelChange = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxRepeats = new System.Windows.Forms.ComboBox();
+            this.radioButtonOn = new System.Windows.Forms.RadioButton();
+            this.radioButtonAfter = new System.Windows.Forms.RadioButton();
+            this.radioButtonNever = new System.Windows.Forms.RadioButton();
+            this.labelEnds = new System.Windows.Forms.Label();
+            this.labelRepeatEvery = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelRepeat = new System.Windows.Forms.Label();
             this.panelRepeat.SuspendLayout();
             this.panelWeekDay.SuspendLayout();
             this.SuspendLayout();
@@ -101,6 +101,7 @@
             this.dateTimePickerFrom.Name = "dateTimePickerFrom";
             this.dateTimePickerFrom.Size = new System.Drawing.Size(185, 26);
             this.dateTimePickerFrom.TabIndex = 5;
+            this.dateTimePickerFrom.Value = new System.DateTime(2016, 4, 1, 13, 0, 0, 0);
             // 
             // dateTimePicker2
             // 
@@ -174,13 +175,13 @@
             this.textBoxWhere.Size = new System.Drawing.Size(323, 26);
             this.textBoxWhere.TabIndex = 12;
             // 
-            // textBox1
+            // textBoxDescription
             // 
-            this.textBox1.Location = new System.Drawing.Point(142, 215);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(323, 64);
-            this.textBox1.TabIndex = 13;
+            this.textBoxDescription.Location = new System.Drawing.Point(142, 215);
+            this.textBoxDescription.Multiline = true;
+            this.textBoxDescription.Name = "textBoxDescription";
+            this.textBoxDescription.Size = new System.Drawing.Size(323, 64);
+            this.textBoxDescription.TabIndex = 13;
             // 
             // panelRepeat
             // 
@@ -203,37 +204,21 @@
             this.panelRepeat.TabIndex = 14;
             this.panelRepeat.Visible = false;
             // 
-            // labelRepeat
+            // panelWeekDay
             // 
-            this.labelRepeat.AutoSize = true;
-            this.labelRepeat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRepeat.Location = new System.Drawing.Point(4, 4);
-            this.labelRepeat.Name = "labelRepeat";
-            this.labelRepeat.Size = new System.Drawing.Size(88, 26);
-            this.labelRepeat.TabIndex = 0;
-            this.labelRepeat.Text = "Repeat";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 40);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 25);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Repeats";
-            // 
-            // labelRepeatEvery
-            // 
-            this.labelRepeatEvery.AutoSize = true;
-            this.labelRepeatEvery.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRepeatEvery.Location = new System.Drawing.Point(21, 76);
-            this.labelRepeatEvery.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelRepeatEvery.Name = "labelRepeatEvery";
-            this.labelRepeatEvery.Size = new System.Drawing.Size(127, 25);
-            this.labelRepeatEvery.TabIndex = 12;
-            this.labelRepeatEvery.Text = "Repeat every";
+            this.panelWeekDay.Controls.Add(this.labelRepeatOn);
+            this.panelWeekDay.Controls.Add(this.checkBox6);
+            this.panelWeekDay.Controls.Add(this.checkBox0);
+            this.panelWeekDay.Controls.Add(this.checkBox5);
+            this.panelWeekDay.Controls.Add(this.checkBox1);
+            this.panelWeekDay.Controls.Add(this.checkBox4);
+            this.panelWeekDay.Controls.Add(this.checkBox2);
+            this.panelWeekDay.Controls.Add(this.checkBox3);
+            this.panelWeekDay.Location = new System.Drawing.Point(15, 109);
+            this.panelWeekDay.Name = "panelWeekDay";
+            this.panelWeekDay.Size = new System.Drawing.Size(466, 39);
+            this.panelWeekDay.TabIndex = 28;
+            this.panelWeekDay.Visible = false;
             // 
             // labelRepeatOn
             // 
@@ -246,65 +231,84 @@
             this.labelRepeatOn.TabIndex = 13;
             this.labelRepeatOn.Text = "Repeat on";
             // 
-            // labelEnds
+            // checkBox6
             // 
-            this.labelEnds.AutoSize = true;
-            this.labelEnds.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEnds.Location = new System.Drawing.Point(21, 151);
-            this.labelEnds.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelEnds.Name = "labelEnds";
-            this.labelEnds.Size = new System.Drawing.Size(57, 25);
-            this.labelEnds.TabIndex = 14;
-            this.labelEnds.Text = "Ends";
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(422, 8);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(46, 24);
+            this.checkBox6.TabIndex = 27;
+            this.checkBox6.Text = "S";
+            this.checkBox6.UseVisualStyleBackColor = true;
             // 
-            // radioButtonNever
+            // checkBox0
             // 
-            this.radioButtonNever.AutoSize = true;
-            this.radioButtonNever.Checked = true;
-            this.radioButtonNever.Location = new System.Drawing.Point(154, 151);
-            this.radioButtonNever.Name = "radioButtonNever";
-            this.radioButtonNever.Size = new System.Drawing.Size(75, 24);
-            this.radioButtonNever.TabIndex = 15;
-            this.radioButtonNever.TabStop = true;
-            this.radioButtonNever.Text = "Never";
-            this.radioButtonNever.UseVisualStyleBackColor = true;
+            this.checkBox0.AutoSize = true;
+            this.checkBox0.Location = new System.Drawing.Point(139, 8);
+            this.checkBox0.Name = "checkBox0";
+            this.checkBox0.Size = new System.Drawing.Size(46, 24);
+            this.checkBox0.TabIndex = 21;
+            this.checkBox0.Text = "S";
+            this.checkBox0.UseVisualStyleBackColor = true;
             // 
-            // radioButtonAfter
+            // checkBox5
             // 
-            this.radioButtonAfter.AutoSize = true;
-            this.radioButtonAfter.Location = new System.Drawing.Point(154, 181);
-            this.radioButtonAfter.Name = "radioButtonAfter";
-            this.radioButtonAfter.Size = new System.Drawing.Size(69, 24);
-            this.radioButtonAfter.TabIndex = 16;
-            this.radioButtonAfter.TabStop = true;
-            this.radioButtonAfter.Text = "After";
-            this.radioButtonAfter.UseVisualStyleBackColor = true;
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(380, 8);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(45, 24);
+            this.checkBox5.TabIndex = 26;
+            this.checkBox5.Text = "F";
+            this.checkBox5.UseVisualStyleBackColor = true;
             // 
-            // radioButtonOn
+            // checkBox1
             // 
-            this.radioButtonOn.AutoSize = true;
-            this.radioButtonOn.Location = new System.Drawing.Point(154, 211);
-            this.radioButtonOn.Name = "radioButtonOn";
-            this.radioButtonOn.Size = new System.Drawing.Size(138, 24);
-            this.radioButtonOn.TabIndex = 17;
-            this.radioButtonOn.TabStop = true;
-            this.radioButtonOn.Text = "radioButtonOn";
-            this.radioButtonOn.UseVisualStyleBackColor = true;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(185, 8);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(48, 24);
+            this.checkBox1.TabIndex = 22;
+            this.checkBox1.Text = "M";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // comboBoxRepeats
+            // checkBox4
             // 
-            this.comboBoxRepeats.FormattingEnabled = true;
-            this.comboBoxRepeats.Items.AddRange(new object[] {
-            "Daily",
-            "Weekly",
-            "Monthly",
-            "Yearly"});
-            this.comboBoxRepeats.Location = new System.Drawing.Point(154, 40);
-            this.comboBoxRepeats.Name = "comboBoxRepeats";
-            this.comboBoxRepeats.Size = new System.Drawing.Size(291, 28);
-            this.comboBoxRepeats.TabIndex = 18;
-            this.comboBoxRepeats.Text = "Daily";
-            this.comboBoxRepeats.SelectedIndexChanged += new System.EventHandler(this.Repeats_Changed);
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(332, 8);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(44, 24);
+            this.checkBox4.TabIndex = 25;
+            this.checkBox4.Text = "T";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(234, 8);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(44, 24);
+            this.checkBox2.TabIndex = 23;
+            this.checkBox2.Text = "T";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(282, 8);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(50, 24);
+            this.checkBox3.TabIndex = 24;
+            this.checkBox3.Text = "W";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // labelChange
+            // 
+            this.labelChange.AutoSize = true;
+            this.labelChange.Location = new System.Drawing.Point(281, 80);
+            this.labelChange.Name = "labelChange";
+            this.labelChange.Size = new System.Drawing.Size(42, 20);
+            this.labelChange.TabIndex = 20;
+            this.labelChange.Text = "days";
             // 
             // comboBox2
             // 
@@ -345,100 +349,97 @@
             this.comboBox2.Size = new System.Drawing.Size(121, 28);
             this.comboBox2.TabIndex = 19;
             // 
-            // labelChange
+            // comboBoxRepeats
             // 
-            this.labelChange.AutoSize = true;
-            this.labelChange.Location = new System.Drawing.Point(281, 80);
-            this.labelChange.Name = "labelChange";
-            this.labelChange.Size = new System.Drawing.Size(42, 20);
-            this.labelChange.TabIndex = 20;
-            this.labelChange.Text = "days";
+            this.comboBoxRepeats.FormattingEnabled = true;
+            this.comboBoxRepeats.Items.AddRange(new object[] {
+            "Daily",
+            "Weekly",
+            "Monthly",
+            "Yearly"});
+            this.comboBoxRepeats.Location = new System.Drawing.Point(154, 40);
+            this.comboBoxRepeats.Name = "comboBoxRepeats";
+            this.comboBoxRepeats.Size = new System.Drawing.Size(291, 28);
+            this.comboBoxRepeats.TabIndex = 18;
+            this.comboBoxRepeats.Text = "Daily";
+            this.comboBoxRepeats.SelectedIndexChanged += new System.EventHandler(this.Repeats_Changed);
             // 
-            // checkBox0
+            // radioButtonOn
             // 
-            this.checkBox0.AutoSize = true;
-            this.checkBox0.Location = new System.Drawing.Point(139, 8);
-            this.checkBox0.Name = "checkBox0";
-            this.checkBox0.Size = new System.Drawing.Size(46, 24);
-            this.checkBox0.TabIndex = 21;
-            this.checkBox0.Text = "S";
-            this.checkBox0.UseVisualStyleBackColor = true;
+            this.radioButtonOn.AutoSize = true;
+            this.radioButtonOn.Location = new System.Drawing.Point(154, 211);
+            this.radioButtonOn.Name = "radioButtonOn";
+            this.radioButtonOn.Size = new System.Drawing.Size(138, 24);
+            this.radioButtonOn.TabIndex = 17;
+            this.radioButtonOn.TabStop = true;
+            this.radioButtonOn.Text = "radioButtonOn";
+            this.radioButtonOn.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // radioButtonAfter
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(185, 8);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(48, 24);
-            this.checkBox1.TabIndex = 22;
-            this.checkBox1.Text = "M";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.radioButtonAfter.AutoSize = true;
+            this.radioButtonAfter.Location = new System.Drawing.Point(154, 181);
+            this.radioButtonAfter.Name = "radioButtonAfter";
+            this.radioButtonAfter.Size = new System.Drawing.Size(69, 24);
+            this.radioButtonAfter.TabIndex = 16;
+            this.radioButtonAfter.TabStop = true;
+            this.radioButtonAfter.Text = "After";
+            this.radioButtonAfter.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // radioButtonNever
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(234, 8);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(44, 24);
-            this.checkBox2.TabIndex = 23;
-            this.checkBox2.Text = "T";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.radioButtonNever.AutoSize = true;
+            this.radioButtonNever.Checked = true;
+            this.radioButtonNever.Location = new System.Drawing.Point(154, 151);
+            this.radioButtonNever.Name = "radioButtonNever";
+            this.radioButtonNever.Size = new System.Drawing.Size(75, 24);
+            this.radioButtonNever.TabIndex = 15;
+            this.radioButtonNever.TabStop = true;
+            this.radioButtonNever.Text = "Never";
+            this.radioButtonNever.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // labelEnds
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(282, 8);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(50, 24);
-            this.checkBox3.TabIndex = 24;
-            this.checkBox3.Text = "W";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.labelEnds.AutoSize = true;
+            this.labelEnds.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEnds.Location = new System.Drawing.Point(21, 151);
+            this.labelEnds.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelEnds.Name = "labelEnds";
+            this.labelEnds.Size = new System.Drawing.Size(57, 25);
+            this.labelEnds.TabIndex = 14;
+            this.labelEnds.Text = "Ends";
             // 
-            // checkBox4
+            // labelRepeatEvery
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(332, 8);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(44, 24);
-            this.checkBox4.TabIndex = 25;
-            this.checkBox4.Text = "T";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.labelRepeatEvery.AutoSize = true;
+            this.labelRepeatEvery.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRepeatEvery.Location = new System.Drawing.Point(21, 76);
+            this.labelRepeatEvery.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelRepeatEvery.Name = "labelRepeatEvery";
+            this.labelRepeatEvery.Size = new System.Drawing.Size(127, 25);
+            this.labelRepeatEvery.TabIndex = 12;
+            this.labelRepeatEvery.Text = "Repeat every";
             // 
-            // checkBox5
+            // label1
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(380, 8);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(45, 24);
-            this.checkBox5.TabIndex = 26;
-            this.checkBox5.Text = "F";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 40);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 25);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Repeats";
             // 
-            // checkBox6
+            // labelRepeat
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(422, 8);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(46, 24);
-            this.checkBox6.TabIndex = 27;
-            this.checkBox6.Text = "S";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // panelWeekDay
-            // 
-            this.panelWeekDay.Controls.Add(this.labelRepeatOn);
-            this.panelWeekDay.Controls.Add(this.checkBox6);
-            this.panelWeekDay.Controls.Add(this.checkBox0);
-            this.panelWeekDay.Controls.Add(this.checkBox5);
-            this.panelWeekDay.Controls.Add(this.checkBox1);
-            this.panelWeekDay.Controls.Add(this.checkBox4);
-            this.panelWeekDay.Controls.Add(this.checkBox2);
-            this.panelWeekDay.Controls.Add(this.checkBox3);
-            this.panelWeekDay.Location = new System.Drawing.Point(15, 109);
-            this.panelWeekDay.Name = "panelWeekDay";
-            this.panelWeekDay.Size = new System.Drawing.Size(466, 39);
-            this.panelWeekDay.TabIndex = 28;
-            this.panelWeekDay.Visible = false;
+            this.labelRepeat.AutoSize = true;
+            this.labelRepeat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRepeat.Location = new System.Drawing.Point(4, 4);
+            this.labelRepeat.Name = "labelRepeat";
+            this.labelRepeat.Size = new System.Drawing.Size(88, 26);
+            this.labelRepeat.TabIndex = 0;
+            this.labelRepeat.Text = "Repeat";
             // 
             // eventDialog
             // 
@@ -449,7 +450,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(483, 543);
             this.Controls.Add(this.panelRepeat);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxDescription);
             this.Controls.Add(this.textBoxWhere);
             this.Controls.Add(this.labelDescription);
             this.Controls.Add(this.labelWhere);
@@ -487,7 +488,7 @@
         private System.Windows.Forms.Label labelWhere;
         private System.Windows.Forms.Label labelDescription;
         private System.Windows.Forms.TextBox textBoxWhere;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxDescription;
         private System.Windows.Forms.Panel panelRepeat;
         private System.Windows.Forms.Label labelRepeatOn;
         private System.Windows.Forms.Label labelRepeatEvery;

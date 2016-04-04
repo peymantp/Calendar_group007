@@ -309,3 +309,5 @@ C:\Users\Student\Downloads\2m\Calendar_group007\obj\Debug\PJCalender.csproj.Gene
 C:\Users\Student\Downloads\2m\Calendar_group007\obj\Debug\en-CA\PJCalender.resources.dll
 C:\Users\Justin\Documents\BCIT\Term 3\Tech Pro\Calendar\Calendar_group007\bin\Debug\Database.mdf
 C:\Users\Justin\Documents\BCIT\Term 3\Tech Pro\Calendar\Calendar_group007\bin\Debug\Database_log.ldf
+C:\Users\peymantp\Documents\Calendar_group007\Calendar_group007\bin\Debug\Database.mdf
+C:\Users\peymantp\Documents\Calendar_group007\Calendar_group007\bin\Debug\Database_log.ldf
