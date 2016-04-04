@@ -1,0 +1,65 @@
+{
+  "anyoneCanAddSelf": null,
+  "attachments": null,
+  "attendees": null,
+  "attendeesOmitted": null,
+  "colorId": null,
+  "created": "2016-04-04T05:41:32.000Z",
+  "creator": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "description": null,
+  "end": {
+    "date": null,
+    "dateTime": "2016-04-13T17:30:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "endTimeUnspecified": true,
+  "etag": "\"2919496985946000\"",
+  "extendedProperties": null,
+  "gadget": null,
+  "guestsCanInviteOthers": null,
+  "guestsCanModify": null,
+  "guestsCanSeeOtherGuests": null,
+  "hangoutLink": null,
+  "htmlLink": "https://www.google.com/calendar/event?eid=NWNjcGhpbGhiNXVkYW1lamloazUzN2M3ZnMgcGV5bWFudHBhcnNhQG0",
+  "iCalUID": "5ccphilhb5udamejihk537c7fs@google.com",
+  "id": "5ccphilhb5udamejihk537c7fs",
+  "kind": "calendar#event",
+  "location": null,
+  "locked": null,
+  "organizer": {
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
+    "id": null,
+    "self": true
+  },
+  "originalStartTime": null,
+  "privateCopy": null,
+  "recurrence": null,
+  "recurringEventId": null,
+  "reminders": {
+    "overrides": null,
+    "useDefault": true
+  },
+  "sequence": 0,
+  "source": {
+    "title": "[COMP3721] Assignment #4",
+    "url": "https://mail.google.com/mail/#all/153deec28b552d9d"
+  },
+  "start": {
+    "date": null,
+    "dateTime": "2016-04-13T16:30:00-07:00",
+    "timeZone": "America/Vancouver",
+    "ETag": null
+  },
+  "status": "confirmed",
+  "summary": "DataCommAssignment #4",
+  "transparency": null,
+  "updated": "2016-04-04T05:41:32.973Z",
+  "visibility": null
+}

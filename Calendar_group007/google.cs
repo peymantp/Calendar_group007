@@ -77,7 +77,8 @@ namespace PJCalender
             String where,
             String desc,
             DateTime st,
-            DateTime en)
+            DateTime en,
+            String[] re)
         {
             using (var stream = new System.IO.FileStream("client_secret.json", System.IO.FileMode.Open, System.IO.FileAccess.Read))
             {
@@ -100,7 +101,6 @@ namespace PJCalender
                     ApplicationName = ApplicationName,
                 });
 
-
                 Event newEvent = new Event()
                 {
                     Summary = sum,
@@ -109,28 +109,28 @@ namespace PJCalender
                     Start = new EventDateTime()
                     {
                         DateTime = st,
-                        TimeZone = TimeZone.CurrentTimeZone.ToString(),
+                        TimeZone = "America/Vancouver",
                     },
                     End = new EventDateTime()
                     {
                         DateTime = en,
-                        TimeZone = TimeZone.CurrentTimeZone.ToString(),
+                        TimeZone = "America/Vancouver",
                     },
-                    Recurrence = new String[] { "RRULE:FREQ=DAILY;COUNT=2" },
+                    Recurrence = re,
                     Reminders = new Event.RemindersData()
                     {
-                        UseDefault = false,
-                        Overrides = new EventReminder[]
-                        {
-                        new EventReminder() { Method = "email", Minutes = 24 * 60 },
-                        new EventReminder() { Method = "sms", Minutes = 10 },
-                        }
+                        UseDefault = true,
                     }
                 };
 
                 String calendarId = "primary";
                 EventsResource.InsertRequest request = service.Events.Insert(newEvent, calendarId);
-                Event createdEvent = request.Execute();
+                try {
+                    Event createdEvent = request.Execute();
+                } catch(Exception x)
+                {
+
+                }
             }
         }
         /// <summary>
@@ -161,28 +161,31 @@ namespace PJCalender
         {
             if (!System.IO.Directory.Exists(".save/currentUser"))
                 System.IO.Directory.CreateDirectory(".save/currentUser");
-
             foreach (var eventItem in events.Items)
             {
                 try
                 {
-                    /*System.IO.StreamWriter file = new System.IO.StreamWriter(".save/currentUser/" + eventItem.Id + ".json");
-                    string json = JsonConvert.SerializeObject(eventItem, Formatting.Indented);
-                    try
+                    /*
+                    using (System.IO.StreamWriter file = new System.IO.StreamWriter(".save/currentUser/" + eventItem.Id + ".json"))
                     {
-                        file.Close();
+                        string json = JsonConvert.SerializeObject(eventItem, Formatting.Indented);
+                        try
+                        {
+                            file.Write(json);
+                        }
+                        catch (EncoderFallbackException fallback)
+                        {
+                            System.Windows.Forms.MessageBox.Show(fallback.ToString(), fallback.GetType().ToString());
+                        }
                     }
-                    catch (EncoderFallbackException fallback)
-                    {
-                        System.Windows.Forms.MessageBox.Show(fallback.ToString(), fallback.GetType().ToString());
-                    }*/
+                    */
                     DatabaseDataSet database = new DatabaseDataSet();
                     DatabaseDataSetTableAdapters.EventDataTableAdapter adapter
                         = new DatabaseDataSetTableAdapters.EventDataTableAdapter();
 
-
+                    
                     adapter.Insert(eventItem.Id, (DateTime)eventItem.Start.DateTime
-                        , ((DateTime)eventItem.Start.DateTime).ToLongTimeString(), eventItem.ToString());
+                        , ((DateTime)eventItem.Start.DateTime).ToLongTimeString(), eventItem.ToString()); 
                 }
                 catch (System.IO.DirectoryNotFoundException ex)
                 {

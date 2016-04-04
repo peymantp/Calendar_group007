@@ -3,10 +3,11 @@ clear all events on screen when user logs out
 eventDialog
 
 event creation
+-stop multiday daily repeats
 
 change events retrieved to 20 years
 
 make server
-	-multi user
+	-multi user(maybe)
 	
 dont change login button to logout if user cancels google access

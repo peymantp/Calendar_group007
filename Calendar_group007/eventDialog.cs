@@ -17,6 +17,7 @@ namespace PJCalender
     /// </summary>
     public partial class eventDialog : Form
     {
+        private string[] recurrence { get; set; }
         public eventDialog()
         {
             InitializeComponent();
@@ -66,7 +67,70 @@ namespace PJCalender
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            
+            if (checkBoxRepeat.Checked)
+            {
+                recurrence = null;
+                makeRecurrence();
+            }
+            google.createEvent(textBoxEvent.Text, textBoxWhere.Text, textBoxDescription.Text,
+                dateTimePickerFrom.Value, dateTimePicker2.Value,recurrence);
+        }
+
+        private void makeRecurrence()
+        {
+            List<string> ruleList = new List<string>();
+            ruleList.Add("RRULE:FREQ=" + comboBoxRepeats.SelectedText + ";INTERVAL=" + comboBoxRepeatEvery.SelectedText);
+
+            if (radioButtonAfter.Checked)
+            {
+                ruleList.Add("RRULE:FREQ=" + comboBoxRepeats.SelectedText + ";COUNT=" + comboBoxAfter.SelectedText);
+            }
+            else if (radioButtonOn.Checked)
+            {
+                ruleList.Add("RRULE:FREQ=" + comboBoxRepeats.SelectedText + ";UNTIL=" 
+                    + dateTimePickerOn.Value.ToString("yyyyMMdd")+"T"
+                    + dateTimePickerOn.Value.ToString("HHmmss"));
+            }
+
+            if (panelWeekDay.Visible)
+            {
+                List<string> dayList = new List<string>();
+                if (checkBox0.Checked) dayList.Add("SU");
+                if (checkBox1.Checked) dayList.Add("MO");
+                if (checkBox2.Checked) dayList.Add("TU");
+                if (checkBox3.Checked) dayList.Add("WE");
+                if (checkBox4.Checked) dayList.Add("TH");
+                if (checkBox5.Checked) dayList.Add("FR");
+                if (checkBox6.Checked) dayList.Add("SA");
+                if (dayList.Count != 0)
+                {
+                    String days = "";
+                    days += dayList.ElementAt(0);
+                    for(int i = 1; i < dayList.Count; ++i)
+                    {
+                        days += "," + dayList.ElementAt(i);
+                    }
+                    ruleList.Add("RRULE:FREQ=" + comboBoxRepeats.SelectedText + ";BYDAY=" + days);
+                }
+            }
+
+            recurrence = ruleList.ToArray();
+        }
+
+        private void radioButtonAfter_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonAfter.Checked)
+                comboBoxAfter.Enabled = true;
+            else
+                comboBoxAfter.Enabled = false;
+        }
+
+        private void radioButtonOn_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonOn.Checked)
+                dateTimePickerOn.Enabled = true;
+            else
+                dateTimePickerOn.Enabled = false;
         }
     }
 }
