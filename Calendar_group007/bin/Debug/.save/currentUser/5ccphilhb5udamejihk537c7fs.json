@@ -4,37 +4,37 @@
   "attendees": null,
   "attendeesOmitted": null,
   "colorId": null,
-  "created": "2016-02-17T19:25:33.000Z",
+  "created": "2016-04-04T05:41:32.000Z",
   "creator": {
-    "displayName": "Wendy Huchet",
-    "email": "wendy.huchet@gmail.com",
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
     "id": null,
-    "self": null
+    "self": true
   },
   "description": null,
   "end": {
     "date": null,
-    "dateTime": "2016-04-02T12:00:00-07:00",
+    "dateTime": "2016-04-13T17:30:00-07:00",
     "timeZone": "America/Vancouver",
     "ETag": null
   },
-  "endTimeUnspecified": null,
-  "etag": "\"2911488797316000\"",
+  "endTimeUnspecified": true,
+  "etag": "\"2919496985946000\"",
   "extendedProperties": null,
   "gadget": null,
   "guestsCanInviteOthers": null,
   "guestsCanModify": null,
   "guestsCanSeeOtherGuests": null,
   "hangoutLink": null,
-  "htmlLink": "https://www.google.com/calendar/event?eid=Y3BqNjJkOWdjbGk2MmI5cGM0bzY0YjlrY29yNjhiOW82ZGdqZ2I5bTY4cWpnY2hsNmRoNjZvcjY3NCBqdWRhaHVAbQ",
-  "iCalUID": "cpj62d9gcli62b9pc4o64b9kcor68b9o6dgjgb9m68qjgchl6dh66or674@google.com",
-  "id": "cpj62d9gcli62b9pc4o64b9kcor68b9o6dgjgb9m68qjgchl6dh66or674",
+  "htmlLink": "https://www.google.com/calendar/event?eid=NWNjcGhpbGhiNXVkYW1lamloazUzN2M3ZnMgcGV5bWFudHBhcnNhQG0",
+  "iCalUID": "5ccphilhb5udamejihk537c7fs@google.com",
+  "id": "5ccphilhb5udamejihk537c7fs",
   "kind": "calendar#event",
   "location": null,
   "locked": null,
   "organizer": {
-    "displayName": "Justin Huchet",
-    "email": "judahu@gmail.com",
+    "displayName": "Peyman Parsa",
+    "email": "peymantparsa@gmail.com",
     "id": null,
     "self": true
   },
@@ -47,16 +47,19 @@
     "useDefault": true
   },
   "sequence": 0,
-  "source": null,
+  "source": {
+    "title": "[COMP3721] Assignment #4",
+    "url": "https://mail.google.com/mail/#all/153deec28b552d9d"
+  },
   "start": {
     "date": null,
-    "dateTime": "2016-04-02T11:00:00-07:00",
+    "dateTime": "2016-04-13T16:30:00-07:00",
     "timeZone": "America/Vancouver",
     "ETag": null
   },
   "status": "confirmed",
-  "summary": "J: Dr. Geoghegan (hygiene)",
+  "summary": "DataCommAssignment #4",
   "transparency": null,
-  "updated": "2016-02-17T21:26:38.658Z",
+  "updated": "2016-04-04T05:41:32.973Z",
   "visibility": null
 }

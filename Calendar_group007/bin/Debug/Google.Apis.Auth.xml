@@ -399,6 +399,16 @@
             </summary>
             <remarks>Currently unsupported for installed apps.</remarks>
         </member>
+        <member name="P:Google.Apis.Auth.OAuth2.Requests.GoogleAuthorizationCodeRequestUrl.UserDefinedQueryParams">
+            <summary>
+            Gets or sets a collection of user defined query parameters to facilitate any not explicitly supported
+            by the library which will be included in the resultant authentication URL.
+            </summary>
+            <remarks>
+            The name of this parameter is used only for the constructor and will not end up in the resultant query
+            string.
+            </remarks>
+        </member>
         <member name="M:Google.Apis.Auth.OAuth2.Requests.GoogleAuthorizationCodeRequestUrl.#ctor(System.Uri)">
             <summary>
             Constructs a new authorization code request with the given authorization server URL. This constructor sets
@@ -550,6 +560,12 @@
         </member>
         <member name="M:Google.Apis.Auth.OAuth2.ServiceCredential.#ctor(Google.Apis.Auth.OAuth2.ServiceCredential.Initializer)">
             <summary>Constructs a new service account credential using the given initializer.</summary>
+        </member>
+        <member name="M:Google.Apis.Auth.OAuth2.ServiceCredential.HandleResponseAsync(Google.Apis.Http.HandleUnsuccessfulResponseArgs)">
+            <summary>
+            Decorates unsuccessful responses, returns true if the response gets modified.
+            See IHttpUnsuccessfulResponseHandler for more information. 
+            </summary>
         </member>
         <member name="M:Google.Apis.Auth.OAuth2.ServiceCredential.GetAccessTokenForRequestAsync(System.String,System.Threading.CancellationToken)">
             <summary>
@@ -817,6 +833,9 @@
         <member name="P:Google.Apis.Auth.OAuth2.Flows.GoogleAuthorizationCodeFlow.IncludeGrantedScopes">
             <summary>Gets or sets the include granted scopes indicator.</summary>
         </member>
+        <member name="P:Google.Apis.Auth.OAuth2.Flows.GoogleAuthorizationCodeFlow.UserDefinedQueryParams">
+            <summary>Gets the user defined query parameters.</summary>
+        </member>
         <member name="M:Google.Apis.Auth.OAuth2.Flows.GoogleAuthorizationCodeFlow.#ctor(Google.Apis.Auth.OAuth2.Flows.GoogleAuthorizationCodeFlow.Initializer)">
             <summary>Constructs a new Google authorization code flow.</summary>
         </member>
@@ -827,7 +846,12 @@
             <summary>Gets or sets the token revocation URL.</summary>
         </member>
         <member name="P:Google.Apis.Auth.OAuth2.Flows.GoogleAuthorizationCodeFlow.Initializer.IncludeGrantedScopes">
-            <summary>Gets or sets the optional indicator for including granted scopes for incremental authorization.</summary>
+            <summary>
+            Gets or sets the optional indicator for including granted scopes for incremental authorization.
+            </summary>
+        </member>
+        <member name="P:Google.Apis.Auth.OAuth2.Flows.GoogleAuthorizationCodeFlow.Initializer.UserDefinedQueryParams">
+            <summary>Gets or sets the optional user defined query parameters.</summary>
         </member>
         <member name="M:Google.Apis.Auth.OAuth2.Flows.GoogleAuthorizationCodeFlow.Initializer.#ctor">
             <summary>

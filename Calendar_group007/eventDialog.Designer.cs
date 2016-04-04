@@ -51,7 +51,7 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.labelChange = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxRepeatEvery = new System.Windows.Forms.ComboBox();
             this.comboBoxRepeats = new System.Windows.Forms.ComboBox();
             this.radioButtonOn = new System.Windows.Forms.RadioButton();
             this.radioButtonAfter = new System.Windows.Forms.RadioButton();
@@ -60,6 +60,9 @@
             this.labelRepeatEvery = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.labelRepeat = new System.Windows.Forms.Label();
+            this.comboBoxAfter = new System.Windows.Forms.ComboBox();
+            this.labelOccurrences = new System.Windows.Forms.Label();
+            this.dateTimePickerOn = new System.Windows.Forms.DateTimePicker();
             this.panelRepeat.SuspendLayout();
             this.panelWeekDay.SuspendLayout();
             this.SuspendLayout();
@@ -144,6 +147,7 @@
             this.checkBoxRepeat.TabIndex = 9;
             this.checkBoxRepeat.Text = "Repeat";
             this.checkBoxRepeat.UseVisualStyleBackColor = true;
+            this.checkBoxRepeat.Visible = false;
             this.checkBoxRepeat.CheckedChanged += new System.EventHandler(this.checkBoxRepeat_CheckedChanged);
             // 
             // labelWhere
@@ -187,9 +191,12 @@
             // 
             this.panelRepeat.AutoSize = true;
             this.panelRepeat.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelRepeat.Controls.Add(this.dateTimePickerOn);
+            this.panelRepeat.Controls.Add(this.labelOccurrences);
+            this.panelRepeat.Controls.Add(this.comboBoxAfter);
             this.panelRepeat.Controls.Add(this.panelWeekDay);
             this.panelRepeat.Controls.Add(this.labelChange);
-            this.panelRepeat.Controls.Add(this.comboBox2);
+            this.panelRepeat.Controls.Add(this.comboBoxRepeatEvery);
             this.panelRepeat.Controls.Add(this.comboBoxRepeats);
             this.panelRepeat.Controls.Add(this.radioButtonOn);
             this.panelRepeat.Controls.Add(this.radioButtonAfter);
@@ -200,7 +207,7 @@
             this.panelRepeat.Controls.Add(this.labelRepeat);
             this.panelRepeat.Location = new System.Drawing.Point(-1, 291);
             this.panelRepeat.Name = "panelRepeat";
-            this.panelRepeat.Size = new System.Drawing.Size(484, 238);
+            this.panelRepeat.Size = new System.Drawing.Size(484, 242);
             this.panelRepeat.TabIndex = 14;
             this.panelRepeat.Visible = false;
             // 
@@ -310,10 +317,10 @@
             this.labelChange.TabIndex = 20;
             this.labelChange.Text = "days";
             // 
-            // comboBox2
+            // comboBoxRepeatEvery
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboBoxRepeatEvery.FormattingEnabled = true;
+            this.comboBoxRepeatEvery.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -344,24 +351,25 @@
             "28",
             "29",
             "30"});
-            this.comboBox2.Location = new System.Drawing.Point(154, 75);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 28);
-            this.comboBox2.TabIndex = 19;
+            this.comboBoxRepeatEvery.Location = new System.Drawing.Point(154, 75);
+            this.comboBoxRepeatEvery.Name = "comboBoxRepeatEvery";
+            this.comboBoxRepeatEvery.Size = new System.Drawing.Size(121, 28);
+            this.comboBoxRepeatEvery.TabIndex = 19;
+            this.comboBoxRepeatEvery.Text = "1";
             // 
             // comboBoxRepeats
             // 
             this.comboBoxRepeats.FormattingEnabled = true;
             this.comboBoxRepeats.Items.AddRange(new object[] {
-            "Daily",
-            "Weekly",
-            "Monthly",
-            "Yearly"});
+            "DAILY",
+            "WEEKLY",
+            "MONTHLY",
+            "YEARLY"});
             this.comboBoxRepeats.Location = new System.Drawing.Point(154, 40);
             this.comboBoxRepeats.Name = "comboBoxRepeats";
             this.comboBoxRepeats.Size = new System.Drawing.Size(291, 28);
             this.comboBoxRepeats.TabIndex = 18;
-            this.comboBoxRepeats.Text = "Daily";
+            this.comboBoxRepeats.Text = "DAILY";
             this.comboBoxRepeats.SelectedIndexChanged += new System.EventHandler(this.Repeats_Changed);
             // 
             // radioButtonOn
@@ -369,11 +377,12 @@
             this.radioButtonOn.AutoSize = true;
             this.radioButtonOn.Location = new System.Drawing.Point(154, 211);
             this.radioButtonOn.Name = "radioButtonOn";
-            this.radioButtonOn.Size = new System.Drawing.Size(138, 24);
+            this.radioButtonOn.Size = new System.Drawing.Size(55, 24);
             this.radioButtonOn.TabIndex = 17;
             this.radioButtonOn.TabStop = true;
-            this.radioButtonOn.Text = "radioButtonOn";
+            this.radioButtonOn.Text = "On";
             this.radioButtonOn.UseVisualStyleBackColor = true;
+            this.radioButtonOn.CheckedChanged += new System.EventHandler(this.radioButtonOn_CheckedChanged);
             // 
             // radioButtonAfter
             // 
@@ -385,6 +394,7 @@
             this.radioButtonAfter.TabStop = true;
             this.radioButtonAfter.Text = "After";
             this.radioButtonAfter.UseVisualStyleBackColor = true;
+            this.radioButtonAfter.CheckedChanged += new System.EventHandler(this.radioButtonAfter_CheckedChanged);
             // 
             // radioButtonNever
             // 
@@ -440,6 +450,69 @@
             this.labelRepeat.Size = new System.Drawing.Size(88, 26);
             this.labelRepeat.TabIndex = 0;
             this.labelRepeat.Text = "Repeat";
+            // 
+            // comboBoxAfter
+            // 
+            this.comboBoxAfter.Enabled = false;
+            this.comboBoxAfter.FormattingEnabled = true;
+            this.comboBoxAfter.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30"});
+            this.comboBoxAfter.Location = new System.Drawing.Point(229, 177);
+            this.comboBoxAfter.Name = "comboBoxAfter";
+            this.comboBoxAfter.Size = new System.Drawing.Size(121, 28);
+            this.comboBoxAfter.TabIndex = 29;
+            // 
+            // labelOccurrences
+            // 
+            this.labelOccurrences.AutoSize = true;
+            this.labelOccurrences.Location = new System.Drawing.Point(356, 181);
+            this.labelOccurrences.Name = "labelOccurrences";
+            this.labelOccurrences.Size = new System.Drawing.Size(99, 20);
+            this.labelOccurrences.TabIndex = 30;
+            this.labelOccurrences.Text = "Occurrences";
+            // 
+            // dateTimePickerOn
+            // 
+            this.dateTimePickerOn.CustomFormat = "MMM dd, yyyy";
+            this.dateTimePickerOn.Enabled = false;
+            this.dateTimePickerOn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerOn.Location = new System.Drawing.Point(229, 211);
+            this.dateTimePickerOn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateTimePickerOn.MaxDate = new System.DateTime(2020, 12, 31, 0, 0, 0, 0);
+            this.dateTimePickerOn.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.dateTimePickerOn.Name = "dateTimePickerOn";
+            this.dateTimePickerOn.Size = new System.Drawing.Size(185, 26);
+            this.dateTimePickerOn.TabIndex = 15;
+            this.dateTimePickerOn.Value = new System.DateTime(2016, 12, 25, 23, 59, 59, 0);
             // 
             // eventDialog
             // 
@@ -506,8 +579,11 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox0;
         private System.Windows.Forms.Label labelChange;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxRepeatEvery;
         private System.Windows.Forms.ComboBox comboBoxRepeats;
         private System.Windows.Forms.Panel panelWeekDay;
+        private System.Windows.Forms.ComboBox comboBoxAfter;
+        private System.Windows.Forms.DateTimePicker dateTimePickerOn;
+        private System.Windows.Forms.Label labelOccurrences;
     }
 }
