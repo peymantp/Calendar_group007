@@ -86,3 +86,7 @@ C:\Users\peymantp\Desktop\Calendar_group007\PJCalender.Tests1\bin\Debug\Zlib.Por
 C:\Users\peymantp\Desktop\Calendar_group007\PJCalender.Tests1\bin\Debug\en-CA\PJCalender.resources.dll
 C:\Users\peymantp\Desktop\Calendar_group007\PJCalender.Tests1\obj\Debug\PJCalender.Tests1.dll
 C:\Users\peymantp\Desktop\Calendar_group007\PJCalender.Tests1\obj\Debug\PJCalender.Tests1.pdb
+C:\Users\peymantp\Documents\Calendar_group007\PJCalender.Tests1\bin\Debug\Microsoft.Threading.Tasks.dll
+C:\Users\peymantp\Documents\Calendar_group007\PJCalender.Tests1\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\peymantp\Documents\Calendar_group007\PJCalender.Tests1\bin\Debug\Microsoft.Threading.Tasks.xml
+C:\Users\peymantp\Documents\Calendar_group007\PJCalender.Tests1\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml

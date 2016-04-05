@@ -19,7 +19,7 @@ namespace PJCalender
     /// <summary>
     /// Handles all of the google api functionallity 
     /// </summary>
-    class google
+    public class google
     {
         static string[] Scopes = { CalendarService.Scope.Calendar };
         static string ApplicationName = "PJCalender";
@@ -93,7 +93,14 @@ namespace PJCalender
                 UserCredential credential = null;
                 //string credPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
                 string credPath = (".credentials/currentUser");
-                string user = (Directory.GetFiles(".credentials/currentUser", "*")[0]).Split('-')[1];
+                string user = "";
+                try {
+                    user = (Directory.GetFiles(".credentials/currentUser", "*")[0]).Split('-')[1];
+                }catch(Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show("Login required before creating an event");
+                    return;
+                } 
                 credential = GoogleWebAuthorizationBroker.AuthorizeAsync(GoogleClientSecrets.Load(stream).Secrets,
                                                                          Scopes,
                                                                          user,
@@ -137,7 +144,7 @@ namespace PJCalender
                     Event createdEvent = request.Execute();
                 } catch(Exception x)
                 {
-
+                    System.Windows.Forms.MessageBox.Show("Failed to create event");
                 }
             }
         }
@@ -170,44 +177,36 @@ namespace PJCalender
             if (!System.IO.Directory.Exists(".save/currentUser"))
                 System.IO.Directory.CreateDirectory(".save/currentUser");
 
+            DatabaseDataSet dbds = new DatabaseDataSet();
+            DatabaseDataSet.EventDataDataTable eddt = dbds.EventData;
+            var r = eddt.Columns;
             foreach (var eventItem in events.Items)
             {
                 try
                 {
-                    using (System.IO.StreamWriter file = new System.IO.StreamWriter(".save/currentUser/" + eventItem.Id + ".json"))
-                    {
-                        string json = JsonConvert.SerializeObject(eventItem, Formatting.Indented);
-                        try
-                        {
-                            file.Write(json);
-                        }
-                        catch (EncoderFallbackException fallback)
-                        {
-                            System.Windows.Forms.MessageBox.Show(fallback.ToString(), fallback.GetType().ToString());
-                        }
-                    }
-                    
-                    /*
-                    DatabaseDataSet database = new DatabaseDataSet();
-                    DatabaseDataSetTableAdapters.EventDataTableAdapter adapter
-                        = new DatabaseDataSetTableAdapters.EventDataTableAdapter();
-                    adapter.Insert(eventItem.Id, (DateTime)eventItem.Start.DateTime
-                        , ((DateTime)eventItem.Start.DateTime).ToLongTimeString(), eventItem.ToString()); 
-                        */
+                    String id = eventItem.Id;
+                    DateTime dt = (DateTime)eventItem.Start.DateTime;
+                    String time = "";
+                    String data = eventItem.ToString();
+                    if (((DateTime)eventItem.Start.DateTime).ToLongTimeString() != null)
+                        time = ((DateTime)eventItem.Start.DateTime).ToLongTimeString();
+
+                    DatabaseDataSet.EventDataRow edr = eddt.NewEventDataRow();
+                    edr[0] = id;
+                    edr[1] = dt;
+                    edr[2] = time;
+                    edr[3] = data;
+
+                    eddt.Rows.Add(edr);
+
                 }
-                catch (System.IO.DirectoryNotFoundException ex)
-                {
-                    System.Windows.Forms.MessageBox.Show(ex.ToString(), ex.GetType().ToString());
-                }
-                catch (System.IO.IOException ex)
-                {
-                    System.Windows.Forms.MessageBox.Show(ex.ToString(), ex.GetType().ToString());
-                }
-                catch (System.Security.SecurityException ex)
+                catch (Exception ex)
                 {
                     System.Windows.Forms.MessageBox.Show(ex.ToString(), ex.GetType().ToString());
                 }
             }
+
+            dbds.Tables.Add(eddt);
         }
     }
 }
