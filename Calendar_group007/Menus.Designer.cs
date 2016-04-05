@@ -519,7 +519,7 @@
             this.Controls.Add(this.tabControl);
             this.MaximizeBox = false;
             this.Name = "Menus";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.tableLayoutPanelMonth.ResumeLayout(false);
             this.tableLayoutPanelMonth.PerformLayout();
             this.tabPageMonth.ResumeLayout(false);

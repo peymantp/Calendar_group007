@@ -11,6 +11,7 @@ using Google.Apis.Util.Store;
 using Newtonsoft.Json;
 using System.IO;
 using System.Collections;
+using System.Data.SqlClient;
 /// <summary>
 /// arthor: Peyman Justin
 /// </summary>
@@ -174,39 +175,45 @@ namespace PJCalender
         /// <param name="events"></param>
         public static void saveEventLocal(Events events)
         {
-            if (!System.IO.Directory.Exists(".save/currentUser"))
-                System.IO.Directory.CreateDirectory(".save/currentUser");
-
-            DatabaseDataSet dbds = new DatabaseDataSet();
-            DatabaseDataSet.EventDataDataTable eddt = dbds.EventData;
-            var r = eddt.Columns;
-            foreach (var eventItem in events.Items)
+            using (SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename" +
+                @"=C:\Users\peymantp\Documents\Calendar_group007\Calendar_group007\Database.mdf;Integrated Security=True"))
             {
-                try
+                int i = 1;
+                conn.Open();
+                foreach (var eventItem in events.Items)
                 {
-                    String id = eventItem.Id;
-                    DateTime dt = (DateTime)eventItem.Start.DateTime;
-                    String time = "";
-                    String data = eventItem.ToString();
-                    if (((DateTime)eventItem.Start.DateTime).ToLongTimeString() != null)
-                        time = ((DateTime)eventItem.Start.DateTime).ToLongTimeString();
+                    try
+                    {
+                        String id = eventItem.Id;
+                        String dt;
+                        if (eventItem.Start.Date != null)
+                            dt = eventItem.Start.Date;
+                        else
+                            dt = eventItem.Start.DateTime.ToString();
 
-                    DatabaseDataSet.EventDataRow edr = eddt.NewEventDataRow();
-                    edr[0] = id;
-                    edr[1] = dt;
-                    edr[2] = time;
-                    edr[3] = data;
+                        //String time = "";
+                        //if (((DateTime)eventItem.Start.DateTime).ToLongTimeString() != null)
+                        //    time = ((DateTime)eventItem.Start.DateTime).ToLongTimeString();
 
-                    eddt.Rows.Add(edr);
+                        String data = eventItem.Summary;
 
-                }
-                catch (Exception ex)
-                {
-                    System.Windows.Forms.MessageBox.Show(ex.ToString(), ex.GetType().ToString());
+                        //test small val
+                        dt = "" + i;
+                        String time = "" + i;
+                        data = dt;
+                        i++;
+
+                        string sql = "INSERT INTO [dbo].[Table] (Id, Date, Time, Data) VALUES ('" + id + "', '" + dt + "', '" + time + "', '" + data + "')";
+                        SqlCommand cmd = conn.CreateCommand();
+                        cmd.CommandText = sql;
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        System.Windows.Forms.MessageBox.Show(ex.ToString(), ex.GetType().ToString());
+                    }
                 }
             }
-
-            dbds.Tables.Add(eddt);
         }
     }
 }
