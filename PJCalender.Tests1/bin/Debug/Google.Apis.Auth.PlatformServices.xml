@@ -213,7 +213,7 @@
             different location.
             </remarks>
         </member>
-        <member name="M:Google.Apis.Auth.OAuth2.GoogleWebAuthorizationBroker.AuthorizeAsync(Google.Apis.Auth.OAuth2.ClientSecrets,System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken,Google.Apis.Util.Store.IDataStore,Google.Apis.Auth.OAuth2.ICodeReceiver)">
+        <member name="M:Google.Apis.Auth.OAuth2.GoogleWebAuthorizationBroker.AuthorizeAsync(Google.Apis.Auth.OAuth2.ClientSecrets,System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken,Google.Apis.Util.Store.IDataStore)">
             <summary>Asynchronously authorizes the specified user.</summary>
             <remarks>
             In case no data store is specified, <see cref="T:Google.Apis.Util.Store.FileDataStore"/> will be used by 
@@ -226,10 +226,9 @@
             <param name="user">The user to authorize.</param>
             <param name="taskCancellationToken">Cancellation token to cancel an operation.</param>
             <param name="dataStore">The data store, if not specified a file data store will be used.</param>
-            <param name="codeReceiver">The code receiver, if not specified a local server code receiver will be used.</param>
             <returns>User credential.</returns>
         </member>
-        <member name="M:Google.Apis.Auth.OAuth2.GoogleWebAuthorizationBroker.AuthorizeAsync(System.IO.Stream,System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken,Google.Apis.Util.Store.IDataStore,Google.Apis.Auth.OAuth2.ICodeReceiver)">
+        <member name="M:Google.Apis.Auth.OAuth2.GoogleWebAuthorizationBroker.AuthorizeAsync(System.IO.Stream,System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken,Google.Apis.Util.Store.IDataStore)">
             <summary>Asynchronously authorizes the specified user.</summary>
             <remarks>
             In case no data store is specified, <see cref="T:Google.Apis.Util.Store.FileDataStore"/> will be used by 
@@ -244,10 +243,9 @@
             <param name="user">The user to authorize.</param>
             <param name="taskCancellationToken">Cancellation token to cancel an operation.</param>
             <param name="dataStore">The data store, if not specified a file data store will be used.</param>
-            <param name="codeReceiver">The code receiver, if not specified a local server code receiver will be used.</param>
             <returns>User credential.</returns>
         </member>
-        <member name="M:Google.Apis.Auth.OAuth2.GoogleWebAuthorizationBroker.ReauthorizeAsync(Google.Apis.Auth.OAuth2.UserCredential,System.Threading.CancellationToken,Google.Apis.Auth.OAuth2.ICodeReceiver)">
+        <member name="M:Google.Apis.Auth.OAuth2.GoogleWebAuthorizationBroker.ReauthorizeAsync(Google.Apis.Auth.OAuth2.UserCredential,System.Threading.CancellationToken)">
             <summary>
             Asynchronously reauthorizes the user. This method should be called if the users want to authorize after 
             they revoked the token.
@@ -255,9 +253,8 @@
             <param name="userCredential">The current user credential. Its <see cref="P:Google.Apis.Auth.OAuth2.UserCredential.Token"/> will be
             updated. </param>
             <param name="taskCancellationToken">Cancellation token to cancel an operation.</param>
-            <param name="codeReceiver">The code receiver, if not specified a local server code receiver will be used.</param>
         </member>
-        <member name="M:Google.Apis.Auth.OAuth2.GoogleWebAuthorizationBroker.AuthorizeAsync(Google.Apis.Auth.OAuth2.Flows.GoogleAuthorizationCodeFlow.Initializer,System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken,Google.Apis.Util.Store.IDataStore,Google.Apis.Auth.OAuth2.ICodeReceiver)">
+        <member name="M:Google.Apis.Auth.OAuth2.GoogleWebAuthorizationBroker.AuthorizeAsync(Google.Apis.Auth.OAuth2.Flows.GoogleAuthorizationCodeFlow.Initializer,System.Collections.Generic.IEnumerable{System.String},System.String,System.Threading.CancellationToken,Google.Apis.Util.Store.IDataStore)">
             <summary>The core logic for asynchronously authorizing the specified user.</summary>
             <param name="initializer">The authorization code initializer.</param>
             <param name="scopes">
@@ -266,7 +263,6 @@
             <param name="user">The user to authorize.</param>
             <param name="taskCancellationToken">Cancellation token to cancel an operation.</param>
             <param name="dataStore">The data store, if not specified a file data store will be used.</param>
-            <param name="codeReceiver">The code receiver, if not specified a local server code receiver will be used.</param>
             <returns>User credential.</returns>
         </member>
         <member name="T:Google.Apis.Auth.OAuth2.LocalServerCodeReceiver">
