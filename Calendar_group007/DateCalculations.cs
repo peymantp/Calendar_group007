@@ -9,7 +9,7 @@ namespace PJCalender
     /// <summary>
     /// arthor: Peyman Justin
     /// </summary>
-    static class DateCalculations
+    static public class DateCalculations
     {
         /// <summary>
         /// Returns the number of days in a month sent to the function
