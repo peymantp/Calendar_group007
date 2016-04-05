@@ -12,7 +12,11 @@ namespace PJCalender
     /// </summary>
     class User
     {
-
+        /// <summary>
+        /// creates files for new user 
+        /// </summary>
+        /// <param name="userLoggedIn">username</param>
+        /// <param name="mainForm">parent form</param>
         public User(String userLoggedIn, Menus mainForm)
         {
             if (!System.IO.Directory.Exists(".credentials/.archived.users"))
@@ -46,7 +50,9 @@ namespace PJCalender
             mainForm.displayAll(); // make delegate
 
         }
-
+        /// <summary>
+        /// Logout current user
+        /// </summary>
         static public void Logout()
         {
             try
@@ -60,7 +66,10 @@ namespace PJCalender
                 MessageBox.Show(indexEx.ToString(), indexEx.GetType().ToString());
             }
         }
-
+        /// <summary>
+        /// to do delete this
+        /// </summary>
+        /// <returns></returns>
         static public String currentUserLoggedIn()
         {
             String file;

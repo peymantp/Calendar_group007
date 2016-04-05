@@ -17,12 +17,22 @@ namespace PJCalender
     /// </summary>
     public partial class eventDialog : Form
     {
+        /// <summary>
+        /// complicated string for event recurrence
+        /// </summary>
         private string[] recurrence { get; set; }
+        /// <summary>
+        /// event creation dialog
+        /// </summary>
         public eventDialog()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Shows option to customise reapeat options
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void checkBoxRepeat_CheckedChanged(object sender, EventArgs e)
         {
             if (panelRepeat.Visible == false)
@@ -30,7 +40,11 @@ namespace PJCalender
             else
                 panelRepeat.Visible = false;
         }
-
+        /// <summary>
+        /// Decide if event repeats every day, weeks, months, yearly
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Repeats_Changed(object sender, EventArgs e)
         {
             if (comboBoxRepeats.SelectedItem.Equals("Daily"))
@@ -51,7 +65,11 @@ namespace PJCalender
                 panelWeekDay.Visible = false;
             }
         }
-
+        /// <summary>
+        /// decide if events are full/multi day event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Check_AllDay(object sender, EventArgs e)
         {
             if (checkBoxAllDay.Checked)
@@ -64,7 +82,11 @@ namespace PJCalender
                 dateTimePicker2.CustomFormat = "dd, MM, yyyy: HH:mm";
             }
         }
-
+        /// <summary>
+        /// create event based on the options selected in the dialog
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonSave_Click(object sender, EventArgs e)
         {
             if (checkBoxRepeat.Checked)
@@ -75,7 +97,9 @@ namespace PJCalender
             google.createEvent(textBoxEvent.Text, textBoxWhere.Text, textBoxDescription.Text,
                 dateTimePickerFrom.Value, dateTimePicker2.Value,recurrence);
         }
-
+        /// <summary>
+        /// Creates complicated string for event recurrence
+        /// </summary>
         private void makeRecurrence()
         {
             List<string> ruleList = new List<string>();
@@ -116,7 +140,11 @@ namespace PJCalender
 
             recurrence = ruleList.ToArray();
         }
-
+        /// <summary>
+        /// enables more option to decide after how many times an event will stop
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void radioButtonAfter_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButtonAfter.Checked)
@@ -124,7 +152,11 @@ namespace PJCalender
             else
                 comboBoxAfter.Enabled = false;
         }
-
+        /// <summary>
+        /// Enables option to decide when the event will stop recurrencing
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void radioButtonOn_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButtonOn.Checked)

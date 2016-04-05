@@ -72,7 +72,15 @@ namespace PJCalender
                 }
             }
         }
-
+        /// <summary>
+        /// Event creation
+        /// </summary>
+        /// <param name="sum">Summary</param>
+        /// <param name="where">Location of Event</param>
+        /// <param name="desc">Description of event</param>
+        /// <param name="st">Start date in DateTime</param>
+        /// <param name="en">End date in DateTime</param>
+        /// <param name="re">Recurrence of the event</param>
         static public void createEvent(String sum,
             String where,
             String desc,
@@ -161,11 +169,11 @@ namespace PJCalender
         {
             if (!System.IO.Directory.Exists(".save/currentUser"))
                 System.IO.Directory.CreateDirectory(".save/currentUser");
+
             foreach (var eventItem in events.Items)
             {
                 try
                 {
-                    /*
                     using (System.IO.StreamWriter file = new System.IO.StreamWriter(".save/currentUser/" + eventItem.Id + ".json"))
                     {
                         string json = JsonConvert.SerializeObject(eventItem, Formatting.Indented);
@@ -178,14 +186,14 @@ namespace PJCalender
                             System.Windows.Forms.MessageBox.Show(fallback.ToString(), fallback.GetType().ToString());
                         }
                     }
-                    */
+                    
+                    /*
                     DatabaseDataSet database = new DatabaseDataSet();
                     DatabaseDataSetTableAdapters.EventDataTableAdapter adapter
                         = new DatabaseDataSetTableAdapters.EventDataTableAdapter();
-
-                    
                     adapter.Insert(eventItem.Id, (DateTime)eventItem.Start.DateTime
                         , ((DateTime)eventItem.Start.DateTime).ToLongTimeString(), eventItem.ToString()); 
+                        */
                 }
                 catch (System.IO.DirectoryNotFoundException ex)
                 {

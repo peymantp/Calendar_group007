@@ -10,6 +10,9 @@ namespace PJCalender
     /// </summary>
     public partial class Menus : Form
     {
+        /// <summary>
+        /// date selected for the views to show
+        /// </summary>
         private DateTime Selected
         {
             get;
@@ -58,7 +61,6 @@ namespace PJCalender
             Selected = dateTimePicker.Value;
             displayAll();
         }
-       
         /// <summary>
         /// Changes the text on the button login/logout if a new user is created
         /// </summary>
@@ -76,13 +78,16 @@ namespace PJCalender
              //   loginButtonChangeText();
             }
         }
-
+        /// <summary>
+        /// Opens event creation dialog
+        /// </summary>
+        /// <param name="sender">object calling event</param>
+        /// <param name="e">Event</param>
         private void buttonEvent_Click(object sender, EventArgs e)
         {
             eventDialog ev = new eventDialog();
             ev.Show();
         }
-
         protected override void WndProc(ref Message m)
         {
             if (m.Msg == NativeMethods.WM_SHOWME)
@@ -91,21 +96,19 @@ namespace PJCalender
             }
             base.WndProc(ref m);
         }
-
         private void ShowMe()
         {
             if (WindowState == FormWindowState.Minimized)
             {
                 WindowState = FormWindowState.Normal;
             }
-            // get our current "TopMost" value (ours will always be false though)
+            // get our current "TopMost" value 
             bool top = TopMost;
             // make our form jump to the top of everything
             TopMost = true;
             // set it back to whatever it was
             TopMost = top;
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             clear();

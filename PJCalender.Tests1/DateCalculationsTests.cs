@@ -8,9 +8,20 @@ using System.Threading.Tasks;
 
 namespace PJCalender.Tests
 {
+    /// <summary>
+    /// test class for DataCalculations.cs
+    /// </summary>
     [TestFixture()]
     public class DateCalculationsTests
     {
+        /// <summary>
+        /// Test/Scenario:
+        ///     Input a dateTime object 
+        ///     Format yyyy MM dd
+        ///     
+        /// Expected Result
+        ///     returns the number of days in a month given a year and month
+        /// </summary>
         [Test]
         public void monthDayNumberTest()
         {
@@ -42,7 +53,13 @@ namespace PJCalender.Tests
             Assert.AreEqual(30, PJCalender.DateCalculations.monthDayNumber(Nov));
             Assert.AreEqual(31, PJCalender.DateCalculations.monthDayNumber(Dec));
         }
-
+        /// <summary>
+        /// Test/Scenario:
+        ///     retuens given value based on DAteTime value
+        ///     
+        /// Expected Result
+        ///     month value
+        /// </summary>
         [Test()]
         public void monthValueTest()
         {

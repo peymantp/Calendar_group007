@@ -10,7 +10,9 @@ namespace PJCalender
     public partial class Menus
     {
         private delegate void DisplayDelegate();
-
+        /// <summary>
+        /// call all display functions
+        /// </summary>
         public void displayAll()
         {
             clear();
@@ -18,7 +20,9 @@ namespace PJCalender
             displayLabelDay();
             displayAgenda();
         }
-
+        /// <summary>
+        /// display agendatab
+        /// </summary>
         private void displayAgenda()
         {
             if (events == null || events.Count == 0)
@@ -69,7 +73,9 @@ namespace PJCalender
                 flowLayoutPanel.Controls.Add(TLA);
             }
         }
-
+        /// <summary>
+        /// Number days in month tab
+        /// </summary>
         public void displayMonthNumbers()
         {
             DateTime tem = new DateTime(Selected.Year, Selected.Month, 1);
@@ -94,12 +100,19 @@ namespace PJCalender
                 }
             }
         }
-
+        /// <summary>
+        /// clear information when
+        ///     new user logs in
+        ///     old user logs out
+        ///     views need re-writing
+        /// </summary>
         public void clear()
         {
             flowLayoutPanel.Controls.Clear();
         }
-
+        /// <summary>
+        /// display day tab
+        /// </summary>
         private void displayLabelDay()
         {
             labelDay.Text = Selected.ToLongDateString();
