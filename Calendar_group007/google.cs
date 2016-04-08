@@ -55,10 +55,10 @@ namespace PJCalender
 
                 // Define parameters of request.
                 EventsResource.ListRequest request = service.Events.List("primary");
-                request.TimeMin = DateTime.Now;
+                request.TimeMin =new DateTime(2000,1,1);
                 request.ShowDeleted = false;
                 request.SingleEvents = true;
-                request.TimeMax = DateTime.Now.AddYears(1); //todo change number to 20
+                request.TimeMax = DateTime.Now.AddYears(20); //todo change number to 20
                 request.OrderBy = EventsResource.ListRequest.OrderByEnum.StartTime;
 
                 try
@@ -70,6 +70,7 @@ namespace PJCalender
                 {
                     System.Windows.Forms.MessageBox.Show(requestEx.ToString(), requestEx.GetType().ToString());
                 }
+                //Menus.displayAll(form);
             }
         }
         /// <summary>
@@ -211,46 +212,38 @@ namespace PJCalender
                             EndDate = temp.ToString("yyyy/MM/dd");
                             EndTime = temp.ToString("HH:mm:ss");
                         }
+                        string sql = @"IF NOT EXISTS(SELECT 1 FROM [dbo].[Table] WHERE Id = '" + eventItem.Id + "')" 
+                        + " BEGIN INSERT INTO [dbo].[Table] (Id, StartDate, StartTime, Summary, Location, Description, html, EndData, EndTime) VALUES ('" +
+                        eventItem.Id + "', '" +
+                        StartDate + "', '" +
+                        StartTime + "', '" +
+                        eventItem.Summary + "', '" +
+                        Location + "', '" +
+                        Description + "', '" +
+                        htmlLink + "', '" +
+                        EndDate + "', '" +
+                        EndTime + "') END ELSE " +
+                        "BEGIN UPDATE[dbo].[Table] SET "
+                        + "StartDate = @StartDate, "
+                        + "StartTime = @StartTime, "
+                        + "Summary = @Summary, "
+                        + "Location = @Locations, "
+                        + "Description = @Description, "
+                        + "EndData = @EndData, "
+                        + "EndTime = @EndTime "
+                        + "WHERE " + "Id = @Id END";
 
-                        try {
-                            string sql = @"INSERT INTO [dbo].[Table] (Id, StartDate, StartTime, Summary, Location, Description, html, EndData, EndTime) VALUES ('" +
-                                            eventItem.Id + "', '" +
-                                            StartDate + "', '" +
-                                            StartTime + "', '" +
-                                            eventItem.Summary + "', '" +
-                                            Location + "', '" +
-                                            Description + "', '" +
-                                            htmlLink + "', '" +
-                                            EndDate + "', '" +
-                                            EndTime + "')";
-                            SqlCommand cmd = conn.CreateCommand();
-                            cmd.CommandText = sql;
-                            cmd.ExecuteNonQuery();
-                        }
-                        catch (System.Data.SqlClient.SqlException)
-                        {
-                            string sql = @"UPDATE [dbo].[Table] SET " +
-                                            "StartDate = @StartDate, " +
-                                            "StartTime = @StartTime, " +
-                                            "Summary = @Summary, " +
-                                            "Location = @Locations, " +
-                                            "Description = @Description, " +
-                                            "EndData = @EndData, " +
-                                            "EndTime = @EndTime " +
-                                        "WHERE " +
-                                            "Id = @Id" ;
-                            SqlCommand cmd = conn.CreateCommand();
-                            cmd.Parameters.AddWithValue("@StartDate", StartDate);
-                            cmd.Parameters.AddWithValue("@StartTime", StartTime);
-                            cmd.Parameters.AddWithValue("@Summary", eventItem.Summary);
-                            cmd.Parameters.AddWithValue("@Locations", Location);
-                            cmd.Parameters.AddWithValue("@Description", Description);
-                            cmd.Parameters.AddWithValue("@EndData", EndDate);
-                            cmd.Parameters.AddWithValue("@EndTime", EndTime);
-                            cmd.Parameters.AddWithValue("@Id", eventItem.Id);
-                            cmd.CommandText = sql;
-                            cmd.ExecuteNonQuery();
-                        }
+                        SqlCommand cmd = conn.CreateCommand();
+                        cmd.Parameters.AddWithValue("@StartDate", StartDate);
+                        cmd.Parameters.AddWithValue("@StartTime", StartTime);
+                        cmd.Parameters.AddWithValue("@Summary", eventItem.Summary);
+                        cmd.Parameters.AddWithValue("@Locations", Location);
+                        cmd.Parameters.AddWithValue("@Description", Description);
+                        cmd.Parameters.AddWithValue("@EndData", EndDate);
+                        cmd.Parameters.AddWithValue("@EndTime", EndTime);
+                        cmd.Parameters.AddWithValue("@Id", eventItem.Id);
+                        cmd.CommandText = sql;
+                        cmd.ExecuteNonQuery();
                     } 
                     catch (Exception ex)
                     {

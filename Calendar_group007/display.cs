@@ -17,16 +17,13 @@ namespace PJCalender
         /// </summary>
         static public void displayAll(Menus m)
         {
-
-            if (m.events == null || m.events.Count == 0)
-                //ThreadPool.QueueUserWorkItem(google.readEventLocal, m);
-                google.readEventLocal(m);
             m.clear();
+            google.readEventLocal(m);
             DisplayDelegate d = new DisplayDelegate(m.displayAgenda);
             Thread t = new Thread(() => d.Invoke());
             t.Name = "displayAgenda";
             t.Start();
-            displayMonthNumbers(m);
+            m.displayMonthNumbers();
             displayLabelDay(m);
             //m.displayAgenda();
         }
@@ -69,30 +66,33 @@ namespace PJCalender
         /// <summary>
         /// Number days in month tab
         /// </summary>
-        public static void displayMonthNumbers(object state)
+        public void displayMonthNumbers()
         {
-        Menus m = (Menus)state;
-            DateTime tem = new DateTime(m.Selected.Year, m.Selected.Month, 1);
-            int firstWeekDay = (int)tem.DayOfWeek;
-            int max = DateCalculations.monthDayNumber(m.Selected.AddMonths(-1));
-            int thisMonthLength = DateCalculations.monthDayNumber(m.Selected);
-            int day = max - firstWeekDay + 1;
-            for (int row = 1; row < 7; ++row)
-            {
-                for (int column = 0; column < 7; ++column, ++day)
+            if (tableLayoutPanelMonth.InvokeRequired)
+                Invoke(new DisplayDelegate(displayMonthNumbers));
+            else {
+                DateTime tem = new DateTime(Selected.Year, Selected.Month, 1);
+                int firstWeekDay = (int)tem.DayOfWeek;
+                int max = DateCalculations.monthDayNumber(Selected.AddMonths(-1));
+                int thisMonthLength = DateCalculations.monthDayNumber(Selected);
+                int day = max - firstWeekDay + 1;
+                for (int row = 1; row < 7; ++row)
                 {
-                    if (day > max)
+                    for (int column = 0; column < 7; ++column, ++day)
                     {
-                        day = 1;
-                        max = thisMonthLength;
+                        if (day > max)
+                        {
+                            day = 1;
+                            max = thisMonthLength;
+                        }
+                        Label label = new Label();
+                        label.Text = "" + day;
+                        Control c = tableLayoutPanelMonth.GetControlFromPosition(column, row);
+                        c.Controls.Clear();
+                        c.Controls.Add(label);
                     }
-                    Label label = new Label();
-                    label.Text = "" + day;
-                    Control c = m.tableLayoutPanelMonth.GetControlFromPosition(column, row);
-                    c.Controls.Clear();
-                    c.Controls.Add(label);
                 }
-            }            
+            }         
         }
         /// <summary>
         /// clear information when
@@ -102,7 +102,10 @@ namespace PJCalender
         /// </summary>
         public void clear()
         {
-            flowLayoutPanel.Controls.Clear();
+            if (flowLayoutPanel.InvokeRequired)
+                Invoke(new DisplayDelegate(clear));
+            else
+                flowLayoutPanel.Controls.Clear();
         }
         /// <summary>
         /// display day tab

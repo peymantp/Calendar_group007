@@ -128,9 +128,9 @@ namespace PJCalender
         {
             System.Threading.Thread t = new System.Threading.Thread(() => new google(this));
             t.Name = "Google";
+            //clear();
             t.Start();
-            while (t.IsAlive) { }
-            displayAll(this);
+            //displayAll(this);
         }
     }
 }

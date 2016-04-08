@@ -41,6 +41,9 @@
             this.textBoxWhere = new System.Windows.Forms.TextBox();
             this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.panelRepeat = new System.Windows.Forms.Panel();
+            this.dateTimePickerOn = new System.Windows.Forms.DateTimePicker();
+            this.labelOccurrences = new System.Windows.Forms.Label();
+            this.comboBoxAfter = new System.Windows.Forms.ComboBox();
             this.panelWeekDay = new System.Windows.Forms.Panel();
             this.labelRepeatOn = new System.Windows.Forms.Label();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
@@ -60,9 +63,6 @@
             this.labelRepeatEvery = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.labelRepeat = new System.Windows.Forms.Label();
-            this.comboBoxAfter = new System.Windows.Forms.ComboBox();
-            this.labelOccurrences = new System.Windows.Forms.Label();
-            this.dateTimePickerOn = new System.Windows.Forms.DateTimePicker();
             this.panelRepeat.SuspendLayout();
             this.panelWeekDay.SuspendLayout();
             this.SuspendLayout();
@@ -102,7 +102,7 @@
             this.dateTimePickerFrom.Location = new System.Drawing.Point(14, 100);
             this.dateTimePickerFrom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePickerFrom.Name = "dateTimePickerFrom";
-            this.dateTimePickerFrom.Size = new System.Drawing.Size(185, 26);
+            this.dateTimePickerFrom.Size = new System.Drawing.Size(200, 26);
             this.dateTimePickerFrom.TabIndex = 5;
             this.dateTimePickerFrom.Value = new System.DateTime(2016, 4, 1, 13, 0, 0, 0);
             // 
@@ -110,10 +110,10 @@
             // 
             this.dateTimePicker2.CustomFormat = "dd, MM, yyyy: HH:mm";
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(273, 100);
+            this.dateTimePicker2.Location = new System.Drawing.Point(263, 100);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(190, 26);
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 26);
             this.dateTimePicker2.TabIndex = 6;
             // 
             // labelTo
@@ -210,6 +210,69 @@
             this.panelRepeat.Size = new System.Drawing.Size(484, 242);
             this.panelRepeat.TabIndex = 14;
             this.panelRepeat.Visible = false;
+            // 
+            // dateTimePickerOn
+            // 
+            this.dateTimePickerOn.CustomFormat = "MMM dd, yyyy";
+            this.dateTimePickerOn.Enabled = false;
+            this.dateTimePickerOn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerOn.Location = new System.Drawing.Point(229, 211);
+            this.dateTimePickerOn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateTimePickerOn.MaxDate = new System.DateTime(2020, 12, 31, 0, 0, 0, 0);
+            this.dateTimePickerOn.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.dateTimePickerOn.Name = "dateTimePickerOn";
+            this.dateTimePickerOn.Size = new System.Drawing.Size(185, 26);
+            this.dateTimePickerOn.TabIndex = 15;
+            this.dateTimePickerOn.Value = new System.DateTime(2016, 12, 25, 23, 59, 59, 0);
+            // 
+            // labelOccurrences
+            // 
+            this.labelOccurrences.AutoSize = true;
+            this.labelOccurrences.Location = new System.Drawing.Point(356, 181);
+            this.labelOccurrences.Name = "labelOccurrences";
+            this.labelOccurrences.Size = new System.Drawing.Size(99, 20);
+            this.labelOccurrences.TabIndex = 30;
+            this.labelOccurrences.Text = "Occurrences";
+            // 
+            // comboBoxAfter
+            // 
+            this.comboBoxAfter.Enabled = false;
+            this.comboBoxAfter.FormattingEnabled = true;
+            this.comboBoxAfter.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30"});
+            this.comboBoxAfter.Location = new System.Drawing.Point(229, 177);
+            this.comboBoxAfter.Name = "comboBoxAfter";
+            this.comboBoxAfter.Size = new System.Drawing.Size(121, 28);
+            this.comboBoxAfter.TabIndex = 29;
             // 
             // panelWeekDay
             // 
@@ -450,69 +513,6 @@
             this.labelRepeat.Size = new System.Drawing.Size(88, 26);
             this.labelRepeat.TabIndex = 0;
             this.labelRepeat.Text = "Repeat";
-            // 
-            // comboBoxAfter
-            // 
-            this.comboBoxAfter.Enabled = false;
-            this.comboBoxAfter.FormattingEnabled = true;
-            this.comboBoxAfter.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30"});
-            this.comboBoxAfter.Location = new System.Drawing.Point(229, 177);
-            this.comboBoxAfter.Name = "comboBoxAfter";
-            this.comboBoxAfter.Size = new System.Drawing.Size(121, 28);
-            this.comboBoxAfter.TabIndex = 29;
-            // 
-            // labelOccurrences
-            // 
-            this.labelOccurrences.AutoSize = true;
-            this.labelOccurrences.Location = new System.Drawing.Point(356, 181);
-            this.labelOccurrences.Name = "labelOccurrences";
-            this.labelOccurrences.Size = new System.Drawing.Size(99, 20);
-            this.labelOccurrences.TabIndex = 30;
-            this.labelOccurrences.Text = "Occurrences";
-            // 
-            // dateTimePickerOn
-            // 
-            this.dateTimePickerOn.CustomFormat = "MMM dd, yyyy";
-            this.dateTimePickerOn.Enabled = false;
-            this.dateTimePickerOn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerOn.Location = new System.Drawing.Point(229, 211);
-            this.dateTimePickerOn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dateTimePickerOn.MaxDate = new System.DateTime(2020, 12, 31, 0, 0, 0, 0);
-            this.dateTimePickerOn.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            this.dateTimePickerOn.Name = "dateTimePickerOn";
-            this.dateTimePickerOn.Size = new System.Drawing.Size(185, 26);
-            this.dateTimePickerOn.TabIndex = 15;
-            this.dateTimePickerOn.Value = new System.DateTime(2016, 12, 25, 23, 59, 59, 0);
             // 
             // eventDialog
             // 
