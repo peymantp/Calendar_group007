@@ -96,6 +96,7 @@ namespace PJCalender
             }
             google.createEvent(textBoxEvent.Text, textBoxWhere.Text, textBoxDescription.Text,
                 dateTimePickerFrom.Value, dateTimePicker2.Value,recurrence);
+            this.Close();
         }
         /// <summary>
         /// Creates complicated string for event recurrence

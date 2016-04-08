@@ -24,7 +24,7 @@ namespace PJCalender
             string[] files = Directory.GetFiles(@".credentials/.archived.users", "*");
 
             bool fileNotFound = true;
-
+            userLoggedIn = "user";
             foreach (String file in files)
             {
                 if (file.Split('-')[1].Equals(userLoggedIn))
@@ -41,13 +41,13 @@ namespace PJCalender
                 if (!String.IsNullOrEmpty(userLoggedIn))
                 {
 
-                    Thread t = new Thread(() => new google(mainForm, userLoggedIn));
+                    Thread t = new Thread(() => new google(mainForm));
                     t.Name = "Google";
                     t.Start();
                 }
             }
 
-            mainForm.displayAll(); // make delegate
+            Menus.displayAll(mainForm); // make delegate
 
         }
         /// <summary>
@@ -70,7 +70,7 @@ namespace PJCalender
         /// to do delete this
         /// </summary>
         /// <returns></returns>
-        static public String currentUserLoggedIn()
+        static public string currentUserLoggedIn()
         {
             String file;
             try

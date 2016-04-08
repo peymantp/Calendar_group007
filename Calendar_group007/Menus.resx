@@ -151,7 +151,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonExit.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="toolStripTextBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
@@ -181,7 +181,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dateTimePicker.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="tableLayoutPanelMonth.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -194,6 +194,627 @@
   </data>
   <data name="tableLayoutPanelMonth.ColumnCount" type="System.Int32, mscorlib">
     <value>7</value>
+  </data>
+  <data name="&gt;&gt;panel66.Name" xml:space="preserve">
+    <value>panel66</value>
+  </data>
+  <data name="&gt;&gt;panel66.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel66.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel66.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panel56.Name" xml:space="preserve">
+    <value>panel56</value>
+  </data>
+  <data name="&gt;&gt;panel56.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel56.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel56.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panel46.Name" xml:space="preserve">
+    <value>panel46</value>
+  </data>
+  <data name="&gt;&gt;panel46.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel46.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel46.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;panel36.Name" xml:space="preserve">
+    <value>panel36</value>
+  </data>
+  <data name="&gt;&gt;panel36.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel36.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel36.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panel26.Name" xml:space="preserve">
+    <value>panel26</value>
+  </data>
+  <data name="&gt;&gt;panel26.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel26.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel26.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;panel16.Name" xml:space="preserve">
+    <value>panel16</value>
+  </data>
+  <data name="&gt;&gt;panel16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel16.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel16.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;panel06.Name" xml:space="preserve">
+    <value>panel06</value>
+  </data>
+  <data name="&gt;&gt;panel06.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel06.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel06.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;panel65.Name" xml:space="preserve">
+    <value>panel65</value>
+  </data>
+  <data name="&gt;&gt;panel65.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel65.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel65.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;panel55.Name" xml:space="preserve">
+    <value>panel55</value>
+  </data>
+  <data name="&gt;&gt;panel55.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel55.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel55.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;panel45.Name" xml:space="preserve">
+    <value>panel45</value>
+  </data>
+  <data name="&gt;&gt;panel45.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel45.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel45.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;panel35.Name" xml:space="preserve">
+    <value>panel35</value>
+  </data>
+  <data name="&gt;&gt;panel35.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel35.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel35.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;panel25.Name" xml:space="preserve">
+    <value>panel25</value>
+  </data>
+  <data name="&gt;&gt;panel25.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel25.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel25.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;panel15.Name" xml:space="preserve">
+    <value>panel15</value>
+  </data>
+  <data name="&gt;&gt;panel15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel15.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel15.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;panel05.Name" xml:space="preserve">
+    <value>panel05</value>
+  </data>
+  <data name="&gt;&gt;panel05.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel05.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel05.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;panel64.Name" xml:space="preserve">
+    <value>panel64</value>
+  </data>
+  <data name="&gt;&gt;panel64.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel64.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel64.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;panel54.Name" xml:space="preserve">
+    <value>panel54</value>
+  </data>
+  <data name="&gt;&gt;panel54.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel54.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel54.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;panel44.Name" xml:space="preserve">
+    <value>panel44</value>
+  </data>
+  <data name="&gt;&gt;panel44.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel44.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel44.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;panel34.Name" xml:space="preserve">
+    <value>panel34</value>
+  </data>
+  <data name="&gt;&gt;panel34.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel34.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel34.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;panel24.Name" xml:space="preserve">
+    <value>panel24</value>
+  </data>
+  <data name="&gt;&gt;panel24.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel24.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel24.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;panel14.Name" xml:space="preserve">
+    <value>panel14</value>
+  </data>
+  <data name="&gt;&gt;panel14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel14.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel14.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;panel04.Name" xml:space="preserve">
+    <value>panel04</value>
+  </data>
+  <data name="&gt;&gt;panel04.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel04.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel04.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;panel63.Name" xml:space="preserve">
+    <value>panel63</value>
+  </data>
+  <data name="&gt;&gt;panel63.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel63.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel63.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;panel53.Name" xml:space="preserve">
+    <value>panel53</value>
+  </data>
+  <data name="&gt;&gt;panel53.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel53.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel53.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;panel43.Name" xml:space="preserve">
+    <value>panel43</value>
+  </data>
+  <data name="&gt;&gt;panel43.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel43.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel43.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;panel33.Name" xml:space="preserve">
+    <value>panel33</value>
+  </data>
+  <data name="&gt;&gt;panel33.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel33.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel33.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;panel23.Name" xml:space="preserve">
+    <value>panel23</value>
+  </data>
+  <data name="&gt;&gt;panel23.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel23.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel23.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;panel13.Name" xml:space="preserve">
+    <value>panel13</value>
+  </data>
+  <data name="&gt;&gt;panel13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel13.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel13.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;panel03.Name" xml:space="preserve">
+    <value>panel03</value>
+  </data>
+  <data name="&gt;&gt;panel03.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel03.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel03.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;panel62.Name" xml:space="preserve">
+    <value>panel62</value>
+  </data>
+  <data name="&gt;&gt;panel62.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel62.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel62.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;panel52.Name" xml:space="preserve">
+    <value>panel52</value>
+  </data>
+  <data name="&gt;&gt;panel52.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel52.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel52.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;panel42.Name" xml:space="preserve">
+    <value>panel42</value>
+  </data>
+  <data name="&gt;&gt;panel42.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel42.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel42.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;panel32.Name" xml:space="preserve">
+    <value>panel32</value>
+  </data>
+  <data name="&gt;&gt;panel32.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel32.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel32.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;panel22.Name" xml:space="preserve">
+    <value>panel22</value>
+  </data>
+  <data name="&gt;&gt;panel22.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel22.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel22.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;panel12.Name" xml:space="preserve">
+    <value>panel12</value>
+  </data>
+  <data name="&gt;&gt;panel12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel12.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel12.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;panel02.Name" xml:space="preserve">
+    <value>panel02</value>
+  </data>
+  <data name="&gt;&gt;panel02.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel02.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel02.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="&gt;&gt;panel61.Name" xml:space="preserve">
+    <value>panel61</value>
+  </data>
+  <data name="&gt;&gt;panel61.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel61.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel61.ZOrder" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="&gt;&gt;panel51.Name" xml:space="preserve">
+    <value>panel51</value>
+  </data>
+  <data name="&gt;&gt;panel51.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel51.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel51.ZOrder" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="&gt;&gt;panel41.Name" xml:space="preserve">
+    <value>panel41</value>
+  </data>
+  <data name="&gt;&gt;panel41.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel41.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel41.ZOrder" xml:space="preserve">
+    <value>37</value>
+  </data>
+  <data name="&gt;&gt;panel31.Name" xml:space="preserve">
+    <value>panel31</value>
+  </data>
+  <data name="&gt;&gt;panel31.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel31.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel31.ZOrder" xml:space="preserve">
+    <value>38</value>
+  </data>
+  <data name="&gt;&gt;panel21.Name" xml:space="preserve">
+    <value>panel21</value>
+  </data>
+  <data name="&gt;&gt;panel21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel21.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel21.ZOrder" xml:space="preserve">
+    <value>39</value>
+  </data>
+  <data name="&gt;&gt;panel11.Name" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;panel11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel11.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel11.ZOrder" xml:space="preserve">
+    <value>40</value>
+  </data>
+  <data name="&gt;&gt;labelSunday.Name" xml:space="preserve">
+    <value>labelSunday</value>
+  </data>
+  <data name="&gt;&gt;labelSunday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelSunday.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;labelSunday.ZOrder" xml:space="preserve">
+    <value>41</value>
+  </data>
+  <data name="&gt;&gt;labelMonday.Name" xml:space="preserve">
+    <value>labelMonday</value>
+  </data>
+  <data name="&gt;&gt;labelMonday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMonday.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;labelMonday.ZOrder" xml:space="preserve">
+    <value>42</value>
+  </data>
+  <data name="&gt;&gt;labelTuesday.Name" xml:space="preserve">
+    <value>labelTuesday</value>
+  </data>
+  <data name="&gt;&gt;labelTuesday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelTuesday.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;labelTuesday.ZOrder" xml:space="preserve">
+    <value>43</value>
+  </data>
+  <data name="&gt;&gt;labelWednesday.Name" xml:space="preserve">
+    <value>labelWednesday</value>
+  </data>
+  <data name="&gt;&gt;labelWednesday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelWednesday.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;labelWednesday.ZOrder" xml:space="preserve">
+    <value>44</value>
+  </data>
+  <data name="&gt;&gt;labelThursday.Name" xml:space="preserve">
+    <value>labelThursday</value>
+  </data>
+  <data name="&gt;&gt;labelThursday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelThursday.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;labelThursday.ZOrder" xml:space="preserve">
+    <value>45</value>
+  </data>
+  <data name="&gt;&gt;labelFriday.Name" xml:space="preserve">
+    <value>labelFriday</value>
+  </data>
+  <data name="&gt;&gt;labelFriday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelFriday.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;labelFriday.ZOrder" xml:space="preserve">
+    <value>46</value>
+  </data>
+  <data name="&gt;&gt;labelSaturday.Name" xml:space="preserve">
+    <value>labelSaturday</value>
+  </data>
+  <data name="&gt;&gt;labelSaturday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelSaturday.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;labelSaturday.ZOrder" xml:space="preserve">
+    <value>47</value>
+  </data>
+  <data name="&gt;&gt;panel01.Name" xml:space="preserve">
+    <value>panel01</value>
+  </data>
+  <data name="&gt;&gt;panel01.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel01.Parent" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;panel01.ZOrder" xml:space="preserve">
+    <value>48</value>
+  </data>
+  <data name="tableLayoutPanelMonth.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tableLayoutPanelMonth.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tableLayoutPanelMonth.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="tableLayoutPanelMonth.RowCount" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="tableLayoutPanelMonth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1094, 961</value>
+  </data>
+  <data name="tableLayoutPanelMonth.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelMonth.Name" xml:space="preserve">
+    <value>tableLayoutPanelMonth</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelMonth.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelMonth.Parent" xml:space="preserve">
+    <value>tabPageMonth</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelMonth.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tableLayoutPanelMonth.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="panel66" Row="6" RowSpan="1" Column="6" ColumnSpan="1" /&gt;&lt;Control Name="panel56" Row="6" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="panel46" Row="6" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="panel36" Row="6" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="panel26" Row="6" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="panel16" Row="6" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="panel06" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="panel65" Row="5" RowSpan="1" Column="6" ColumnSpan="1" /&gt;&lt;Control Name="panel55" Row="5" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="panel45" Row="5" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="panel35" Row="5" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="panel25" Row="5" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="panel15" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="panel05" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="panel64" Row="4" RowSpan="1" Column="6" ColumnSpan="1" /&gt;&lt;Control Name="panel54" Row="4" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="panel44" Row="4" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="panel34" Row="4" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="panel24" Row="4" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="panel14" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="panel04" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="panel63" Row="3" RowSpan="1" Column="6" ColumnSpan="1" /&gt;&lt;Control Name="panel53" Row="3" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="panel43" Row="3" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="panel33" Row="3" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="panel23" Row="3" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="panel13" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="panel03" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="panel62" Row="2" RowSpan="1" Column="6" ColumnSpan="1" /&gt;&lt;Control Name="panel52" Row="2" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="panel42" Row="2" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="panel32" Row="2" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="panel22" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="panel12" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="panel02" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="panel61" Row="1" RowSpan="1" Column="6" ColumnSpan="1" /&gt;&lt;Control Name="panel51" Row="1" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="panel41" Row="1" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="panel31" Row="1" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="panel21" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="panel11" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelSunday" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelMonday" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelTuesday" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="labelWednesday" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="labelThursday" Row="0" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="labelFriday" Row="0" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="labelSaturday" Row="0" RowSpan="1" Column="6" ColumnSpan="1" /&gt;&lt;Control Name="panel01" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,14.28869,Percent,14.28869,Percent,14.28869,Percent,14.28869,Percent,14.28869,Percent,14.28869,Percent,14.26786" /&gt;&lt;Rows Styles="Absolute,23,Percent,16.66667,Percent,16.66667,Percent,16.66667,Percent,16.66667,Percent,16.66667,Percent,16.66667" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="panel66.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1575,39 +2196,6 @@
   <data name="&gt;&gt;panel01.ZOrder" xml:space="preserve">
     <value>48</value>
   </data>
-  <data name="tableLayoutPanelMonth.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tableLayoutPanelMonth.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="tableLayoutPanelMonth.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="tableLayoutPanelMonth.RowCount" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="tableLayoutPanelMonth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1094, 961</value>
-  </data>
-  <data name="tableLayoutPanelMonth.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanelMonth.Name" xml:space="preserve">
-    <value>tableLayoutPanelMonth</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanelMonth.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanelMonth.Parent" xml:space="preserve">
-    <value>tabPageMonth</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanelMonth.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tableLayoutPanelMonth.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="panel66" Row="6" RowSpan="1" Column="6" ColumnSpan="1" /&gt;&lt;Control Name="panel56" Row="6" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="panel46" Row="6" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="panel36" Row="6" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="panel26" Row="6" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="panel16" Row="6" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="panel06" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="panel65" Row="5" RowSpan="1" Column="6" ColumnSpan="1" /&gt;&lt;Control Name="panel55" Row="5" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="panel45" Row="5" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="panel35" Row="5" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="panel25" Row="5" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="panel15" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="panel05" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="panel64" Row="4" RowSpan="1" Column="6" ColumnSpan="1" /&gt;&lt;Control Name="panel54" Row="4" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="panel44" Row="4" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="panel34" Row="4" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="panel24" Row="4" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="panel14" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="panel04" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="panel63" Row="3" RowSpan="1" Column="6" ColumnSpan="1" /&gt;&lt;Control Name="panel53" Row="3" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="panel43" Row="3" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="panel33" Row="3" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="panel23" Row="3" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="panel13" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="panel03" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="panel62" Row="2" RowSpan="1" Column="6" ColumnSpan="1" /&gt;&lt;Control Name="panel52" Row="2" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="panel42" Row="2" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="panel32" Row="2" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="panel22" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="panel12" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="panel02" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="panel61" Row="1" RowSpan="1" Column="6" ColumnSpan="1" /&gt;&lt;Control Name="panel51" Row="1" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="panel41" Row="1" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="panel31" Row="1" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="panel21" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="panel11" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelSunday" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labelMonday" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labelTuesday" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="labelWednesday" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="labelThursday" Row="0" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="labelFriday" Row="0" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="labelSaturday" Row="0" RowSpan="1" Column="6" ColumnSpan="1" /&gt;&lt;Control Name="panel01" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,14.28869,Percent,14.28869,Percent,14.28869,Percent,14.28869,Percent,14.28869,Percent,14.28869,Percent,14.26786" /&gt;&lt;Rows Styles="Absolute,23,Percent,16.66667,Percent,16.66667,Percent,16.66667,Percent,16.66667,Percent,16.66667,Percent,16.66667" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
   <data name="tabPageMonth.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 29</value>
   </data>
@@ -1662,27 +2250,6 @@
   <data name="&gt;&gt;tabPageWeek.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="labelDay.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelDay.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="labelDay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 5</value>
-  </data>
-  <data name="labelDay.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="labelDay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 33</value>
-  </data>
-  <data name="labelDay.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="labelDay.Text" xml:space="preserve">
-    <value>Its not working</value>
-  </data>
   <data name="&gt;&gt;labelDay.Name" xml:space="preserve">
     <value>labelDay</value>
   </data>
@@ -1727,9 +2294,6 @@
   </data>
   <data name="flowLayoutPanel.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="flowLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
   </data>
   <data name="flowLayoutPanel.FlowDirection" type="System.Windows.Forms.FlowDirection, System.Windows.Forms">
     <value>TopDown</value>
@@ -1819,7 +2383,40 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tabControl.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
+  </data>
+  <data name="labelDay.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelDay.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="labelDay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 5</value>
+  </data>
+  <data name="labelDay.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="labelDay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 33</value>
+  </data>
+  <data name="labelDay.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="labelDay.Text" xml:space="preserve">
+    <value>Its not working</value>
+  </data>
+  <data name="&gt;&gt;labelDay.Name" xml:space="preserve">
+    <value>labelDay</value>
+  </data>
+  <data name="&gt;&gt;labelDay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelDay.Parent" xml:space="preserve">
+    <value>tabPageDay</value>
+  </data>
+  <data name="&gt;&gt;labelDay.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="tableLayoutAgenda.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -1854,6 +2451,9 @@
   <data name="buttonPickDay.Text" xml:space="preserve">
     <value>Pick day</value>
   </data>
+  <data name="buttonPickDay.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;buttonPickDay.Name" xml:space="preserve">
     <value>buttonPickDay</value>
   </data>
@@ -1864,7 +2464,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonPickDay.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="buttonLog.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 126</value>
@@ -1885,7 +2485,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonLog.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="buttonEvent.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 174</value>
@@ -1912,10 +2512,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonEvent.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 217</value>
+    <value>20, 266</value>
   </data>
   <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
     <value>112, 42</value>
@@ -1925,6 +2525,9 @@
   </data>
   <data name="button1.Text" xml:space="preserve">
     <value>clear(test)</value>
+  </data>
+  <data name="button1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;button1.Name" xml:space="preserve">
     <value>button1</value>
@@ -1936,6 +2539,30 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="buttonRefresh.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 217</value>
+  </data>
+  <data name="buttonRefresh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 43</value>
+  </data>
+  <data name="buttonRefresh.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="buttonRefresh.Text" xml:space="preserve">
+    <value>refresh</value>
+  </data>
+  <data name="&gt;&gt;buttonRefresh.Name" xml:space="preserve">
+    <value>buttonRefresh</value>
+  </data>
+  <data name="&gt;&gt;buttonRefresh.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonRefresh.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonRefresh.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

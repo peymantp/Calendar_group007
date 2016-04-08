@@ -87,12 +87,13 @@
             this.tabPageDay = new System.Windows.Forms.TabPage();
             this.labelDay = new System.Windows.Forms.Label();
             this.tabPageAgenda = new System.Windows.Forms.TabPage();
-            this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutAgenda = new System.Windows.Forms.TableLayoutPanel();
             this.buttonPickDay = new System.Windows.Forms.Button();
             this.buttonLog = new System.Windows.Forms.Button();
             this.buttonEvent = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.buttonRefresh = new System.Windows.Forms.Button();
+            this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanelMonth.SuspendLayout();
             this.tabPageMonth.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -466,12 +467,6 @@
             this.tabPageAgenda.Name = "tabPageAgenda";
             this.tabPageAgenda.UseVisualStyleBackColor = true;
             // 
-            // flowLayoutPanel
-            // 
-            resources.ApplyResources(this.flowLayoutPanel, "flowLayoutPanel");
-            this.flowLayoutPanel.BackColor = System.Drawing.Color.Gray;
-            this.flowLayoutPanel.Name = "flowLayoutPanel";
-            // 
             // tableLayoutAgenda
             // 
             resources.ApplyResources(this.tableLayoutAgenda, "tableLayoutAgenda");
@@ -505,11 +500,25 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // buttonRefresh
+            // 
+            resources.ApplyResources(this.buttonRefresh, "buttonRefresh");
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
+            // 
+            // flowLayoutPanel
+            // 
+            resources.ApplyResources(this.flowLayoutPanel, "flowLayoutPanel");
+            this.flowLayoutPanel.BackColor = System.Drawing.Color.Gray;
+            this.flowLayoutPanel.Name = "flowLayoutPanel";
+            // 
             // Menus
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
+            this.Controls.Add(this.buttonRefresh);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonEvent);
             this.Controls.Add(this.buttonLog);
@@ -550,7 +559,6 @@
         private System.Windows.Forms.Button buttonPickDay;
         private System.Windows.Forms.TabPage tabPageAgenda;
         private System.Windows.Forms.TableLayoutPanel tableLayoutAgenda;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
         public System.Windows.Forms.Button buttonLog;
         private System.Windows.Forms.Label labelDay;
         private System.Windows.Forms.Button buttonEvent;
@@ -598,6 +606,8 @@
         private System.Windows.Forms.Panel panel31;
         private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Button buttonRefresh;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
     }
 }
 

@@ -4,71 +4,64 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Linq;
+using System.Threading;
 
 namespace PJCalender
 {
     public partial class Menus
     {
         private delegate void DisplayDelegate();
+        private delegate void StaticDisplayDelegate(Menus m);
         /// <summary>
         /// call all display functions
         /// </summary>
-        public void displayAll()
+        static public void displayAll(Menus m)
         {
-            clear();
-            displayMonthNumbers();
-            displayLabelDay();
-            displayAgenda();
+
+            if (m.events == null || m.events.Count == 0)
+                //ThreadPool.QueueUserWorkItem(google.readEventLocal, m);
+                google.readEventLocal(m);
+            m.clear();
+            DisplayDelegate d = new DisplayDelegate(m.displayAgenda);
+            Thread t = new Thread(() => d.Invoke());
+            t.Name = "displayAgenda";
+            t.Start();
+            displayMonthNumbers(m);
+            displayLabelDay(m);
+            //m.displayAgenda();
         }
         /// <summary>
         /// display agendatab
         /// </summary>
         private void displayAgenda()
         {
-            if (events == null || events.Count == 0)
-                google.readEventLocal(this);
+            if (flowLayoutPanel.InvokeRequired)
+            {
+                Invoke(new DisplayDelegate(displayAgenda));
+                return;
+            } 
+
             if (events.Count > 0)
             {
-                Label label = new Label();
-                label.Text = events.Count + "";
                 String nl = Environment.NewLine;
-                int column = 0;
-                int row = 0;
-                TableLayoutPanel TLA = new TableLayoutPanel();
-                flowLayoutPanel.Controls.Add(label);
-                foreach (Event eventItem in events)
+                int column = 8;
+                DBLayoutPanel TLA = new DBLayoutPanel();
+                TLA.ColumnCount = column;
+                TLA.RowCount = events.Count;
+                int i = 0;
+                Label label;
+                foreach (eventStruct eventitem in events)
                 {
-                    column = 0;
-                    TLA.RowCount = ++row;
-                    try
+                    
+                    for(int j = 0; j < column; j++)
                     {
-                        if (eventItem.Start.DateTime != null)
-                        {
-                            DateTime start = (DateTime)eventItem.Start.DateTime;
-                            string startDay = start.ToLongDateString();
-                            string startTime = start.ToLongTimeString();
-
-                            DateTime end = (DateTime)eventItem.End.DateTime;
-                            string endDay = end.ToLongDateString();
-                            string endTime = end.ToLongTimeString();
-
-                            string discription = eventItem.Description;
-                            string Summary = eventItem.Summary;
-
-                            //Start hour and end hour
-                            label = new Label();
-                            label.Text = startTime + nl + endTime;
-                            TLA.Controls.Add(label, column++, row);
-
-                            //Summary and discription
-                            label = new Label();
-                            label.Text = (Summary + nl + discription);
-                            TLA.Controls.Add(label, column++, row);
-                        }
+                        label = new Label();
+                        label.Text = eventitem.getItemByIndex(j);
+                        TLA.Controls.Add(label, j, i);
                     }
-                    catch (Exception e) { }
-                   }
-                TLA.MinimumSize = new System.Drawing.Size(722, 0);
+                    ++i;
+                }
+                //TLA.MinimumSize = new System.Drawing.Size(722, 0);
                 TLA.AutoSize = true;
                 flowLayoutPanel.Controls.Add(TLA);
             }
@@ -76,12 +69,13 @@ namespace PJCalender
         /// <summary>
         /// Number days in month tab
         /// </summary>
-        public void displayMonthNumbers()
+        public static void displayMonthNumbers(object state)
         {
-            DateTime tem = new DateTime(Selected.Year, Selected.Month, 1);
+        Menus m = (Menus)state;
+            DateTime tem = new DateTime(m.Selected.Year, m.Selected.Month, 1);
             int firstWeekDay = (int)tem.DayOfWeek;
-            int max = DateCalculations.monthDayNumber(Selected.AddMonths(-1));
-            int thisMonthLength = DateCalculations.monthDayNumber(Selected);
+            int max = DateCalculations.monthDayNumber(m.Selected.AddMonths(-1));
+            int thisMonthLength = DateCalculations.monthDayNumber(m.Selected);
             int day = max - firstWeekDay + 1;
             for (int row = 1; row < 7; ++row)
             {
@@ -94,11 +88,11 @@ namespace PJCalender
                     }
                     Label label = new Label();
                     label.Text = "" + day;
-                    Control c = tableLayoutPanelMonth.GetControlFromPosition(column, row);
+                    Control c = m.tableLayoutPanelMonth.GetControlFromPosition(column, row);
                     c.Controls.Clear();
                     c.Controls.Add(label);
                 }
-            }
+            }            
         }
         /// <summary>
         /// clear information when
@@ -113,9 +107,10 @@ namespace PJCalender
         /// <summary>
         /// display day tab
         /// </summary>
-        private void displayLabelDay()
+        private static void displayLabelDay(object state)
         {
-            labelDay.Text = Selected.ToLongDateString();
+            Menus m = (Menus)state;
+            m.labelDay.Text = m.Selected.ToLongDateString();
         }
 
         /// <summary> 
@@ -155,10 +150,6 @@ namespace PJCalender
                     buttonLog.Text = message;
                 }
             }
-
-            
-
-
         }
     }
 }

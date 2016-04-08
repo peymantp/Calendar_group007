@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Windows.Forms;
 /// <summary>
 /// arthor: Peyman Justin
@@ -28,9 +29,15 @@ namespace PJCalender
         {
             InitializeComponent();
             loginButtonChangeText();
+            if (!String.IsNullOrEmpty(User.currentUserLoggedIn()))
+            {
+                loginButtonChangeText();
+                buttonLog.Enabled = false;
+            }
+            events = new System.Collections.ArrayList();
             Selected = DateTime.Now;
             dateTimePicker.Value = Selected;
-            displayAll();
+            displayAll(this);
         }
         /// <summary>
         /// Exits the program
@@ -59,7 +66,7 @@ namespace PJCalender
         private void dateTimePicker_DatePicked(object sender, EventArgs e)
         {
             Selected = dateTimePicker.Value;
-            displayAll();
+            displayAll(this);
         }
         /// <summary>
         /// Changes the text on the button login/logout if a new user is created
@@ -73,9 +80,10 @@ namespace PJCalender
                 User.Logout();
                 loginButtonChangeText();
             }
-            else if (new UsernameDialog(this).ShowDialog() == DialogResult.OK)
+            else
             {
-             //   loginButtonChangeText();
+                new User(" ", this);
+                buttonLog.Enabled = false;
             }
         }
         /// <summary>
@@ -87,6 +95,8 @@ namespace PJCalender
         {
             eventDialog ev = new eventDialog();
             ev.Show();
+
+            buttonRefresh_Click(sender, e);
         }
         protected override void WndProc(ref Message m)
         {
@@ -112,6 +122,15 @@ namespace PJCalender
         private void button1_Click(object sender, EventArgs e)
         {
             clear();
+        }
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            System.Threading.Thread t = new System.Threading.Thread(() => new google(this));
+            t.Name = "Google";
+            t.Start();
+            while (t.IsAlive) { }
+            displayAll(this);
         }
     }
 }

@@ -30,7 +30,7 @@ namespace PJCalender
         /// </summary>
         /// <param name="form">The form calling crating this object</param>
         /// <param name="user">username of user</param>
-        public google(Menus form, string user)
+        public google(Menus form)
         {
             using (var stream = new System.IO.FileStream("client_secret.json", System.IO.FileMode.Open, System.IO.FileAccess.Read))
             {
@@ -40,7 +40,7 @@ namespace PJCalender
 
                 credential = GoogleWebAuthorizationBroker.AuthorizeAsync(GoogleClientSecrets.Load(stream).Secrets,
                                                                          Scopes,
-                                                                         user,
+                                                                         "user",
                                                                          System.Threading.CancellationToken.None,
                                                                          new FileDataStore(credPath, true)).Result;
                 // Create Google Calendar API service.
@@ -63,7 +63,6 @@ namespace PJCalender
 
                 try
                 {
-                    form.loginButtonChangeText();
                     Events events = request.Execute();
                     saveEventLocal(events);
                 }
@@ -155,17 +154,27 @@ namespace PJCalender
         /// <returns></returns>
         static public void readEventLocal(Menus form)
         {
-            form.events = new ArrayList();
-            if (!System.IO.Directory.Exists(".save/currentUser"))
-                return;
-            string[] files = Directory.GetFiles(@".save/currentUser", "*");
-            foreach (String fileName in files)
+            System.Threading.Thread t = System.Threading.Thread.CurrentThread;
+            t.Priority = System.Threading.ThreadPriority.Highest;
+            using (SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename" +
+                @"=C:\Users\peymantp\Documents\Calendar_group007\Calendar_group007\Database.mdf;Integrated Security=True"))
             {
-                using (StreamReader file = File.OpenText(fileName))
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("Select * From [dbo].[Table] ORDER by StartDate", conn);
+                //cmd.CommandText = "Select * From [dbo].[Table]";
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
                 {
-                    JsonSerializer serializer = new JsonSerializer();
-                    Event calEvent = (Event)serializer.Deserialize(file, typeof(Event));
-                    form.events.Add(calEvent);
+                    eventStruct s = new eventStruct();
+                    s.startDate = reader.GetString(1);
+                    s.startTime = reader.GetString(2);
+                    s.Summary = reader.GetString(3);
+                    s.Location = reader.GetString(4);
+                    s.Description = reader.GetString(5);
+                    s.html = reader.GetString(6);
+                    s.endDate = reader.GetString(7);
+                    s.endTime = reader.GetString(8);
+                    form.events.Add(s);
                 }
             }
         }
@@ -178,42 +187,92 @@ namespace PJCalender
             using (SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename" +
                 @"=C:\Users\peymantp\Documents\Calendar_group007\Calendar_group007\Database.mdf;Integrated Security=True"))
             {
-                int i = 1;
                 conn.Open();
                 foreach (var eventItem in events.Items)
                 {
                     try
                     {
-                        String id = eventItem.Id;
-                        String dt;
-                        if (eventItem.Start.Date != null)
-                            dt = eventItem.Start.Date;
-                        else
-                            dt = eventItem.Start.DateTime.ToString();
+                        string StartDate;
+                        string StartTime = "";
+                        string EndDate;
+                        string EndTime = "";
+                        string Location = nullCatcher(eventItem.Location);
+                        string Description = nullCatcher(eventItem.Description);
+                        string htmlLink = eventItem.HtmlLink;
 
-                        //String time = "";
-                        //if (((DateTime)eventItem.Start.DateTime).ToLongTimeString() != null)
-                        //    time = ((DateTime)eventItem.Start.DateTime).ToLongTimeString();
+                        if (eventItem.Start.Date != null) {
+                            StartDate = eventItem.Start.Date;
+                            EndDate = eventItem.End.Date;
+                        } else {
+                            DateTime temp = (DateTime)eventItem.Start.DateTime;
+                            StartDate = temp.ToString("yyyy/MM/dd");
+                            StartTime = temp.ToString("HH:mm:ss");
+                            temp = (DateTime)eventItem.End.DateTime;
+                            EndDate = temp.ToString("yyyy/MM/dd");
+                            EndTime = temp.ToString("HH:mm:ss");
+                        }
 
-                        String data = eventItem.Summary;
-
-                        //test small val
-                        dt = "" + i;
-                        String time = "" + i;
-                        data = dt;
-                        i++;
-
-                        string sql = "INSERT INTO [dbo].[Table] (Id, Date, Time, Data) VALUES ('" + id + "', '" + dt + "', '" + time + "', '" + data + "')";
-                        SqlCommand cmd = conn.CreateCommand();
-                        cmd.CommandText = sql;
-                        cmd.ExecuteNonQuery();
-                    }
+                        try {
+                            string sql = @"INSERT INTO [dbo].[Table] (Id, StartDate, StartTime, Summary, Location, Description, html, EndData, EndTime) VALUES ('" +
+                                            eventItem.Id + "', '" +
+                                            StartDate + "', '" +
+                                            StartTime + "', '" +
+                                            eventItem.Summary + "', '" +
+                                            Location + "', '" +
+                                            Description + "', '" +
+                                            htmlLink + "', '" +
+                                            EndDate + "', '" +
+                                            EndTime + "')";
+                            SqlCommand cmd = conn.CreateCommand();
+                            cmd.CommandText = sql;
+                            cmd.ExecuteNonQuery();
+                        }
+                        catch (System.Data.SqlClient.SqlException)
+                        {
+                            string sql = @"UPDATE [dbo].[Table] SET " +
+                                            "StartDate = @StartDate, " +
+                                            "StartTime = @StartTime, " +
+                                            "Summary = @Summary, " +
+                                            "Location = @Locations, " +
+                                            "Description = @Description, " +
+                                            "EndData = @EndData, " +
+                                            "EndTime = @EndTime " +
+                                        "WHERE " +
+                                            "Id = @Id" ;
+                            SqlCommand cmd = conn.CreateCommand();
+                            cmd.Parameters.AddWithValue("@StartDate", StartDate);
+                            cmd.Parameters.AddWithValue("@StartTime", StartTime);
+                            cmd.Parameters.AddWithValue("@Summary", eventItem.Summary);
+                            cmd.Parameters.AddWithValue("@Locations", Location);
+                            cmd.Parameters.AddWithValue("@Description", Description);
+                            cmd.Parameters.AddWithValue("@EndData", EndDate);
+                            cmd.Parameters.AddWithValue("@EndTime", EndTime);
+                            cmd.Parameters.AddWithValue("@Id", eventItem.Id);
+                            cmd.CommandText = sql;
+                            cmd.ExecuteNonQuery();
+                        }
+                    } 
                     catch (Exception ex)
                     {
                         System.Windows.Forms.MessageBox.Show(ex.ToString(), ex.GetType().ToString());
                     }
                 }
+                conn.Close();
             }
+        }
+
+        private static string nullCatcher(string obj)
+        {
+            try
+            {
+                if (!String.IsNullOrEmpty(obj))
+                    return obj;
+            }
+            catch (Exception e)
+            {
+                return "";
+            }
+            return "";
         }
     }
 }
