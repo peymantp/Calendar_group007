@@ -1,9 +1,6 @@
-﻿using Google.Apis.Calendar.v3.Data;
-using System;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using System.Linq;
 using System.Threading;
 
 namespace PJCalender
@@ -15,17 +12,29 @@ namespace PJCalender
         /// <summary>
         /// call all display functions
         /// </summary>
-        static public void displayAll(Menus m)
+        public void displayAll()
         {
-            m.clear();
-            google.readEventLocal(m);
-            DisplayDelegate d = new DisplayDelegate(m.displayAgenda);
-            Thread t = new Thread(() => d.Invoke());
-            t.Name = "displayAgenda";
-            t.Start();
-            m.displayMonthNumbers();
-            displayLabelDay(m);
-            //m.displayAgenda();
+            clear();
+            google.readEventLocal(this);
+            //delegate version
+            //DisplayDelegate d = new DisplayDelegate(displayAgenda);
+            //d += new DisplayDelegate(displayMonthNumbers);
+            //Thread t = new Thread(() => d.Invoke());
+            //Thread t = new Thread(() => displayAgenda());
+            //t.Name = "displayAgenda";
+            //t.Start();
+
+            //List version
+            List<Thread> threads = new List<Thread>();
+            threads.Add(new Thread(() => displayAgenda()));
+            threads.Add(new Thread(() => displayLabelDay()));
+            threads.Add(new Thread(() => displayMonthNumbers()));
+            int i = 0;
+            foreach (var item in threads)
+            {
+                item.Name = "" + i;
+                item.Start();
+            }
         }
         /// <summary>
         /// display agendatab
@@ -106,14 +115,17 @@ namespace PJCalender
                 Invoke(new DisplayDelegate(clear));
             else
                 flowLayoutPanel.Controls.Clear();
+            events.Clear();
         }
         /// <summary>
         /// display day tab
         /// </summary>
-        private static void displayLabelDay(object state)
+        private void displayLabelDay()
         {
-            Menus m = (Menus)state;
-            m.labelDay.Text = m.Selected.ToLongDateString();
+            if (labelDay.InvokeRequired)
+                Invoke(new DisplayDelegate(displayLabelDay));
+            else
+                labelDay.Text = Selected.ToLongDateString();
         }
 
         /// <summary> 

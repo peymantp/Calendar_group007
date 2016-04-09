@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading;
 using System.Windows.Forms;
 /// <summary>
 /// arthor: Peyman Justin
@@ -37,7 +36,7 @@ namespace PJCalender
             events = new System.Collections.ArrayList();
             Selected = DateTime.Now;
             dateTimePicker.Value = Selected;
-            displayAll(this);
+            displayAll();
         }
         /// <summary>
         /// Exits the program
@@ -66,7 +65,7 @@ namespace PJCalender
         private void dateTimePicker_DatePicked(object sender, EventArgs e)
         {
             Selected = dateTimePicker.Value;
-            displayAll(this);
+            displayAll();
         }
         /// <summary>
         /// Changes the text on the button login/logout if a new user is created
@@ -121,6 +120,7 @@ namespace PJCalender
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            events = null;
             clear();
         }
 

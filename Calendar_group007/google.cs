@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Calendar.v3;
 using Google.Apis.Calendar.v3.Data;
 using Google.Apis.Services;
 using Google.Apis.Util.Store;
-using Newtonsoft.Json;
 using System.IO;
-using System.Collections;
 using System.Data.SqlClient;
 /// <summary>
 /// arthor: Peyman Justin
@@ -70,7 +64,6 @@ namespace PJCalender
                 {
                     System.Windows.Forms.MessageBox.Show(requestEx.ToString(), requestEx.GetType().ToString());
                 }
-                //Menus.displayAll(form);
             }
         }
         /// <summary>
@@ -158,7 +151,7 @@ namespace PJCalender
             System.Threading.Thread t = System.Threading.Thread.CurrentThread;
             t.Priority = System.Threading.ThreadPriority.Highest;
             using (SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename" +
-                @"=C:\Users\peymantp\Documents\Calendar_group007\Calendar_group007\Database.mdf;Integrated Security=True"))
+                @"=|DataDirectory|\Database.mdf;Integrated Security=True"))
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("Select * From [dbo].[Table] ORDER by StartDate", conn);
@@ -183,10 +176,10 @@ namespace PJCalender
         /// todo remake funciton
         /// </summary>
         /// <param name="events"></param>
-        public static void saveEventLocal(Events events)
+        private static void saveEventLocal(Events events)
         {
             using (SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename" +
-                @"=C:\Users\peymantp\Documents\Calendar_group007\Calendar_group007\Database.mdf;Integrated Security=True"))
+                @"=|DataDirectory|\Database.mdf;Integrated Security=True"))
             {
                 conn.Open();
                 foreach (var eventItem in events.Items)
