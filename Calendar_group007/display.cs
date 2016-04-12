@@ -8,13 +8,14 @@ namespace PJCalender
     public partial class Menus
     {
         private delegate void DisplayDelegate();
-        private delegate void StaticDisplayDelegate(Menus m);
+        private delegate void ControlDelegate(Control c, Label l);
         /// <summary>
         /// call all display functions
         /// </summary>
         public void displayAll()
         {
             clear();
+
             google.readEventLocal(this);
 
             //List version
@@ -24,7 +25,7 @@ namespace PJCalender
             threads.Add(new Thread(() => displayLabelDay()));
             threads.Add(new Thread(() => displayDayEvents()));
             threads.Add(new Thread(() => displayWeekEvents()));
-            threads.Add(new Thread(() => displayMonthEvents()));
+            //threads.Add(new Thread(() => displayMonthEvents()));
             int i = 0;
             foreach (var item in threads)
             {
@@ -54,34 +55,26 @@ namespace PJCalender
                 int i = 1;
                 Label label;
 
-                label = new Label();
-                label.Text = "Start Date";
+                label = labelmaker("Start Date");
                 TLA.Controls.Add(label, 0, 0);
-                label = new Label();
-                label.Text = "Start Time";
+                label = labelmaker("Start Time");
                 TLA.Controls.Add(label, 1, 0);
-                label = new Label();
-                label.Text = "Summary";
+                label = labelmaker("Summary");
                 TLA.Controls.Add(label, 2, 0);
-                label = new Label();
-                label.Text = "Location";
+                label = labelmaker("Location");
                 TLA.Controls.Add(label, 3, 0);
-                label = new Label();
-                label.Text = "Description";
+                label = labelmaker("Description");
                 TLA.Controls.Add(label, 4, 0);
-                label = new Label();
-                label.Text = "End Date";
+                label = labelmaker("End Date");
                 TLA.Controls.Add(label, 5, 0);
-                label = new Label();
-                label.Text = "End Time";
+                label = labelmaker("End Time");
                 TLA.Controls.Add(label, 6, 0);
 
                 foreach (eventStruct eventitem in events)
                 {
                     for(int j = 0; j < column; j++)
                     {
-                        label = new Label();
-                        label.Text = eventitem.getItemByIndex(j);
+                        label = labelmaker(eventitem.getItemByIndex(j));
                         TLA.Controls.Add(label, j, i);
                     }
                     ++i;
@@ -142,22 +135,74 @@ namespace PJCalender
                 DateTime begin = Selected.AddDays(-today);
                 int column = 7;
                 Label label;
+                string format = "yyyy-MM-dd";
+                List<Control> controls = new List<Control>();
+                controls.Add(tableLayoutPanelWeek.GetControlFromPosition(0, 1));
+                controls.Add(tableLayoutPanelWeek.GetControlFromPosition(1, 1));
+                controls.Add(tableLayoutPanelWeek.GetControlFromPosition(2, 1));
+                controls.Add(tableLayoutPanelWeek.GetControlFromPosition(3, 1));
+                controls.Add(tableLayoutPanelWeek.GetControlFromPosition(4, 1));
+                controls.Add(tableLayoutPanelWeek.GetControlFromPosition(5, 1));
+                controls.Add(tableLayoutPanelWeek.GetControlFromPosition(6, 1));
 
+                foreach(Control c in controls)
+                {
+                    c.Controls.Clear();
+                }
                 foreach (eventStruct eventitem in events)
                 {
-                    
+                    if (begin.ToString(format).Equals(eventitem.startDate))
+                    {
+                        label = labelmaker(eventitem.Summary);
+                        controls[0].Controls.Add(label);
+                    }
+                    else if((begin.AddDays(1)).ToString(format).Equals(eventitem.startDate))
+                    {
+                        label = labelmaker(eventitem.Summary);
+                        controls[1].Controls.Add(label);
+                    }
+                    else if ((begin.AddDays(2)).ToString(format).Equals(eventitem.startDate))
+                    {
+                        label = labelmaker(eventitem.Summary);
+                        controls[2].Controls.Add(label);
+                    }
+                    else if ((begin.AddDays(3)).ToString(format).Equals(eventitem.startDate))
+                    {
+                        label = labelmaker(eventitem.Summary);
+                        controls[3].Controls.Add(label);
+                    }
+                    else if ((begin.AddDays(4)).ToString(format).Equals(eventitem.startDate))
+                    {
+                        label = labelmaker(eventitem.Summary);
+                        controls[4].Controls.Add(label);
+                    }
+                    else if ((begin.AddDays(5)).ToString(format).Equals(eventitem.startDate))
+                    {
+                        label = labelmaker(eventitem.Summary);
+                        controls[5].Controls.Add(label);
+                    }
+                    else if ((begin.AddDays(6)).ToString(format).Equals(eventitem.startDate))
+                    {
+                        label = labelmaker(eventitem.Summary);
+                        controls[6].Controls.Add(label);
+                    }
                 }
             }
         }
-
+        private Label labelmaker(string text)
+        {
+            Label l = new Label();
+            l.Text = text;
+            return l;
+        }
         public void displayDayEvents()
         {
-            if (flowLayoutPanelDay.InvokeRequired)
+            if (panelDay.InvokeRequired)
                 Invoke(new DisplayDelegate(displayDayEvents));
             else {
                 if (events.Count > 0)
                 {
-                    string grab = Selected.ToShortDateString();
+                    string grab = Selected.ToString("yyyy-MM-dd"); //2016-04-01
                     String nl = Environment.NewLine;
                     int column = 7;
                     DBLayoutPanel TLA = new DBLayoutPanel();
@@ -201,10 +246,10 @@ namespace PJCalender
                             ++i;
                         }
                     }
-                    //TLA.MinimumSize = new System.Drawing.Size(722, 0);
+                    TLA.MinimumSize = new System.Drawing.Size(722, 0);
                     TLA.AutoSize = true;
                     TLA.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
-                    flowLayoutPanelDay.Controls.Add(TLA);
+                    panelDay.Controls.Add(TLA);
                 }
             }
         }
@@ -220,7 +265,7 @@ namespace PJCalender
                 Invoke(new DisplayDelegate(clear));
             else {
                 flowLayoutPanel.Controls.Clear();
-                flowLayoutPanelDay.Controls.Clear();
+                panelDay.Controls.Clear();
             }
             events.Clear();
         }
@@ -254,6 +299,21 @@ namespace PJCalender
                 }
                 else
                     buttonLog.Text = "Logout";
+            }
+        }
+
+        public void syncLabel()
+        {
+            if (labelLoading.InvokeRequired)
+            {
+                Invoke(new DisplayDelegate(syncLabel));
+            }
+            else
+            {
+                if (labelLoading.Visible)
+                    labelLoading.Visible = false;
+                else
+                    labelLoading.Visible = true;
             }
         }
     }

@@ -32,47 +32,6 @@
             this.dropDownView = new System.Windows.Forms.ToolStripComboBox();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanelMonth = new System.Windows.Forms.TableLayoutPanel();
-            this.panel66 = new System.Windows.Forms.Panel();
-            this.panel56 = new System.Windows.Forms.Panel();
-            this.panel46 = new System.Windows.Forms.Panel();
-            this.panel36 = new System.Windows.Forms.Panel();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.panel06 = new System.Windows.Forms.Panel();
-            this.panel65 = new System.Windows.Forms.Panel();
-            this.panel55 = new System.Windows.Forms.Panel();
-            this.panel45 = new System.Windows.Forms.Panel();
-            this.panel35 = new System.Windows.Forms.Panel();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel05 = new System.Windows.Forms.Panel();
-            this.panel64 = new System.Windows.Forms.Panel();
-            this.panel54 = new System.Windows.Forms.Panel();
-            this.panel44 = new System.Windows.Forms.Panel();
-            this.panel34 = new System.Windows.Forms.Panel();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel04 = new System.Windows.Forms.Panel();
-            this.panel63 = new System.Windows.Forms.Panel();
-            this.panel53 = new System.Windows.Forms.Panel();
-            this.panel43 = new System.Windows.Forms.Panel();
-            this.panel33 = new System.Windows.Forms.Panel();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel03 = new System.Windows.Forms.Panel();
-            this.panel62 = new System.Windows.Forms.Panel();
-            this.panel52 = new System.Windows.Forms.Panel();
-            this.panel42 = new System.Windows.Forms.Panel();
-            this.panel32 = new System.Windows.Forms.Panel();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel02 = new System.Windows.Forms.Panel();
-            this.panel61 = new System.Windows.Forms.Panel();
-            this.panel51 = new System.Windows.Forms.Panel();
-            this.panel41 = new System.Windows.Forms.Panel();
-            this.panel31 = new System.Windows.Forms.Panel();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
             this.labelSunday = new System.Windows.Forms.Label();
             this.labelMonday = new System.Windows.Forms.Label();
             this.labelTuesday = new System.Windows.Forms.Label();
@@ -80,17 +39,10 @@
             this.labelThursday = new System.Windows.Forms.Label();
             this.labelFriday = new System.Windows.Forms.Label();
             this.labelSaturday = new System.Windows.Forms.Label();
-            this.panel01 = new System.Windows.Forms.Panel();
             this.tabPageMonth = new System.Windows.Forms.TabPage();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageWeek = new System.Windows.Forms.TabPage();
             this.tableLayoutPanelWeek = new System.Windows.Forms.TableLayoutPanel();
-            this.panelWeekSat = new System.Windows.Forms.Panel();
-            this.panelWeekFir = new System.Windows.Forms.Panel();
-            this.panelWeekThu = new System.Windows.Forms.Panel();
-            this.panelWeekWednesday = new System.Windows.Forms.Panel();
-            this.panelWeekTuesday = new System.Windows.Forms.Panel();
-            this.panelWeekMonday = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -98,9 +50,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.panelWeekSunday = new System.Windows.Forms.Panel();
             this.tabPageDay = new System.Windows.Forms.TabPage();
-            this.flowLayoutPanelDay = new System.Windows.Forms.FlowLayoutPanel();
             this.labelDay = new System.Windows.Forms.Label();
             this.tabPageAgenda = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -110,6 +60,58 @@
             this.buttonEvent = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonRefresh = new System.Windows.Forms.Button();
+            this.panelDay = new System.Windows.Forms.Panel();
+            this.labelLoading = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel11 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel12 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel13 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel14 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel15 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel16 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel17 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel18 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel19 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel20 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel21 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel22 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel23 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel24 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel25 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel26 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel27 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel28 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel29 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel30 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel31 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel32 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel33 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel34 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel35 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel36 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel37 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel38 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel39 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel40 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel41 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel42 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel43 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel44 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel45 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel46 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel47 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel48 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel49 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel50 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanelMonth.SuspendLayout();
             this.tabPageMonth.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -117,6 +119,7 @@
             this.tableLayoutPanelWeek.SuspendLayout();
             this.tabPageDay.SuspendLayout();
             this.tabPageAgenda.SuspendLayout();
+            this.flowLayoutPanel20.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonExit
@@ -146,47 +149,47 @@
             // tableLayoutPanelMonth
             // 
             resources.ApplyResources(this.tableLayoutPanelMonth, "tableLayoutPanelMonth");
-            this.tableLayoutPanelMonth.Controls.Add(this.panel66, 6, 6);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel56, 5, 6);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel46, 4, 6);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel36, 3, 6);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel26, 2, 6);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel16, 1, 6);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel06, 0, 6);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel65, 6, 5);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel55, 5, 5);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel45, 4, 5);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel35, 3, 5);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel25, 2, 5);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel15, 1, 5);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel05, 0, 5);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel64, 6, 4);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel54, 5, 4);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel44, 4, 4);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel34, 3, 4);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel24, 2, 4);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel14, 1, 4);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel04, 0, 4);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel63, 6, 3);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel53, 5, 3);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel43, 4, 3);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel33, 3, 3);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel23, 2, 3);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel13, 1, 3);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel03, 0, 3);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel62, 6, 2);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel52, 5, 2);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel42, 4, 2);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel32, 3, 2);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel22, 2, 2);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel12, 1, 2);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel02, 0, 2);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel61, 6, 1);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel51, 5, 1);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel41, 4, 1);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel31, 3, 1);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel21, 2, 1);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel11, 1, 1);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel50, 6, 6);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel49, 5, 6);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel48, 4, 6);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel47, 3, 6);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel46, 2, 6);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel45, 1, 6);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel44, 0, 6);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel43, 6, 5);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel42, 5, 5);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel41, 4, 5);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel40, 3, 5);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel39, 2, 5);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel38, 1, 5);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel37, 0, 5);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel36, 6, 4);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel35, 5, 4);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel34, 4, 4);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel33, 3, 4);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel32, 2, 4);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel31, 1, 4);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel30, 0, 4);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel29, 6, 3);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel28, 5, 3);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel27, 4, 3);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel26, 3, 3);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel25, 2, 3);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel24, 1, 3);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel23, 0, 3);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel22, 6, 2);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel20, 5, 2);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel19, 4, 2);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel18, 3, 2);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel17, 2, 2);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel16, 1, 2);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel15, 0, 2);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel14, 6, 1);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel13, 5, 1);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel12, 4, 1);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel11, 3, 1);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel10, 2, 1);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel9, 1, 1);
             this.tableLayoutPanelMonth.Controls.Add(this.labelSunday, 0, 0);
             this.tableLayoutPanelMonth.Controls.Add(this.labelMonday, 1, 0);
             this.tableLayoutPanelMonth.Controls.Add(this.labelTuesday, 2, 0);
@@ -194,214 +197,9 @@
             this.tableLayoutPanelMonth.Controls.Add(this.labelThursday, 4, 0);
             this.tableLayoutPanelMonth.Controls.Add(this.labelFriday, 5, 0);
             this.tableLayoutPanelMonth.Controls.Add(this.labelSaturday, 6, 0);
-            this.tableLayoutPanelMonth.Controls.Add(this.panel01, 0, 1);
+            this.tableLayoutPanelMonth.Controls.Add(this.flowLayoutPanel8, 0, 1);
             this.tableLayoutPanelMonth.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.tableLayoutPanelMonth.Name = "tableLayoutPanelMonth";
-            // 
-            // panel66
-            // 
-            resources.ApplyResources(this.panel66, "panel66");
-            this.panel66.Name = "panel66";
-            // 
-            // panel56
-            // 
-            resources.ApplyResources(this.panel56, "panel56");
-            this.panel56.Name = "panel56";
-            // 
-            // panel46
-            // 
-            resources.ApplyResources(this.panel46, "panel46");
-            this.panel46.Name = "panel46";
-            // 
-            // panel36
-            // 
-            resources.ApplyResources(this.panel36, "panel36");
-            this.panel36.Name = "panel36";
-            // 
-            // panel26
-            // 
-            resources.ApplyResources(this.panel26, "panel26");
-            this.panel26.Name = "panel26";
-            // 
-            // panel16
-            // 
-            resources.ApplyResources(this.panel16, "panel16");
-            this.panel16.Name = "panel16";
-            // 
-            // panel06
-            // 
-            resources.ApplyResources(this.panel06, "panel06");
-            this.panel06.Name = "panel06";
-            // 
-            // panel65
-            // 
-            resources.ApplyResources(this.panel65, "panel65");
-            this.panel65.Name = "panel65";
-            // 
-            // panel55
-            // 
-            resources.ApplyResources(this.panel55, "panel55");
-            this.panel55.Name = "panel55";
-            // 
-            // panel45
-            // 
-            resources.ApplyResources(this.panel45, "panel45");
-            this.panel45.Name = "panel45";
-            // 
-            // panel35
-            // 
-            resources.ApplyResources(this.panel35, "panel35");
-            this.panel35.Name = "panel35";
-            // 
-            // panel25
-            // 
-            resources.ApplyResources(this.panel25, "panel25");
-            this.panel25.Name = "panel25";
-            // 
-            // panel15
-            // 
-            resources.ApplyResources(this.panel15, "panel15");
-            this.panel15.Name = "panel15";
-            // 
-            // panel05
-            // 
-            resources.ApplyResources(this.panel05, "panel05");
-            this.panel05.Name = "panel05";
-            // 
-            // panel64
-            // 
-            resources.ApplyResources(this.panel64, "panel64");
-            this.panel64.Name = "panel64";
-            // 
-            // panel54
-            // 
-            resources.ApplyResources(this.panel54, "panel54");
-            this.panel54.Name = "panel54";
-            // 
-            // panel44
-            // 
-            resources.ApplyResources(this.panel44, "panel44");
-            this.panel44.Name = "panel44";
-            // 
-            // panel34
-            // 
-            resources.ApplyResources(this.panel34, "panel34");
-            this.panel34.Name = "panel34";
-            // 
-            // panel24
-            // 
-            resources.ApplyResources(this.panel24, "panel24");
-            this.panel24.Name = "panel24";
-            // 
-            // panel14
-            // 
-            resources.ApplyResources(this.panel14, "panel14");
-            this.panel14.Name = "panel14";
-            // 
-            // panel04
-            // 
-            resources.ApplyResources(this.panel04, "panel04");
-            this.panel04.Name = "panel04";
-            // 
-            // panel63
-            // 
-            resources.ApplyResources(this.panel63, "panel63");
-            this.panel63.Name = "panel63";
-            // 
-            // panel53
-            // 
-            resources.ApplyResources(this.panel53, "panel53");
-            this.panel53.Name = "panel53";
-            // 
-            // panel43
-            // 
-            resources.ApplyResources(this.panel43, "panel43");
-            this.panel43.Name = "panel43";
-            // 
-            // panel33
-            // 
-            resources.ApplyResources(this.panel33, "panel33");
-            this.panel33.Name = "panel33";
-            // 
-            // panel23
-            // 
-            resources.ApplyResources(this.panel23, "panel23");
-            this.panel23.Name = "panel23";
-            // 
-            // panel13
-            // 
-            resources.ApplyResources(this.panel13, "panel13");
-            this.panel13.Name = "panel13";
-            // 
-            // panel03
-            // 
-            resources.ApplyResources(this.panel03, "panel03");
-            this.panel03.Name = "panel03";
-            // 
-            // panel62
-            // 
-            resources.ApplyResources(this.panel62, "panel62");
-            this.panel62.Name = "panel62";
-            // 
-            // panel52
-            // 
-            resources.ApplyResources(this.panel52, "panel52");
-            this.panel52.Name = "panel52";
-            // 
-            // panel42
-            // 
-            resources.ApplyResources(this.panel42, "panel42");
-            this.panel42.Name = "panel42";
-            // 
-            // panel32
-            // 
-            resources.ApplyResources(this.panel32, "panel32");
-            this.panel32.Name = "panel32";
-            // 
-            // panel22
-            // 
-            resources.ApplyResources(this.panel22, "panel22");
-            this.panel22.Name = "panel22";
-            // 
-            // panel12
-            // 
-            resources.ApplyResources(this.panel12, "panel12");
-            this.panel12.Name = "panel12";
-            // 
-            // panel02
-            // 
-            resources.ApplyResources(this.panel02, "panel02");
-            this.panel02.Name = "panel02";
-            // 
-            // panel61
-            // 
-            resources.ApplyResources(this.panel61, "panel61");
-            this.panel61.Name = "panel61";
-            // 
-            // panel51
-            // 
-            resources.ApplyResources(this.panel51, "panel51");
-            this.panel51.Name = "panel51";
-            // 
-            // panel41
-            // 
-            resources.ApplyResources(this.panel41, "panel41");
-            this.panel41.Name = "panel41";
-            // 
-            // panel31
-            // 
-            resources.ApplyResources(this.panel31, "panel31");
-            this.panel31.Name = "panel31";
-            // 
-            // panel21
-            // 
-            resources.ApplyResources(this.panel21, "panel21");
-            this.panel21.Name = "panel21";
-            // 
-            // panel11
-            // 
-            resources.ApplyResources(this.panel11, "panel11");
-            this.panel11.Name = "panel11";
             // 
             // labelSunday
             // 
@@ -438,11 +236,6 @@
             resources.ApplyResources(this.labelSaturday, "labelSaturday");
             this.labelSaturday.Name = "labelSaturday";
             // 
-            // panel01
-            // 
-            resources.ApplyResources(this.panel01, "panel01");
-            this.panel01.Name = "panel01";
-            // 
             // tabPageMonth
             // 
             this.tabPageMonth.Controls.Add(this.tableLayoutPanelMonth);
@@ -470,12 +263,11 @@
             // tableLayoutPanelWeek
             // 
             resources.ApplyResources(this.tableLayoutPanelWeek, "tableLayoutPanelWeek");
-            this.tableLayoutPanelWeek.Controls.Add(this.panelWeekSat, 6, 1);
-            this.tableLayoutPanelWeek.Controls.Add(this.panelWeekFir, 5, 1);
-            this.tableLayoutPanelWeek.Controls.Add(this.panelWeekThu, 4, 1);
-            this.tableLayoutPanelWeek.Controls.Add(this.panelWeekWednesday, 3, 1);
-            this.tableLayoutPanelWeek.Controls.Add(this.panelWeekTuesday, 2, 1);
-            this.tableLayoutPanelWeek.Controls.Add(this.panelWeekMonday, 1, 1);
+            this.tableLayoutPanelWeek.Controls.Add(this.flowLayoutPanel7, 6, 1);
+            this.tableLayoutPanelWeek.Controls.Add(this.flowLayoutPanel6, 5, 1);
+            this.tableLayoutPanelWeek.Controls.Add(this.flowLayoutPanel5, 4, 1);
+            this.tableLayoutPanelWeek.Controls.Add(this.flowLayoutPanel4, 3, 1);
+            this.tableLayoutPanelWeek.Controls.Add(this.flowLayoutPanel3, 2, 1);
             this.tableLayoutPanelWeek.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanelWeek.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanelWeek.Controls.Add(this.label3, 2, 0);
@@ -483,39 +275,10 @@
             this.tableLayoutPanelWeek.Controls.Add(this.label5, 4, 0);
             this.tableLayoutPanelWeek.Controls.Add(this.label6, 5, 0);
             this.tableLayoutPanelWeek.Controls.Add(this.label7, 6, 0);
-            this.tableLayoutPanelWeek.Controls.Add(this.panelWeekSunday, 0, 1);
+            this.tableLayoutPanelWeek.Controls.Add(this.flowLayoutPanel1, 1, 1);
+            this.tableLayoutPanelWeek.Controls.Add(this.flowLayoutPanel2, 0, 1);
             this.tableLayoutPanelWeek.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.tableLayoutPanelWeek.Name = "tableLayoutPanelWeek";
-            // 
-            // panelWeekSat
-            // 
-            resources.ApplyResources(this.panelWeekSat, "panelWeekSat");
-            this.panelWeekSat.Name = "panelWeekSat";
-            // 
-            // panelWeekFir
-            // 
-            resources.ApplyResources(this.panelWeekFir, "panelWeekFir");
-            this.panelWeekFir.Name = "panelWeekFir";
-            // 
-            // panelWeekThu
-            // 
-            resources.ApplyResources(this.panelWeekThu, "panelWeekThu");
-            this.panelWeekThu.Name = "panelWeekThu";
-            // 
-            // panelWeekWednesday
-            // 
-            resources.ApplyResources(this.panelWeekWednesday, "panelWeekWednesday");
-            this.panelWeekWednesday.Name = "panelWeekWednesday";
-            // 
-            // panelWeekTuesday
-            // 
-            resources.ApplyResources(this.panelWeekTuesday, "panelWeekTuesday");
-            this.panelWeekTuesday.Name = "panelWeekTuesday";
-            // 
-            // panelWeekMonday
-            // 
-            resources.ApplyResources(this.panelWeekMonday, "panelWeekMonday");
-            this.panelWeekMonday.Name = "panelWeekMonday";
             // 
             // label1
             // 
@@ -552,24 +315,13 @@
             resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
             // 
-            // panelWeekSunday
-            // 
-            resources.ApplyResources(this.panelWeekSunday, "panelWeekSunday");
-            this.panelWeekSunday.Name = "panelWeekSunday";
-            // 
             // tabPageDay
             // 
-            this.tabPageDay.Controls.Add(this.flowLayoutPanelDay);
+            this.tabPageDay.Controls.Add(this.panelDay);
             this.tabPageDay.Controls.Add(this.labelDay);
             resources.ApplyResources(this.tabPageDay, "tabPageDay");
             this.tabPageDay.Name = "tabPageDay";
             this.tabPageDay.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanelDay
-            // 
-            resources.ApplyResources(this.flowLayoutPanelDay, "flowLayoutPanelDay");
-            this.flowLayoutPanelDay.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanelDay.Name = "flowLayoutPanelDay";
             // 
             // labelDay
             // 
@@ -629,11 +381,273 @@
             this.buttonRefresh.UseVisualStyleBackColor = true;
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
+            // panelDay
+            // 
+            resources.ApplyResources(this.panelDay, "panelDay");
+            this.panelDay.Name = "panelDay";
+            // 
+            // labelLoading
+            // 
+            resources.ApplyResources(this.labelLoading, "labelLoading");
+            this.labelLoading.Name = "labelLoading";
+            // 
+            // flowLayoutPanel1
+            // 
+            resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            // 
+            // flowLayoutPanel2
+            // 
+            resources.ApplyResources(this.flowLayoutPanel2, "flowLayoutPanel2");
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            // 
+            // flowLayoutPanel5
+            // 
+            resources.ApplyResources(this.flowLayoutPanel5, "flowLayoutPanel5");
+            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
+            // 
+            // flowLayoutPanel6
+            // 
+            resources.ApplyResources(this.flowLayoutPanel6, "flowLayoutPanel6");
+            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
+            // 
+            // flowLayoutPanel7
+            // 
+            resources.ApplyResources(this.flowLayoutPanel7, "flowLayoutPanel7");
+            this.flowLayoutPanel7.Name = "flowLayoutPanel7";
+            // 
+            // flowLayoutPanel4
+            // 
+            resources.ApplyResources(this.flowLayoutPanel4, "flowLayoutPanel4");
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            // 
+            // flowLayoutPanel3
+            // 
+            resources.ApplyResources(this.flowLayoutPanel3, "flowLayoutPanel3");
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            // 
+            // flowLayoutPanel8
+            // 
+            resources.ApplyResources(this.flowLayoutPanel8, "flowLayoutPanel8");
+            this.flowLayoutPanel8.Name = "flowLayoutPanel8";
+            // 
+            // flowLayoutPanel9
+            // 
+            resources.ApplyResources(this.flowLayoutPanel9, "flowLayoutPanel9");
+            this.flowLayoutPanel9.Name = "flowLayoutPanel9";
+            // 
+            // flowLayoutPanel10
+            // 
+            resources.ApplyResources(this.flowLayoutPanel10, "flowLayoutPanel10");
+            this.flowLayoutPanel10.Name = "flowLayoutPanel10";
+            // 
+            // flowLayoutPanel11
+            // 
+            resources.ApplyResources(this.flowLayoutPanel11, "flowLayoutPanel11");
+            this.flowLayoutPanel11.Name = "flowLayoutPanel11";
+            // 
+            // flowLayoutPanel12
+            // 
+            resources.ApplyResources(this.flowLayoutPanel12, "flowLayoutPanel12");
+            this.flowLayoutPanel12.Name = "flowLayoutPanel12";
+            // 
+            // flowLayoutPanel13
+            // 
+            resources.ApplyResources(this.flowLayoutPanel13, "flowLayoutPanel13");
+            this.flowLayoutPanel13.Name = "flowLayoutPanel13";
+            // 
+            // flowLayoutPanel14
+            // 
+            resources.ApplyResources(this.flowLayoutPanel14, "flowLayoutPanel14");
+            this.flowLayoutPanel14.Name = "flowLayoutPanel14";
+            // 
+            // flowLayoutPanel15
+            // 
+            resources.ApplyResources(this.flowLayoutPanel15, "flowLayoutPanel15");
+            this.flowLayoutPanel15.Name = "flowLayoutPanel15";
+            // 
+            // flowLayoutPanel16
+            // 
+            resources.ApplyResources(this.flowLayoutPanel16, "flowLayoutPanel16");
+            this.flowLayoutPanel16.Name = "flowLayoutPanel16";
+            // 
+            // flowLayoutPanel17
+            // 
+            resources.ApplyResources(this.flowLayoutPanel17, "flowLayoutPanel17");
+            this.flowLayoutPanel17.Name = "flowLayoutPanel17";
+            // 
+            // flowLayoutPanel18
+            // 
+            resources.ApplyResources(this.flowLayoutPanel18, "flowLayoutPanel18");
+            this.flowLayoutPanel18.Name = "flowLayoutPanel18";
+            // 
+            // flowLayoutPanel19
+            // 
+            resources.ApplyResources(this.flowLayoutPanel19, "flowLayoutPanel19");
+            this.flowLayoutPanel19.Name = "flowLayoutPanel19";
+            // 
+            // flowLayoutPanel20
+            // 
+            this.flowLayoutPanel20.Controls.Add(this.flowLayoutPanel21);
+            resources.ApplyResources(this.flowLayoutPanel20, "flowLayoutPanel20");
+            this.flowLayoutPanel20.Name = "flowLayoutPanel20";
+            // 
+            // flowLayoutPanel21
+            // 
+            resources.ApplyResources(this.flowLayoutPanel21, "flowLayoutPanel21");
+            this.flowLayoutPanel21.Name = "flowLayoutPanel21";
+            // 
+            // flowLayoutPanel22
+            // 
+            resources.ApplyResources(this.flowLayoutPanel22, "flowLayoutPanel22");
+            this.flowLayoutPanel22.Name = "flowLayoutPanel22";
+            // 
+            // flowLayoutPanel23
+            // 
+            resources.ApplyResources(this.flowLayoutPanel23, "flowLayoutPanel23");
+            this.flowLayoutPanel23.Name = "flowLayoutPanel23";
+            // 
+            // flowLayoutPanel24
+            // 
+            resources.ApplyResources(this.flowLayoutPanel24, "flowLayoutPanel24");
+            this.flowLayoutPanel24.Name = "flowLayoutPanel24";
+            // 
+            // flowLayoutPanel25
+            // 
+            resources.ApplyResources(this.flowLayoutPanel25, "flowLayoutPanel25");
+            this.flowLayoutPanel25.Name = "flowLayoutPanel25";
+            // 
+            // flowLayoutPanel26
+            // 
+            resources.ApplyResources(this.flowLayoutPanel26, "flowLayoutPanel26");
+            this.flowLayoutPanel26.Name = "flowLayoutPanel26";
+            // 
+            // flowLayoutPanel27
+            // 
+            resources.ApplyResources(this.flowLayoutPanel27, "flowLayoutPanel27");
+            this.flowLayoutPanel27.Name = "flowLayoutPanel27";
+            // 
+            // flowLayoutPanel28
+            // 
+            resources.ApplyResources(this.flowLayoutPanel28, "flowLayoutPanel28");
+            this.flowLayoutPanel28.Name = "flowLayoutPanel28";
+            // 
+            // flowLayoutPanel29
+            // 
+            resources.ApplyResources(this.flowLayoutPanel29, "flowLayoutPanel29");
+            this.flowLayoutPanel29.Name = "flowLayoutPanel29";
+            // 
+            // flowLayoutPanel30
+            // 
+            resources.ApplyResources(this.flowLayoutPanel30, "flowLayoutPanel30");
+            this.flowLayoutPanel30.Name = "flowLayoutPanel30";
+            // 
+            // flowLayoutPanel31
+            // 
+            resources.ApplyResources(this.flowLayoutPanel31, "flowLayoutPanel31");
+            this.flowLayoutPanel31.Name = "flowLayoutPanel31";
+            // 
+            // flowLayoutPanel32
+            // 
+            resources.ApplyResources(this.flowLayoutPanel32, "flowLayoutPanel32");
+            this.flowLayoutPanel32.Name = "flowLayoutPanel32";
+            // 
+            // flowLayoutPanel33
+            // 
+            resources.ApplyResources(this.flowLayoutPanel33, "flowLayoutPanel33");
+            this.flowLayoutPanel33.Name = "flowLayoutPanel33";
+            // 
+            // flowLayoutPanel34
+            // 
+            resources.ApplyResources(this.flowLayoutPanel34, "flowLayoutPanel34");
+            this.flowLayoutPanel34.Name = "flowLayoutPanel34";
+            // 
+            // flowLayoutPanel35
+            // 
+            resources.ApplyResources(this.flowLayoutPanel35, "flowLayoutPanel35");
+            this.flowLayoutPanel35.Name = "flowLayoutPanel35";
+            // 
+            // flowLayoutPanel36
+            // 
+            resources.ApplyResources(this.flowLayoutPanel36, "flowLayoutPanel36");
+            this.flowLayoutPanel36.Name = "flowLayoutPanel36";
+            // 
+            // flowLayoutPanel37
+            // 
+            resources.ApplyResources(this.flowLayoutPanel37, "flowLayoutPanel37");
+            this.flowLayoutPanel37.Name = "flowLayoutPanel37";
+            // 
+            // flowLayoutPanel38
+            // 
+            resources.ApplyResources(this.flowLayoutPanel38, "flowLayoutPanel38");
+            this.flowLayoutPanel38.Name = "flowLayoutPanel38";
+            // 
+            // flowLayoutPanel39
+            // 
+            resources.ApplyResources(this.flowLayoutPanel39, "flowLayoutPanel39");
+            this.flowLayoutPanel39.Name = "flowLayoutPanel39";
+            // 
+            // flowLayoutPanel40
+            // 
+            resources.ApplyResources(this.flowLayoutPanel40, "flowLayoutPanel40");
+            this.flowLayoutPanel40.Name = "flowLayoutPanel40";
+            // 
+            // flowLayoutPanel41
+            // 
+            resources.ApplyResources(this.flowLayoutPanel41, "flowLayoutPanel41");
+            this.flowLayoutPanel41.Name = "flowLayoutPanel41";
+            // 
+            // flowLayoutPanel42
+            // 
+            resources.ApplyResources(this.flowLayoutPanel42, "flowLayoutPanel42");
+            this.flowLayoutPanel42.Name = "flowLayoutPanel42";
+            // 
+            // flowLayoutPanel43
+            // 
+            resources.ApplyResources(this.flowLayoutPanel43, "flowLayoutPanel43");
+            this.flowLayoutPanel43.Name = "flowLayoutPanel43";
+            // 
+            // flowLayoutPanel44
+            // 
+            resources.ApplyResources(this.flowLayoutPanel44, "flowLayoutPanel44");
+            this.flowLayoutPanel44.Name = "flowLayoutPanel44";
+            // 
+            // flowLayoutPanel45
+            // 
+            resources.ApplyResources(this.flowLayoutPanel45, "flowLayoutPanel45");
+            this.flowLayoutPanel45.Name = "flowLayoutPanel45";
+            // 
+            // flowLayoutPanel46
+            // 
+            resources.ApplyResources(this.flowLayoutPanel46, "flowLayoutPanel46");
+            this.flowLayoutPanel46.Name = "flowLayoutPanel46";
+            // 
+            // flowLayoutPanel47
+            // 
+            resources.ApplyResources(this.flowLayoutPanel47, "flowLayoutPanel47");
+            this.flowLayoutPanel47.Name = "flowLayoutPanel47";
+            // 
+            // flowLayoutPanel48
+            // 
+            resources.ApplyResources(this.flowLayoutPanel48, "flowLayoutPanel48");
+            this.flowLayoutPanel48.Name = "flowLayoutPanel48";
+            // 
+            // flowLayoutPanel49
+            // 
+            resources.ApplyResources(this.flowLayoutPanel49, "flowLayoutPanel49");
+            this.flowLayoutPanel49.Name = "flowLayoutPanel49";
+            // 
+            // flowLayoutPanel50
+            // 
+            resources.ApplyResources(this.flowLayoutPanel50, "flowLayoutPanel50");
+            this.flowLayoutPanel50.Name = "flowLayoutPanel50";
+            // 
             // Menus
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
+            this.Controls.Add(this.labelLoading);
             this.Controls.Add(this.buttonRefresh);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonEvent);
@@ -657,7 +671,9 @@
             this.tabPageDay.ResumeLayout(false);
             this.tabPageDay.PerformLayout();
             this.tabPageAgenda.ResumeLayout(false);
+            this.flowLayoutPanel20.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
         
@@ -684,58 +700,9 @@
         private System.Windows.Forms.Button buttonEvent;
         private System.Windows.Forms.TabPage tabPageWeek;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel01;
-        private System.Windows.Forms.Panel panel66;
-        private System.Windows.Forms.Panel panel56;
-        private System.Windows.Forms.Panel panel46;
-        private System.Windows.Forms.Panel panel36;
-        private System.Windows.Forms.Panel panel26;
-        private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.Panel panel06;
-        private System.Windows.Forms.Panel panel65;
-        private System.Windows.Forms.Panel panel55;
-        private System.Windows.Forms.Panel panel45;
-        private System.Windows.Forms.Panel panel35;
-        private System.Windows.Forms.Panel panel25;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Panel panel05;
-        private System.Windows.Forms.Panel panel64;
-        private System.Windows.Forms.Panel panel54;
-        private System.Windows.Forms.Panel panel44;
-        private System.Windows.Forms.Panel panel34;
-        private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Panel panel04;
-        private System.Windows.Forms.Panel panel63;
-        private System.Windows.Forms.Panel panel53;
-        private System.Windows.Forms.Panel panel43;
-        private System.Windows.Forms.Panel panel33;
-        private System.Windows.Forms.Panel panel23;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Panel panel03;
-        private System.Windows.Forms.Panel panel62;
-        private System.Windows.Forms.Panel panel52;
-        private System.Windows.Forms.Panel panel42;
-        private System.Windows.Forms.Panel panel32;
-        private System.Windows.Forms.Panel panel22;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Panel panel02;
-        private System.Windows.Forms.Panel panel61;
-        private System.Windows.Forms.Panel panel51;
-        private System.Windows.Forms.Panel panel41;
-        private System.Windows.Forms.Panel panel31;
-        private System.Windows.Forms.Panel panel21;
-        private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelDay;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelWeek;
-        private System.Windows.Forms.Panel panelWeekSat;
-        private System.Windows.Forms.Panel panelWeekFir;
-        private System.Windows.Forms.Panel panelWeekThu;
-        private System.Windows.Forms.Panel panelWeekWednesday;
-        private System.Windows.Forms.Panel panelWeekTuesday;
-        private System.Windows.Forms.Panel panelWeekMonday;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -743,7 +710,58 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panelWeekSunday;
+        private System.Windows.Forms.Panel panelDay;
+        public System.Windows.Forms.Label labelLoading;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel50;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel49;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel48;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel47;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel46;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel45;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel44;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel43;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel42;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel41;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel40;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel39;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel38;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel37;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel36;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel35;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel34;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel33;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel32;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel31;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel30;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel29;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel28;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel27;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel26;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel25;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel24;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel23;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel22;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel20;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel21;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel19;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel18;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel17;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel16;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel15;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel14;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel13;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel12;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel11;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel10;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel9;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
     }
 }
 

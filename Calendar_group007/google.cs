@@ -49,17 +49,19 @@ namespace PJCalender
 
                 // Define parameters of request.
                 EventsResource.ListRequest request = service.Events.List("primary");
-                request.TimeMin =new DateTime(2015,1,1);
+                request.TimeMin =new DateTime(2016,1,1);
                 request.ShowDeleted = false;
                 request.SingleEvents = true;
-                request.TimeMax = new DateTime(2021, 1, 1); //todo change number to 20
+                request.TimeMax = new DateTime(2017, 1, 1); //todo change number to 20
                 request.MaxResults = 2000;
                 //request.OrderBy = EventsResource.ListRequest.OrderByEnum.StartTime;
 
                 try
                 {
                     Events events = request.Execute();
+                    form.syncLabel();
                     saveEventLocal(events);
+                    form.syncLabel();
                     form.loginButtonChangeText();
                 }
                 catch (System.Net.Http.HttpRequestException requestEx)
@@ -152,7 +154,7 @@ namespace PJCalender
         {
             System.Threading.Thread t = System.Threading.Thread.CurrentThread;
             t.Priority = System.Threading.ThreadPriority.Highest;
-            string grab = form.Selected.ToShortDateString().Substring(0,7);
+            string grab = form.Selected.Year + "-" + form.Selected.Month.ToString("D2");
             using (SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename" +
                 @"=|DataDirectory|\Database.mdf;Integrated Security=True"))
             {
@@ -184,6 +186,7 @@ namespace PJCalender
             using (SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename" +
                 @"=|DataDirectory|\Database.mdf;Integrated Security=True"))
             {
+                
                 conn.Open();
                 foreach (var eventItem in events.Items)
                 {
@@ -203,10 +206,10 @@ namespace PJCalender
                             EndDate = eventItem.End.Date;
                         } else {
                             DateTime temp = (DateTime)eventItem.Start.DateTime;
-                            StartDate = temp.ToString("yyyy/MM/dd");
+                            StartDate = temp.ToString("yyyy-MM-dd");
                             StartTime = temp.ToString("HH:mm:ss");
                             temp = (DateTime)eventItem.End.DateTime;
-                            EndDate = temp.ToString("yyyy/MM/dd");
+                            EndDate = temp.ToString("yyyy-MM-dd");
                             EndTime = temp.ToString("HH:mm:ss");
                         }
                         string sql = @"IF NOT EXISTS(SELECT 1 FROM [dbo].[Table] WHERE Id = '" + eventItem.Id + "')" 
