@@ -145,7 +145,7 @@ namespace PJCalender
 
                 foreach (eventStruct eventitem in events)
                 {
-                    if(event)
+                    
                 }
             }
         }
