@@ -84,19 +84,37 @@
             this.tabPageMonth = new System.Windows.Forms.TabPage();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageWeek = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanelWeek = new System.Windows.Forms.TableLayoutPanel();
+            this.panelWeekSat = new System.Windows.Forms.Panel();
+            this.panelWeekFir = new System.Windows.Forms.Panel();
+            this.panelWeekThu = new System.Windows.Forms.Panel();
+            this.panelWeekWednesday = new System.Windows.Forms.Panel();
+            this.panelWeekTuesday = new System.Windows.Forms.Panel();
+            this.panelWeekMonday = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panelWeekSunday = new System.Windows.Forms.Panel();
             this.tabPageDay = new System.Windows.Forms.TabPage();
+            this.flowLayoutPanelDay = new System.Windows.Forms.FlowLayoutPanel();
             this.labelDay = new System.Windows.Forms.Label();
             this.tabPageAgenda = new System.Windows.Forms.TabPage();
+            this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutAgenda = new System.Windows.Forms.TableLayoutPanel();
             this.buttonPickDay = new System.Windows.Forms.Button();
             this.buttonLog = new System.Windows.Forms.Button();
             this.buttonEvent = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonRefresh = new System.Windows.Forms.Button();
-            this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanelMonth.SuspendLayout();
             this.tabPageMonth.SuspendLayout();
             this.tabControl.SuspendLayout();
+            this.tabPageWeek.SuspendLayout();
+            this.tableLayoutPanelWeek.SuspendLayout();
             this.tabPageDay.SuspendLayout();
             this.tabPageAgenda.SuspendLayout();
             this.SuspendLayout();
@@ -444,16 +462,114 @@
             // 
             // tabPageWeek
             // 
+            this.tabPageWeek.Controls.Add(this.tableLayoutPanelWeek);
             resources.ApplyResources(this.tabPageWeek, "tabPageWeek");
             this.tabPageWeek.Name = "tabPageWeek";
             this.tabPageWeek.UseVisualStyleBackColor = true;
             // 
+            // tableLayoutPanelWeek
+            // 
+            resources.ApplyResources(this.tableLayoutPanelWeek, "tableLayoutPanelWeek");
+            this.tableLayoutPanelWeek.Controls.Add(this.panelWeekSat, 6, 1);
+            this.tableLayoutPanelWeek.Controls.Add(this.panelWeekFir, 5, 1);
+            this.tableLayoutPanelWeek.Controls.Add(this.panelWeekThu, 4, 1);
+            this.tableLayoutPanelWeek.Controls.Add(this.panelWeekWednesday, 3, 1);
+            this.tableLayoutPanelWeek.Controls.Add(this.panelWeekTuesday, 2, 1);
+            this.tableLayoutPanelWeek.Controls.Add(this.panelWeekMonday, 1, 1);
+            this.tableLayoutPanelWeek.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanelWeek.Controls.Add(this.label2, 1, 0);
+            this.tableLayoutPanelWeek.Controls.Add(this.label3, 2, 0);
+            this.tableLayoutPanelWeek.Controls.Add(this.label4, 3, 0);
+            this.tableLayoutPanelWeek.Controls.Add(this.label5, 4, 0);
+            this.tableLayoutPanelWeek.Controls.Add(this.label6, 5, 0);
+            this.tableLayoutPanelWeek.Controls.Add(this.label7, 6, 0);
+            this.tableLayoutPanelWeek.Controls.Add(this.panelWeekSunday, 0, 1);
+            this.tableLayoutPanelWeek.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
+            this.tableLayoutPanelWeek.Name = "tableLayoutPanelWeek";
+            // 
+            // panelWeekSat
+            // 
+            resources.ApplyResources(this.panelWeekSat, "panelWeekSat");
+            this.panelWeekSat.Name = "panelWeekSat";
+            // 
+            // panelWeekFir
+            // 
+            resources.ApplyResources(this.panelWeekFir, "panelWeekFir");
+            this.panelWeekFir.Name = "panelWeekFir";
+            // 
+            // panelWeekThu
+            // 
+            resources.ApplyResources(this.panelWeekThu, "panelWeekThu");
+            this.panelWeekThu.Name = "panelWeekThu";
+            // 
+            // panelWeekWednesday
+            // 
+            resources.ApplyResources(this.panelWeekWednesday, "panelWeekWednesday");
+            this.panelWeekWednesday.Name = "panelWeekWednesday";
+            // 
+            // panelWeekTuesday
+            // 
+            resources.ApplyResources(this.panelWeekTuesday, "panelWeekTuesday");
+            this.panelWeekTuesday.Name = "panelWeekTuesday";
+            // 
+            // panelWeekMonday
+            // 
+            resources.ApplyResources(this.panelWeekMonday, "panelWeekMonday");
+            this.panelWeekMonday.Name = "panelWeekMonday";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
+            // 
+            // panelWeekSunday
+            // 
+            resources.ApplyResources(this.panelWeekSunday, "panelWeekSunday");
+            this.panelWeekSunday.Name = "panelWeekSunday";
+            // 
             // tabPageDay
             // 
+            this.tabPageDay.Controls.Add(this.flowLayoutPanelDay);
             this.tabPageDay.Controls.Add(this.labelDay);
             resources.ApplyResources(this.tabPageDay, "tabPageDay");
             this.tabPageDay.Name = "tabPageDay";
             this.tabPageDay.UseVisualStyleBackColor = true;
+            // 
+            // flowLayoutPanelDay
+            // 
+            resources.ApplyResources(this.flowLayoutPanelDay, "flowLayoutPanelDay");
+            this.flowLayoutPanelDay.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanelDay.Name = "flowLayoutPanelDay";
             // 
             // labelDay
             // 
@@ -466,6 +582,12 @@
             resources.ApplyResources(this.tabPageAgenda, "tabPageAgenda");
             this.tabPageAgenda.Name = "tabPageAgenda";
             this.tabPageAgenda.UseVisualStyleBackColor = true;
+            // 
+            // flowLayoutPanel
+            // 
+            resources.ApplyResources(this.flowLayoutPanel, "flowLayoutPanel");
+            this.flowLayoutPanel.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanel.Name = "flowLayoutPanel";
             // 
             // tableLayoutAgenda
             // 
@@ -507,12 +629,6 @@
             this.buttonRefresh.UseVisualStyleBackColor = true;
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
-            // flowLayoutPanel
-            // 
-            resources.ApplyResources(this.flowLayoutPanel, "flowLayoutPanel");
-            this.flowLayoutPanel.BackColor = System.Drawing.Color.Gray;
-            this.flowLayoutPanel.Name = "flowLayoutPanel";
-            // 
             // Menus
             // 
             resources.ApplyResources(this, "$this");
@@ -534,6 +650,10 @@
             this.tabPageMonth.ResumeLayout(false);
             this.tabPageMonth.PerformLayout();
             this.tabControl.ResumeLayout(false);
+            this.tabPageWeek.ResumeLayout(false);
+            this.tabPageWeek.PerformLayout();
+            this.tableLayoutPanelWeek.ResumeLayout(false);
+            this.tableLayoutPanelWeek.PerformLayout();
             this.tabPageDay.ResumeLayout(false);
             this.tabPageDay.PerformLayout();
             this.tabPageAgenda.ResumeLayout(false);
@@ -608,6 +728,22 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelDay;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelWeek;
+        private System.Windows.Forms.Panel panelWeekSat;
+        private System.Windows.Forms.Panel panelWeekFir;
+        private System.Windows.Forms.Panel panelWeekThu;
+        private System.Windows.Forms.Panel panelWeekWednesday;
+        private System.Windows.Forms.Panel panelWeekTuesday;
+        private System.Windows.Forms.Panel panelWeekMonday;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panelWeekSunday;
     }
 }
 

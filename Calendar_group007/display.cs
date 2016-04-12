@@ -16,23 +16,20 @@ namespace PJCalender
         {
             clear();
             google.readEventLocal(this);
-            //delegate version
-            //DisplayDelegate d = new DisplayDelegate(displayAgenda);
-            //d += new DisplayDelegate(displayMonthNumbers);
-            //Thread t = new Thread(() => d.Invoke());
-            //Thread t = new Thread(() => displayAgenda());
-            //t.Name = "displayAgenda";
-            //t.Start();
 
             //List version
             List<Thread> threads = new List<Thread>();
+            threads.Add(new Thread(() => displayMonthNumbers()));
             threads.Add(new Thread(() => displayAgenda()));
             threads.Add(new Thread(() => displayLabelDay()));
-            threads.Add(new Thread(() => displayMonthNumbers()));
+            threads.Add(new Thread(() => displayDayEvents()));
+            threads.Add(new Thread(() => displayWeekEvents()));
+            threads.Add(new Thread(() => displayMonthEvents()));
             int i = 0;
             foreach (var item in threads)
             {
                 item.Name = "" + i;
+                ++i;
                 item.Start();
             }
         }
@@ -50,15 +47,37 @@ namespace PJCalender
             if (events.Count > 0)
             {
                 String nl = Environment.NewLine;
-                int column = 8;
+                int column = 7;
                 DBLayoutPanel TLA = new DBLayoutPanel();
                 TLA.ColumnCount = column;
                 TLA.RowCount = events.Count;
-                int i = 0;
+                int i = 1;
                 Label label;
+
+                label = new Label();
+                label.Text = "Start Date";
+                TLA.Controls.Add(label, 0, 0);
+                label = new Label();
+                label.Text = "Start Time";
+                TLA.Controls.Add(label, 1, 0);
+                label = new Label();
+                label.Text = "Summary";
+                TLA.Controls.Add(label, 2, 0);
+                label = new Label();
+                label.Text = "Location";
+                TLA.Controls.Add(label, 3, 0);
+                label = new Label();
+                label.Text = "Description";
+                TLA.Controls.Add(label, 4, 0);
+                label = new Label();
+                label.Text = "End Date";
+                TLA.Controls.Add(label, 5, 0);
+                label = new Label();
+                label.Text = "End Time";
+                TLA.Controls.Add(label, 6, 0);
+
                 foreach (eventStruct eventitem in events)
                 {
-                    
                     for(int j = 0; j < column; j++)
                     {
                         label = new Label();
@@ -69,6 +88,7 @@ namespace PJCalender
                 }
                 //TLA.MinimumSize = new System.Drawing.Size(722, 0);
                 TLA.AutoSize = true;
+                TLA.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
                 flowLayoutPanel.Controls.Add(TLA);
             }
         }
@@ -103,6 +123,91 @@ namespace PJCalender
                 }
             }         
         }
+
+        public void displayMonthEvents()
+        {
+            if (tableLayoutPanelMonth.InvokeRequired)
+                Invoke(new DisplayDelegate(displayMonthEvents));
+            else {
+
+            }
+        }
+
+        public void displayWeekEvents()
+        {
+            if (tableLayoutPanelWeek.InvokeRequired)
+                Invoke(new DisplayDelegate(displayWeekEvents));
+            else {
+                int today = (int)Selected.DayOfWeek;
+                DateTime begin = Selected.AddDays(-today);
+                int column = 7;
+                Label label;
+
+                foreach (eventStruct eventitem in events)
+                {
+                    if(event)
+                }
+            }
+        }
+
+        public void displayDayEvents()
+        {
+            if (flowLayoutPanelDay.InvokeRequired)
+                Invoke(new DisplayDelegate(displayDayEvents));
+            else {
+                if (events.Count > 0)
+                {
+                    string grab = Selected.ToShortDateString();
+                    String nl = Environment.NewLine;
+                    int column = 7;
+                    DBLayoutPanel TLA = new DBLayoutPanel();
+                    TLA.ColumnCount = column;
+                    TLA.RowCount = events.Count;
+                    int i = 1;
+                    Label label;
+                    
+                    label = new Label();
+                    label.Text = "Start Date";
+                    TLA.Controls.Add(label, 0, 0);
+                    label = new Label();
+                    label.Text = "Start Time";
+                    TLA.Controls.Add(label, 1, 0);
+                    label = new Label();
+                    label.Text = "Summary";
+                    TLA.Controls.Add(label, 2, 0);
+                    label = new Label();
+                    label.Text = "Location";
+                    TLA.Controls.Add(label, 3, 0);
+                    label = new Label();
+                    label.Text = "Description";
+                    TLA.Controls.Add(label, 4, 0);
+                    label = new Label();
+                    label.Text = "End Date";
+                    TLA.Controls.Add(label, 5, 0);
+                    label = new Label();
+                    label.Text = "End Time";
+                    TLA.Controls.Add(label, 6, 0);
+
+                    foreach (eventStruct eventitem in events)
+                    {
+                        if (grab.CompareTo(eventitem.startDate) == 0)
+                        {
+                            for (int j = 0; j < column; j++)
+                            {
+                                label = new Label();
+                                label.Text = eventitem.getItemByIndex(j);
+                                TLA.Controls.Add(label, j, i);
+                            }
+                            ++i;
+                        }
+                    }
+                    //TLA.MinimumSize = new System.Drawing.Size(722, 0);
+                    TLA.AutoSize = true;
+                    TLA.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
+                    flowLayoutPanelDay.Controls.Add(TLA);
+                }
+            }
+        }
         /// <summary>
         /// clear information when
         ///     new user logs in
@@ -113,8 +218,10 @@ namespace PJCalender
         {
             if (flowLayoutPanel.InvokeRequired)
                 Invoke(new DisplayDelegate(clear));
-            else
+            else {
                 flowLayoutPanel.Controls.Clear();
+                flowLayoutPanelDay.Controls.Clear();
+            }
             events.Clear();
         }
         /// <summary>
@@ -135,35 +242,18 @@ namespace PJCalender
         /// <param name="e">Event</param>
         public void loginButtonChangeText()
         {
-            String message;
-
-            if (buttonLog.Text.Equals("Login"))
+            if (buttonLog.InvokeRequired)
             {
-                message = "Logout";
-                if (buttonLog.InvokeRequired)
-                {
-                    //Executes the DisplayDelegate on the thread that owns the control's 
-                    //underlying window handle.                                      
-                    Invoke(new DisplayDelegate(loginButtonChangeText));
-                } // end if
-                else // add message to text box
-                {
-                    buttonLog.Text = message;
-                }
-            }
-            else
+                Invoke(new DisplayDelegate(loginButtonChangeText));
+            } else
             {
-                message = "Login";
-                if (buttonLog.InvokeRequired)
+                if (User.currentUserLoggedIn() == null)
                 {
-                    //Executes the DisplayDelegate on the thread that owns the control's 
-                    //underlying window handle.                                      
-                    Invoke(new DisplayDelegate(loginButtonChangeText));
-                } // end if
-                else // add message to text box
-                {
-                    buttonLog.Text = message;
+                    string test = User.currentUserLoggedIn();
+                    buttonLog.Text = "Login";
                 }
+                else
+                    buttonLog.Text = "Logout";
             }
         }
     }

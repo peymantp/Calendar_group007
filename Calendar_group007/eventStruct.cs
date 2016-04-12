@@ -40,13 +40,13 @@ namespace PJCalender
                     if (!String.IsNullOrEmpty(Description)) return Description;
                     else return "";
                     break;
-                case 5:
+                case 7:
                     return html;
                     break;
-                case 6:
+                case 5:
                     return endDate;
                     break;
-                case 7:
+                case 6:
                     if (!String.IsNullOrEmpty(endTime)) return endTime;
                     else return "";
                     break;

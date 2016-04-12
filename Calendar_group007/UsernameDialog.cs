@@ -30,7 +30,7 @@ namespace PJCalender
         private void buttonLog_Click(object sender, EventArgs e)
         {
             //new google(f, textBox1.Text);
-            new User(textBox1.Text, f);
+            new User(f);
             this.Close();
         }
     }

@@ -49,16 +49,18 @@ namespace PJCalender
 
                 // Define parameters of request.
                 EventsResource.ListRequest request = service.Events.List("primary");
-                request.TimeMin =new DateTime(2000,1,1);
+                request.TimeMin =new DateTime(2015,1,1);
                 request.ShowDeleted = false;
                 request.SingleEvents = true;
-                request.TimeMax = DateTime.Now.AddYears(20); //todo change number to 20
-                request.OrderBy = EventsResource.ListRequest.OrderByEnum.StartTime;
+                request.TimeMax = new DateTime(2021, 1, 1); //todo change number to 20
+                request.MaxResults = 2000;
+                //request.OrderBy = EventsResource.ListRequest.OrderByEnum.StartTime;
 
                 try
                 {
                     Events events = request.Execute();
                     saveEventLocal(events);
+                    form.loginButtonChangeText();
                 }
                 catch (System.Net.Http.HttpRequestException requestEx)
                 {
@@ -150,11 +152,12 @@ namespace PJCalender
         {
             System.Threading.Thread t = System.Threading.Thread.CurrentThread;
             t.Priority = System.Threading.ThreadPriority.Highest;
+            string grab = form.Selected.ToShortDateString().Substring(0,7);
             using (SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename" +
                 @"=|DataDirectory|\Database.mdf;Integrated Security=True"))
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("Select * From [dbo].[Table] ORDER by StartDate", conn);
+                SqlCommand cmd = new SqlCommand("Select * From [dbo].[Table] WHERE StartDate LIKE '" + grab + "%' ORDER by StartDate", conn);
                 //cmd.CommandText = "Select * From [dbo].[Table]";
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -190,6 +193,7 @@ namespace PJCalender
                         string StartTime = "";
                         string EndDate;
                         string EndTime = "";
+                        string Summary = nullCatcher(eventItem.Summary);
                         string Location = nullCatcher(eventItem.Location);
                         string Description = nullCatcher(eventItem.Description);
                         string htmlLink = eventItem.HtmlLink;
@@ -210,13 +214,13 @@ namespace PJCalender
                         eventItem.Id + "', '" +
                         StartDate + "', '" +
                         StartTime + "', '" +
-                        eventItem.Summary + "', '" +
+                        Summary + "', '" +
                         Location + "', '" +
                         Description + "', '" +
                         htmlLink + "', '" +
                         EndDate + "', '" +
                         EndTime + "') END ELSE " +
-                        "BEGIN UPDATE[dbo].[Table] SET "
+                        "BEGIN UPDATE [dbo].[Table] SET "
                         + "StartDate = @StartDate, "
                         + "StartTime = @StartTime, "
                         + "Summary = @Summary, "
@@ -224,17 +228,18 @@ namespace PJCalender
                         + "Description = @Description, "
                         + "EndData = @EndData, "
                         + "EndTime = @EndTime "
-                        + "WHERE " + "Id = @Id END";
+                        + "WHERE " 
+                        + "Id = @q END";
 
                         SqlCommand cmd = conn.CreateCommand();
                         cmd.Parameters.AddWithValue("@StartDate", StartDate);
                         cmd.Parameters.AddWithValue("@StartTime", StartTime);
-                        cmd.Parameters.AddWithValue("@Summary", eventItem.Summary);
+                        cmd.Parameters.AddWithValue("@Summary", Summary);
                         cmd.Parameters.AddWithValue("@Locations", Location);
                         cmd.Parameters.AddWithValue("@Description", Description);
                         cmd.Parameters.AddWithValue("@EndData", EndDate);
                         cmd.Parameters.AddWithValue("@EndTime", EndTime);
-                        cmd.Parameters.AddWithValue("@Id", eventItem.Id);
+                        cmd.Parameters.AddWithValue("@q", eventItem.Id);
                         cmd.CommandText = sql;
                         cmd.ExecuteNonQuery();
                     } 

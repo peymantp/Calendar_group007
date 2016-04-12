@@ -13,10 +13,10 @@ namespace PJCalender
         /// <summary>
         /// date selected for the views to show
         /// </summary>
-        private DateTime Selected
+        public DateTime Selected
         {
             get;
-            set;
+            private set;
         }
 
         public System.Collections.ArrayList events {
@@ -28,15 +28,12 @@ namespace PJCalender
         {
             InitializeComponent();
             loginButtonChangeText();
-            if (!String.IsNullOrEmpty(User.currentUserLoggedIn()))
-            {
-                loginButtonChangeText();
-                buttonLog.Enabled = false;
-            }
             events = new System.Collections.ArrayList();
             Selected = DateTime.Now;
             dateTimePicker.Value = Selected;
             displayAll();
+            if (!System.IO.Directory.Exists(".credentials/currentUser"))
+                System.IO.Directory.CreateDirectory(".credentials/currentUser");
         }
         /// <summary>
         /// Exits the program
@@ -81,8 +78,7 @@ namespace PJCalender
             }
             else
             {
-                new User(" ", this);
-                buttonLog.Enabled = false;
+                new User(this);
             }
         }
         /// <summary>
@@ -128,9 +124,7 @@ namespace PJCalender
         {
             System.Threading.Thread t = new System.Threading.Thread(() => new google(this));
             t.Name = "Google";
-            //clear();
             t.Start();
-            //displayAll(this);
         }
     }
 }

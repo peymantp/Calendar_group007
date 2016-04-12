@@ -17,21 +17,23 @@ namespace PJCalender
         /// </summary>
         /// <param name="userLoggedIn">username</param>
         /// <param name="mainForm">parent form</param>
-        public User(String userLoggedIn, Menus mainForm)
+        public User(Menus mainForm)
         {
+            bool fileNotFound = true;
+            string userLoggedIn = "user";
+
             if (!System.IO.Directory.Exists(".credentials/.archived.users"))
                 System.IO.Directory.CreateDirectory(".credentials/.archived.users");
             string[] files = Directory.GetFiles(@".credentials/.archived.users", "*");
-
-            bool fileNotFound = true;
-            userLoggedIn = "user";
+            
             foreach (String file in files)
             {
                 if (file.Split('-')[1].Equals(userLoggedIn))
                 {
                     File.Move(file, @".credentials/currentUser/" + file.Split('\\')[1]);
                     userLoggedIn = file.Split('-')[1];
-                    fileNotFound = false;
+                    //fileNotFound = false;
+                    mainForm.loginButtonChangeText();
                     break;
                 }
             }
@@ -83,7 +85,7 @@ namespace PJCalender
                 else {
                     file = Directory.GetFiles(".credentials/currentUser", "*")[0];
 
-                    return file.Split('-')[1];
+                    return file;
                 }
             }
             catch (System.IndexOutOfRangeException ex)
