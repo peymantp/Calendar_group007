@@ -75,6 +75,8 @@ namespace PJCalender
             {
                 User.Logout();
                 loginButtonChangeText();
+                google.clearTableData();
+                displayAll();
             }
             else
             {
