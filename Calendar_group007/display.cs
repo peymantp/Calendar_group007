@@ -93,42 +93,63 @@ namespace PJCalender
             if (tableLayoutPanelMonth.InvokeRequired)
                 Invoke(new DisplayDelegate(displayMonthNumbers));
             else {
-                DateTime tem = new DateTime(Selected.Year, Selected.Month, 1);
-                int firstWeekDay = (int)tem.DayOfWeek;
-                int max = DateCalculations.monthDayNumber(Selected.AddMonths(-1));
-                int thisMonthLength = DateCalculations.monthDayNumber(Selected);
-                int day = max - firstWeekDay + 1;
-                for (int row = 1; row < 7; ++row)
-                {
-                    for (int column = 0; column < 7; ++column, ++day)
+                try {
+                    DateTime tem = new DateTime(Selected.Year, Selected.Month, 1);
+                    int firstWeekDay = (int)tem.DayOfWeek;
+                    int max = DateCalculations.monthDayNumber(Selected.AddMonths(-1));
+                    int thisMonthLength = DateCalculations.monthDayNumber(Selected);
+                    int day = max - firstWeekDay + 1;
+                    bool maxHit = false;
+                    for (int row = 1; row < 7; ++row)
                     {
-                        if (day > max)
+                        for (int column = 0; column < 7; ++column, ++day)
                         {
-                            day = 1;
-                            max = thisMonthLength;
+                            if (day > max)
+                            {
+                                day = 1;
+                                max = thisMonthLength;
+                                if (maxHit)
+                                    maxHit = false;
+                                maxHit = true;
+                            }
+                            Label label = new Label();
+                            label.Text = "" + day;
+                            if (maxHit)
+                                label.Name = "Label" + Selected.Year + "-" + Selected.Month.ToString("D2") + "-" + day.ToString("D2");
+                            Control c = tableLayoutPanelMonth.GetControlFromPosition(column, row);
+                            listofC.Add(c);
+                            c.Controls.Clear();
+                            c.Controls.Add(label);
                         }
-                        Label label = new Label();
-                        label.Text = "" + day;
-                        Control c = tableLayoutPanelMonth.GetControlFromPosition(column, row);
-                        c.Controls.Clear();
-                        c.Controls.Add(label);
                     }
+                } catch (Exception x)
+                {
+
                 }
             }         
         }
-
+        System.Collections.ArrayList listofC = new System.Collections.ArrayList();
         public void displayMonthEvents()
         {
             int column = 0, row = 0;
-            System.Collections.ArrayList tempEvents = events;
+            Label l;
+            //System.Collections.ArrayList tempEvents = events;
             if (tableLayoutPanelMonth.InvokeRequired)
                 Invoke(new DisplayDelegate(displayMonthEvents));
             else {
                 DateTime start = new DateTime(Selected.Year, Selected.Month, 1);
-                foreach (Control c in tableLayoutPanelMonth.Controls)
+                foreach (eventStruct evstrct in events)
                 {
-                    Control[] cont = c.Controls.Find("1", true);
-                    
+                    foreach(Control c in listofC)
+                    {
+                        Control[] cont = c.Controls.Find("Label" + evstrct.startDate, true);
+                        if(cont.Length > 0)
+                        {
+                            l = labelmaker(evstrct.Summary);
+                            c.Controls.Add(l);
+                            break;
+                        }
+                    }
                 }
             }
         }
@@ -217,27 +238,20 @@ namespace PJCalender
                     TLA.RowCount = events.Count;
                     int i = 1;
                     Label label;
-                    
-                    label = new Label();
-                    label.Text = "Start Date";
+
+                    label = labelmaker("Start Date");
                     TLA.Controls.Add(label, 0, 0);
-                    label = new Label();
-                    label.Text = "Start Time";
+                    label = labelmaker("Start Time");
                     TLA.Controls.Add(label, 1, 0);
-                    label = new Label();
-                    label.Text = "Summary";
+                    label = labelmaker("Summary");
                     TLA.Controls.Add(label, 2, 0);
-                    label = new Label();
-                    label.Text = "Location";
+                    label = labelmaker("Location");
                     TLA.Controls.Add(label, 3, 0);
-                    label = new Label();
-                    label.Text = "Description";
+                    label = labelmaker("Description");
                     TLA.Controls.Add(label, 4, 0);
-                    label = new Label();
-                    label.Text = "End Date";
+                    label = labelmaker("End Date");
                     TLA.Controls.Add(label, 5, 0);
-                    label = new Label();
-                    label.Text = "End Time";
+                    label = labelmaker("End Time");
                     TLA.Controls.Add(label, 6, 0);
 
                     foreach (eventStruct eventitem in events)
@@ -308,7 +322,10 @@ namespace PJCalender
                     buttonLog.Text = "Logout";
             }
         }
-
+        /// <summary>
+        /// displays a label on the buttom left corner when the client
+        /// is pulling data from google servers
+        /// </summary>
         public void syncLabel()
         {
             if (labelLoading.InvokeRequired)
