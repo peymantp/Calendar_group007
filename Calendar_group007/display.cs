@@ -25,7 +25,7 @@ namespace PJCalender
             threads.Add(new Thread(() => displayLabelDay()));
             threads.Add(new Thread(() => displayDayEvents()));
             threads.Add(new Thread(() => displayWeekEvents()));
-            //threads.Add(new Thread(() => displayMonthEvents()));
+            threads.Add(new Thread(() => displayMonthEvents()));
             int i = 0;
             foreach (var item in threads)
             {
@@ -119,10 +119,17 @@ namespace PJCalender
 
         public void displayMonthEvents()
         {
+            int column = 0, row = 0;
+            System.Collections.ArrayList tempEvents = events;
             if (tableLayoutPanelMonth.InvokeRequired)
                 Invoke(new DisplayDelegate(displayMonthEvents));
             else {
-
+                DateTime start = new DateTime(Selected.Year, Selected.Month, 1);
+                foreach (Control c in tableLayoutPanelMonth.Controls)
+                {
+                    Control[] cont = c.Controls.Find("1", true);
+                    
+                }
             }
         }
 
