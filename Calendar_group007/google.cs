@@ -255,6 +255,21 @@ namespace PJCalender
             }
         }
 
+        public static void clearTableData()
+        {
+            using (SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename" +
+                @"=|DataDirectory|\Database.mdf;Integrated Security=True"))
+            {
+
+                conn.Open();
+
+                string sql = "TRUNCATE TABLE [dbo].[Table]";
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = sql;
+                cmd.ExecuteNonQuery();
+            }
+        }
+
         private static string nullCatcher(string obj)
         {
             try
