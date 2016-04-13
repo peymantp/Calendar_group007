@@ -106,10 +106,8 @@
             this.tabPageAgenda = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutAgenda = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonPickDay = new System.Windows.Forms.Button();
             this.buttonLog = new System.Windows.Forms.Button();
             this.buttonEvent = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.labelLoading = new System.Windows.Forms.Label();
             this.tableLayoutPanelMonth.SuspendLayout();
@@ -602,13 +600,6 @@
             resources.ApplyResources(this.tableLayoutAgenda, "tableLayoutAgenda");
             this.tableLayoutAgenda.Name = "tableLayoutAgenda";
             // 
-            // buttonPickDay
-            // 
-            resources.ApplyResources(this.buttonPickDay, "buttonPickDay");
-            this.buttonPickDay.Name = "buttonPickDay";
-            this.buttonPickDay.UseVisualStyleBackColor = true;
-            this.buttonPickDay.Click += new System.EventHandler(this.buttonPickDay_Click);
-            // 
             // buttonLog
             // 
             resources.ApplyResources(this.buttonLog, "buttonLog");
@@ -622,13 +613,6 @@
             this.buttonEvent.Name = "buttonEvent";
             this.buttonEvent.UseVisualStyleBackColor = true;
             this.buttonEvent.Click += new System.EventHandler(this.buttonEvent_Click);
-            // 
-            // button1
-            // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonRefresh
             // 
@@ -649,10 +633,8 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.Controls.Add(this.labelLoading);
             this.Controls.Add(this.buttonRefresh);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonEvent);
             this.Controls.Add(this.buttonLog);
-            this.Controls.Add(this.buttonPickDay);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.tabControl);
@@ -692,14 +674,12 @@
         private System.Windows.Forms.Label labelSaturday;
         private System.Windows.Forms.Label labelFriday;
         private System.Windows.Forms.Label labelThursday;
-        private System.Windows.Forms.Button buttonPickDay;
         private System.Windows.Forms.TabPage tabPageAgenda;
         private System.Windows.Forms.TableLayoutPanel tableLayoutAgenda;
         public System.Windows.Forms.Button buttonLog;
         private System.Windows.Forms.Label labelDay;
         private System.Windows.Forms.Button buttonEvent;
         private System.Windows.Forms.TabPage tabPageWeek;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelWeek;
