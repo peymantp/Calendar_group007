@@ -7,18 +7,32 @@ namespace PJCalender
 {
     public partial class Menus
     {
+        /// <summary>
+        /// This delegate is used to run most fucntions that edit the GUI
+        /// </summary>
         private delegate void DisplayDelegate();
+        /// <summary>
+        /// This delegate is for functions that add labels to
+        /// different controls
+        /// </summary>
+        /// <param name="c">The control being edited</param>
+        /// <param name="l">Label being added to the control</param>
         private delegate void ControlDelegate(Control c, Label l);
+        /// <summary>
+        /// List of flowLayoutPanels in month view
+        /// </summary>
+        System.Collections.ArrayList listofC = new System.Collections.ArrayList();
         /// <summary>
         /// call all display functions
         /// </summary>
         public void displayAll()
         {
+            //clear old controls
             clear();
-
+            
+            //reread events for current month in case moew were added
             google.readEventLocal(this);
-
-            //List version
+            
             List<Thread> threads = new List<Thread>();
             threads.Add(new Thread(() => displayMonthNumbers()));
             threads.Add(new Thread(() => displayAgenda()));
@@ -35,7 +49,7 @@ namespace PJCalender
             }
         }
         /// <summary>
-        /// display agendatab
+        /// display all events for the selected month in a list format
         /// </summary>
         private void displayAgenda()
         {
@@ -43,18 +57,17 @@ namespace PJCalender
             {
                 Invoke(new DisplayDelegate(displayAgenda));
                 return;
-            } 
-
+            }
             if (events.Count > 0)
             {
-                String nl = Environment.NewLine;
                 int column = 7;
                 DBLayoutPanel TLA = new DBLayoutPanel();
-                TLA.ColumnCount = column;
+                TLA.ColumnCount = 7;
                 TLA.RowCount = events.Count;
                 int i = 1;
                 Label label;
 
+                //add the header row to the table
                 label = labelmaker("Start Date");
                 TLA.Controls.Add(label, 0, 0);
                 label = labelmaker("Start Time");
@@ -79,16 +92,16 @@ namespace PJCalender
                     }
                     ++i;
                 }
-                //TLA.MinimumSize = new System.Drawing.Size(722, 0);
+
                 TLA.AutoSize = true;
                 TLA.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
                 flowLayoutPanel.Controls.Add(TLA);
             }
         }
         /// <summary>
-        /// Number days in month tab
+        /// Number the days in month tab
         /// </summary>
-        public void displayMonthNumbers()
+        private void displayMonthNumbers()
         {
             if (tableLayoutPanelMonth.InvokeRequired)
                 Invoke(new DisplayDelegate(displayMonthNumbers));
@@ -128,12 +141,12 @@ namespace PJCalender
                 }
             }         
         }
-        System.Collections.ArrayList listofC = new System.Collections.ArrayList();
-        public void displayMonthEvents()
+        /// <summary>
+        /// Displays all the events within a month
+        /// </summary>
+        private void displayMonthEvents()
         {
-            int column = 0, row = 0;
             Label l;
-            //System.Collections.ArrayList tempEvents = events;
             if (tableLayoutPanelMonth.InvokeRequired)
                 Invoke(new DisplayDelegate(displayMonthEvents));
             else {
@@ -153,17 +166,20 @@ namespace PJCalender
                 }
             }
         }
-
-        public void displayWeekEvents()
+        /// <summary>
+        /// Display the events for the week selected 
+        /// </summary>
+        private void displayWeekEvents()
         {
             if (tableLayoutPanelWeek.InvokeRequired)
                 Invoke(new DisplayDelegate(displayWeekEvents));
             else {
-                int today = (int)Selected.DayOfWeek;
-                DateTime begin = Selected.AddDays(-today);
-                int column = 7;
+                //The date of the saturday. Used to calculate the
+                //date of the other days in the same week
+                DateTime begin = Selected.AddDays(-(int)Selected.DayOfWeek);
                 Label label;
                 string format = "yyyy-MM-dd";
+                //Each Control represents a day of the week 0 being Saturday
                 List<Control> controls = new List<Control>();
                 controls.Add(tableLayoutPanelWeek.GetControlFromPosition(0, 1));
                 controls.Add(tableLayoutPanelWeek.GetControlFromPosition(1, 1));
@@ -217,20 +233,28 @@ namespace PJCalender
                 }
             }
         }
+        /// <summary>
+        /// Used to create new Label object
+        /// </summary>
+        /// <param name="text">The text displayed by the label</param>
+        /// <returns>A Label object with a set text</returns>
         private Label labelmaker(string text)
         {
             Label l = new Label();
             l.Text = text;
             return l;
         }
-        public void displayDayEvents()
+        /// <summary>
+        /// Displays the eents in the day selected
+        /// </summary>
+        private void displayDayEvents()
         {
             if (panelDay.InvokeRequired)
                 Invoke(new DisplayDelegate(displayDayEvents));
             else {
                 if (events.Count > 0)
                 {
-                    string grab = Selected.ToString("yyyy-MM-dd"); //2016-04-01
+                    string grab = Selected.ToString("yyyy-MM-dd"); //format 2016-04-01
                     String nl = Environment.NewLine;
                     int column = 7;
                     DBLayoutPanel TLA = new DBLayoutPanel();
@@ -239,6 +263,7 @@ namespace PJCalender
                     int i = 1;
                     Label label;
 
+                    //The headers for the table
                     label = labelmaker("Start Date");
                     TLA.Controls.Add(label, 0, 0);
                     label = labelmaker("Start Time");
@@ -280,7 +305,7 @@ namespace PJCalender
         ///     old user logs out
         ///     views need re-writing
         /// </summary>
-        public void clear()
+        private void clear()
         {
             if (flowLayoutPanel.InvokeRequired)
                 Invoke(new DisplayDelegate(clear));
@@ -291,7 +316,7 @@ namespace PJCalender
             events.Clear();
         }
         /// <summary>
-        /// display day tab
+        /// display the day selected in the day view
         /// </summary>
         private void displayLabelDay()
         {
@@ -300,7 +325,6 @@ namespace PJCalender
             else
                 labelDay.Text = Selected.ToLongDateString();
         }
-
         /// <summary> 
         /// Changes the text on the button login/logout if a new user is created
         /// </summary>
@@ -311,7 +335,8 @@ namespace PJCalender
             if (buttonLog.InvokeRequired)
             {
                 Invoke(new DisplayDelegate(loginButtonChangeText));
-            } else
+            }
+            else
             {
                 if (User.currentUserLoggedIn() == null)
                 {
