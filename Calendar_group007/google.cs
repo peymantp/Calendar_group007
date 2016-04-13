@@ -16,7 +16,15 @@ namespace PJCalender
     /// </summary>
     public class google
     {
+        /// <summary>
+        /// access type to the calender
+        /// CalendarService.Scope.Calendar = read/write
+        /// CalendarService.Scope.CalendarReadOnly = read
+        /// </summary>
         static string[] Scopes = { CalendarService.Scope.Calendar };
+        /// <summary>
+        /// Name of application sent to google
+        /// </summary>
         static string ApplicationName = "PJCalender";
         /// <summary>
         /// This object is not meant to be stored.
@@ -26,10 +34,11 @@ namespace PJCalender
         /// <param name="user">username of user</param>
         public google(Menus form)
         {
+            //Open file with api key to google
             using (var stream = new System.IO.FileStream("client_secret.json", System.IO.FileMode.Open, System.IO.FileAccess.Read))
             {
                 UserCredential credential = null;
-                //string credPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+                //string credPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal); //used for final product stores in user folder
                 string credPath = (".credentials/currentUser");
 
                 credential = GoogleWebAuthorizationBroker.AuthorizeAsync(GoogleClientSecrets.Load(stream).Secrets,
@@ -136,24 +145,25 @@ namespace PJCalender
                     }
                 };
 
-                String calendarId = "primary";
-                EventsResource.InsertRequest request = service.Events.Insert(newEvent, calendarId);
-                try {
+                EventsResource.InsertRequest request = service.Events.Insert(newEvent, "primary");
+                try
+                {
                     Event createdEvent = request.Execute();
-                } catch(Exception x)
+                }
+                catch (Exception x)
                 {
                     System.Windows.Forms.MessageBox.Show("Failed to create event");
                 }
             }
         }
         /// <summary>
-        /// todo remake fucntion
+        /// Get data from the local SQL database that are linked to the month selected
         /// </summary>
-        /// <returns></returns>
+        /// <param name="form">Object calling the function</param>
         static public void readEventLocal(Menus form)
         {
             System.Threading.Thread t = System.Threading.Thread.CurrentThread;
-            t.Priority = System.Threading.ThreadPriority.Highest;
+            t.Priority = System.Threading.ThreadPriority.Highest; //set thread as top piority
             string grab = form.Selected.Year + "-" + form.Selected.Month.ToString("D2");
             using (SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename" +
                 @"=|DataDirectory|\Database.mdf;Integrated Security=True"))
@@ -178,15 +188,14 @@ namespace PJCalender
             }
         }
         /// <summary>
-        /// todo remake funciton
+        /// Retrieves the selected data from the local SQL server
         /// </summary>
-        /// <param name="events"></param>
+        /// <param name="events">All the data</param>
         private static void saveEventLocal(Events events)
         {
             using (SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename" +
                 @"=|DataDirectory|\Database.mdf;Integrated Security=True"))
             {
-                
                 conn.Open();
                 foreach (var eventItem in events.Items)
                 {
@@ -254,13 +263,14 @@ namespace PJCalender
                 conn.Close();
             }
         }
-
+        /// <summary>
+        /// Empty the local SQL server
+        /// </summary>
         public static void clearTableData()
         {
             using (SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename" +
                 @"=|DataDirectory|\Database.mdf;Integrated Security=True"))
             {
-
                 conn.Open();
 
                 string sql = "TRUNCATE TABLE [dbo].[Table]";
@@ -269,7 +279,14 @@ namespace PJCalender
                 cmd.ExecuteNonQuery();
             }
         }
-
+        /// <summary>
+        /// Checks if a given string object is null and returns an empty
+        /// string value if it is
+        /// </summary>
+        /// <param name="obj">String to be checked</param>
+        /// <returns>
+        /// the string sent or an empty string if the string object is null
+        /// </returns>
         private static string nullCatcher(string obj)
         {
             try
