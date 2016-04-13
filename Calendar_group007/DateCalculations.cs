@@ -49,7 +49,11 @@ namespace PJCalender
             }
             return 0;
         }
-
+        /// <summary>
+        /// Returns the a month value to be used in an equation
+        /// </summary>
+        /// <param name="date">date with month value </param>
+        /// <returns>An int representing the month</returns>
         static public int monthValue(DateTime date)
         {
             switch (date.Month)
