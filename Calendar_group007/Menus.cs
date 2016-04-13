@@ -143,5 +143,21 @@ namespace PJCalender
             t.Name = "Google";
             t.Start();
         }
+        /// <summary>
+        /// displays all the data inside sql
+        /// </summary>
+        /// <param name="msg"></param>
+        /// <param name="keyData"></param>
+        /// <returns></returns>
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.Control | Keys.T))
+            {
+                dataGridView1.Visible = true;
+                displayDataGrid();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
     }
 }

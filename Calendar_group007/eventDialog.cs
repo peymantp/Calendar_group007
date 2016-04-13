@@ -27,6 +27,8 @@ namespace PJCalender
         public eventDialog()
         {
             InitializeComponent();
+            dateTimePickerFrom.Value = DateTime.Today;
+            dateTimePicker2.Value = DateTime.Today;
         }
         /// <summary>
         /// Shows option to customise reapeat options
@@ -93,6 +95,11 @@ namespace PJCalender
             {
                 recurrence = null;
                 makeRecurrence();
+            }
+            if(checkBoxAllDay.Checked)
+            {
+                dateTimePicker2.Value = new DateTime(dateTimePicker2.Value.Year, dateTimePicker2.Value.Month, dateTimePicker2.Value.AddDays(1).Day);
+                dateTimePickerFrom.Value = new DateTime(dateTimePickerFrom.Value.Year, dateTimePickerFrom.Value.Month, dateTimePickerFrom.Value.Day);
             }
             google.createEvent(textBoxEvent.Text, textBoxWhere.Text, textBoxDescription.Text,
                 dateTimePickerFrom.Value, dateTimePicker2.Value,recurrence);
@@ -164,6 +171,15 @@ namespace PJCalender
                 dateTimePickerOn.Enabled = true;
             else
                 dateTimePickerOn.Enabled = false;
+        }
+        /// <summary>
+        /// keeps the two date pickers consistent
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void dateTimePickerFrom_ValueChanged(object sender, EventArgs e)
+        {
+            dateTimePicker2.Value = dateTimePickerFrom.Value.AddHours(2);
         }
     }
 }

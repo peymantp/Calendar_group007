@@ -58,10 +58,10 @@ namespace PJCalender
 
                 // Define parameters of request.
                 EventsResource.ListRequest request = service.Events.List("primary");
-                request.TimeMin =new DateTime(2016,1,1);
+                request.TimeMin =new DateTime(2010,1,1);
                 request.ShowDeleted = false;
                 request.SingleEvents = true;
-                request.TimeMax = new DateTime(2017, 1, 1); //todo change number to 20
+                request.TimeMax = new DateTime(2021, 1, 1); //todo change number to 20
                 request.MaxResults = 2000;
                 //request.OrderBy = EventsResource.ListRequest.OrderByEnum.StartTime;
 
@@ -72,6 +72,7 @@ namespace PJCalender
                     saveEventLocal(events);
                     form.syncLabel();
                     form.loginButtonChangeText();
+                    form.displayAll();
                 }
                 catch (System.Net.Http.HttpRequestException requestEx)
                 {

@@ -26,6 +26,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menus));
             this.buttonExit = new System.Windows.Forms.Button();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
@@ -105,11 +106,22 @@
             this.labelDay = new System.Windows.Forms.Label();
             this.tabPageAgenda = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.summaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endDataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseDataSet = new PJCalender.DatabaseDataSet();
             this.tableLayoutAgenda = new System.Windows.Forms.TableLayoutPanel();
             this.buttonLog = new System.Windows.Forms.Button();
             this.buttonEvent = new System.Windows.Forms.Button();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.labelLoading = new System.Windows.Forms.Label();
+            this.tableTableAdapter = new PJCalender.DatabaseDataSetTableAdapters.TableTableAdapter();
             this.tableLayoutPanelMonth.SuspendLayout();
             this.flowLayoutPanel20.SuspendLayout();
             this.tabPageMonth.SuspendLayout();
@@ -118,6 +130,9 @@
             this.tableLayoutPanelWeek.SuspendLayout();
             this.tabPageDay.SuspendLayout();
             this.tabPageAgenda.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonExit
@@ -595,6 +610,94 @@
             this.flowLayoutPanel.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanel.Name = "flowLayoutPanel";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.startDateDataGridViewTextBoxColumn,
+            this.startTimeDataGridViewTextBoxColumn,
+            this.summaryDataGridViewTextBoxColumn,
+            this.locationDataGridViewTextBoxColumn,
+            this.descriptionDataGridViewTextBoxColumn,
+            this.endDataDataGridViewTextBoxColumn,
+            this.endTimeDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.tableBindingSource;
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            // 
+            // startDateDataGridViewTextBoxColumn
+            // 
+            this.startDateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "StartDate";
+            resources.ApplyResources(this.startDateDataGridViewTextBoxColumn, "startDateDataGridViewTextBoxColumn");
+            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
+            this.startDateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.startDateDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // startTimeDataGridViewTextBoxColumn
+            // 
+            this.startTimeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.startTimeDataGridViewTextBoxColumn.DataPropertyName = "StartTime";
+            resources.ApplyResources(this.startTimeDataGridViewTextBoxColumn, "startTimeDataGridViewTextBoxColumn");
+            this.startTimeDataGridViewTextBoxColumn.Name = "startTimeDataGridViewTextBoxColumn";
+            this.startTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.startTimeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // summaryDataGridViewTextBoxColumn
+            // 
+            this.summaryDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+            this.summaryDataGridViewTextBoxColumn.DataPropertyName = "Summary";
+            resources.ApplyResources(this.summaryDataGridViewTextBoxColumn, "summaryDataGridViewTextBoxColumn");
+            this.summaryDataGridViewTextBoxColumn.Name = "summaryDataGridViewTextBoxColumn";
+            this.summaryDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // locationDataGridViewTextBoxColumn
+            // 
+            this.locationDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.locationDataGridViewTextBoxColumn.DataPropertyName = "Location";
+            resources.ApplyResources(this.locationDataGridViewTextBoxColumn, "locationDataGridViewTextBoxColumn");
+            this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
+            this.locationDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            resources.ApplyResources(this.descriptionDataGridViewTextBoxColumn, "descriptionDataGridViewTextBoxColumn");
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // endDataDataGridViewTextBoxColumn
+            // 
+            this.endDataDataGridViewTextBoxColumn.DataPropertyName = "EndData";
+            resources.ApplyResources(this.endDataDataGridViewTextBoxColumn, "endDataDataGridViewTextBoxColumn");
+            this.endDataDataGridViewTextBoxColumn.Name = "endDataDataGridViewTextBoxColumn";
+            this.endDataDataGridViewTextBoxColumn.ReadOnly = true;
+            this.endDataDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // endTimeDataGridViewTextBoxColumn
+            // 
+            this.endTimeDataGridViewTextBoxColumn.DataPropertyName = "EndTime";
+            resources.ApplyResources(this.endTimeDataGridViewTextBoxColumn, "endTimeDataGridViewTextBoxColumn");
+            this.endTimeDataGridViewTextBoxColumn.Name = "endTimeDataGridViewTextBoxColumn";
+            this.endTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tableBindingSource
+            // 
+            this.tableBindingSource.DataMember = "Table";
+            this.tableBindingSource.DataSource = this.databaseDataSet;
+            // 
+            // databaseDataSet
+            // 
+            this.databaseDataSet.DataSetName = "DatabaseDataSet";
+            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // tableLayoutAgenda
             // 
             resources.ApplyResources(this.tableLayoutAgenda, "tableLayoutAgenda");
@@ -626,11 +729,16 @@
             resources.ApplyResources(this.labelLoading, "labelLoading");
             this.labelLoading.Name = "labelLoading";
             // 
+            // tableTableAdapter
+            // 
+            this.tableTableAdapter.ClearBeforeFill = true;
+            // 
             // Menus
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.labelLoading);
             this.Controls.Add(this.buttonRefresh);
             this.Controls.Add(this.buttonEvent);
@@ -654,6 +762,9 @@
             this.tabPageDay.ResumeLayout(false);
             this.tabPageDay.PerformLayout();
             this.tabPageAgenda.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -742,6 +853,17 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel10;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel9;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private DatabaseDataSet databaseDataSet;
+        private System.Windows.Forms.BindingSource tableBindingSource;
+        private DatabaseDataSetTableAdapters.TableTableAdapter tableTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn startTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn summaryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn locationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn endDataDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn endTimeDataGridViewTextBoxColumn;
     }
 }
 

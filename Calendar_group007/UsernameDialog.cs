@@ -12,6 +12,9 @@ using System.Windows.Forms;
 /// </summary>
 namespace PJCalender
 {
+    /// <summary>
+    /// Unused dialog
+    /// </summary>
     public partial class UsernameDialog : Form
     {
         private Menus f { get; set; }

@@ -34,18 +34,35 @@ namespace PJCalender
             google.readEventLocal(this);
             
             List<Thread> threads = new List<Thread>();
+            //threads.Add(new Thread(() => displayDataGrid()));
             threads.Add(new Thread(() => displayMonthNumbers()));
             threads.Add(new Thread(() => displayAgenda()));
             threads.Add(new Thread(() => displayLabelDay()));
             threads.Add(new Thread(() => displayDayEvents()));
             threads.Add(new Thread(() => displayWeekEvents()));
-            threads.Add(new Thread(() => displayMonthEvents()));
+            //threads.Add(new Thread(() => displayMonthEvents()));
             int i = 0;
             foreach (var item in threads)
             {
                 item.Name = "" + i;
                 ++i;
                 item.Start();
+            }
+        }
+        /// <summary>
+        /// used to display all the values inside the sql
+        /// </summary>
+        void displayDataGrid()
+        {
+            if (dataGridView1.InvokeRequired)
+            {
+                Invoke(new DisplayDelegate(displayDataGrid));
+                return;
+            }
+            else
+            {
+                dataGridView1.DataSource = tableTableAdapter.GetData();
+                //tableTableAdapter.Fill(databaseDataSet.Table);
             }
         }
         /// <summary>
@@ -135,7 +152,9 @@ namespace PJCalender
                             c.Controls.Add(label);
                         }
                     }
-                } catch (Exception x)
+                    displayMonthEvents();
+                }
+                catch (Exception x)
                 {
 
                 }
