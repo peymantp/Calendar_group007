@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace PJCalender
 {
+    /// <summary>
+    /// Format of events that are stored locally from google 
+    /// </summary>
     public struct eventStruct
     {
         public string startDate;
@@ -16,7 +19,11 @@ namespace PJCalender
         public string html;
         public string endDate;
         public string endTime;
-
+        /// <summary>
+        /// easy way of returning the value inside the object
+        /// </summary>
+        /// <param name="i">location of the value</param>
+        /// <returns>string for the index</returns>
         public string getItemByIndex(int i)
         {
             switch (i)
@@ -47,21 +54,26 @@ namespace PJCalender
             }
             return " ";
         }
+        /// <summary>
+        /// Returns a string with all the values of the object
+        /// format: start date, start time, summary, location, description, html link, end date, end time
+        /// </summary>
+        /// <returns>All the none null values the object has in a string</returns>
         public override string ToString()
         {
             string value = startDate;
             if (!String.IsNullOrEmpty(startTime))
-                value += " " + startTime;
+                value += ", " + startTime;
             if (!String.IsNullOrEmpty(Summary))
-                value += " " + Summary;
+                value += ", " + Summary;
             if (!String.IsNullOrEmpty(Location))
-                value += " " + Location;
+                value += ", " + Location;
             if (!String.IsNullOrEmpty(Description))
-                value += " " + Description;
+                value += ", " + Description;
 
-            value += " " + html + " " + endDate;
+            value += ", " + html + ", " + endDate;
             if (!String.IsNullOrEmpty(endTime))
-                value += " " + endTime;
+                value += ", " + endTime;
 
             return value;
 
