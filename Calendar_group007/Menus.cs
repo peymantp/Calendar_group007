@@ -18,17 +18,22 @@ namespace PJCalender
             get;
             private set;
         }
-
+        /// <summary>
+        /// List of events for the selected month
+        /// </summary>
         public System.Collections.ArrayList events {
             get;
             set;
         }
-
+        /// <summary>
+        /// ctor for the application
+        /// </summary>
         public Menus()
         {
             InitializeComponent();
             loginButtonChangeText();
             events = new System.Collections.ArrayList();
+            //select default values
             Selected = DateTime.Now;
             dateTimePicker.Value = Selected;
             displayAll();
@@ -95,6 +100,12 @@ namespace PJCalender
 
             buttonRefresh_Click(sender, e);
         }
+        /// <summary>
+        /// Opens the current instance of the program if user tries 
+        /// to create a secount  
+        /// http://stackoverflow.com/questions/35470399/if-an-instance-of-the-application-is-already-running-call-a-method-within-the-a
+        /// </summary>
+        /// <param name="m">ref Message</param>
         protected override void WndProc(ref Message m)
         {
             if (m.Msg == NativeMethods.WM_SHOWME)
@@ -103,6 +114,11 @@ namespace PJCalender
             }
             base.WndProc(ref m);
         }
+        /// <summary>
+        /// displays the application on top of all other
+        /// running applications on the system
+        /// http://stackoverflow.com/questions/35470399/if-an-instance-of-the-application-is-already-running-call-a-method-within-the-a
+        /// </summary>
         private void ShowMe()
         {
             if (WindowState == FormWindowState.Minimized)
@@ -116,12 +132,11 @@ namespace PJCalender
             // set it back to whatever it was
             TopMost = top;
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            events = null;
-            clear();
-        }
-
+        /// <summary>
+        /// retrieves data from google servers
+        /// </summary>
+        /// <param name="sender">button clicked</param>
+        /// <param name="e">event triggered</param>
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
             System.Threading.Thread t = new System.Threading.Thread(() => new google(this));
