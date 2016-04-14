@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="FullSignature">
   <Class Name="PJCalender.dayPickerDialog">
-    <Position X="2" Y="0.5" Width="1.5" />
+    <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAABACAAAAAAAACAAAACAAAAAAAAEAAACAAAAAA=</HashCode>
       <FileName>dayPickerDialog.cs</FileName>
@@ -9,49 +9,61 @@
   </Class>
   <Class Name="PJCalender.Menus" Collapsed="true">
     <Position X="5.5" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="PJCalender.Menus.DisplayDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>display.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="PJCalender.Menus.ControlDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>display.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAIAgAAYiAABCQCJgCEAIACIAIIACBghECEBAAAAAE=</HashCode>
+      <HashCode>AEAIAgGvYiweBHQCbSKPBIAC8Kr/Q9pk/OCHRABCPB4=</HashCode>
       <FileName>display.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PJCalender.google">
+  <Class Name="PJCalender.google" Collapsed="true">
     <Position X="3.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAAAEACAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <HashCode>AQIAAAAAAAAEACAAAIAAIAAAAAAAAAAACAAAAAAAAAA=</HashCode>
       <FileName>google.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PJCalender.Program" Collapsed="true">
-    <Position X="5.5" Y="3.5" Width="1.5" />
+  <Class Name="PJCalender.Program">
+    <Position X="2.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAABAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAABAAAIAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PJCalender.User">
-    <Position X="3.75" Y="3" Width="1.5" />
+    <Position X="2.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIEAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>User.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PJCalender.UsernameDialog" Collapsed="true">
-    <Position X="5.5" Y="2.5" Width="1.5" />
+    <Position X="3.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAAAACAAAECAAAYAAAQEGAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAACAAAAAAAACABAASEAIAAAAQEAAAAAAAAAA=</HashCode>
       <FileName>UsernameDialog.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PJCalender.Properties.Resources">
-    <Position X="2" Y="3.25" Width="1.5" />
+  <Class Name="PJCalender.Properties.Resources" Collapsed="true">
+    <Position X="3.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="PJCalender.Properties.Settings" Collapsed="true">
-    <Position X="5.5" Y="1.5" Width="1.5" />
+    <Position X="7.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAgA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

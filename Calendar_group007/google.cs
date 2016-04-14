@@ -258,7 +258,7 @@ namespace PJCalender
                     } 
                     catch (Exception ex)
                     {
-                        System.Windows.Forms.MessageBox.Show(ex.ToString(), ex.GetType().ToString());
+                        System.Diagnostics.Debug.WriteLine(ex.ToString(), ex.GetType().ToString());
                     }
                 }
                 conn.Close();
