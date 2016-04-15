@@ -60,18 +60,19 @@ namespace PJCalender
             try
             {
                 string file = Directory.GetFiles(@".credentials/currentUser", "*")[0];
-                File.Delete(@".credentials/.archived.users/" + file.Split('\\')[1]);
-                File.Move(file, @".credentials/.archived.users/" + file.Split('\\')[1]);
+                if(!String.IsNullOrEmpty(file))
+                    File.Delete(file);
             }
             catch (System.IndexOutOfRangeException indexEx)
             {
-                MessageBox.Show(indexEx.ToString(), indexEx.GetType().ToString());
+                System.Diagnostics.Debug.WriteLine(indexEx.ToString(), indexEx.GetType().ToString());
+                MessageBox.Show("Error on log out");
             }
         }
         /// <summary>
-        /// to do delete this
+        /// returns a string with user name if they exist
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The name of the user logged in</returns>
         static public string currentUserLoggedIn()
         {
             String file;
@@ -84,13 +85,12 @@ namespace PJCalender
                 }
                 else {
                     file = Directory.GetFiles(".credentials/currentUser", "*")[0];
-
                     return file;
                 }
             }
-            catch (System.IndexOutOfRangeException ex)
+            catch (System.IndexOutOfRangeException indexEx)
             {
-                //MessageBox.Show(ex.ToString(), ex.GetType().ToString());
+                System.Diagnostics.Debug.WriteLine(indexEx.ToString(), indexEx.GetType().ToString());
             }
             catch (System.IO.DirectoryNotFoundException ex)
             {

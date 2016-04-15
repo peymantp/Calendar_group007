@@ -63,7 +63,6 @@
   <ItemGroup>
     <Compile Include="DateCalculationsTests.cs" />
     <Compile Include="googleTests.cs" />
-    <Compile Include="MenusTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

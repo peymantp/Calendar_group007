@@ -33,6 +33,11 @@ namespace PJCalender
             InitializeComponent();
             loginButtonChangeText();
             events = new System.Collections.ArrayList();
+            //create user folder if it doesnt exist
+            if (!System.IO.Directory.Exists(".credentials/currentUser"))
+            {
+                System.IO.Directory.CreateDirectory(".credentials/currentUser");
+            }
             //select default values
             Selected = DateTime.Now;
             dateTimePicker.Value = Selected;
@@ -97,7 +102,6 @@ namespace PJCalender
         {
             eventDialog ev = new eventDialog();
             ev.Show();
-
             buttonRefresh_Click(sender, e);
         }
         /// <summary>
